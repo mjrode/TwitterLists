@@ -19,8 +19,11 @@ class Users::ImportLists < Less::Interaction
 
 
   def save_list_id(list)
+    user = User.find_by_username(username)
     List.create(
-      api_list_id:  list.id )
+      name: list.name,
+      api_list_id:  list.id, 
+      user_id:  user.id)
   end
 
 
