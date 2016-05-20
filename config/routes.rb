@@ -1,5 +1,10 @@
 Rails.application.routes.draw do
 
+  resources :lists
+  get 'name', to: 'lists#name'
+
+  get 'friends/index'
+
   root 'pages#home'
   get '/auth/:provider/callback', to: 'sessions#create'
 
