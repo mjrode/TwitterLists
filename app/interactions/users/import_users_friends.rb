@@ -1,4 +1,4 @@
-class Users::ListOfFriends < Less::Interaction
+class Users::ImportUsersFriends < Less::Interaction
  expects :user
 
    def run
@@ -35,8 +35,17 @@ class Users::ListOfFriends < Less::Interaction
        members = TWITTER_CLIENT.list_members(user.username, list.id)
        members.each do |member|
          save_friend(member)
+         create_schedule(member, list)
        end
      end
+   end
+
+   def create_schedule(member, list)
+    friend = Friend.find_by_username(member.screen_name)
+    list = List.find_by_api_list_id(list.id)
+     FriendListSchedule.create(
+      friend_id: friend.id, 
+      list_id: list.id)
    end
 
    def fetch_all_friends
