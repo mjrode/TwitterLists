@@ -3,6 +3,7 @@ class Users::ImportUsersFriends < Less::Interaction
 
    def run
      delay.fetch_all_friends
+     delay.fetch_all_list_members
      self
    end
 
@@ -19,8 +20,8 @@ class Users::ImportUsersFriends < Less::Interaction
      )
    end
 
-   def fetch_all_followers
-     followers = TWITTER_CLIENT.followers(user.username, count: 200)
+   def fetch_all_friends
+     followers = TWITTER_CLIENT.friends(user.username, count: 200)
      followers.each do |f|
        save_friend(f)
      end
@@ -46,11 +47,6 @@ class Users::ImportUsersFriends < Less::Interaction
      FriendListSchedule.create(
       friend_id: friend.id, 
       list_id: list.id)
-   end
-
-   def fetch_all_friends
-     fetch_all_followers
-     fetch_all_list_members
    end
  end
  
