@@ -1,0 +1,6 @@
+%h1.center Please enter the name for this list
+
+=form_for @lists do |f|
+  =f.label :name
+  =f.text_field :name
+  %btn.btn-default=f.submit
