@@ -1,4 +1,5 @@
-%h4 Would you like to create a new list or build from a pre-exisiting one? 
-
-%button.btn.btn-default= link_to "New List", name_path
-%button.btn.btn-default= link_to "Build from pre-exisiting list", "#"
+%h2.play.center Enter New List Name:
+.col-sm-6.col-sm-offset-3
+  =form_for @list do |f|
+    =f.text_field :name, placeholder: "Name", class: "full-width form-control"
+    =f.submit  class: "form-control"
