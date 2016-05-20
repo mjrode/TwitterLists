@@ -6,6 +6,7 @@ class Users::UserAuthenticationFromOauth < Less::Interaction
   def run
     initialize_user
     self.message = "Welcome, #{user.name}!"
+    self.user = user
     Users::ImportLists.run(username: self.user.username)
     Users::ImportUsersFriends.run(user: self.user)
     self
