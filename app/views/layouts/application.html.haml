@@ -19,8 +19,11 @@
           = link_to "Home", root_path, class: "navbar-brand"
         .collapse.navbar-collapse.navbar-ex1-collapse
           %ul.nav.navbar-nav.navbar-right
-            %li= link_to "Log In", '/auth/twitter'
-            %li= link_to "Other", "#"
+            -if current_user
+              %li= link_to "Refresh", "#"
+              %li= link_to "Log Out", "#"
+            -else
+              %li= link_to "Log In", '/auth/twitter'
   - flash.each do |key, value|
     .alert{ :class => "alert-#{key}" }
       %button.close{ :data => { :dismiss => "alert" } } x

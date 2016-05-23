@@ -1,8 +1,11 @@
-%h2.center.play.big What ya wanna do ?
+-if current_user
+  %h2.center.play.big What ya wanna do ?
 
-.col-sm-6.col-sm-offset-3.center.move-down
-  %button.btn.btn-default.list-button.play= link_to "Make a New List", new_list_path
-  %button.btn.btn-default.list-button.play= link_to "Edit Current List", "#"
-  %button.btn.btn-default.list-button.play= link_to "View Unassigned Friends", "#"
+  .col-sm-6.col-sm-offset-3.center.move-down
+    %button.btn.btn-default.list-button.play= link_to "Make a New List", new_list_path
+    %button.btn.btn-default.list-button.play= link_to "Edit Current List", "#"
+    %button.btn.btn-default.list-button.play= link_to "View Unassigned Friends", "#"
 
 
+-else
+  %h1.center.play Please Log In
