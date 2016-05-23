@@ -1,20 +1,24 @@
 class Lists::AddFriendsToList < Less::Interaction
-  expects :friend_ids
+  expects :friends_hash
   expects :list
   expects :user
+  returns :id
 
   def run
     create_schedules
-    binding.pry 
+    self.id = list.id
+    self
   end
 
   private
 
   def create_schedules
-    friend_ids.each do |id|
-      user.friend_list_schedule.create(
+    friends_hash.each do |hash|
+      FriendListSchedule.create(
         list_id: list.id, 
-        friend_id: id)
+        friend_id: hash[:friend_id],
+        schedule: hash[:schedule]
+      )
     end
   end
 
