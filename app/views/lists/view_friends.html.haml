@@ -1,0 +1,11 @@
+%h1.center= "Check the friends you would like to import and press submit!"
+
+=form_tag("/add_friends", method: :post, class: "center") do 
+  -@friends.each do |friend|
+    =check_box_tag "friend_ids[]", friend.id, false
+    =hidden_field_tag "list", @list.id 
+    =friend.username
+    %br/
+    %br/
+  =submit_tag "Submit", class: "btn btn-success btn-lg full-width"
+

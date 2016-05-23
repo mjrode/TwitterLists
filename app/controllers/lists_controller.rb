@@ -5,18 +5,19 @@ class ListsController < ApplicationController
     @lists = current_user.lists
   end
 
-  def name
-    @list = List.new
+  def create
+    @list = List.find_or_create_by!(name: params[:list][:name])
+    redirect_to view_friends_list_path(id: @list.id)
   end
 
-  def create
-    @list = List.find_or_create_by(name: params[:list][:name])
-    redirect_to add_friends_list_path(id: @list.id)
+  def view_friends
+    @list = List.find(params[:id])
+    @friends = current_user.friends
   end
 
   def add_friends
-    @friends = current_user.friends
-    binding.pry
+    @list = List.find(params[:list])
+    Lists::AddFriendsToList.run(friend_ids: params[:friend_ids], list: @list, user: current_user)
   end
 
   def new
