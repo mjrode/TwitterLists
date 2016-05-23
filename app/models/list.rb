@@ -5,5 +5,15 @@ class List < ActiveRecord::Base
   validates :name, presence: true
   validates :name, uniqueness: true
 
+  def on_list
+    self.friend_list_schedules.where("schedule != ?", "Never on List")
+  end
+
+  def new_list?(user)
+    list_names = TWITTER_CLIENT.lists(user.twitter_id).map{|list| list.name }
+    unless list_names.include?(self.name)
+      true
+    end
+  end
 
 end
