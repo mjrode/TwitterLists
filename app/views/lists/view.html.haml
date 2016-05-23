@@ -1,0 +1,7 @@
+%h1= "#{@list.name}"
+- @schedules.each do |schedule|
+  =schedule.friend.name
+  |
+  =schedule.schedule
+  %br/
+  %hr/

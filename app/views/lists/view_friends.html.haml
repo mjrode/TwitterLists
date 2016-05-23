@@ -1,11 +1,21 @@
-%h1.center= "Check the friends you would like to import and press submit!"
+%h1.center= "Add to #{@list.name} list"
+.col-sm-8.col-sm-offset-2
 
-=form_tag("/add_friends", method: :post, class: "center") do 
-  -@friends.each do |friend|
-    =check_box_tag "friend_ids[]", friend.id, false
-    =hidden_field_tag "list", @list.id 
-    =friend.username
-    %br/
-    %br/
-  =submit_tag "Submit", class: "btn btn-success btn-lg full-width"
-
+  %table.table
+    %thead
+      %tr
+        %th Name
+        %th Bio
+        %th.center Rotation Schedule 
+        %th{:colspan => "3"}
+    %tbody
+      =form_tag("/add_friends", method: :post)
+      - @friends.each do |friend|
+        %tr
+          %td= friend.name
+          %td= friend.bio
+          %td.center= select_tag "friends[][schedule]", options_for_select(FriendListSchedule.schedules), selected: "Never On List"
+          =hidden_field_tag "friends[][friend_id]", friend.id
+          =hidden_field_tag "list", @list.id 
+=submit_tag "Submit", class: "btn btn-success btn-lg full-width marg-bottom"
+    

@@ -1,2 +1,7 @@
 -@lists.each do |list|
-  %p=list.id
+  .col-sm-6.col-sm-offset-3.center.move-down
+    %button.btn.btn-default.list-button-med.play= link_to list.name, list
+    %i.fa.fa-trash.fa-lg.move-down
+      =link_to "Delete List", list_path(list), method: :delete, data:{confirm: "Are you sure you want to delete #{list.name}?"}
+    %hr/
+      

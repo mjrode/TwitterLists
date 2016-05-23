@@ -1,5 +1,5 @@
-%h2.play.center Enter New List Name:
-.col-sm-6.col-sm-offset-3
+%h1.play.center Enter List Name:
+.col-sm-6.col-sm-offset-3.move-down
   =form_for @list do |f|
     =f.text_field :name, placeholder: "Name", class: "full-width form-control"
     =f.submit  class: "form-control"
