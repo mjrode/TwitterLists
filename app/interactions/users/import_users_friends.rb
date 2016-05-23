@@ -15,8 +15,11 @@ class Users::ImportUsersFriends < Less::Interaction
 
    def save_friend(friend)
      Friend.create(
+       name: friend.name, 
        username: friend.screen_name,
-       user_id: user.id
+       user_id: user.id,
+       bio: friend.description, 
+       twitter_id: friend.id
      )
    end
 
