@@ -35,7 +35,6 @@ before_action :set_list, only: [:view, :show, :destroy, :add_friends, :select_fr
   end
 
   def show
-    binding.pry
     @schedules = @list.on_list
   end
 

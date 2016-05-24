@@ -16,11 +16,13 @@ class Lists::AddFriendsToLocalList < Less::Interaction
 
   def create_schedules
     friends_hash.each do |hash|
-      FriendListSchedule.create(
-        list_id: list.id, 
-        friend_id: hash[:friend_id],
-        schedule: hash[:schedule]
-      )
+      unless hash[:friend_id] == nil
+        FriendListSchedule.create(
+          list_id: list.id, 
+          friend_id: hash[:friend_id],
+          schedule: hash[:schedule]
+        )
+      end
     end
   end
 
