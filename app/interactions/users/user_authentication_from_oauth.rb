@@ -7,15 +7,15 @@ class Users::UserAuthenticationFromOauth < Less::Interaction
     initialize_user
     self.message = "Welcome, #{user.name}!"
     self.user = user
-    Users::ImportLists.run(username: self.user.username)
     Users::ImportUsersFriends.run(user: self.user)
+    Users::ImportLists.run(username: self.user.username)
     self
   end
 
   private
 
   def initialize_user
-    self.user = User.find_or_create_by(twitter_id: auth_hash.uid)
+    self.user = User.find_or_create_by(remote_id: auth_hash.uid)
     set_attributes
   end
 

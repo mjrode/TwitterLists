@@ -14,6 +14,8 @@ class Users::ImportLists < Less::Interaction
   def cache_lists
     get_list_ids_from_twitter.each do |list|
       save_list_id(list)
+      # commenting out due to rate limit issues
+      # create_schedule(list)
     end
   end
 
@@ -22,10 +24,21 @@ class Users::ImportLists < Less::Interaction
     user = User.find_by_username(username)
     List.create(
       name: list.name,
-      api_list_id:  list.id, 
+      remote_id:  list.id, 
       user_id:  user.id)
   end
 
-
-
+  def create_schedule(list)
+    # rate limit issues here
+    binding.pry
+    members = TWITTER_CLIENT.list_members(username, list.id)
+    list = List.find_by_remote_id(list.id)
+    members.each do |member|
+      friend = Friend.find_by_remote_id(member.id)
+      FriendListSchedule.create(
+        list_id: list.id, 
+        friend_id: friend.id, 
+        schedule: "Always on List" )
+    end
+  end
 end

@@ -10,7 +10,7 @@ class List < ActiveRecord::Base
   end
 
   def new_list?(user)
-    list_names = TWITTER_CLIENT.lists(user.twitter_id).map{|list| list.name }
+    list_names = TWITTER_CLIENT.lists(user.remote_id).map{|list| list.name }
     unless list_names.include?(self.name)
       true
     end

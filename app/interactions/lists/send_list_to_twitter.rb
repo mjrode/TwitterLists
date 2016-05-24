@@ -18,11 +18,12 @@ class Lists::SendListToTwitter < Less::Interaction
   end
 
   def set_url
-    @client.list(user_id, @list.api_list_id)
+    @client.list(user_id, @list.remote_id)
   end
 
   def add_friends
-    @client.add_list_members(list.api_list_id, list_of_friends)
+    binding.pry
+    @client.add_list_members(list.remote_id, list_of_friends)
   end
 
   def list_of_friends
