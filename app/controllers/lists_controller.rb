@@ -13,7 +13,7 @@ before_action :set_list, only: [:view, :show, :destroy, :add_friends, :select_fr
   end
 
   def create
-    @list = List.find_or_create_by!(name: params[:list][:name], user_id: current_user.id)
+    @list = List.find_or_create_by(name: params[:list][:name], user_id: current_user.id)
     result = Lists::CreateRemoteList.run(local_list: @list, user: current_user)
     if result.success
       redirect_to select_friends_list_path(id: @list.id)
