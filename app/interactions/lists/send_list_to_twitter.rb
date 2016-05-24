@@ -4,22 +4,15 @@ class Lists::SendListToTwitter < Less::Interaction
   
   def run
     set_twitter_client
-    create_list
     add_friends
-    set_url
+    # set_url
   end
 
   private 
 
-  def create_list
-     info = @client.create_list(list.name)
-     list.url = info.url.to_s
-     list.save
-  end
-
-  def set_url
-    @client.list(user_id, @list.remote_id)
-  end
+  # def set_url
+  #   @client.list(user_id, @list.remote_id)
+  # end
 
   def add_friends
     binding.pry
