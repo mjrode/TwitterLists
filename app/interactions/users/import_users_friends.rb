@@ -2,12 +2,22 @@ class Users::ImportUsersFriends < Less::Interaction
  expects :user
 
    def run
+     set_twitter_client
      delay.fetch_all_friends
      delay.fetch_all_list_members
      self
    end
 
    private
+
+   def set_twitter_client
+     @client = Twitter::REST::Client.new do |config|
+       config.consumer_key        = ENV["twitter_consumer_key"]
+       config.consumer_secret     = ENV["twitter_secret_key"]
+       config.access_token        = user.token
+       config.access_token_secret = user.secret
+     end
+   end
 
    def import_key
      SecureRandom.base64
@@ -24,19 +34,19 @@ class Users::ImportUsersFriends < Less::Interaction
    end
 
    def fetch_all_friends
-     followers = TWITTER_CLIENT.friends(user.username, count: 200)
+     followers = @client.friends(user.username, count: 200)
      followers.each do |f|
        save_friend(f)
      end
    end
 
    def lists
-     TWITTER_CLIENT.lists(user.username)
+     @client.lists(user.username)
    end
 
    def fetch_all_list_members
      lists.each do |list|
-       members = TWITTER_CLIENT.list_members(user.username, list.id)
+       members = @client.list_members(user.username, list.id)
        members.each do |member|
          save_friend(member)
          create_schedule(member, list)
