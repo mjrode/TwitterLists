@@ -1,8 +1,10 @@
-class Lists::AddFriendsToList < Less::Interaction
+class Lists::AddFriendsToLocalList < Less::Interaction
   expects :friends_hash
   expects :list
   expects :user
   returns :id
+  returns :message
+  returns :success
 
   def run
     create_schedules
