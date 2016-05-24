@@ -22,7 +22,7 @@
           %ul.nav.navbar-nav.navbar-right
             -if current_user
               %li= link_to "Refresh", "/auth/twitter"
-              %li= link_to "Log Out", "#"
+              %li= link_to "Log Out", logout_path, method: :delete
             -else
               %li= link_to "Log In", '/auth/twitter'
 

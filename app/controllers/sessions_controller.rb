@@ -6,7 +6,12 @@ class SessionsController < ApplicationController
     flash[:success] = response.message
     redirect_to pages_home_path
   end
-
+  
   def destroy
+    if current_user
+      session.delete(:user_id)
+      flash[:success] = 'See you!'
+    end
+    redirect_to root_path
   end
 end
