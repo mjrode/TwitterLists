@@ -1,3 +1,5 @@
+# Import users Twitter Friends and save them locally
+# 
 class Users::ImportUsersFriends < Less::Interaction
  expects :user
 
@@ -53,13 +55,14 @@ class Users::ImportUsersFriends < Less::Interaction
        end
      end
    end
-
+   
    def create_schedule(member, list)
     friend = Friend.find_by_username(member.screen_name)
     list = List.find_by_remote_id(list.id)
      FriendListSchedule.create(
       friend_id: friend.id, 
-      list_id: list.id)
+      list_id: list.id, 
+      schedule: "Always on List")
    end
  end
  

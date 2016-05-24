@@ -1,3 +1,4 @@
+# Imports list and list members from Twitter and saves a local copy. 
 class Lists::ImportLists < Less::Interaction
   expects :username
 
@@ -42,16 +43,7 @@ class Lists::ImportLists < Less::Interaction
     @client.list_members(username, remote_list.id)    
   end
 
-  # def local_list(remote_list)
-  #   List.find_by_remote_id(remote_list.id)
-  # end
-
-  # def local_friend(remote_member)
-  #   Friend.find_by_remote_id(remote_member.id)
-  # end
-
   def create_schedule(remote_list)
-    # rate limit issues here
     remote_members(remote_list).each do |remote_member|
       local_list = List.find_by_remote_id(remote_list.id)
       friend = Friend.find_by_remote_id(remote_member.id)
