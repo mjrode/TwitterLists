@@ -3,6 +3,10 @@ Rails.application.routes.draw do
   resources :lists do 
     member  do
       get :view_friends
+      get :view
+    end
+    collection do 
+      get :import
     end
   end
   post '/add_friends', to: "lists#add_friends"
@@ -15,7 +19,7 @@ Rails.application.routes.draw do
 
 
   get 'sessions/create'
-  get 'sessions/destroy'
+  delete '/logout', to: 'sessions#destroy'
   get '/auth/:provider/callback', to: 'sessions#create'
 
 end

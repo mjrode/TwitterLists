@@ -1,3 +1,5 @@
+# need to set list api id before I try to save list 
+
 class ListsController < ApplicationController
   before_action :set_list, only: [:view_friends, :view, :show, :destroy]
 
@@ -8,7 +10,8 @@ class ListsController < ApplicationController
 
   def create
     @list = List.find_or_create_by!(name: params[:list][:name], user_id: current_user.id)
-    if @list.new_list?(current_user)
+    result = Lists::CreateRemoteList.run(local_list: @list, user: current_user)
+    if result.success
       redirect_to view_friends_list_path(id: @list.id)
     else
       flash[:warning] = "That name has already been taken"
@@ -21,6 +24,7 @@ class ListsController < ApplicationController
   end
 
   def add_friends
+    @list = List.find(params[:list])  
     Lists::AddFriendsToList.run(friends_hash: params[:friends], list: @list, user: current_user)
     redirect_to view_list_path(@list)
   end
@@ -45,11 +49,17 @@ class ListsController < ApplicationController
 
   def destroy
     @list.destroy
+    Lists::DeleteList.run(list: @list, user: current_user)
     redirect_to lists_path
   end
 
   def new
     @list = List.new
+  end
+
+  def import
+    Users::ImportLists.run(username: current_user.username)
+    redirect_to lists_path
   end
 
   private
