@@ -2,14 +2,15 @@ Rails.application.routes.draw do
 
   resources :lists do 
     member  do
-      get :view_friends
+      get :select_friends
       get :view
+      post :add_friends
     end
     collection do 
       get :import
     end
   end
-  post '/add_friends', to: "lists#add_friends"
+  # post '/add_friends', to: "lists#add_friends"
 
 
   get  'pages/home'
