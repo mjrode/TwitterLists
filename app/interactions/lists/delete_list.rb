@@ -20,8 +20,7 @@ class Lists::DeleteList < Less::Interaction
   end
 
   def destroy_remote_list
-    binding.pry
-    @client.destroy_list(list.remote_id)
+    @client.destroy_list(user.remote_id, list.name)
   end
 
 
