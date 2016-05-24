@@ -29,7 +29,7 @@ before_action :set_list, only: [:view, :show, :destroy, :add_friends, :select_fr
 
   def add_friends
     Lists::AddFriendsToLocalList.run(friends_hash: params[:friends], list: @list, user: current_user)
-    Lists::AddFriendsToRemoteList.run(list: @list, user_id: @user.id)
+    Lists::AddFriendsToRemoteList.run(list: @list, user_id: current_user.id)
     flash[:notice] = "Check out your new list here #{@list.name}"
     redirect_to lists_path
   end
@@ -46,7 +46,7 @@ before_action :set_list, only: [:view, :show, :destroy, :add_friends, :select_fr
 
 
   def import
-    Users::ImportLists.run(username: current_user.username)
+    Lists::ImportLists.run(username: current_user.username)
     redirect_to lists_path
   end
 

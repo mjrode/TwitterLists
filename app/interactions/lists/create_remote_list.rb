@@ -28,11 +28,12 @@ class Lists::CreateRemoteList < Less::Interaction
   end
 
   def create_local_copy(remote_list)
-    List.create(
+    list = List.create(
      name: remote_list.name,
      remote_id:  remote_list.id, 
      user_id:  user.id
      )
+    list.save
   end
 
   def set_twitter_client

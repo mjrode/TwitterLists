@@ -1,4 +1,4 @@
-class Lists::AddFriendToRemoteList < Less::Interaction
+class Lists::AddFriendsToRemoteList < Less::Interaction
   expects :list  
   expects :user_id
   
