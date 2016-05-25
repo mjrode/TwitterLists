@@ -17,7 +17,7 @@ before_action :set_list, only: [:view, :show, :destroy, :add_friends, :select_fr
       redirect_to select_friends_list_path(id: @list.id)
     else
       flash[:warning] = "That name has already been taken"
-      redirect_to new_list_path
+      redirect_to edit_list_path(@list)
     end
   end
 
@@ -27,6 +27,7 @@ before_action :set_list, only: [:view, :show, :destroy, :add_friends, :select_fr
 
   def add_friends
     Lists::AddFriendsToLocalList.run(friends_hash: params[:friends], list: @list, user: current_user)
+    Lists::SetCurrentList.run(list: @list, user: current_user)
     Lists::AddFriendsToRemoteList.run(list: @list, user_id: current_user.id)
     flash[:notice] = "Check out your new list here #{@list.name}"
     redirect_to lists_path
@@ -34,6 +35,15 @@ before_action :set_list, only: [:view, :show, :destroy, :add_friends, :select_fr
 
   def show
     @schedules = @list.on_list
+  end
+
+  def edit
+    @list = List.find(params[:id])
+    @friends = current_user.friends
+  end
+
+  def update
+    redirect_to root_path
   end
 
   def destroy
