@@ -55,6 +55,7 @@ before_action :set_list, only: [:view, :show, :destroy, :add_friends, :select_fr
 
   def import
     Lists::ImportLists.run(username: current_user.username)
+    flash[:success] = "Your lists have been updated!"
     redirect_to lists_path
   end
 

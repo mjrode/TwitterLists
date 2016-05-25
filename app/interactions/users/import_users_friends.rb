@@ -62,7 +62,7 @@ class Users::ImportUsersFriends < Less::Interaction
      FriendListSchedule.create(
       friend_id: friend.id, 
       list_id: list.id, 
-      schedule: "Always on List")
+      schedule: 1)
    end
  end
  

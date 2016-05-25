@@ -6,6 +6,6 @@ class Friend < ActiveRecord::Base
   def current_schedule(list)
     self.friend_list_schedules.where(list_id: list.id).first.schedule
   rescue NoMethodError
-    "Never on List"
+    4
   end
 end
