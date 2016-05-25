@@ -1,5 +1,3 @@
-# need to set list api id before I try to save list 
-
 class ListsController < ApplicationController
 before_action :set_list, only: [:view, :show, :destroy, :add_friends, :select_friends]
 
