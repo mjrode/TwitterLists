@@ -43,15 +43,27 @@ class Lists::ImportLists < Less::Interaction
     @client.list_members(username, remote_list.id)    
   end
 
+  def local_list(remote_list)
+    List.find_by_remote_id(remote_list.id)
+  end
+
+  def local_friend(remote_member)
+    Friend.find_by_remote_id(remote_member.id)
+  end
+
+  def reset_schedules(remote_list)
+    list = List.find_by_remote_id(remote_list.id)
+    list.friend_list_schedules.destroy_all
+  end
+  
   def create_schedule(remote_list)
+    reset_schedules(remote_list)
     remote_members(remote_list).each do |remote_member|
-      local_list = List.find_by_remote_id(remote_list.id)
-      friend = Friend.find_by_remote_id(remote_member.id)
-      unless friend.try(:id) == nil
+      unless local_friend(remote_member).try(:id) == nil
         FriendListSchedule.create(
-          list_id: local_list.id, 
-          friend_id: friend.id, 
-          schedule: "Always on List" )
+          list_id: local_list(remote_list).id, 
+          friend_id: local_friend(remote_member).id, 
+          schedule: 1 )
       end
     end
   end
