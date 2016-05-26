@@ -6,7 +6,7 @@ class List < ActiveRecord::Base
   validates :name, uniqueness: true
 
   def on_list
-    self.friend_list_schedules.where("schedule != ?", 4)
+    self.friend_list_schedules.where("schedule != ?", "4")
   end
 
   def new_list?(user)

@@ -42,11 +42,6 @@ before_action :set_list, only: [:view, :show, :destroy, :add_friends, :select_fr
     @friends = current_user.friends
   end
 
-  def update
-    binding.pry
-    redirect_to add_friends
-  end
-
   def destroy
     Lists::DeleteList.run(list: @list, user: current_user)
     @list.destroy
