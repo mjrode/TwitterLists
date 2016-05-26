@@ -6,7 +6,7 @@ class List < ActiveRecord::Base
   validates :name, uniqueness: true
 
   def on_list
-    self.friend_list_schedules.where("schedule != ?", "Never on List")
+    self.friend_list_schedules.where("schedule != ?", 4)
   end
 
   def new_list?(user)
@@ -15,5 +15,23 @@ class List < ActiveRecord::Base
       true
     end
   end
+
+  def always_on_list
+    self.friend_list_schedules.where(schedule: "1")
+  end
+
+  def never_on_list
+    self.friend_list_schedules.where(schedule: "4")
+  end
+
+  def sometimes_on_list
+    self.friend_list_schedules.where(schedule: "3")
+  end
+
+  def frequently_on_list
+    self.friend_list_schedules.where(schedule: "2")
+  end
+
+
 
 end
