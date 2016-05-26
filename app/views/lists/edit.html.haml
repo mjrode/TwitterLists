@@ -4,16 +4,16 @@
     %thead
       %tr
         %th Name
-        %th Bio
         %th.center Rotation Schedule 
+        %th Bio
         %th{:colspan => "3"}
     %tbody
       =form_tag(add_friends_list_path(@list))
       - @friends.each do |friend|
         %tr
           %td= friend.name
-          %td= friend.bio
           %td.center= select_tag "friends[][schedule]", options_for_select(FriendListSchedule.schedules, friend.current_schedule(@list))
+          %td= friend.bio
           =hidden_field_tag "friends[][friend_id]", friend.id
           =hidden_field_tag "list", @list.id 
-=submit_tag "Submit", class: "btn btn-success btn-lg full-width marg-bottom"
+      =submit_tag "Submit", class: "btn btn-success btn-lg full-width marg-bottom"
