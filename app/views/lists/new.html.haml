@@ -2,4 +2,8 @@
 .col-sm-6.col-sm-offset-3.move-down
   =form_for @list do |f|
     =f.text_field :name, placeholder: "Name", class: "full-width form-control"
+    %br/
+    Rotate members every 
+    =f.text_field :days_until_rotation, class: "form-control small-width push-down new-form-text"
+    days
     =f.submit  class: "form-control"
