@@ -1,33 +1,60 @@
+# if no list then no need to check for list memebers
+# need to parse current_list_of_friends to got friends stored in an array
+
 class Lists::AddFriendsToRemoteList < Less::Interaction
   expects :list  
+  expects :randomized_list_of_friends
   expects :user_id
   
   def run
+    set_user
     set_twitter_client
-    add_friends
-    # set_url
+    update_friends
   end
 
   private 
 
-  # def set_url
-  #   @client.list(user_id, @list.remote_id)
-  # end
-
-  def add_friends
-    @client.add_list_members(list.remote_id, list_of_friends)
+  def set_user
+    @user = User.find(user_id)
   end
 
-  def list_of_friends
+  def update_friends
+    remove_members
+    add_members
+  end
+
+  def current_list_of_friends
+    current_list_of_friends = []
+    unless list.new_list?(@user)
+      remote_members = @client.list_members(list.remote_id)
+      remote_members.each do |member| 
+        current_list_of_friends << member.screen_name
+      end 
+    end
+    current_list_of_friends
+  end
+
+  def remove_members
+    
+    friends_to_remove = current_list_of_friends - list_of_randomized_friends
+    binding.pry
+    @client.remove_list_members(@user.remote_id, list.remote_id, friends_to_remove)
+  end
+
+  def add_members
+    friends_to_add = list_of_randomized_friends - current_list_of_friends
+    @client.add_list_members(list.remote_id, friends_to_add)
+  end
+
+  def list_of_randomized_friends
     friends = []
-    list.on_list.each do |schedule|
+    randomized_list_of_friends.each do |schedule|
       friends << schedule.friend.username
     end
     friends
   end
 
   def set_twitter_client
-    @user = User.find(user_id)
     @client = Twitter::REST::Client.new do |config|
       config.consumer_key        = ENV["twitter_consumer_key"]
       config.consumer_secret     = ENV["twitter_secret_key"]
