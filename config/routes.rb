@@ -10,6 +10,12 @@ Rails.application.routes.draw do
       get :import
     end
   end
+
+  resources :friends do 
+    collection do 
+      get :unassigned
+    end
+  end
   # post '/add_friends', to: "lists#add_friends"
 
 
