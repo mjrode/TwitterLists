@@ -1,5 +1,11 @@
 class ListsController < ApplicationController
-before_action :set_list, only: [:view, :show, :destroy, :add_friends, :select_friends]
+  before_action :set_list, only: [
+    :view,
+    :show,
+    :destroy,
+    :add_friends, 
+    :select_friends
+  ]
 
   def  index
     @friends = Friend.all
@@ -10,14 +16,14 @@ before_action :set_list, only: [:view, :show, :destroy, :add_friends, :select_fr
     @list = List.new
   end
 
+# How can I refactor this? 
   def create
-    @list = List.find_or_create_by(name: params[:list][:name], user_id: current_user.id)
-    result = Lists::CreateRemoteList.run(local_list: @list, user: current_user)
+    result = Lists::CreateList.run(user: current_user, name: params[:list][:name])
     if result.success
-      redirect_to select_friends_list_path(id: @list.id)
+      redirect_to select_friends_list_path(id: result.local_list.id)
     else
       flash[:warning] = "That name has already been taken"
-      redirect_to edit_list_path(@list)
+      redirect_to edit_list_path(result.local_list)
     end
   end
 
@@ -26,9 +32,16 @@ before_action :set_list, only: [:view, :show, :destroy, :add_friends, :select_fr
   end
 
   def add_friends
-    Lists::AddFriendsToLocalList.run(friends_hash: params[:friends], list: @list, user: current_user)
-    randomized_list_of_friends = Lists::RandomizeList.run(list: @list)
-    Lists::AddFriendsToRemoteList.run(randomized_list_of_friends: randomized_list_of_friends, list: @list, user_id: current_user.id)
+    Lists::AddFriendsToLocalList.run(
+      friends_hash: params[:friends], 
+      list: @list, 
+      user: current_user
+    )
+    Lists::UpdateRemoteListMembers.run(
+      randomized_list_of_friends: Lists::RandomizeList.run(list: @list), 
+      list: @list, 
+      user_id: current_user.id
+    )
     flash[:notice] = "Check out your new list here #{@list.name}"
     redirect_to lists_path
   end
@@ -47,7 +60,6 @@ before_action :set_list, only: [:view, :show, :destroy, :add_friends, :select_fr
     @list.destroy
     redirect_to lists_path
   end
-
 
   def import
     Lists::ImportLists.run(username: current_user.username)

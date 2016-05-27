@@ -1,10 +1,12 @@
-class Lists::CreateRemoteList < Less::Interaction
-  expects :local_list
+class Lists::CreateList < Less::Interaction
+  expects_any :local_list, :name
   expects :user
   returns :success
   returns :message
 
+  attr_writer :local_list
   def run
+    self.local_list ||= get_local_list_from_name
     set_twitter_client
     if unique
       create_remote_list
@@ -18,6 +20,10 @@ class Lists::CreateRemoteList < Less::Interaction
 
   private
 
+  def get_local_list_from_name
+    List.find_or_create_by(name: name, user_id: user.id)
+  end
+
   def unique
     local_list.new_list?(user)
   end
@@ -29,10 +35,10 @@ class Lists::CreateRemoteList < Less::Interaction
 
   def create_local_copy(remote_list)
     local_list.update_attributes(
-     name: remote_list.name,
-     remote_id:  remote_list.id, 
-     user_id:  user.id
-     )
+      name: remote_list.name,
+      remote_id:  remote_list.id, 
+      user_id:  user.id
+    )
   end
 
   def set_twitter_client
@@ -43,5 +49,4 @@ class Lists::CreateRemoteList < Less::Interaction
       config.access_token_secret = user.secret
     end
   end
-
 end

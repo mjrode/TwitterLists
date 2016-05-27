@@ -1,18 +1,15 @@
-# if no list then no need to check for list memebers
-# need to parse current_list_of_friends to got friends stored in an array
-
-class Lists::AddFriendsToRemoteList < Less::Interaction
-  expects :list  
+class Lists::UpdateRemoteListMembers < Less::Interaction
+  expects :list
   expects :randomized_list_of_friends
   expects :user_id
-  
+
   def run
     set_user
     set_twitter_client
     update_friends
   end
 
-  private 
+  private
 
   def set_user
     @user = User.find(user_id)
@@ -27,15 +24,14 @@ class Lists::AddFriendsToRemoteList < Less::Interaction
     current_list_of_friends = []
     unless list.new_list?(@user)
       remote_members = @client.list_members(list.remote_id)
-      remote_members.each do |member| 
+      remote_members.each do |member|
         current_list_of_friends << member.screen_name
-      end 
+      end
     end
     current_list_of_friends
   end
 
   def remove_members
-
     friends_to_remove = current_list_of_friends - list_of_randomized_friends
     @client.remove_list_members(@user.remote_id, list.remote_id, friends_to_remove)
   end
