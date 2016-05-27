@@ -36,7 +36,7 @@ class Lists::CreateList < Less::Interaction
   def create_local_copy(remote_list)
     local_list.update_attributes(
       name: remote_list.name,
-      remote_id:  remote_list.id, 
+      remote_id:  remote_list.id,
       user_id:  user.id
     )
   end

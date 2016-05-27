@@ -8,4 +8,8 @@ class Friend < ActiveRecord::Base
   rescue NoMethodError
     4
   end
+
+  def bio_extra
+    self.bio ? bio : "This user does not have a bio"
+  end
 end

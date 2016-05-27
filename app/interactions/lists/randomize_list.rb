@@ -1,21 +1,12 @@
+# Takes local copy of updated list and randomly selects members to rotate off/on
 class Lists::RandomizeList < Less::Interaction
   expects :list
 
   def run
-    #fetch_members_user_names
-    generate_new_list 
+    generate_new_list
   end
 
   private
-
-  def fetch_members_user_names
-    list = []
-    friends_hash.each do |hash|
-      schedule = FriendListSchedule.find_by_friend_id(hash["friend_id"])
-      @list << schedule
-    end
-    @list
-  end
 
   def generate_new_list
     @new_list = []
@@ -39,7 +30,7 @@ class Lists::RandomizeList < Less::Interaction
     end
   end
 
-  def add_sometimes_on_list 
+  def add_sometimes_on_list
     list_size = (list.sometimes_on_list.count * 0.25).round
     random_schedules = list.sometimes_on_list.sample(list_size)
     random_schedules.each do |schedule|

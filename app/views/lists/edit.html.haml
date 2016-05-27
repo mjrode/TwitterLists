@@ -1,14 +1,17 @@
-%h1.center= "Edit #{@list.name}"
+%h1.center= "Edit #{@list.name}" 
+%hr/
 .col-sm-8.col-sm-offset-2  
   = form_tag(add_friends_list_path(@list)) do 
     - @friends.each do |friend|
-      .center= friend.name
+      .center.name
+        = friend.name
+        |
+        = select_tag "friends[][schedule]", options_for_select(FriendListSchedule.schedules, friend.current_schedule(@list))
       %br/
-      .center= friend.bio
+      .center.bio= friend.bio_extra
       %br/
-      .center= select_tag "friends[][schedule]", options_for_select(FriendListSchedule.schedules, friend.current_schedule(@list))
       =hidden_field_tag "friends[][friend_id]", friend.id
       =hidden_field_tag "list", @list.id 
       %br/
-      %hr/
-    =submit_tag "Submitttt", class: "btn btn-success btn-lg full-width marg-bottom"
+      %hr
+    =submit_tag "Submit", class: "btn btn-default list-button btn-lg full-width marg-bottom"

@@ -6,7 +6,7 @@ class SessionsController < ApplicationController
     flash[:success] = response.message
     redirect_to pages_home_path
   end
-  
+
   def destroy
     if current_user
       session.delete(:user_id)

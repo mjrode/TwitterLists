@@ -3,10 +3,9 @@ class Lists::DeleteList < Less::Interaction
   expects :user
 
   def run
-  set_twitter_client  
-  destroy_remote_list
+    set_twitter_client
+    destroy_remote_list
   end
-
 
   private
 
@@ -22,7 +21,4 @@ class Lists::DeleteList < Less::Interaction
   def destroy_remote_list
     @client.destroy_list(list.remote_id)
   end
-
-
-
 end

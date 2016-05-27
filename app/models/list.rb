@@ -10,10 +10,8 @@ class List < ActiveRecord::Base
   end
 
   def new_list?(user)
-    list_names = TWITTER_CLIENT.lists(user.remote_id).map{|list| list.name }
-    unless list_names.include?(self.name)
-      true
-    end
+    names_of_lists = TWITTER_CLIENT.lists(user.remote_id).map(&:name)
+    !names_of_lists.include?(self.name)
   end
 
   def always_on_list
@@ -31,7 +29,4 @@ class List < ActiveRecord::Base
   def frequently_on_list
     self.friend_list_schedules.where(schedule: "2")
   end
-
-
-
 end
