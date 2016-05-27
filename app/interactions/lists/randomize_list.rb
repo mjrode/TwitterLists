@@ -31,14 +31,13 @@ class Lists::RandomizeList < Less::Interaction
     end
   end
 
-  def add_frequently_on_list 
+  def add_frequently_on_list
     list_size = (list.frequently_on_list.count * 0.5).round
     random_schedules = list.frequently_on_list.sample(list_size)
     random_schedules.each do |schedule|
       @new_list << schedule
     end
   end
-
 
   def add_sometimes_on_list 
     list_size = (list.sometimes_on_list.count * 0.25).round
@@ -47,5 +46,4 @@ class Lists::RandomizeList < Less::Interaction
       @new_list << schedule
     end
   end
-
 end

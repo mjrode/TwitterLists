@@ -16,7 +16,6 @@ class ListsController < ApplicationController
     @list = List.new
   end
 
-# How can I refactor this? 
   def create
     result = Lists::CreateList.run(user: current_user, name: params[:list][:name])
     if result.success
@@ -33,13 +32,13 @@ class ListsController < ApplicationController
 
   def add_friends
     Lists::AddFriendsToLocalList.run(
-      friends_hash: params[:friends], 
-      list: @list, 
+      friends_hash: params[:friends],
+      list: @list,
       user: current_user
     )
     Lists::UpdateRemoteListMembers.run(
-      randomized_list_of_friends: Lists::RandomizeList.run(list: @list), 
-      list: @list, 
+      randomized_list_of_friends: Lists::RandomizeList.run(list: @list),
+      list: @list,
       user_id: current_user.id
     )
     flash[:notice] = "Check out your new list here #{@list.name}"

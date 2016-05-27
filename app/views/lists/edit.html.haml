@@ -1,19 +1,14 @@
 %h1.center= "Edit #{@list.name}"
-.col-sm-8.col-sm-offset-2
-  %table.table
-    %thead
-      %tr
-        %th Name
-        %th.center Rotation Schedule 
-        %th Bio
-        %th{:colspan => "3"}
-    %tbody
-      =form_tag(add_friends_list_path(@list))
-      - @friends.each do |friend|
-        %tr
-          %td= friend.name
-          %td.center= select_tag "friends[][schedule]", options_for_select(FriendListSchedule.schedules, friend.current_schedule(@list))
-          %td= friend.bio
-          =hidden_field_tag "friends[][friend_id]", friend.id
-          =hidden_field_tag "list", @list.id 
-      =submit_tag "Submit", class: "btn btn-success btn-lg full-width marg-bottom"
+.col-sm-8.col-sm-offset-2  
+  = form_tag(add_friends_list_path(@list)) do 
+    - @friends.each do |friend|
+      .center= friend.name
+      %br/
+      .center= friend.bio
+      %br/
+      .center= select_tag "friends[][schedule]", options_for_select(FriendListSchedule.schedules, friend.current_schedule(@list))
+      =hidden_field_tag "friends[][friend_id]", friend.id
+      =hidden_field_tag "list", @list.id 
+      %br/
+      %hr/
+    =submit_tag "Submitttt", class: "btn btn-success btn-lg full-width marg-bottom"

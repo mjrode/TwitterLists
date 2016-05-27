@@ -16,8 +16,6 @@ Rails.application.routes.draw do
       get :unassigned
     end
   end
-  # post '/add_friends', to: "lists#add_friends"
-
 
   get  'pages/home'
   root 'pages#home'
