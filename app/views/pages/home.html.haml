@@ -8,5 +8,10 @@
 
 
 -else
-  %h1.center.play Please Log In
-  = link_to (image_tag "twitter-pen-lg.png", class: "middle move-down"), "/auth/twitter/"
+  .col-sm-6.col-sm-offset-3.col-xs-12
+    %h1.center.push-down Twitter Lists
+    .hovereffect
+      %img.img-responsive= image_tag "twitter_bird.png", class: "middle full-width"
+      .overlay
+        %h2 Welcome
+        %a.info{:href => "/auth/twitter/"} log in

@@ -15,7 +15,7 @@ class Lists::AddFriendsToLocalList < Less::Interaction
   private
 
   def create_or_update_schedules
-    if list.friends.count > 0 
+    if list.friends.count > 0
       update_schedules
     else
       create_schedules
@@ -25,18 +25,17 @@ class Lists::AddFriendsToLocalList < Less::Interaction
   def update_schedules
     friends_hash.each do |friend_hash|
       schedule = list.friend_list_schedules.find_or_create_by(friend_id: friend_hash[:friend_id])
-      schedule.update_attributes( schedule: friend_hash[:schedule])
+      schedule.update_attributes(schedule: friend_hash[:schedule])
     end
   end
 
   def create_schedules
     friends_hash.each do |friend_hash|
       FriendListSchedule.create(
-        list_id: list.id, 
+        list_id: list.id,
         friend_id: friend_hash[:friend_id],
         schedule: friend_hash[:schedule]
       )
     end
   end
-
 end

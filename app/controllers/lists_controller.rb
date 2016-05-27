@@ -1,13 +1,7 @@
 class ListsController < ApplicationController
-  before_action :set_list, only: [
-    :view,
-    :show,
-    :destroy,
-    :add_friends, 
-    :select_friends
-  ]
+  before_action :set_list, only: [:view, :show, :destroy, :add_friends, :select_friends]
 
-  def  index
+  def index
     @friends = Friend.all
     @lists = current_user.lists.all
   end
