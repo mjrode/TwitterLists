@@ -10,8 +10,8 @@ class Users::UserAuthenticationFromOauthTest < ActiveSupport::TestCase
 
   test 'user does not get created twice' do
     Users::UserAuthenticationFromOauth.run(auth_hash: omniauth_hash)
-    assert_no_difference 'User.count' do 
-      Users::UserAuthenticationFromOauth.run(auth_hash: omniauth_hash)  
+    assert_no_difference 'User.count' do
+      Users::UserAuthenticationFromOauth.run(auth_hash: omniauth_hash)
     end
   end
 
@@ -27,17 +27,17 @@ class Users::UserAuthenticationFromOauthTest < ActiveSupport::TestCase
     OmniAuth::AuthHash.new(
       "provider" => "twitter",
       "uid" => "711995065347006465",
-      "info" => 
-      {"nickname" => "mjr_tts",
+      "info" =>
+    {  "nickname" => "mjr_tts",
        "name" => "test less",
        "email" => nil,
        "location" => "",
        "image" => "http://abs.twimg.com/sticky/default_profile_images/default_profile_3_normal.png",
        "description" => "",
-       "urls" => { "Website" => nil, "Twitter" => "https://twitter.com/mjr_tts" }},
+       "urls" => { "Website" => nil, "Twitter" => "https://twitter.com/mjr_tts" } },
       "credentials" =>
-      {"token" => "711995065347006465-JLJWrBLyfySojWUz1C7mwaqx37Qv7vQ",
-       "secret" => "Efmd45AlTJml6nIcsaBVjLuyZwPpx9Bn9ktICwiPxNIRF" }
+    { "token" => "711995065347006465-JLJWrBLyfySojWUz1C7mwaqx37Qv7vQ",
+      "secret" => "Efmd45AlTJml6nIcsaBVjLuyZwPpx9Bn9ktICwiPxNIRF" }
     )
   end
 end
