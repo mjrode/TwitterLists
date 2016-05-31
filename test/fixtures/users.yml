@@ -1,0 +1,18 @@
+
+one:
+  username: MyString
+
+
+
+two:
+  username: MyString
+ 
+mike: 
+  username: mjrode
+  name: michael
+  location: ""
+  url: nil
+  image_url: http://abs.twimg.com/sticky/default_profile_images/default_profile_3_normal.png
+  token: 711995065347006465-pBgN1wqq2ajxkAswHIrBmFqO5VoqX0O
+  secret: 4769zrsDSVjnBqCR7VlcECtGHWL1rH2KKE6Y04tnpnhUJ
+  remote_id: 711995065347006464
