@@ -1,10 +1,11 @@
-# Creates local copies of remote lists when user signs in
-class Lists::ImportLists < Less::Interaction
+# Updates local lists to reflect changes made on Twitter.com
+class Lists::UpdateLocalLists < Less::Interaction
   expects :username
 
   def run
     set_twitter_client
     fetch_remote_lists
+    remove_deleted_lists
   end
 
   private
@@ -23,10 +24,18 @@ class Lists::ImportLists < Less::Interaction
     @client.lists(username)
   end
 
+  def remove_deleted_lists
+    List.all.each do |list|
+      list.destroy unless @remote_list_names.include?(list.name)
+    end
+  end
+
   def fetch_remote_lists
+    @remote_list_names = []
     remote_lists.each do |remote_list|
       save_local_list(remote_list)
       create_friend_list_schedule(remote_list)
+      @remote_list_names << remote_list.name
     end
   end
 
@@ -53,6 +62,7 @@ class Lists::ImportLists < Less::Interaction
 
   def create_friend_list_schedule(remote_list)
     remote_members(remote_list).each do |remote_member|
+      binding.pry
       FriendListSchedule.create(
         list_id: local_list(remote_list).id,
         friend_id: local_friend(remote_member.id).id,
