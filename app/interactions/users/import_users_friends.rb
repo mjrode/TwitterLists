@@ -1,12 +1,12 @@
 # Import users Twitter Friends and save them locally
-# Sets FriendListSchedule for friends imported from current lists 
+# Sets FriendListSchedule for friends imported from current lists
 class Users::ImportUsersFriends < Less::Interaction
   expects :user
 
   def run
     set_twitter_client
     delay.fetch_all_friends
-    delay.fetch_all_list_members
+    fetch_all_list_members
     self
   end
 
