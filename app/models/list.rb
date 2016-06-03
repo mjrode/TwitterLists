@@ -19,6 +19,8 @@ class List < ActiveRecord::Base
   validates :name, presence: true
   validates :name, uniqueness: true
 
+  scope :needs_rotation, -> { where("(updated_at + (days_until_rotation || ' DAY')::INTERVAL) <= CURRENT_TIMESTAMP") }
+
   def on_list
     self.friend_list_schedules.where("schedule != ?", "4")
   end
@@ -42,5 +44,13 @@ class List < ActiveRecord::Base
 
   def frequently_on_list
     self.friend_list_schedules.where(schedule: "2")
+  end
+
+  def next_rotation
+    updated_at + days_until_rotation.days
+  end
+
+  def needs_rotation?
+    next_rotation <= Time.now
   end
 end
