@@ -25,16 +25,7 @@ class ListsController < ApplicationController
   end
 
   def add_friends
-    Lists::AddFriendsToLocalList.run(
-      friends_hash: params[:friends],
-      list: @list,
-      user: current_user
-    )
-    Lists::UpdateRemoteListMembers.run(
-      randomized_list_of_friends: Lists::RandomizeList.run(list: @list),
-      list: @list,
-      user_id: current_user.id
-    )
+    Lists::AddFriends.run(friends_hash: params[:friends], list: @list, user: current_user)
     flash[:notice] = "Check out your new list here #{@list.name}"
     redirect_to lists_path
   end
