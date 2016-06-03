@@ -1,3 +1,15 @@
+# == Schema Information
+#
+# Table name: friend_list_schedules
+#
+#  id         :integer          not null, primary key
+#  list_id    :integer
+#  friend_id  :integer
+#  schedule   :string
+#  created_at :datetime         not null
+#  updated_at :datetime         not null
+#
+
 class FriendListSchedule < ActiveRecord::Base
   belongs_to :list
   belongs_to :friend

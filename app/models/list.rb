@@ -1,3 +1,17 @@
+# == Schema Information
+#
+# Table name: lists
+#
+#  id                  :integer          not null, primary key
+#  name                :string
+#  user_id             :integer
+#  created_at          :datetime         not null
+#  updated_at          :datetime         not null
+#  remote_id           :integer
+#  url                 :string
+#  days_until_rotation :integer
+#
+
 class List < ActiveRecord::Base
   has_many :friend_list_schedules, dependent: :destroy
   has_many :friends, through: :friend_list_schedules
