@@ -1,3 +1,17 @@
+# == Schema Information
+#
+# Table name: friends
+#
+#  id         :integer          not null, primary key
+#  username   :string
+#  user_id    :integer
+#  created_at :datetime         not null
+#  updated_at :datetime         not null
+#  name       :string
+#  bio        :string
+#  remote_id  :integer
+#
+
 class Friend < ActiveRecord::Base
   validates :username, uniqueness: true
   has_many :friend_list_schedules, dependent: :destroy

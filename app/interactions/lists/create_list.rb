@@ -1,13 +1,25 @@
 class Lists::CreateList < Less::Interaction
   expects_any :local_list, :name
   expects :user
+  expects :days_until_rotation
   returns :success
   returns :message
 
   attr_writer :local_list
   def run
-    self.local_list ||= get_local_list_from_name
+    get_local_list_from_name
     set_twitter_client
+    attempt_to_create_list
+    self
+  end
+
+  private
+
+  def get_local_list_from_name
+    self.local_list ||= List.find_or_create_by(name: name, user_id: user.id)
+  end
+
+  def attempt_to_create_list
     if unique
       create_remote_list
       self.success = true
@@ -15,13 +27,6 @@ class Lists::CreateList < Less::Interaction
       self.message = "This name list name has already been taken"
       self.success = false
     end
-    self
-  end
-
-  private
-
-  def get_local_list_from_name
-    List.find_or_create_by(name: name, user_id: user.id)
   end
 
   def unique
@@ -37,7 +42,8 @@ class Lists::CreateList < Less::Interaction
     local_list.update_attributes(
       name: remote_list.name,
       remote_id:  remote_list.id,
-      user_id:  user.id
+      user_id:  user.id,
+      days_until_rotation: days_until_rotation
     )
   end
 

@@ -11,7 +11,7 @@ class ListsController < ApplicationController
   end
 
   def create
-    result = Lists::CreateList.run(user: current_user, name: params[:list][:name])
+    result = Lists::CreateList.run(create_list_params)
     if result.success
       redirect_to select_friends_list_path(id: result.local_list.id)
     else
@@ -25,16 +25,7 @@ class ListsController < ApplicationController
   end
 
   def add_friends
-    Lists::AddFriendsToLocalList.run(
-      friends_hash: params[:friends],
-      list: @list,
-      user: current_user
-    )
-    Lists::UpdateRemoteListMembers.run(
-      randomized_list_of_friends: Lists::RandomizeList.run(list: @list),
-      list: @list,
-      user_id: current_user.id
-    )
+    Lists::AddFriends.run(add_friends_params)
     flash[:notice] = "Check out your new list here #{@list.name}"
     redirect_to lists_path
   end
@@ -65,5 +56,21 @@ class ListsController < ApplicationController
 
   def set_list
     @list = List.find(params[:id])
+  end
+
+  def create_list_params
+    {
+      name: params[:list][:name],
+      days_until_rotation: params[:list][:days_until_rotation],
+      user: current_user
+    }
+  end
+
+  def add_friends_params
+    {
+      friends_hash: params[:friends],
+      list: @list,
+      user: current_user
+    }
   end
 end
