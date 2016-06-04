@@ -4,19 +4,25 @@ require 'test_helper'
 class Users::UserAuthenticationFromOauthTest < ActiveSupport::TestCase
   test 'user gets created' do
     assert_difference 'User.count' do
-      Users::UserAuthenticationFromOauth.run(auth_hash: omniauth_hash)
+      use_cassette ("oauth_login") do 
+        Users::UserAuthenticationFromOauth.run(auth_hash: omniauth_hash)
+      end
     end
   end
 
   test 'user does not get created twice' do
-    Users::UserAuthenticationFromOauth.run(auth_hash: omniauth_hash)
-    assert_no_difference 'User.count' do
+    use_cassette ("oauth_login") do 
       Users::UserAuthenticationFromOauth.run(auth_hash: omniauth_hash)
+      assert_no_difference 'User.count' do
+        Users::UserAuthenticationFromOauth.run(auth_hash: omniauth_hash)
+      end
     end
   end
 
   test "User attributes get set" do
-    Users::UserAuthenticationFromOauth.run(auth_hash: omniauth_hash)
+    use_cassette ("oauth_login") do 
+      Users::UserAuthenticationFromOauth.run(auth_hash: omniauth_hash)
+    end
     assert User.last.username = "mjr_tts"
     assert User.last.name = "test less"
   end
