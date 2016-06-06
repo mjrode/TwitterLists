@@ -1,5 +1,5 @@
 require 'test_helper'
-class CreateListTest < ActiveSupport::TestCase
+class Lists::CreateListTest < ActiveSupport::TestCase
   def setup
     @user = User.create(
       username: "mjr_tts",

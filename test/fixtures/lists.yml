@@ -1,0 +1,10 @@
+first_list: 
+  id: 1234
+  name: "Jake"
+  user_id: 25
+  remote_id: 739942637654921216
+  days_until_rotation: 3
+
+second_list: 
+  name: "random"
+  user_id: 25

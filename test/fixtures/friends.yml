@@ -1,0 +1,15 @@
+kendrick:
+  id: 1619,
+  username: "kendricklamar"
+  user_id: 26
+  name: "Kendrick Lamar"
+  bio: "untitled unmastered. https://t.co/CQTjn8lblS"
+  remote_id: 23561980
+
+sports: 
+  id: 1331
+  username: "SkySportsFL"
+  user_id: 25
+  name: "Football League"
+  bio: "The official site of Sky Sports Football League coverage"
+  remote_id: 443668407

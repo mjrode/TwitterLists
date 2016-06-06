@@ -62,7 +62,6 @@ class Lists::UpdateLocalLists < Less::Interaction
 
   def create_friend_list_schedule(remote_list)
     remote_members(remote_list).each do |remote_member|
-      binding.pry
       FriendListSchedule.create(
         list_id: local_list(remote_list).id,
         friend_id: local_friend(remote_member.id).id,

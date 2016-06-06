@@ -22,20 +22,21 @@ class Lists::AddFriendsToLocalList < Less::Interaction
     end
   end
 
-  def update_schedules
-    friends_hash.each do |friend_hash|
-      schedule = list.friend_list_schedules.find_or_create_by(friend_id: friend_hash[:friend_id])
-      schedule.update_attributes(schedule: friend_hash[:schedule])
-    end
-  end
-
   def create_schedules
     friends_hash.each do |friend_hash|
       FriendListSchedule.create(
         list_id: list.id,
         friend_id: friend_hash[:friend_id],
-        schedule: friend_hash[:schedule]
+        schedule: friend_hash["schedule"]
       )
     end
   end
+
+  def update_schedules
+    friends_hash.each do |friend_hash|
+      schedule = list.friend_list_schedules.find_or_create_by(friend_id: friend_hash[:friend_id])
+      schedule.update_attributes(schedule: friend_hash["schedule"])
+    end
+  end
+
 end
