@@ -1,4 +1,40 @@
+# never on list
 one:
   list_id: 1234
   friend_id: 1619
   schedule: "4"
+# always on list 
+two:
+  list_id: 1234
+  friend_id: 1331
+  schedule: "1"
+# sometimes on list
+three:
+  list_id: 1234
+  friend_id: 1619
+  schedule: "3"
+
+four:
+  list_id: 1234
+  friend_id: 1331
+  schedule: "3"
+
+five:
+  list_id: 1234
+  friend_id: 1619
+  schedule: "3"
+
+six:
+  list_id: 1234
+  friend_id: 1331
+  schedule: "3"
+# frequently on list
+six:
+  list_id: 1234
+  friend_id: 1331
+  schedule: "2"
+
+six:
+  list_id: 1234
+  friend_id: 1331
+  schedule: "2"
