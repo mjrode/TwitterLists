@@ -12,7 +12,7 @@ class Lists::CreateList < Less::Interaction
     attempt_to_create_list
     self
   end
-
+  
   private
 
   def get_local_list_from_name

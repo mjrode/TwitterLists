@@ -17,15 +17,15 @@ class Users::ImportUsersFriendsTest < ActiveSupport::TestCase
     end
   end
 
-  test "adds friends that are only on a list to database" do 
-    use_cassette("import_friends") do 
+  test "adds friends that are only on a list to database" do
+    use_cassette("import_friends") do
       Users::ImportUsersFriends.run(user: @user)
     end
     assert Friend.find_by_username("Coalboat").present?
   end
 
-  test "followers that are not your friends do not get added" do 
-    use_cassette("import_friends") do 
+  test "followers that are not your friends do not get added" do
+    use_cassette("import_friends") do
       Users::ImportUsersFriends.run(user: @user)
     end
     assert Friend.find_by_username("mjrode").blank?
