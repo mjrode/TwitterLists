@@ -23,7 +23,7 @@ class Lists::UpdateLocalListsTest < ActiveSupport::TestCase
     use_cassette("update local lists") do
       Users::ImportUsersFriends.run(user: @user)
       Lists::UpdateLocalLists.run(username: @user.username)
-      assert List.find_by_name("random") == nil
+      assert List.find_by_name("random").nil?
     end
   end
 end
