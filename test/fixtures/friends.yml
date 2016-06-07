@@ -13,3 +13,11 @@ sports:
   name: "Football League"
   bio: "The official site of Sky Sports Football League coverage"
   remote_id: 443668407
+
+jasoncummings86: 
+  id: 1334
+  username: "jasoncummings86"
+  user_id: 25
+  name: "Jason Cummings"
+  bio: "Software Developer @ Hashrocket."
+  remote_id: 2806203971

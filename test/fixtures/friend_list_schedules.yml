@@ -1,17 +1,20 @@
 # never on list
+# kendrick
 one:
   list_id: 1234
   friend_id: 1619
   schedule: "4"
 # always on list 
+# sports
 two:
   list_id: 1234
   friend_id: 1331
   schedule: "1"
 # sometimes on list
+# jason
 three:
   list_id: 1234
-  friend_id: 1619
+  friend_id: 1334
   schedule: "3"
 
 four:
