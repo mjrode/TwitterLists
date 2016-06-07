@@ -33,6 +33,7 @@ class Lists::UpdateRemoteListMembers < Less::Interaction
 
   def remove_members
     friends_to_remove = current_list_of_friends - list_of_randomized_friends
+    binding.pry
     @client.remove_list_members(@user.remote_id, list.remote_id, friends_to_remove)
   end
 
