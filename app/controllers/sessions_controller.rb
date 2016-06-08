@@ -7,6 +7,16 @@ class SessionsController < ApplicationController
     redirect_to pages_home_path
   end
 
+  def set_email
+    @user = current_user
+  end
+
+  def update_email
+    current_user.email = params[:email]
+    current_user.save
+    redirect_to root_path
+  end
+
   def destroy
     if current_user
       session.delete(:user_id)

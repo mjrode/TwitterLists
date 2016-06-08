@@ -26,6 +26,8 @@
                   Account
                   %span.caret
                 %ul.dropdown-menu
+                  -unless current_user.email.present?
+                    %li= link_to "Add Email for notifications!", '/sessions/set_email'
                   %li= link_to "Refresh Friend List", "/auth/twitter"
                   %li.divider{:role => "separator"}
                   %li= link_to "Log Out", logout_path, method: :delete

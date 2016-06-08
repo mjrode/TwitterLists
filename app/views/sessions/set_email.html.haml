@@ -1,0 +1,6 @@
+%h1.play.center Enter Your E-mail:
+.col-sm-6.col-sm-offset-3.move-down
+  =form_tag('/update_email') do
+    =text_field_tag :email,"", class: "full-width form-control em3"
+    %br/
+    =submit_tag "Submit", class: "form-control list-button"

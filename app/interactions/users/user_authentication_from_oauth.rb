@@ -5,7 +5,7 @@ class Users::UserAuthenticationFromOauth < Less::Interaction
 
   def run
     initialize_user
-    self.message = "Welcome, #{user.name}!"
+    self.message = set_message
     self.user = user
     Users::ImportUsersFriends.run(user: self.user)
     Lists::ImportLists.run(username: self.user.username)
@@ -17,6 +17,14 @@ class Users::UserAuthenticationFromOauth < Less::Interaction
   def initialize_user
     self.user = User.find_or_create_by(remote_id: auth_hash.uid)
     set_attributes
+  end
+
+  def set_message
+    if user.email.present? 
+      "Welcome, #{user.name}"  
+    else
+      "Click on the account dropdown to add your email address and get notified when your lists update."
+    end
   end
 
   def set_attributes
