@@ -1,0 +1,11 @@
+%h1.center= "Hello #{@user.username.capitalize}!"
+%p= "Your list, #{@list.name}, has been updated. Here is the updated version: "
+
+%h1 Current Members
+-@new_list.each do |schedule|
+  %ul
+    %li= schedule.friend.name
+
+
+=link_to "View your list here", root_url
+

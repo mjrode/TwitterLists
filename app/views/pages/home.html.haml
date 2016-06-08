@@ -5,6 +5,7 @@
     = link_to "Make a New List", new_list_path, class: "button btn btn-default list-button play"
     = link_to "Edit Current List", lists_path, class: "button btn btn-default list-button play"
     = link_to "View Unassigned Friends", unassigned_friends_path, class: "button btn btn-default list-button play"
+    = link_to "Add Email for Notifications", '/sessions/set_email', class: "button btn btn-default list-button play" if current_user.email.nil?
 
 
 -else

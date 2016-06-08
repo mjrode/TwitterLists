@@ -3,7 +3,7 @@ class Lists::RandomizeList < Less::Interaction
   expects :list
 
   def run
-    generate_new_list
+    generate_new_list 
   end
 
   private
@@ -13,6 +13,7 @@ class Lists::RandomizeList < Less::Interaction
     add_always_on_list
     add_frequently_on_list
     add_sometimes_on_list
+    Listmailer.list_updated_email(@new_list, list).deliver_later if list.user.email.present?
     @new_list
   end
 
