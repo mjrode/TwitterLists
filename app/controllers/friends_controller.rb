@@ -4,6 +4,7 @@ class FriendsController < ApplicationController
   end
 
   def unassigned
-    @friends = current_user.unassigned_friends
+    #@friends = current_user.unassigned_friends
+    @friends = Friend.all
   end
 end

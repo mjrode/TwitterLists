@@ -1,3 +1,24 @@
--@friends.each do |friend|
-  %h3.center=friend.name
-  %br/
+.col-sm-12
+  %h1.center Unassigned Friends
+  =form_tag add_unassigned_friends_lists_path, method: :post, class: 'form-group' do 
+    .col-sm-4
+      %h2.center Friend
+    .col-sm-4
+      %h2.center List
+    .col-sm-4.push-down
+      %h2.center Schedule
+    %hr/
+    -@friends.each do |friend|
+      .row
+        .col-sm-4
+          %p.center.name=friend.name
+          =hidden_field_tag "friends[][friend_id]", friend.id
+        .col-sm-4
+          =select_tag "friends[][list_name]", content_tag(:option,'select one...',:value=>"")+options_from_collection_for_select(List.all, 'id', 'name'), class: "center middle" 
+        .col-sm-4
+          =select_tag "friends[][schedule]", options_for_select(FriendListSchedule.schedules, friend.current_schedule(@list)), class: "center middle"
+      %hr/
+    =submit_tag "Submit", class: "btn btn-default list-button btn-lg full-width marg-bottom"
+
+
+

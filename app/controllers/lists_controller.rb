@@ -34,6 +34,12 @@ class ListsController < ApplicationController
     @schedules = @list.on_list
   end
 
+  def add_unassigned_friends
+    binding.pry
+    Lists::AddFriendsToDifferentLists.run(friends_hash: params["friends"], user: current_user)
+    redirect_to lists_path
+  end
+
   def edit
     @list = List.find(params[:id])
     @friends = current_user.friends

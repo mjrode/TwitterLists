@@ -6,8 +6,8 @@ class ListmailerTest < ActionMailer::TestCase
     @email = "michaelrode44@gmail.com"
   end
 
-  test 'email gets sent successfully' do 
-    assert_changed -> { ActionMailer::Base.deliveries.size } do 
+  test 'email gets sent successfully' do
+    assert_changed -> { ActionMailer::Base.deliveries.size } do
       Lists::RandomizeList.run(list: @list)
     end
     last_email = ActionMailer::Base.deliveries.last
