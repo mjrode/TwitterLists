@@ -13,7 +13,7 @@
 class FriendListSchedule < ActiveRecord::Base
   belongs_to :list
   belongs_to :friend
-  validates_uniqueness_of :id, scope: [:friend_id, :list_id]
+  validates :friend_id, uniqueness: { scope: :list_id, message: "This Friend is already on this list!" }
 
   def self.schedules
     [["Never on List", 4], ["Sometimes on list", 3], ["Frequently on List", 2], ["Always on List", 1]]
