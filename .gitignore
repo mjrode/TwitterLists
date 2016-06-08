@@ -22,3 +22,6 @@
 # Ignore rvm files
 /.ruby-gemset
 /.ruby-version
+
+# Ignore Passwords
+/config/initializers/app_env_vars.rb
