@@ -3,7 +3,7 @@ class Lists::RandomizeList < Less::Interaction
   expects :list
 
   def run
-    generate_new_list 
+    generate_new_list
   end
 
   private

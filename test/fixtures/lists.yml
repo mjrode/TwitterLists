@@ -7,5 +7,7 @@ first_list:
   user: mike
 
 second_list: 
+  id: 123
   name: "random"
   user_id: 25
+  user: mike

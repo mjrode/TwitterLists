@@ -1,4 +1,4 @@
-class Lists::AddFriendsToDifferentLists < Less::Interaction
+class Lists::AddFriendsToMultipleLists < Less::Interaction
   expects :friends_hash
   expects :user
   def run
