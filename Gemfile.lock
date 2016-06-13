@@ -37,6 +37,8 @@ GEM
       thread_safe (~> 0.3, >= 0.3.4)
       tzinfo (~> 1.1)
     addressable (2.4.0)
+    animate-rails (1.0.10)
+      rails
     annotate (2.7.1)
       activerecord (>= 3.2, < 6.0)
       rake (>= 10.4, < 12.0)
@@ -271,6 +273,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  animate-rails
   annotate
   bootstrap-sass
   byebug

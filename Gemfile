@@ -18,6 +18,7 @@ gem 'draper'
 gem 'twitter'
 gem 'omniauth-twitter'
 gem 'figaro'
+gem 'animate-rails'
 
 group :development, :test do
   gem 'byebug'
