@@ -38,5 +38,4 @@ class Lists::AddFriendsToLocalList < Less::Interaction
       schedule.update_attributes(schedule: friend_hash["schedule"])
     end
   end
-
 end

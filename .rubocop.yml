@@ -3,10 +3,12 @@ AllCops:
     - Rakefile
     - config.ru
   Exclude:
-    - db/**
-    - config/**
-    - script/**
-    - log/**
+    - bin/*
+    - db/**/*
+    - config/**/*
+    - script/**/*
+    - log/**/*
+    - test/**/*
     - app/validators/**
 Documentation:
   Enabled: false
@@ -33,10 +35,8 @@ Style/ClassAndModuleChildren:
     - compact
 Style/FileName:
   Enabled: false
-
 Style/AccessorMethodName:
   Description: Check the naming of accessor methods for get_/set_.
   Enabled: false
-
 Metrics/MethodLength:
   Max: 25

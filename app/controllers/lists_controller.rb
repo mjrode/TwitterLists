@@ -35,7 +35,6 @@ class ListsController < ApplicationController
   end
 
   def add_unassigned_friends
-    binding.pry
     Lists::AddFriendsToMultipleLists.run(friends_hash: params["friends"], user: current_user)
     redirect_to lists_path
   end

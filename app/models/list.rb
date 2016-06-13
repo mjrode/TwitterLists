@@ -18,9 +18,9 @@ class List < ActiveRecord::Base
   belongs_to :user
   validates :name, presence: true
   validates :name, uniqueness: true
-
+  # rubocop:disable all
   scope :needs_rotation, -> { where("(updated_at + (days_until_rotation || ' DAY')::INTERVAL) <= CURRENT_TIMESTAMP") }
-
+  # rubocop:enable all
   def on_list
     self.friend_list_schedules.where("schedule != ?", "4")
   end
@@ -51,6 +51,6 @@ class List < ActiveRecord::Base
   end
 
   def needs_rotation?
-    next_rotation <= Time.now
+    next_rotation <= Time.zone.now
   end
 end

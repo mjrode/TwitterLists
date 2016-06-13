@@ -20,8 +20,8 @@ class Users::UserAuthenticationFromOauth < Less::Interaction
   end
 
   def set_message
-    if user.email.present? 
-      "Welcome, #{user.name}"  
+    if user.email.present?
+      "Welcome, #{user.name}"
     else
       "Click on the account dropdown to add your email address and get notified when your lists update."
     end
