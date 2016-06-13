@@ -26,16 +26,16 @@ class Lists::UpdateLocalLists < Less::Interaction
 
   def remove_deleted_lists
     List.all.each do |list|
-      list.destroy unless @remote_list_names.include?(list.name)
+      list.destroy unless fetch_remote_lists.include?(list.name)
     end
   end
 
+  # TODO: How can I write this without each. Is it possible to use Map here. 
   def fetch_remote_lists
-    @remote_list_names = []
-    remote_lists.each do |remote_list|
+    remote_lists.map do |remote_list|
       save_local_list(remote_list)
       create_friend_list_schedule(remote_list)
-      @remote_list_names << remote_list.name
+      # remote_list.name
     end
   end
 
