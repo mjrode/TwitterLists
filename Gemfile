@@ -21,7 +21,6 @@ gem 'figaro'
 gem 'animate-rails'
 gem 'foundation-rails'
 
-
 group :development, :test do
   gem 'byebug'
   gem 'pry-rails'

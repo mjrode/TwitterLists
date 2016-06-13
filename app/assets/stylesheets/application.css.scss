@@ -11,13 +11,18 @@
  * file per style scope.
  *
   *= require_self
+ //= require foundation_and_overrides
+
   *= require animate
  */
-  @import "bootstrap-sprockets";
-  @import "bootstrap";
+ /* @import "bootstrap-sprockets";
+  @import "bootstrap";*/
   @import url(https://fonts.googleapis.com/css?family=Patrick+Hand+SC);
 
-
+.logo{
+  color: white;
+  font-size: 4em;
+}
 .center{
   text-align: center;
 }
@@ -31,9 +36,7 @@ select{
 hr{
   border-top: 1px solid black;
 }
-.testing{
-  font-size: 10em;
-}
+
 .alert{
   font-size: 1.5em;
   text-align: center;

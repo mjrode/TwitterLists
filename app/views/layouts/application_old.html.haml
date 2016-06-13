@@ -1,0 +1,45 @@
+!!!
+%html
+  %head
+    %meta{:content => "text/html; charset=UTF-8", "http-equiv" => "Content-Type"}/
+    %title Twitterlists
+    = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true
+    = javascript_include_tag 'application', 'data-turbolinks-track' => true
+    %link{:href => "https://fonts.googleapis.com/css?family=Play", :rel => "stylesheet", :type => "text/css"}/
+    %script{:src => "https://use.fontawesome.com/7873634036.js"}
+    = csrf_meta_tags
+  %body
+    %nav.navbar.navbar-default{:role => "navigation"}
+      .container-fluid
+        .navbar-header
+          %button.navbar-toggle{"data-target" => ".navbar-ex1-collapse", "data-toggle" => "collapse", :type => "button"}
+            %span.sr-only Toggle navigation
+            %span.icon-bar
+            %span.icon-bar
+            %span.icon-bar
+          = link_to "Home", root_path, class: "navbar-brand"
+        .collapse.navbar-collapse.navbar-ex1-collapse
+          %ul.nav.navbar-nav.navbar-right
+            -if current_user
+              %li.dropdown
+                %a.dropdown-toggle{"aria-expanded" => "false", "aria-haspopup" => "true", "data-toggle" => "dropdown", :href => "#", :role => "button"}
+                  Account
+                  %span.caret
+                %ul.dropdown-menu
+                  -unless current_user.email.present?
+                    %li= link_to "Add Email for notifications!", '/sessions/set_email'
+                  %li= link_to "Refresh Friend List", "/auth/twitter"
+                  %li.divider{:role => "separator"}
+                  %li= link_to "Log Out", logout_path, method: :delete
+             
+            -else
+              %li= link_to "Log In", '/auth/twitter'
+
+  - flash.each do |key, value|
+    .alert{ :class => "alert-#{key}" }
+      %button.close{ :data => { :dismiss => "alert" } } x
+      %strong
+        = value
+  .container
+    = yield
+    
