@@ -49,6 +49,6 @@ class Lists::UpdateRemoteListMembers < Less::Interaction
   end
 
   def list_of_randomized_friends
-    randomized_list_of_friends.inject([]) { |array, schedule| array << schedule.friend.username }
+    randomized_list_of_friends.inject([]) { |a, e| a << e.friend.username }
   end
 end
