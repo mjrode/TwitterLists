@@ -8,14 +8,14 @@ Rails.application.routes.draw do
       post :add_friends
     end
     collection do 
-      post :add_unassigned_friends
+      post :add_multiple_friends
       get :import
     end
   end
 
   resources :friends do 
     collection do 
-      get :unassigned
+      get :all
     end
   end
 

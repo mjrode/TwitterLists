@@ -19,6 +19,8 @@ gem 'twitter'
 gem 'omniauth-twitter'
 gem 'figaro'
 gem 'animate-rails'
+gem 'foundation-rails'
+
 
 group :development, :test do
   gem 'byebug'
@@ -41,4 +43,4 @@ group :development do
   gem 'spring'
 end
 
-gem 'bootstrap-sass'
+# gem 'bootstrap-sass'

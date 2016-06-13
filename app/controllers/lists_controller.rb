@@ -34,7 +34,7 @@ class ListsController < ApplicationController
     @schedules = @list.on_list
   end
 
-  def add_unassigned_friends
+  def add_multiple_friends
     Lists::AddFriendsToMultipleLists.run(friends_hash: params["friends"], user: current_user)
     redirect_to lists_path
   end
