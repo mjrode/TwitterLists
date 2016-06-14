@@ -1,11 +1,7 @@
-.small-4.columns.small-offset-4.move-down-4
-  %h2 Create New List:
+.middle.float-center=image_tag "create_new_list.png", class: "float-center"
+.small-4.columns.small-offset-4.move-down-4.list
   =form_for @list do |f|
-    %label
-      Name
-      =f.text_field :name, placeholder: "Name", class: "full-width form-control em3"
+    =f.text_field :name, placeholder: "Name", class: "full-width form-control em3"
     %br/
-    %label
-      Rotate every __ days: 
-      =f.text_field :days_until_rotation, placeholder: "Days Between Rotation", class: "form-control small-width push-down new-form-text days"
+    =f.text_field :days_until_rotation, placeholder: "Days Between Rotation", class: "form-control small-width push-down new-form-text days"
     =f.submit  class: "success large button full-width custom"

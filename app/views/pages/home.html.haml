@@ -1,15 +1,15 @@
-.header= image_tag "twitter_lists.jpg"
 
 -if current_user
-  .row.move-down-4
+  .header.inline= image_tag "twitter_lists2.png"
+  .row.over
     .small-6.columns
-      = link_to "Make a New List", new_list_path, class: "primary large button full-width"
+      = link_to "Make a New List", new_list_path, class: "yellow large button full-width"
     .small-6.columns
-      = link_to "Edit Current List", lists_path, class: "primary large button full-width"
+      = link_to "Edit Current List", lists_path, class: "yellow large button full-width"
     .small-6.columns
-      = link_to "View All Friends", friends_path, class: "primary large button full-width"
+      = link_to "View All Friends", friends_path, class: "yellow large button full-width"
     .small-6.columns
-      = link_to "Add Email for Notifications", '/sessions/set_email', class: "primary large button full-width" if current_user.email.nil?
+      = link_to "Add Email for Notifications", '/sessions/set_email', class: "yellow large button full-width" if current_user.email.nil?
     .small-6.columns
 
 
