@@ -30,6 +30,11 @@ class List < ActiveRecord::Base
     !names_of_lists.include?(self.name)
   end
 
+  def last_friend
+    "The last friend you added to this list was: #{self.friends.last.name}" if self.friends.count > 0 
+    "There are no friends on this list."
+  end
+
   def always_on_list
     self.friend_list_schedules.where(schedule: "1")
   end
@@ -52,5 +57,10 @@ class List < ActiveRecord::Base
 
   def needs_rotation?
     next_rotation <= Time.zone.now
+  end
+
+  def avatar_sample
+    avatar_array = self.friends.map(&:avatar)
+    avatar_array.sample
   end
 end

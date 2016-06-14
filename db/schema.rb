@@ -11,10 +11,19 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160608000800) do
+ActiveRecord::Schema.define(version: 20160614194502) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "blog_posts", force: :cascade do |t|
+    t.string   "author"
+    t.string   "content"
+    t.string   "image"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.string   "remote_id"
+  end
 
   create_table "delayed_jobs", force: :cascade do |t|
     t.integer  "priority",   default: 0, null: false
@@ -48,6 +57,7 @@ ActiveRecord::Schema.define(version: 20160608000800) do
     t.string   "name"
     t.string   "bio"
     t.integer  "remote_id",  limit: 8
+    t.string   "avatar"
   end
 
   create_table "lists", force: :cascade do |t|

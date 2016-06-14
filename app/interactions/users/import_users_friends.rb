@@ -31,7 +31,9 @@ class Users::ImportUsersFriends < Less::Interaction
       username: friend.screen_name,
       user_id: user.id,
       bio: friend.description,
-      remote_id: friend.id
+      remote_id: friend.id, 
+      avatar: friend.profile_image_uri.to_s.gsub("_normal", "")
+
     )
   end
 

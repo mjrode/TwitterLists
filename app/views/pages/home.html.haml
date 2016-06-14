@@ -1,23 +1,26 @@
--if current_user
-  %h2.center.big.move-down Pick a Task:
+.header= image_tag "twitter_lists.jpg"
 
-  .small-6.columns.small-offset-3
-    = link_to "Make a New List", new_list_path, class: "secondary large button full-width custom"
-  .small-6.columns.small-offset-3
-    = link_to "Edit Current List", lists_path, class: "secondary large button full-width custom"
-  .small-6.columns.small-offset-3
-    = link_to "View All Friends", friends_path, class: "secondary large button full-width custom"
-  .small-6.columns.small-offset-3
-    = link_to "Add Email for Notifications", '/sessions/set_email', class: "secondary large button full-width custom" if current_user.email.nil?
-  .small-6.columns.small-offset-3
+-if current_user
+  .row.move-down-4
+    .small-6.columns
+      = link_to "Make a New List", new_list_path, class: "primary large button full-width"
+    .small-6.columns
+      = link_to "Edit Current List", lists_path, class: "primary large button full-width"
+    .small-6.columns
+      = link_to "View All Friends", friends_path, class: "primary large button full-width"
+    .small-6.columns
+      = link_to "Add Email for Notifications", '/sessions/set_email', class: "primary large button full-width" if current_user.email.nil?
+    .small-6.columns
 
 
 
 -else
-  .col-sm-6.col-sm-offset-3.col-xs-12
-    %h1.center.push-down Twitter Lists
-    .hovereffect
-      %img.img-responsive= image_tag "twitter_bird.png", class: "middle full-width"
-      .overlay
-        %h2 Welcome
-        %a.info{:href => "/auth/twitter/"} log in
+  .row
+    .small-6.columns.small-offset-3
+      %h1.center.move-down Twitter Lists
+      .image-wrapper.overlay-fade-in
+        %img= image_tag "twitter_bird.png"
+        .image-overlay-content
+          %h2 Welcome
+          %p.price Easily Manage Your Lists
+          %a.button.large.success.half-width{:href => "/auth/twitter"} Log In

@@ -1,24 +1,17 @@
-.col-sm-12
-  %h1.center All Friends
+%hr.half-width
+.row
   =form_tag add_multiple_friends_lists_path, method: :post, class: 'form-group' do 
-    .col-sm-4
-      %h2.center Friend
-    .col-sm-4
-      %h2.center List
-    .col-sm-4.push-down
-      %h2.center Schedule
-    %hr/
-    -@friends.each do |friend|
-      .row
-        .col-sm-4
-          %p.center.name=friend.name
-          =hidden_field_tag "friends[][friend_id]", friend.id
-        .col-sm-4
-          =select_tag "friends[][list_name]", content_tag(:option,'select one...',:value=>"")+options_from_collection_for_select(List.all, 'id', 'name'), class: "center middle" 
-        .col-sm-4
-          =select_tag "friends[][schedule]", options_for_select(FriendListSchedule.schedules, friend.current_schedule(@list)), class: "center middle"
-      %hr/
-    =submit_tag "Submit", class: "btn btn-default list-button btn-lg full-width marg-bottom"
-
-
-
+    - @friends.each do |friend|
+      .large-6.columns.large-offset-3
+        .small-4.columns.border-right
+          =image_tag friend.avatar, class: "circle"
+        .h2.center.name.align-right= friend.name
+        .center.bio.align-right= friend.bio_extra
+        %br
+        
+        =select_tag "friends[][list_name]", content_tag(:option,'Select One...',:value=>"")+options_from_collection_for_select(List.all, 'id', 'name'), class: "float-right small-form"
+        %br/
+        =select_tag "friends[][schedule]", options_for_select(FriendListSchedule.schedules, friend.current_schedule(@list)), class: "float-right small-form clear"
+        %br/
+        %hr
+    =submit_tag "Submit", class: "button success large float-center half-width"

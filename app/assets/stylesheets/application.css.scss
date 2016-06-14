@@ -11,17 +11,45 @@
  * file per style scope.
  *
   *= require_self
- //= require foundation_and_overrides
-
+  *= require_tree
   *= require animate
  */
   @import url(https://fonts.googleapis.com/css?family=Patrick+Hand+SC);
-  @import "foundation_and_overrides";
+.small{
+  height: 3em;
+}
+.circle{
+  border-radius: 8em;
+  margin-top: 1em;
+
+}
+.six-height{
+  height: 6em;
+}
+.inline{
+  display: inline;
+}
+.collage{
+ width: 49%;
+ display: inline;
+ margin: 0;
+ padding-bottom: 2%;
+}
 .logo{
   color: white;
 }
 .button.black{
   color: black;
+}
+.menu>li>a{
+  color: black;
+}
+
+.clear{
+  clear: right;
+}
+.clear-both{
+  clear: both;
 }
 .center{
   text-align: center;
@@ -38,10 +66,23 @@
 .move-down-4{
   margin-top: 4em;
 }
-.top-bar.custom{
-  padding: 0 2em;
-  background-color: white;
-  border-bottom: 2px solid black;
+.half-width{
+  width: 50%;
+}
+.name{
+  font-size: 2em;
+}
+.small-form{
+  width: 35%;
+}
+.border-right{
+  border-right: 1px solid #cacaca;
+}
+.align-right{
+  text-align: right;
+}
+/*
+
 }
 .button.middle{
   margin-left: auto;
@@ -81,7 +122,7 @@
       font-size: 3rem; }
   .alert-box .close {
     font-size: 2rem;
-    line-height: 1.25rem; }
+    line-height: 1.25rem; }*/
 
 /*
 select{
@@ -317,7 +358,7 @@ html, body{
   }*/
 
   /*NAVBAR SCSS*/
-  $background-color: white;
+  /*$background-color: white;
   $primary-color: #87D37C;
 
   .row {
@@ -409,10 +450,10 @@ html, body{
       float: left;
     }
   }
-
+*/
 
   /*BUTTON SCSS*/
-  $gradient: linear-gradient(45deg, white, black);
+  /*$gradient: linear-gradient(45deg, white, black);
   $gradient2: linear-gradient(45deg, white, gray);
 
   .button {
@@ -438,4 +479,70 @@ html, body{
   }
   .top-bar-section.custom{
     background-color: white;
+  }*/
+
+  /* Variables */
+
+  // Adjust width accordingly (use even #'s)
+  $logo-width: 118px;
+  // Reduce px value to increase space between logo and menu text
+  $logo-padding: $logo-width - 32px; 
+  // Leave alone
+  $logo-margin: - ($logo-width / 2);
+
+  /* Small Navigation */
+  .logo-small {
+    float: right;
   }
+
+  .title-bar {
+    padding: 0 .5rem;
+  }
+
+  .menu-icon,
+  .title-bar-title {
+    position: relative;
+    top: 10px;
+  }
+
+  /* Medium-Up Navigation */
+  @media only screen and (min-width: 40rem) { 
+
+    .logo-wrapper {
+      position: relative;
+      
+      .logo {
+        width: $logo-width;
+        height:  92px;
+        position: absolute;
+        left: 50%;
+        right: 50%;
+        top: -6px;
+        margin-left: $logo-margin;
+      }
+    }
+
+    // Right part
+    .top-bar-right {
+      width: 50%;
+      padding-left: $logo-padding;
+      
+      ul {
+        float: left;
+      }
+    }
+    
+    // Left part
+    .top-bar-left {
+      width:  50%;
+      padding-right: $logo-padding;
+      
+      ul {
+        float: right;
+      }
+    }
+  }
+
+.top-bar .custom{
+  background-color: #FFFFFF;;
+}

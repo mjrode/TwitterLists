@@ -1,9 +1,36 @@
 -@lists.each do |list|
-  .col-sm-6.col-sm-offset-3.center.move-down
-    = link_to list.name, edit_list_path(list), class: "secondary large button full-width custom"
-    %i.fa.fa-trash.fa-lg.move-down
-      =link_to "Delete List", list_path(list), method: :delete, data:{confirm: "Are you sure you want to delete #{list.name}? This will remove it from twitter too!"}
-    %hr/
+  .large-4.medium-4.columns.move-down
+    = image_tag list.avatar_sample, class: "img collage"
+    = image_tag list.avatar_sample, class: "img collage"
+    = image_tag list.avatar_sample, class: "img collage"
+    = image_tag list.avatar_sample, class: "img collage"
+
+    -# %img.collage{:src => "https://i.ytimg.com/vi/5EPcrQEQqo0/maxresdefault.jpg", :alt => ""}/
+    -# %img.collage{:src => "https://i.ytimg.com/vi/5EPcrQEQqo0/maxresdefault.jpg", :alt => ""}/
+    -# %img.collage{:src => "https://i.ytimg.com/vi/5EPcrQEQqo0/maxresdefault.jpg", :alt => ""}/
+
+    .callout
+      %h5= list.name.capitalize 
+      %p= "There are currently #{list.friends.count} members on this list"
+      %a
+        = link_to "Edit: #{list.name.capitalize}", edit_list_path(list), class: "primary hollow large button full-width"
+      %br/
+      %a
+        =link_to "Delete List", list_path(list), method: :delete, data:{confirm: "Are you sure you want to delete #{list.name}? This will remove it from twitter too!"}, class: "button large hollow full-width alert"
+    %br/
+
+
+
+  -# .large-6.medium-6.columns
+  -#   .callout.secondary
+  -#     %h5= list.name
+  -#     %p= "#{list.name} currently has #{list.friends.count} members on it."
+  -# .row
+  -#   .large-3.columns
       
-.col-sm-6.col-sm-offset-3.center.move-down
-  %button.secondary= link_to "Update Lists", import_lists_path
+  -#   .large-3.columns
+  -#     %button.small.alert
+        
+      
+.col-sm-6.col-sm-offset-3.center.move-down.clear
+  %button.secondary= link_to "Update Lists", import_lists_path, class: "button large success"

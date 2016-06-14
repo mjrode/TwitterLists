@@ -3,42 +3,71 @@
   %head
     %meta{:charset => "utf-8"}/
     %meta{:content => "width=device-width, initial-scale=1.0", :name => "viewport"}/
-    %title= content_for?(:title) ? yield(:title) : "foundation-rails"
     = stylesheet_link_tag    "application"
-    = javascript_include_tag "vendor/modernizr"
-    = javascript_include_tag "application", 'data-turbolinks-track' => true
+    = javascript_include_tag "application", 'data-turbolinks-track' => false
     = csrf_meta_tags
+    :css
+      .top-bar, .top-bar ul {
+          background-color: #FFFFFF;
+      }
   %body
-    %row.margin-in
-      %link{:href => "http://cdnjs.cloudflare.com/ajax/libs/foundicons/3.0.0/foundation-icons.css", :rel => "stylesheet"}/
-      %nav.top-bar.custom{"data-topbar" => "", :role => "navigation"}
-        %ul.title-area
-          / Remove the class "menu-icon" to get rid of menu icon. Take out "Menu" to just have icon alone
-          %li.toggle-topbar.menu-icon
-            %a{:href => "#"}
-              %span Menu
-        %section.top-bar-section.custom
-          / Right Nav Section
-          %ul.right
-            -if current_user
-              %li.divider
-              %li
-                = link_to "Refresh Friend List", "/auth/twitter"
-              %li.divider
-              %li
-                = link_to "Log Out", logout_path, method: :delete
-              %li.divider
-              -unless current_user.email.present?
-                %li
-                  =link_to "Add Email", '/sessions/set_email'
-            -else
-              %li
-                =link_to "Log In", "/auth/twitter"
-          %ul.social-icons
+    / Medium-Up Navigation
+    %nav#nav-menu.top-bar.custom
+      .logo-wrapper.hide-for-small-only
+        .logo
+          %img.small{:src => "https://cdn3.iconfinder.com/data/icons/free-social-icons/67/twitter_circle_black-512.png"}/
+      / Left Nav Section
+      .top-bar-left
+        %ul.vertical.medium-horizontal.menu
+          %li
+            =link_to "Home", root_path
+      / Right Nav Section
+      .top-bar-right
+        %ul.vertical.medium-horizontal.menu
+          -if current_user
+            %li.divider
             %li
-              %a{:href => "/"}
-                %i.fi-home
-                  | Home
+              = link_to "Refresh Friend List", "/auth/twitter"
+            %li.divider
+            %li
+              = link_to "Log Out", logout_path, method: :delete
+            %li.divider
+            -unless current_user.email.present?
+              %li
+                =link_to "Add Email", '/sessions/set_email'
+          -else
+            %li
+              =link_to "Log In", "/auth/twitter"
+    -# %row.margin-in
+    -#   %link{:href => "http://cdnjs.cloudflare.com/ajax/libs/foundicons/3.0.0/foundation-icons.css", :rel => "stylesheet"}/
+    -#   %nav.top-bar.custom{"data-topbar" => "", :role => "navigation"}
+    -#     %ul.title-area
+    -#       / Remove the class "menu-icon" to get rid of menu icon. Take out "Menu" to just have icon alone
+    -#       %li.toggle-topbar.menu-icon
+    -#         %a{:href => "#"}
+    -#           %span Menu
+    -#     %section.top-bar-section.custom
+    -#       / Right Nav Section
+    -#       %ul.right
+    -#         -if current_user
+    -#           %li.divider
+    -#           %li
+    -#             = link_to "Refresh Friend List", "/auth/twitter"
+    -#           %li.divider
+    -#           %li
+    -#             = link_to "Log Out", logout_path, method: :delete
+    -#           %li.divider
+    -#           -unless current_user.email.present?
+    -#             %li
+    -#               =link_to "Add Email", '/sessions/set_email'
+    -#         -else
+    -#           %li
+    -#             =link_to "Log In", "/auth/twitter"
+    -#       %ul.social-icons
+    -#         %li
+    -#           %a{:href => "/"}
+    -#             %i.fi-home
+    -#               | Home
     -# 
     -#   %nav.top-bar.custom
     -#     %ul.title-area
@@ -68,4 +97,6 @@
     -#       = value
     .row
       = yield
+
+
 
