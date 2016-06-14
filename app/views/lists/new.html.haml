@@ -1,9 +1,11 @@
-%h1.play.center Enter List Name:
-.col-sm-6.col-sm-offset-3.move-down
+.small-4.columns.small-offset-4.move-down-4
+  %h2 Create New List:
   =form_for @list do |f|
-    =f.text_field :name, placeholder: "Name", class: "full-width form-control em3"
+    %label
+      Name
+      =f.text_field :name, placeholder: "Name", class: "full-width form-control em3"
     %br/
-    .rotate Rotate members every 
-    =f.text_field :days_until_rotation, class: "form-control small-width push-down new-form-text days"
-    .rotate days
-    =f.submit  class: "form-control list-button"
+    %label
+      Rotate every __ days: 
+      =f.text_field :days_until_rotation, placeholder: "Days Between Rotation", class: "form-control small-width push-down new-form-text days"
+    =f.submit  class: "secondary large button full-width custom"

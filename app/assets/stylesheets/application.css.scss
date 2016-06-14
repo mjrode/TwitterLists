@@ -15,17 +15,75 @@
 
   *= require animate
  */
- /* @import "bootstrap-sprockets";
-  @import "bootstrap";*/
   @import url(https://fonts.googleapis.com/css?family=Patrick+Hand+SC);
-
+  @import "foundation_and_overrides";
 .logo{
   color: white;
-  font-size: 4em;
+}
+.button.black{
+  color: black;
 }
 .center{
   text-align: center;
 }
+.big{
+  font-size: 5em;
+}
+.full-width{
+  width: 100%;
+}
+.move-down{
+  margin-top: 1em;
+}
+.move-down-4{
+  margin-top: 4em;
+}
+.top-bar.custom{
+  padding: 0 2em;
+  background-color: white;
+  border-bottom: 2px solid black;
+}
+.button.middle{
+  margin-left: auto;
+  margin-right: auto;
+  display: block; 
+}
+
+.alert-box {
+  background: #f7f7f7;
+  color: #333;
+  border: none;
+  border-left: 6px solid #008CBA;
+  box-shadow: 0 5px 8px -6px rgba(0, 0, 0, 0.2); }
+  .alert-box.success {
+    background: #f7f7f7;
+    color: #333; }
+  .alert-box.alert {
+    background: #f7f7f7;
+    color: #333; }
+  .alert-box.warning {
+    background: #f7f7f7;
+    color: #333; }
+  .alert-box.info {
+    background: #f7f7f7;
+    color: #333; }
+  .alert-box.small {
+    padding-top: 0.25rem;
+    padding-bottom: 0.25rem;
+    font-size: 0.75rem; }
+    .alert-box.small .close {
+      font-size: 1.5rem; }
+  .alert-box.large {
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+    font-size: 2rem; }
+    .alert-box.large .close {
+      font-size: 3rem; }
+  .alert-box .close {
+    font-size: 2rem;
+    line-height: 1.25rem; }
+
+/*
 select{
   width: 240px;
   height: 34px;
@@ -76,9 +134,7 @@ hr{
 .list-button:hover{
   background-color: gray;
 }
-.full-width{
-  width: 100%;
-}
+
 .create-form{
   height: 4em;
 }
@@ -95,12 +151,7 @@ hr{
   font-size: 3em;
   display: inline;
 }
-.big{
-  font-size: 5em;
-}
-.move-down{
-  margin-top: 1em;
-}
+
 .footer {
     position: absolute;
     bottom: 0;
@@ -263,4 +314,128 @@ html, body{
   justify-content:center;
   background:#F0F0D8;
   font-family: 'Patrick Hand SC', cursive;
+  }*/
+
+  /*NAVBAR SCSS*/
+  $background-color: white;
+  $primary-color: #87D37C;
+
+  .row {
+    max-width: 100%;
+  }
+
+  .menu {
+    background-color: $background-color;
+    padding: 1.5rem 3rem;
+    height: auto;
+    
+    .inline-list {
+      text-align: center;
+      
+      li {
+        float: none;
+        display: inline-block;
+      }
+      
+      a {
+        color: #fff;
+        padding-bottom: 0.5rem;
+        
+        &:hover {
+          color: $primary-color;
+          transition: all .3s ease-in-out;
+        }
+      }
+      
+      .active a {
+        color: $primary-color;
+      }
+    }
+    
+    .account {
+      position: absolute;
+      top: 3%;
+      right: 3%;
+      
+      a , i {
+        color: #fff;
+      }
+    }
+    
+    @media only screen and (min-width: 40.063em) {
+    height: 5rem;
+    
+    .inline-list { 
+      float: left;
+      margin: 0 0 0 1.5rem;
+      }
+      
+      a:hover {
+        border-bottom: 2px solid $primary-color;
+      }
+    }
+    
+    .account-action {
+      float: right;
+      margin: -.75rem 0 0 0;
+      
+      li {
+        margin-left: .2rem;
+      }
+      
+      a { padding: 0.75rem 1rem;}
+      
+      a.signup {
+        font-weight: bold;
+        background-color: scale-color($background-color, $lightness: 10%);
+        border-radius: 3px;
+      }
+    }
+  }
+
+  .name {
+    text-align: center;
+    font-size:  1.5rem;
+    line-height: 1;
+    margin: 0 0 1rem 0;
+    color: #fff;
+    
+    i {
+      color: $primary-color;
+      margin-right: 0.5rem;
+    }
+    
+    @media only screen and (min-width: 40.063em) {
+      float: left;
+    }
+  }
+
+
+  /*BUTTON SCSS*/
+  $gradient: linear-gradient(45deg, white, black);
+  $gradient2: linear-gradient(45deg, white, gray);
+
+  .button {
+    color: transparent;
+    font-size: 2rem;
+    letter-spacing: 5px;
+    border: 4px solid black;
+    border-image: $gradient;
+    border-image-slice: 1;
+    background: $gradient;
+    -webkit-background-clip: text;
+    text-fill-color: transparent;
+    transition: all 0.2s ease;
+    
+    &:hover {
+      border-image: $gradient2;
+      background: $gradient2;
+    }
+  }
+  .button.secondary.custom{
+    border-color: black;
+    border: solid;
+  }
+  .top-bar-section.custom{
+    background-color: white;
   }

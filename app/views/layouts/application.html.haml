@@ -9,60 +9,63 @@
     = javascript_include_tag "application", 'data-turbolinks-track' => true
     = csrf_meta_tags
   %body
-    .contain-to-grid.header-section
-      / TOPBAR SECTION
-      / TOPBAR SECTION
-      %nav.top-bar.important-class{"data-topbar" => ""}
-        / TITLE AREA & LOGO
+    %row.margin-in
+      %link{:href => "http://cdnjs.cloudflare.com/ajax/libs/foundicons/3.0.0/foundation-icons.css", :rel => "stylesheet"}/
+      %nav.top-bar.custom{"data-topbar" => "", :role => "navigation"}
         %ul.title-area
-          %li.name
-            %h2.logo TwitterLists
+          / Remove the class "menu-icon" to get rid of menu icon. Take out "Menu" to just have icon alone
           %li.toggle-topbar.menu-icon
             %a{:href => "#"}
-              %span menu
-        / END TITLE AREA & LOGO
-        / MENU ITEMS
-        %section.top-bar-section
+              %span Menu
+        %section.top-bar-section.custom
+          / Right Nav Section
           %ul.right
             -if current_user
-              %li.active.has_dropdown
-                %ul.dropdown
-                %li.has-dropdown
-                  %a{:href => "#"} Account
-                  %ul.dropdown
-                    %li
-                      =link_to "Add Email for Notifications!", '/sessions/set_email'
-                    %li
-                      = link_to "Refresh Friend List", "/auth/twitter"
-                    %li
-                      = link_to "Log Out", logout_path, method: :delete
-                  -unless current_user.email.present?
-                    %li
-                      = link_to "Add Email for notifications!", '/sessions/set_email'
-                    %li
-                      = link_to "Refresh Friend List", "/auth/twitter"
-                    %li.divider{:role => "separator"}
-                    %li= link_to "Log Out", logout_path, method: :delete
-             
+              %li.divider
+              %li
+                = link_to "Refresh Friend List", "/auth/twitter"
+              %li.divider
+              %li
+                = link_to "Log Out", logout_path, method: :delete
+              %li.divider
+              -unless current_user.email.present?
+                %li
+                  =link_to "Add Email", '/sessions/set_email'
             -else
-              %li.active
-                = link_to "Log In", '/auth/twitter'
-        / END MENU ITEMS
-      / END TOPBAR SECTION
-    /
-      END HEADER SECTION
-      
-      <!-- CONTENT FILL WHEN SCROLL = 0
-    .header-fill
-    / CONTENT SECTION
-    .row.content-section
-      .main-content
-        .small-12.medium-12.large-12.columns
-          = yield
-    / END CONTENT SECTION
-    / FOOTER SECTION
-    .footer-section
-      .row
-        .small-12.medium-12.large-12.columns
-          %p © Copyright 2014
-    / END FOOTER SECTION
+              %li
+                =link_to "Log In", "/auth/twitter"
+          %ul.social-icons
+            %li
+              %a{:href => "/"}
+                %i.fi-home
+                  | Home
+    -# 
+    -#   %nav.top-bar.custom
+    -#     %ul.title-area
+    -#       %li.name
+    -#         %h2.logo 
+    -#           = link_to "TwitterLists", root_path
+    -#     %section.top-bar-section.custom
+    -#       %ul.right
+    -#         -if current_user
+    -#           %li.name
+    -#             %h2 
+    -#               = link_to "Refresh Friend List", "/auth/twitter"
+    -#           %li.name
+    -#             %h2 
+    -#               = link_to "Log Out", logout_path, method: :delete
+    -#           -unless current_user.email.present?
+    -#             %li.name
+    -#               %h2 
+    -#                 =link_to "Add Email", '/sessions/set_email'
+    -#         -else
+    -#           %li.active
+    -#             = link_to "Log In", '/auth/twitter'
+    -# - flash.each do |key, value|
+    -#   .alert{ :class => "alert-box #{key}" }
+    -#     %button.close{ :data => { :dismiss => "alert" } } x
+    -#     %strong
+    -#       = value
+    .row
+      = yield
+
