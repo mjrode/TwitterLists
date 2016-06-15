@@ -51,9 +51,9 @@ class ListsController < ApplicationController
   end
 
   def import
-    Users::ImportUsersFriends.run(user: current_user)
-    Lists::UpdateLocalLists.run(username: current_user.username)
-    flash[:success] = "Your lists have been updated!"
+    delay.Users::ImportUsersFriends.run(user: current_user)
+    delay.Lists::UpdateLocalLists.run(username: current_user.username)
+    delay.flash[:success] = "Your lists have been updated!"
     redirect_to lists_path
   end
 
