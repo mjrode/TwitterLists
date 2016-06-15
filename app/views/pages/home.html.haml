@@ -16,12 +16,4 @@
 
 
   -else
-    .row
-      .small-6.columns.small-offset-3
-        %h1.center.move-down Twitter Lists
-        .image-wrapper.overlay-fade-in
-          %img= image_tag "twitter_bird.png"
-          .image-overlay-content
-            %h2 Welcome
-            %p.price Easily Manage Your Lists
-            %a.button.large.success.half-width{:href => "/auth/twitter"} Log In
+    =link_to "Log In", "/auth/twitter", class: "button yellow float-center half-width large move-down-button"
