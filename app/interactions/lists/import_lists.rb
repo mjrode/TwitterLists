@@ -35,7 +35,8 @@ class Lists::ImportLists < Less::Interaction
     List.create(
       name: remote_list.name,
       remote_id:  remote_list.id,
-      user_id:  user.id
+      user_id:  user.id, 
+      url: remote_list.url
     )
   end
 

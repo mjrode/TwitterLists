@@ -1,20 +1,21 @@
 -@lists.each do |list|
-  .large-4.medium-4.columns.move-down
-    = image_tag list.avatar_sample, class: "img collage"
-    = image_tag list.avatar_sample, class: "img collage"
-    = image_tag list.avatar_sample, class: "img collage"
-    = image_tag list.avatar_sample, class: "img collage"
 
+  .large-6.large-offset-3.columns.move-down
     .callout
-      %h5= list.name.capitalize 
-      %p= "There are currently #{list.on_list.count} members on this list"
+      %h5.center= link_to list.name.capitalize, list.url
+      %p.center= "There are currently #{list.on_list.count} members on this list"
       %a
-        = link_to "Edit: #{list.name.capitalize}", edit_list_path(list), class: "primary  large button full-width"
-      %br/
+      = image_tag list.avatar_sample, class: "img collage"
+      = image_tag list.avatar_sample, class: "img collage"
+      = image_tag list.avatar_sample, class: "img collage"
+      = image_tag list.avatar_sample, class: "img collage"
+
+      %hr/
+      %a= link_to "Edit: #{list.name.capitalize}", edit_list_path(list), class: "primary  button four-width"
+      %a=link_to "Delete List", list_path(list), method: :delete, data:{confirm: "Are you sure you want to delete #{list.name}? This will remove it from twitter too!"}, class: "button  four-width alert"
       %a
-        =link_to "Delete List", list_path(list), method: :delete, data:{confirm: "Are you sure you want to delete #{list.name}? This will remove it from twitter too!"}, class: "button large  full-width alert"
     %br/
-        
+      
       
 .col-sm-6.col-sm-offset-3.center.move-down.clear-both
   %button.secondary= link_to "Update Lists", import_lists_path, class: "button large success clear-both"

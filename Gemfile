@@ -18,7 +18,6 @@ gem 'draper'
 gem 'twitter'
 gem 'omniauth-twitter'
 gem 'figaro'
-gem 'animate-rails'
 gem 'foundation-rails'
 
 group :development, :test do
