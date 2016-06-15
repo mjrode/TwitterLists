@@ -53,11 +53,13 @@ class Lists::ImportLists < Less::Interaction
 
   def create_friend_list_schedule(remote_list)
     remote_members(remote_list).each do |remote_member|
-      FriendListSchedule.create(
-        list_id: local_list(remote_list).id,
-        friend_id: local_friend(remote_member.id).id,
-        schedule: 1
-      )
+      unless local_list(remote_list).try(:id).nil?
+        FriendListSchedule.create(
+          list_id: local_list(remote_list).id,
+          friend_id: local_friend(remote_member.id).id,
+          schedule: 1
+        )
+      end
     end
   end
 end
