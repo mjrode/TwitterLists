@@ -65,7 +65,7 @@ class ListsController < ApplicationController
 
   def create_list_params
     {
-      name: params[:list][:name],
+      name: params[:list][:name].strip,
       days_until_rotation: params[:list][:days_until_rotation],
       user: current_user
     }
