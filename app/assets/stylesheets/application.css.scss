@@ -14,31 +14,82 @@
   *= require_tree
   *= require animate
  */
-  @import url(https://fonts.googleapis.com/css?family=Patrick+Hand+SC);
-.small{
-  height: 3em;
+@import url(https://fonts.googleapis.com/css?family=Patrick+Hand+SC);
+
+
+/*Small Screens*/
+@media only screen and (min-device-width : 300px) and (max-device-width : 599px) { 
+  .margin-top-30{
+    margin-top: 10em;
+  }
+  body.new{
+    background-image: asset-url("create_new_list_mobile.png");
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: 0em 5em;
+  }
+  .move-down-20{
+    margin-top: 50%;
+
+  }
+  body.email{
+    background-image: asset-url("edit_email_mobile.png");
+    background-repeat: no-repeat;
+    background-position: 0em 5em;
+    background-size: 100%;
+
+  }
 }
+
+/*Big Screens*/
+@media only screen and (min-width: 600px) {
+  body.email{
+    background-image: asset-url("edit_email.png");
+    background-repeat: no-repeat;
+    background-position: center;
+
+  }
+  body.new{
+    background-image: asset-url("create_new_list.png");
+    background-size: 60%;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  .margin-top-30{
+    margin-top: 30em;
+  }
+  .move-down-20{
+    margin-top: 28%;
+  }
+}
+
+body.home{
+  background-image: asset-url("twitter_lists2.png");
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-position: 0em  3em;
+}
+
+
 .circle{
   border-radius: 8em;
   margin-top: 1em;
 }
-.list{
-    position: absolute;
-    top: 22em;
-    left: 0em;
+.min{
+  height: 3em;
+}
+.small{
+  height: 3em;
 }
 
-.over{
-  position: absolute;
-  bottom: 6em;
-  left: 16em;
-}
 .six-height{
   height: 6em;
 }
 .inline{
   display: inline;
 }
+
 .collage{
  width: 49%;
  height: 12em;

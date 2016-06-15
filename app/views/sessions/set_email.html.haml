@@ -1,7 +1,7 @@
-.middle.float-center=image_tag "edit_email.png", class: "float-center", style: "height: 40em;"
-.small-4.columns.small-offset-4.move-down-4.list
-  =form_tag('/update_email') do
-    =text_field_tag :email,"",placeholder: "example@email.com", class: "form-control em3"
-    %br/
-    = submit_tag "Submit", class: "success large full-width button middle"
+%body.email
+  .large-4.columns.large-offset-4.move-down-20.small-12
+    =form_tag('/update_email') do
+      =text_field_tag :email,"",placeholder: "example@email.com", class: "form-control em3"
+      %br/
+      = submit_tag "Submit", class: "success large full-width button middle"
 

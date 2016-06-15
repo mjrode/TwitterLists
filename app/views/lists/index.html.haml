@@ -7,7 +7,7 @@
 
     .callout
       %h5= list.name.capitalize 
-      %p= "There are currently #{list.friends.count} members on this list"
+      %p= "There are currently #{list.on_list.count} members on this list"
       %a
         = link_to "Edit: #{list.name.capitalize}", edit_list_path(list), class: "primary  large button full-width"
       %br/

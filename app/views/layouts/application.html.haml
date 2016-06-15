@@ -6,6 +6,8 @@
     = stylesheet_link_tag    "application"
     = javascript_include_tag "application", 'data-turbolinks-track' => false
     = csrf_meta_tags
+    %title
+      TwitterLists
     :css
       .top-bar{
           background-color: #FFFFFF;
@@ -19,11 +21,17 @@
         color: black;
       }
   %body
+    / Small Navigation
+    .title-bar{"data-hide-for" => "medium", "data-responsive-toggle" => "nav-menu"}
+      %a.logo-small.show-for-small-only{:href => "#"}
+        =image_tag "logo.png", class: "img min"
+      %button.menu-icon{"data-toggle" => "", :type => "button"}
+      .title-bar-title Menu
     / Medium-Up Navigation
     %nav#nav-menu.top-bar.custom
       .logo-wrapper.hide-for-small-only
         .logo
-          %img.small{:src => "https://cdn3.iconfinder.com/data/icons/free-social-icons/67/twitter_circle_black-512.png"}/
+          =image_tag "logo.png", class: "img min"
       / Left Nav Section
       .top-bar-left
         %ul.vertical.medium-horizontal.menu

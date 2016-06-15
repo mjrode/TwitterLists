@@ -31,7 +31,7 @@ class List < ActiveRecord::Base
   end
 
   def last_friend
-    "The last friend you added to this list was: #{self.friends.last.name}" if self.friends.count > 0 
+    "The last friend you added to this list was: #{self.friends.last.name}" if self.friends.count > 0
     "There are no friends on this list."
   end
 
@@ -60,7 +60,9 @@ class List < ActiveRecord::Base
   end
 
   def avatar_sample
-    avatar_array = self.friends.map(&:avatar)
+    avatar_array = self.on_list.map do |schedule|
+      schedule.friend.avatar
+    end
     avatar_array.sample
   end
 end
