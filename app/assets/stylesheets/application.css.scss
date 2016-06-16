@@ -19,7 +19,14 @@
 /*Small Screens*/
 @media only screen and (min-device-width : 300px) and (max-device-width : 599px) { 
   .margin-top-30{
-    margin-top: 10em;
+    margin-top: 12em;
+  }
+  .bio{
+    clear: both;
+  }
+  .name{
+    text-align: middle;
+    font-size: 2em;
   }
   body.new{
     background-image: asset-url("create_new_list_mobile.png");
@@ -30,6 +37,9 @@
   .move-down-20{
     margin-top: 50%;
 
+  }
+  .button.move-down-button{
+    margin-top: 70%;
   }
   body.email{
     background-image: asset-url("edit_email_mobile.png");
@@ -47,6 +57,10 @@
     background-repeat: no-repeat;
     background-position: center;
 
+  }
+  .name{
+    font-size: 2em;
+    text-align: right;
   }
 .button.move-down-button{
   margin-top: 40%;
@@ -140,18 +154,14 @@ body.home{
 .four-width{
   width: 48%;
 }
-.name{
-  font-size: 2em;
-}
+
 .small-form{
   width: 35%;
 }
 .border-right{
   border-right: 1px solid #cacaca;
 }
-.align-right{
-  text-align: right;
-}
+
 
   // Adjust width accordingly (use even #'s)
   $logo-width: 118px;
