@@ -13,11 +13,11 @@
       .large-6.small-12.columns
         = link_to "View All Friends", friends_path, class: "yellow large button full-width"
       .large-6.small-12.columns
-        = link_to @email_text, '/sessions/set_email', class: "yellow large button full-width" 
+        = link_to "About", "pages/about", class: "yellow large button full-width" 
       .large-6.small-12.columns
 
 
 
   -else
-    =link_to "Log In", "/auth/twitter", class: "button yellow float-center half-width large move-down-button"
-    =link_to "About", "#", class: "button primary float-center half-width large "
+    =link_to "Log In", "/auth/twitter", class: "button yellow float-center half-width large"
+    =link_to "About", "pages/about", class: "button yellow float-center half-width large "

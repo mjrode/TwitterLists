@@ -51,9 +51,11 @@ class ListsController < ApplicationController
   end
 
   def import
-    delay.Users::ImportUsersFriends.run(user: current_user)
-    delay.Lists::UpdateLocalLists.run(username: current_user.username)
-    delay.flash[:success] = "Your lists have been updated!"
+    # Need to delay these first two api calls - this method takes a while to run
+    # Need to rate limit this call
+    Users::ImportUsersFriends.run(user: current_user)
+    Lists::UpdateLocalLists.run(username: current_user.username)
+    flash[:success] = "Your lists have been updated!"
     redirect_to lists_path
   end
 

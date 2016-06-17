@@ -17,10 +17,7 @@
 
 
 /*Small Screens*/
-@media only screen and (min-device-width : 300px) and (max-device-width : 599px) { 
-  .margin-top-30{
-    margin-top: 12em;
-  }
+@media only screen and (max-width: 600px) { 
   .bio{
     clear: both;
   }
@@ -28,25 +25,23 @@
     text-align: middle;
     font-size: 2em;
   }
-  body.new{
-    background-image: asset-url("create_new_list_mobile.png");
-    background-size: 100%;
-    background-repeat: no-repeat;
-    background-position: 0em 5em;
-  }
-  .move-down-20{
-    margin-top: 50%;
-
-  }
   .button.move-down-button{
     margin-top: 70%;
   }
-  body.email{
-    background-image: asset-url("edit_email_mobile.png");
-    background-repeat: no-repeat;
-    background-position: 0em 5em;
-    background-size: 100%;
+  .tag{
+    font-family: 'Handlee', cursive;
+  }
+  .title{
+    font-family: 'Bungee', cursive;
+    font-size: 4em;
+    margin-top: 0.5em;
+  }
 
+  .new-title{
+    padding-top: 1em;
+    font-family: 'Bungee', cursive;
+    font-size: 4em;
+    margin-top: 1em;
   }
 }
 
@@ -62,27 +57,51 @@
     font-size: 2em;
     text-align: right;
   }
+  .tag{
+    font-family: 'Handlee', cursive;
+  }
+  .title{
+    font-family: 'Bungee', cursive;
+    font-size: 6em;
+    margin-top: 0.5em;
+  }
+
+  .new-title{
+    padding-top: 1em;
+    font-family: 'Bungee', cursive;
+    font-size: 6em;
+    margin-top: 1em;
+  }
+}
+
+/*All CSS*/
+.copy{
+  font-size: 1.5em;
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+}
+#about{
+  width: 75%;
+  background: white;
+  border-radius: 1em;
+  margin-left: auto;
+  margin-right: auto;
+}
 .button.move-down-button{
   margin-top: 40%;
 }
-  #pink{
-    height: 40em;
-    margin-top: 5em;
-    margin-bottom: 5em;
-    background: rgba(250, 135, 189, 0.64);
-    background-repeat: no-repeat;
-    background-position: center;
-  }
+#pink{
+  height: 40em;
+  margin-top: 5em;
+  margin-bottom: 5em;
+  background: rgba(250, 135, 189, 0.64);
+  background-repeat: no-repeat;
+  background-position: center;
+}
 
-  .margin-top-30{
-    margin-top: 30em;
-  }
-  .move-down-20{
-    margin-top: 28%;
-  }
-  .move-down-new{
-    margin-top: 1em;
-  }
+.move-down-new{
+  margin-top: 1em;
 }
 
 body.home{
@@ -90,21 +109,7 @@ body.home{
   background-size: 100%;
   background-repeat: no-repeat;
 }
-.tag{
-  font-family: 'Handlee', cursive;
-}
-.title{
-  font-family: 'Bungee', cursive;
-  font-size: 6em;
-  margin-top: 0.5em;
-}
 
-.new-title{
-  padding-top: 1em;
-  font-family: 'Bungee', cursive;
-  font-size: 6em;
-  margin-top: 1em;
-}
 .circle{
   border-radius: 8em;
   margin-top: 1em;
