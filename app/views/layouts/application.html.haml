@@ -6,6 +6,7 @@
     = stylesheet_link_tag    "application"
     = javascript_include_tag "application", 'data-turbolinks-track' => false
     = csrf_meta_tags
+    = render partial: "partials/google_analytics"
     %title
       TwitterLists
     :css
@@ -56,6 +57,7 @@
               =link_to "Log In", "/auth/twitter"
     .row
       = yield
+    = render partial: "partials/google_analytics_pageview"
     / Drip
     :javascript
       var _dcq = _dcq || [];
