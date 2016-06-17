@@ -14,6 +14,7 @@
   *= require_tree
  */
 @import url(https://fonts.googleapis.com/css?family=Patrick+Hand+SC);
+@import 'https://fonts.googleapis.com/css?family=Fjalla+One|PT+Sans|Ubuntu';
 
 
 /*Small Screens*/
@@ -43,6 +44,9 @@
     font-size: 4em;
     margin-top: 1em;
   }
+  .yellow{
+    width: 50%;
+  }
 }
 
 /*Big Screens*/
@@ -65,7 +69,9 @@
     font-size: 6em;
     margin-top: 0.5em;
   }
-
+  .break{
+    margin-top: 1em;
+  }
   .new-title{
     padding-top: 1em;
     font-family: 'Bungee', cursive;
@@ -75,18 +81,35 @@
 }
 
 /*All CSS*/
+  .title-small{
+    font-family: 'Bungee', cursive;
+    font-size: 3em;
+    margin-top: 1em;
+  }
+.gifs{
+  margin-top: 2em;
+  width: 70%;
+  display: block;
+  margin-right: auto;
+  margin-left: auto;
+  margin-bottom: 1em;
+}
+.bungee{
+  font-family: 'Bungee', cursive;
+}
 .copy{
   font-size: 1.5em;
-  width: 90%;
+  width: 70%;
   margin-left: auto;
   margin-right: auto;
 }
 #about{
-  width: 75%;
+  width: 100%;
   background: white;
   border-radius: 1em;
   margin-left: auto;
   margin-right: auto;
+  font-family: 'Ubuntu', sans-serif;
 }
 .button.move-down-button{
   margin-top: 40%;
@@ -113,6 +136,29 @@ body.home{
 .circle{
   border-radius: 8em;
   margin-top: 1em;
+}
+.text{
+  width: 80%;
+}
+.yellow-small{
+  background: #fee873;
+  width: 70%;
+  display: block;
+  margin-right: auto;
+  margin-left: auto;
+  border-radius: 1em;
+}
+.yellow-big{
+  background: #fee873;
+  width: 100%;
+  display: block;
+  margin-right: auto;
+  margin-left: auto;
+  border-radius: 1em;
+  font-size: 1.5em;
+}
+.padding{
+  padding: 2em 2em;
 }
 .min{
   height: 3em;
