@@ -65,9 +65,11 @@
 .button.move-down-button{
   margin-top: 40%;
 }
-  body.new{
-    background-image: asset-url("create_new_list.png");
-    background-size: 60%;
+  #pink{
+    height: 40em;
+    margin-top: 5em;
+    margin-bottom: 5em;
+    background: rgba(250, 135, 189, 0.64);
     background-repeat: no-repeat;
     background-position: center;
   }
@@ -77,6 +79,9 @@
   }
   .move-down-20{
     margin-top: 28%;
+  }
+  .move-down-new{
+    margin-top: 1em;
   }
 }
 
@@ -97,6 +102,11 @@ body.home{
 }
 .small{
   height: 3em;
+}
+.yellow-large{
+  font-size: 6em;
+  color: #fee873;
+  padding-top: 1em;
 }
 
 .six-height{

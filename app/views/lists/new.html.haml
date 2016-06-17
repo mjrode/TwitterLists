@@ -1,8 +1,9 @@
--# .middle.float-center=image_tag "create_new_list.png", class: "float-center"
 %body.new
-  .large-4.columns.large-offset-4.move-down-20.small-12
-    =form_for @list do |f|
-      =f.text_field :name, placeholder: "Name", class: "full-width form-control em3"
-      %br/
-      =f.text_field :days_until_rotation, placeholder: "Days Between Rotation", class: "form-control small-width push-down new-form-text days"
-      =f.submit  class: "success large button full-width custom"
+  #pink
+    %h2.yellow-large.center Create a New List
+    .move-down-new.small-12.columns.large-6.float-left.large-offset-3
+      =form_for @list do |f|
+        =f.text_field :name, placeholder: "List Name", class: "full-width form-control em3"
+        %br/
+        =f.text_field :days_until_rotation, placeholder: "Days Between Rotation", class: "form-control small-width push-down new-form-text days"
+        =f.submit  class: "yellow large button full-width custom"
