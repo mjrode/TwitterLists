@@ -86,13 +86,25 @@
 }
 
 body.home{
-  background-image: asset-url("twitter_lists2.png");
+  background: rgba(250, 135, 189, 0.64);
   background-size: 100%;
   background-repeat: no-repeat;
-  background-position: 0em  3em;
+}
+.tag{
+  font-family: 'Handlee', cursive;
+}
+.title{
+  font-family: 'Bungee', cursive;
+  font-size: 6em;
+  margin-top: 0.5em;
 }
 
-
+.new-title{
+  padding-top: 1em;
+  font-family: 'Bungee', cursive;
+  font-size: 6em;
+  margin-top: 1em;
+}
 .circle{
   border-radius: 8em;
   margin-top: 1em;
