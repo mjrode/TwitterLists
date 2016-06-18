@@ -51,10 +51,7 @@ class Users::ImportUsersFriends < Less::Interaction
 
   def remove_local_friends
     Friend.all.each do |friend|
-      unless remote_friends_usernames.include?(friend.username)
-        puts "#{friend.username} was removed because you stopped follow them"
-        friend.destroy
-      end
+      friend.destroy unless remote_friends_usernames.include?(friend.username)
     end
   end
 

@@ -56,7 +56,7 @@
           -else
             %li
               =link_to "Log In", "/auth/twitter"
-    - display_flash_messages
+    = display_flash_messages
     .row
       = yield
     = render partial: "partials/google_analytics_pageview"
