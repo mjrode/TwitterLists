@@ -30,5 +30,4 @@ Rails.application.routes.draw do
   get '/sessions/set_email', to: 'sessions#set_email'
   delete '/logout', to: 'sessions#destroy'
   get '/auth/:provider/callback', to: 'sessions#create'
-
 end
