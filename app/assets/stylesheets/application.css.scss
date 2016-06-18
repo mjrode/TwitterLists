@@ -26,6 +26,12 @@
     text-align: middle;
     font-size: 2em;
   }
+  .collage{
+    display:inline;
+    width: 49%;
+    height: 8em;
+
+  }
   .button.move-down-button{
     margin-top: 70%;
   }
@@ -56,6 +62,13 @@
     background-repeat: no-repeat;
     background-position: center;
 
+  }
+  .collage{
+   width: 24%;
+   height: 8em;
+   display: inline;
+   margin: 0;
+   padding-bottom: 2%;
   }
   .name{
     font-size: 2em;
@@ -183,13 +196,6 @@ body.home{
   display: inline;
 }
 
-.collage{
- width: 24%;
- height: 8em;
- display: inline;
- margin: 0;
- padding-bottom: 2%;
-}
 .logo{
   color: white;
 }
