@@ -4,8 +4,8 @@ class Lists::UpdateLocalLists < Less::Interaction
 
   def run
     set_twitter_client
-    delay.fetch_remote_lists
-    delay.remove_deleted_lists
+    fetch_remote_lists
+    remove_deleted_lists
   end
 
   private
@@ -21,21 +21,22 @@ class Lists::UpdateLocalLists < Less::Interaction
   end
 
   def remote_lists
-    @client.lists(username)
+    @remote_lists ||= @client.lists(username)
   end
 
   def remove_deleted_lists
     List.all.each do |list|
-      list.destroy unless fetch_remote_lists.include?(list.name)
+      list.destroy unless @remote_list_names.include?(list.name)
     end
   end
 
-  # TODO: How can I write this without each. Is it possible to use Map here. 
   def fetch_remote_lists
-    remote_lists.map do |remote_list|
+    @remote_list_names = []
+    remote_lists.each do |remote_list|
       save_local_list(remote_list)
       create_friend_list_schedule(remote_list)
-      # remote_list.name
+      destroy_friend_list_schedule(remote_list)
+      @remote_list_names << remote_list.name
     end
   end
 
@@ -60,13 +61,23 @@ class Lists::UpdateLocalLists < Less::Interaction
     Friend.find_by_remote_id(remote_member)
   end
 
+  # TODO: Better way to set @remote_members so I can reuse it below
   def create_friend_list_schedule(remote_list)
-    remote_members(remote_list).each do |remote_member|
+    @remote_members = remote_members(remote_list)
+    @remote_members.each do |remote_member|
       FriendListSchedule.create(
         list_id: local_list(remote_list).id,
         friend_id: local_friend(remote_member.id).id,
         schedule: 1
       )
+    end
+  end
+
+  def destroy_friend_list_schedule(remote_list)
+    @remote_usernames = @remote_members.map(&:screen_name)
+    local_list(remote_list).on_list.each do |schedule|
+      friend = Friend.find(schedule.friend_id)
+      schedule.destroy unless @remote_usernames.include?(friend.username)
     end
   end
 end

@@ -17,3 +17,8 @@ testing:
   name: "testing"
   user_id: 350169049
   remote_id: 740596227935457281
+
+tech:
+  name: "Tech"
+  user_id: 350169049
+  remote_id: 743889984701272064

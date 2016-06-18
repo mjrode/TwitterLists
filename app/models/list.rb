@@ -21,9 +21,6 @@ class List < ActiveRecord::Base
   # rubocop:disable all
   scope :needs_rotation, -> { where("(updated_at + (days_until_rotation || ' DAY')::INTERVAL) <= CURRENT_TIMESTAMP") }
   # rubocop:enable all
-  def on_list
-    self.friend_list_schedules.where("schedule != ?", "4")
-  end
 
   def new_list?(user)
     names_of_lists = TWITTER_CLIENT.lists(user.remote_id).map(&:name)
@@ -45,6 +42,10 @@ class List < ActiveRecord::Base
 
   def sometimes_on_list
     self.friend_list_schedules.where(schedule: "3")
+  end
+
+  def on_list
+    self.friend_list_schedules.where(schedule: %w("1", "2", "3"))
   end
 
   def frequently_on_list

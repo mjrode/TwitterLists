@@ -11,10 +11,10 @@ class Lists::UpdateLocalListsTest < ActiveSupport::TestCase
 
   test "remote lists get recreated locally" do
     use_cassette("update local lists") do
-      assert List.count == 3
+      assert List.find_by_name("Heroku").nil?
       Users::ImportUsersFriends.run(user: @user)
       Lists::UpdateLocalLists.run(username: @user.username)
-      assert List.count == 4
+      assert List.find_by_name("heroku").present?
     end
   end
 
@@ -28,12 +28,22 @@ class Lists::UpdateLocalListsTest < ActiveSupport::TestCase
   end
 
   test "lists that are present remotely do not get removed locally" do
-    assert List.find_by_name("testing").present?
+    assert List.find_by_name("Tech").present?
     use_cassette("update local lists") do
       Users::ImportUsersFriends.run(user: @user)
       Lists::UpdateLocalLists.run(username: @user.username)
-      assert List.find_by_name("testing").present?
+      assert List.find_by_name("Tech").present?
     end
+  end
+
+  test "Removing a member from a list remotely will remove them locally" do
+    friend_list_schedule_id = friend_list_schedules(:local).id
+    assert FriendListSchedule.find(friend_list_schedule_id).present?
+    use_cassette("update local lists") do
+      Users::ImportUsersFriends.run(user: @user)
+      Lists::UpdateLocalLists.run(username: @user.username)
+    end
+    assert FriendListSchedule.find_by_id(friend_list_schedule_id).nil?
   end
 
 end
