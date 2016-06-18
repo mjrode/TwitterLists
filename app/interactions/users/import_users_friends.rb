@@ -6,7 +6,8 @@ class Users::ImportUsersFriends < Less::Interaction
   def run
     set_twitter_client
     delay.fetch_all_friends
-    fetch_all_list_members
+    delay.fetch_all_list_members
+    delay.remove_local_friends
     self
   end
 
@@ -31,16 +32,29 @@ class Users::ImportUsersFriends < Less::Interaction
       username: friend.screen_name,
       user_id: user.id,
       bio: friend.description,
-      remote_id: friend.id, 
+      remote_id: friend.id,
       avatar: friend.profile_image_uri.to_s.gsub("_normal", "")
-
     )
+  end
+
+  def remote_friends_usernames
+    @remote_friends_usernames ||= []
   end
 
   def fetch_all_friends
     followers = @client.friends(user.username, count: 200)
     followers.each do |f|
       save_friend(f)
+      remote_friends_usernames << f.screen_name
+    end
+  end
+
+  def remove_local_friends
+    Friend.all.each do |friend|
+      unless remote_friends_usernames.include?(friend.username)
+        puts "#{friend.username} was removed because you stopped follow them"
+        friend.destroy
+      end
     end
   end
 
@@ -53,6 +67,7 @@ class Users::ImportUsersFriends < Less::Interaction
       members = @client.list_members(user.username, list.id)
       members.each do |member|
         save_friend(member)
+        remote_friends_usernames << member.screen_name
       end
     end
   end

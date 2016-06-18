@@ -30,4 +30,12 @@ class Users::ImportUsersFriendsTest < ActiveSupport::TestCase
     end
     assert Friend.find_by_username("mjrode").blank?
   end
+
+  test "If you unfollow a friend on twitter they are deleted from the database" do
+    # assert Friend.find_by_username("deleteme").present?
+    use_cassette("delete_friends") do
+      Users::ImportUsersFriends.run(user: @user)
+    end
+    # assert Friend.find_by_username("deleteme").nil?
+  end
 end
