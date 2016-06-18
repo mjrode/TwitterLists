@@ -4,18 +4,30 @@
   .yellow-small.padding
     %h2.center.tag How can TwitterLists help you?
     %h2.center.tag By allowing you to:
-  %h2.center.title-small Add Friends to Lists
+    %p.center (Click each link for more details)
+
+  .row.move-down-4
+    .large-4.small-12.columns
+      = link_to "Create Lists",'#view_lists' , class: "yellow large button full-width"
+    .large-4.small-12.columns
+      = link_to "Add ANY Friend to ANY List", '#add_multiple' , class: "yellow large button full-width"
+    .large-4.small-12.columns
+      = link_to "View and Edit All Lists",'#view_lists' , class: "yellow large button full-width"
+  .row
+    .large-4.columns.large-offset-4.small-12
+      = link_to "Automatically Rotate Friends on Lists", "#add_friend", class: "yellow large button full-width"
+  %h2.center.title-small.off#add_friend Add Friends to Lists
   .row#about.break
     =image_tag "add_friends_gif.gif", class: "gifs"
     .copy 
   %p.yellow-big.padding Here is what is great about TwitterLists. When you add a friend to a list you can pick how freqently you want to see tweets from them. If you love what they are posting choose the option "Always on List". If you are unsure you can assign them either; "Frequently on List", or "Sometimes on List" and you will see less of their Tweets. If you have a friend marked as "Sometimes on List" and decide that you want to see all of their posts you can easily switch them to "Always on List".
-  %h2.center.title-small Add Any Friend to Any List
+  %h2.center.title-small#add_multiple Add Any Friend to Any List
   .row#about.break
     =image_tag "multiple_lists.gif", class: "gifs"
     .copy
   %p.yellow-big.padding If you have any experience with lists on Twitter you know that it can be a pain to add your friends to different lists. You have to click through multiple screens which can be very time consuming. TwitterLists has ONE view where you can add ANY friend to ANY list. No more having to click through three screens just to add one friend to a list. 
     
-  %h2.center.title-small View and Edit All of Your Lists
+  %h2.center.title-small#view_lists View and Edit All of Your Lists
   .row#about.break
     =image_tag "edit_lists.gif", class: "gifs"
     .copy 
