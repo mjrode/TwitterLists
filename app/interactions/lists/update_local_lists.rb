@@ -4,8 +4,8 @@ class Lists::UpdateLocalLists < Less::Interaction
 
   def run
     set_twitter_client
-    fetch_remote_lists
-    remove_deleted_lists
+    delay.fetch_remote_lists
+    delay.remove_deleted_lists
   end
 
   private
