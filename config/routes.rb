@@ -19,8 +19,8 @@ Rails.application.routes.draw do
     end
   end
 
-  get  'pages/home'
-  get 'pages/about'
+  get 'pages/home'
+  get '/about', to: 'pages#about'
   root 'pages#home'
 
   get 'friends/index'
