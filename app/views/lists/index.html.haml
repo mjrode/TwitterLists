@@ -5,10 +5,16 @@
       %h5.center= link_to list.name.capitalize, list.url
       %p.center= "There are currently #{list.on_list.count} members on this list"
       %a
-      = image_tag list.avatar_sample, class: "img collage"
-      = image_tag list.avatar_sample, class: "img collage"
-      = image_tag list.avatar_sample, class: "img collage"
-      = image_tag list.avatar_sample, class: "img collage"
+      - if list.friends.count < 4 && list.friends.count > 0
+        = image_tag list.avatar_sample.avatar, class: "img collage"
+        = image_tag list.avatar_sample.avatar, class: "img collage"
+        = image_tag list.avatar_sample.avatar, class: "img collage"
+        = image_tag list.avatar_sample.avatar, class: "img collage"
+      - if list.friends.count > 4
+        = image_tag list.avatar_sample[0], class: "img collage"
+        = image_tag list.avatar_sample[1], class: "img collage"
+        = image_tag list.avatar_sample[2], class: "img collage"
+        = image_tag list.avatar_sample[3], class: "img collage"
 
       %hr/
       %a= link_to "Edit: #{list.name.capitalize}", edit_list_path(list), class: "primary  button four-width"

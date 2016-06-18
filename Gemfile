@@ -19,6 +19,7 @@ gem 'twitter'
 gem 'omniauth-twitter'
 gem 'figaro'
 gem 'foundation-rails'
+gem 'foundation_rails_helper'
 
 group :development, :test do
   gem 'byebug'

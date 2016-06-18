@@ -56,7 +56,7 @@ class ListsController < ApplicationController
     Users::ImportUsersFriends.run(user: current_user)
     Lists::UpdateLocalLists.run(username: current_user.username)
     flash[:success] = "Your lists have been updated!"
-    redirect_to lists_path
+    redirect_to root_path
   end
 
   private

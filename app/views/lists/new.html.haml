@@ -3,11 +3,7 @@
     %h2.new-title.center Create a New List
     .move-down-new.small-12.columns.large-6.float-left.large-offset-3
       =form_for @list do |f|
-        %label
-          List Name
         =f.text_field :name, placeholder: "List Name", class: "full-width form-control em3"
         %br/
-        %label
-          Days Between Rotation
         =f.text_field :days_until_rotation, placeholder: "Days Between Rotation", class: "form-control small-width push-down new-form-text days"
         =f.submit  class: "yellow large button full-width custom"

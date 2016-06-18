@@ -60,9 +60,10 @@ class List < ActiveRecord::Base
   end
 
   def avatar_sample
-    avatar_array = self.on_list.map do |schedule|
-      schedule.friend.avatar
+    if self.friends.count < 4
+      self.friends.select(:avatar).sample
+    else
+      self.friends.pluck(:avatar).last(4)
     end
-    avatar_array.sample
   end
 end

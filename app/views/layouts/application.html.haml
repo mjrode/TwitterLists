@@ -37,25 +37,26 @@
       / Left Nav Section
       .top-bar-left
         %ul.vertical.medium-horizontal.menu
-          %li
+          %li.hide-for-small-only
             =link_to "Home", root_path
       / Right Nav Section
       .top-bar-right
         %ul.vertical.medium-horizontal.menu
           -if current_user
             %li.divider
-            %li
+            %li.hide-for-small-only
               = link_to "Refresh Friend List", "/auth/twitter"
             %li.divider
             %li
               = link_to "Log Out", logout_path, method: :delete
             %li.divider
             -unless current_user.email.present?
-              %li
+              %li.hide-for-small-only
                 =link_to "Add Email", '/sessions/set_email'
           -else
             %li
               =link_to "Log In", "/auth/twitter"
+    - display_flash_messages
     .row
       = yield
     = render partial: "partials/google_analytics_pageview"
