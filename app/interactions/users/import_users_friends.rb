@@ -5,9 +5,9 @@ class Users::ImportUsersFriends < Less::Interaction
 
   def run
     set_twitter_client
-    delay.fetch_all_friends
-    delay.fetch_all_list_members
-    delay.remove_local_friends
+    fetch_all_friends
+    fetch_all_list_members
+    remove_local_friends
     self
   end
 

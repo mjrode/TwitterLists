@@ -26,7 +26,7 @@ class Lists::ImportLists < Less::Interaction
   def fetch_remote_lists
     remote_lists.each do |remote_list|
       save_local_list(remote_list)
-      create_friend_list_schedule(remote_list)
+      create_friend_list_schedules(remote_list)
     end
   end
 
@@ -52,15 +52,17 @@ class Lists::ImportLists < Less::Interaction
     Friend.find_by_remote_id(remote_member)
   end
 
-  def create_friend_list_schedule(remote_list)
+  def create_friend_list_schedule(remote_list, remote_member)
+    FriendListSchedule.create(
+      list_id: local_list(remote_list).id,
+      friend_id: local_friend(remote_member.id).id,
+      schedule: 1
+    )
+  end
+
+  def create_friend_list_schedules(remote_list)
     remote_members(remote_list).each do |remote_member|
-      unless local_list(remote_list).try(:id).nil?
-        FriendListSchedule.create(
-          list_id: local_list(remote_list).id,
-          friend_id: local_friend(remote_member.id).id,
-          schedule: 1
-        )
-      end
+      create_friend_list_schedule(remote_list, remote_member)
     end
   end
 end

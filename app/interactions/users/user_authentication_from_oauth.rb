@@ -7,6 +7,7 @@ class Users::UserAuthenticationFromOauth < Less::Interaction
     initialize_user
     self.message = set_message
     self.user = user
+    # read into active job
     Users::ImportUsersFriends.run(user: self.user)
     Lists::ImportLists.run(username: self.user.username)
     self
@@ -20,11 +21,7 @@ class Users::UserAuthenticationFromOauth < Less::Interaction
   end
 
   def set_message
-    if user.email.present?
-      "Welcome, #{user.name}"
-    else
-      "Click on the account dropdown to add your email address and get notified when your lists update."
-    end
+    "Welcome, #{user.name}"
   end
 
   def set_attributes
