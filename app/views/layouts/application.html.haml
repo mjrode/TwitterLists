@@ -37,7 +37,7 @@
       / Left Nav Section
       .top-bar-left
         %ul.vertical.medium-horizontal.menu
-          %li.hide-for-small-only
+          %li
             =link_to "Home", root_path
       / Right Nav Section
       .top-bar-right
@@ -47,7 +47,7 @@
             %li.hide-for-small-only
               = link_to "Refresh Friend List", "/auth/twitter"
             %li.divider
-            %li
+            %li.hide-for-small-only
               = link_to "Log Out", logout_path, method: :delete
             %li.divider
             -unless current_user.email.present?

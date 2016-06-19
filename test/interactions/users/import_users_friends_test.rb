@@ -24,6 +24,13 @@ class Users::ImportUsersFriendsTest < ActiveSupport::TestCase
     assert Friend.find_by_username("Coalboat").present?
   end
 
+  test "It does not remove local friends that are present remotely" do
+    use_cassette("import_friends") do
+      Users::ImportUsersFriends.run(user: @user)
+    end
+    assert Friend.find_by_username("jasoncummings86").present?    
+  end
+
   test "followers that are not your friends do not get added" do
     use_cassette("import_friends") do
       Users::ImportUsersFriends.run(user: @user)
