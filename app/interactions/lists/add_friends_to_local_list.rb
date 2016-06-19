@@ -34,7 +34,7 @@ class Lists::AddFriendsToLocalList < Less::Interaction
 
   def update_schedules
     friends_hash.each do |friend_hash|
-      schedule = list.friend_list_schedules.find_or_create_by(friend_id: friend_hash[:friend_id])
+      schedule = list.friend_list_schedules.find_or_create_by(friend_id: friend_hash["friend_id"])
       schedule.update_attributes(schedule: friend_hash["schedule"])
     end
   end
