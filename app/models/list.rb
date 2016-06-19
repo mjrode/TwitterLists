@@ -45,7 +45,7 @@ class List < ActiveRecord::Base
   end
 
   def on_list
-    self.friend_list_schedules.where(schedule: %w("1", "2", "3"))
+    self.friend_list_schedules.where("schedule != ?", "4")
   end
 
   def frequently_on_list
