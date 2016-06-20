@@ -27,7 +27,7 @@ class ListsController < ApplicationController
   def add_friends
     Lists::AddFriends.run(add_friends_params)
     flash[:notice] = "Check out your new list here #{@list.name}"
-    redirect_to lists_path
+    redirect_to root_path
   end
 
   def show
@@ -36,7 +36,7 @@ class ListsController < ApplicationController
 
   def add_multiple_friends
     Lists::AddFriendsToMultipleLists.run(friends_hash: params["friends"], user: current_user)
-    redirect_to lists_path
+    redirect_to root_path
   end
 
   def edit
@@ -47,7 +47,7 @@ class ListsController < ApplicationController
   def destroy
     Lists::DeleteList.run(list: @list, user: current_user)
     @list.destroy
-    redirect_to lists_path
+    redirect_to root_path
   end
 
   def import

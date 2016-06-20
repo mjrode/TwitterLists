@@ -11,6 +11,7 @@ Rails.application.routes.draw do
     collection do
       post :add_multiple_friends
       get :import
+      get :find_list
     end
   end
 
@@ -19,11 +20,13 @@ Rails.application.routes.draw do
       get :all
     end
   end
+  get 'find_list', to: 'pages#find_list'
 
   # pages
   get 'pages/home'
   get '/about', to: 'pages#about'
   root 'pages#home'
+
 
   # sessions
   post '/update_email', to: 'sessions#update_email'

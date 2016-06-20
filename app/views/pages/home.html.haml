@@ -4,16 +4,18 @@
   %h2.tag.center
     Choose an Option
   -if current_user
-    .row.move-down-4
+    .row
       .large-6.large-offset-3.small-12.columns
         = link_to "Make a New List", new_list_path, class: "yellow large button half-width float-center"
       .large-6.large-offset-3.small-12.columns
-        = link_to "Manage an Exisiting List", lists_path, class: "yellow large button half-width float-center"
+        = link_to "Manage an Exisiting List", "#", class: "yellow large button half-width float-center", id: "show-find-list"
+      .large-6.large-offset-3.small-12.columns#select-list
+        = form_tag(find_list_path, method: :get) do 
+          = select_tag "list", options_from_collection_for_select(@user.lists, "id", "name"), class: " float-center half-width"
+          =submit_tag "Go", class: "yellow large button half-width float-center"
       .large-6.small-12.columns
-        = link_to "View All Friends", friends_path, class: "yellow large button full-width"
-      .large-6.small-12.columns
-        = link_to "About", "/about", class: "yellow large button full-width" 
-      .large-6.small-12.columns
+
+
 
 
 
