@@ -1,20 +1,26 @@
+:css
+  .row .row {
+  margin-left: auto;
+  margin-right: auto;
+  height: 2em;
+  }
+
 %h1.center= "Edit #{@list.name}" 
-%hr.half-width
+%hr.shrink-me
 
 
 = form_tag(add_friends_list_path(@list)) do 
   - @friends.each do |friend|
-    .large-6.columns.large-offset-3
-      .small-4.columns.border-right
-        =image_tag friend.avatar, class: "circle"
-      .h2.center.name.align-right= friend.name
-      .center.bio.align-right= friend.bio_extra
-      %br
-      = select_tag "friends[][schedule]", options_for_select(FriendListSchedule.schedules, friend.current_schedule(@list)), class: "float-right small-form"
-      %br/
-      %br/
-      =hidden_field_tag "friends[][friend_id]", friend.id
-      =hidden_field_tag "list", @list.id 
-      %br/
-      %hr
+    .row.shrink-me.middle
+      .large-3.columns.border-right.row-height
+        =image_tag friend.avatar, class: "circle middle"
+      .large-3.columns.border-right.row-height
+        .h2.name.center= "#{friend.name}"
+      .large-3.columns.border-right.row-height
+        .h2.name.center= "@#{friend.username}"
+      .large-3.columns.row-height
+        = select_tag "friends[][schedule]", options_for_select(FriendListSchedule.schedules, friend.current_schedule(@list)), class: "middle"
+        =hidden_field_tag "friends[][friend_id]", friend.id
+        =hidden_field_tag "list", @list.id 
+    %hr.shrink-me
   =submit_tag "Submit", class: "button success large float-center half-width"

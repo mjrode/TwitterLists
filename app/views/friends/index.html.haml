@@ -2,7 +2,7 @@
 .row
   =form_tag add_multiple_friends_lists_path, method: :post, class: 'form-group' do 
     - @friends.each do |friend|
-      .large-6.columns.large-offset-3
+      .large-12.columns.large-offset-3
         .small-4.columns.border-right
           =image_tag friend.avatar, class: "circle"
         .h2.center.name.align-right= friend.name
