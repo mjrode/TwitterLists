@@ -28,3 +28,18 @@ deleteme:
   user_id: 40
   name: "Delete Me"
   remote_id: 280620397144
+
+wsj:
+  id: 133495
+  username: "WSJ"
+  user_id: 350169055
+  name: "Wall Street Journal"
+  bio: "Breaking news and features from the WSJ."
+  remote_id: 3108351
+
+coalboat:
+  id: 133585
+  username: "coalboat"
+  user_id: 350169055
+  name: "Coalboat"
+  remote_id: 3108351

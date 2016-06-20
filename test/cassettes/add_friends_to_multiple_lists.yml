@@ -1,6 +1,1275 @@
 ---
 http_interactions:
 - request:
+    method: get
+    uri: https://api.twitter.com/1.1/lists/list.json?user_id=711995065347006465
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      User-Agent:
+      - TwitterRubyGem/5.16.0
+      Authorization:
+      - Bearer AAAAAAAAAAAAAAAAAAAAAPfmvAAAAAAAxuLnQIbL9WM5N3RJsBv%2BKM4fD%2B4%3D3SzoKa9kefI2w6PPiDb4kAzAmXwF7Ev2x3V4zHI9hXls3k39nX
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Cache-Control:
+      - no-cache, no-store, must-revalidate, pre-check=0, post-check=0
+      Content-Disposition:
+      - attachment; filename=json.json
+      Content-Length:
+      - '1021'
+      Content-Type:
+      - application/json;charset=utf-8
+      Date:
+      - Sun, 19 Jun 2016 23:33:17 GMT
+      Expires:
+      - Tue, 31 Mar 1981 05:00:00 GMT
+      Last-Modified:
+      - Sun, 19 Jun 2016 23:33:17 GMT
+      Pragma:
+      - no-cache
+      Server:
+      - tsa_b
+      Set-Cookie:
+      - guest_id=v1%3A146637919699582725; Domain=.twitter.com; Path=/; Expires=Tue,
+        19-Jun-2018 23:33:17 UTC
+      Status:
+      - 200 OK
+      Strict-Transport-Security:
+      - max-age=631138519
+      X-Access-Level:
+      - read
+      X-Connection-Hash:
+      - d95c34dcff66afe5fc4c7018c4e91da6
+      X-Content-Type-Options:
+      - nosniff
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Rate-Limit-Limit:
+      - '15'
+      X-Rate-Limit-Remaining:
+      - '10'
+      X-Rate-Limit-Reset:
+      - '1466379201'
+      X-Response-Time:
+      - '42'
+      X-Transaction:
+      - 263cefca7725e7cb
+      X-Twitter-Response-Tags:
+      - BouncerCompliant
+      X-Xss-Protection:
+      - 1; mode=block
+    body:
+      encoding: ASCII-8BIT
+      string: '[{"id":744644615257591808,"id_str":"744644615257591808","name":"mikes
+        list","uri":"\/mjr_tts\/lists\/mikes-list","subscriber_count":0,"member_count":0,"mode":"public","description":"","slug":"mikes-list","full_name":"@mjr_tts\/mikes-list","created_at":"Sun
+        Jun 19 21:34:45 +0000 2016","following":false,"user":{"id":711995065347006465,"id_str":"711995065347006465","name":"test
+        less","screen_name":"mjr_tts","location":"","description":"","url":null,"entities":{"description":{"urls":[]}},"protected":false,"followers_count":4,"friends_count":10,"listed_count":0,"created_at":"Mon
+        Mar 21 19:17:06 +0000 2016","favourites_count":2,"utc_offset":null,"time_zone":null,"geo_enabled":false,"verified":false,"statuses_count":24,"lang":"en","contributors_enabled":false,"is_translator":false,"is_translation_enabled":false,"profile_background_color":"F5F8FA","profile_background_image_url":null,"profile_background_image_url_https":null,"profile_background_tile":false,"profile_image_url":"http:\/\/abs.twimg.com\/sticky\/default_profile_images\/default_profile_3_normal.png","profile_image_url_https":"https:\/\/abs.twimg.com\/sticky\/default_profile_images\/default_profile_3_normal.png","profile_link_color":"2B7BB9","profile_sidebar_border_color":"C0DEED","profile_sidebar_fill_color":"DDEEF6","profile_text_color":"333333","profile_use_background_image":true,"has_extended_profile":false,"default_profile":true,"default_profile_image":true,"following":null,"follow_request_sent":null,"notifications":null}},{"id":744626780523405316,"id_str":"744626780523405316","name":"Multiple","uri":"\/mjr_tts\/lists\/multiple","subscriber_count":0,"member_count":3,"mode":"public","description":"","slug":"multiple","full_name":"@mjr_tts\/multiple","created_at":"Sun
+        Jun 19 20:23:53 +0000 2016","following":false,"user":{"id":711995065347006465,"id_str":"711995065347006465","name":"test
+        less","screen_name":"mjr_tts","location":"","description":"","url":null,"entities":{"description":{"urls":[]}},"protected":false,"followers_count":4,"friends_count":10,"listed_count":0,"created_at":"Mon
+        Mar 21 19:17:06 +0000 2016","favourites_count":2,"utc_offset":null,"time_zone":null,"geo_enabled":false,"verified":false,"statuses_count":24,"lang":"en","contributors_enabled":false,"is_translator":false,"is_translation_enabled":false,"profile_background_color":"F5F8FA","profile_background_image_url":null,"profile_background_image_url_https":null,"profile_background_tile":false,"profile_image_url":"http:\/\/abs.twimg.com\/sticky\/default_profile_images\/default_profile_3_normal.png","profile_image_url_https":"https:\/\/abs.twimg.com\/sticky\/default_profile_images\/default_profile_3_normal.png","profile_link_color":"2B7BB9","profile_sidebar_border_color":"C0DEED","profile_sidebar_fill_color":"DDEEF6","profile_text_color":"333333","profile_use_background_image":true,"has_extended_profile":false,"default_profile":true,"default_profile_image":true,"following":null,"follow_request_sent":null,"notifications":null}},{"id":744299856911540224,"id_str":"744299856911540224","name":"Remote
+        List","uri":"\/mjr_tts\/lists\/remote-list","subscriber_count":0,"member_count":2,"mode":"public","description":"","slug":"remote-list","full_name":"@mjr_tts\/remote-list","created_at":"Sat
+        Jun 18 22:44:48 +0000 2016","following":false,"user":{"id":711995065347006465,"id_str":"711995065347006465","name":"test
+        less","screen_name":"mjr_tts","location":"","description":"","url":null,"entities":{"description":{"urls":[]}},"protected":false,"followers_count":4,"friends_count":10,"listed_count":0,"created_at":"Mon
+        Mar 21 19:17:06 +0000 2016","favourites_count":2,"utc_offset":null,"time_zone":null,"geo_enabled":false,"verified":false,"statuses_count":24,"lang":"en","contributors_enabled":false,"is_translator":false,"is_translation_enabled":false,"profile_background_color":"F5F8FA","profile_background_image_url":null,"profile_background_image_url_https":null,"profile_background_tile":false,"profile_image_url":"http:\/\/abs.twimg.com\/sticky\/default_profile_images\/default_profile_3_normal.png","profile_image_url_https":"https:\/\/abs.twimg.com\/sticky\/default_profile_images\/default_profile_3_normal.png","profile_link_color":"2B7BB9","profile_sidebar_border_color":"C0DEED","profile_sidebar_fill_color":"DDEEF6","profile_text_color":"333333","profile_use_background_image":true,"has_extended_profile":false,"default_profile":true,"default_profile_image":true,"following":null,"follow_request_sent":null,"notifications":null}},{"id":744272088551333888,"id_str":"744272088551333888","name":"Food","uri":"\/mjr_tts\/lists\/food","subscriber_count":0,"member_count":6,"mode":"public","description":"","slug":"food","full_name":"@mjr_tts\/food","created_at":"Sat
+        Jun 18 20:54:28 +0000 2016","following":false,"user":{"id":711995065347006465,"id_str":"711995065347006465","name":"test
+        less","screen_name":"mjr_tts","location":"","description":"","url":null,"entities":{"description":{"urls":[]}},"protected":false,"followers_count":4,"friends_count":10,"listed_count":0,"created_at":"Mon
+        Mar 21 19:17:06 +0000 2016","favourites_count":2,"utc_offset":null,"time_zone":null,"geo_enabled":false,"verified":false,"statuses_count":24,"lang":"en","contributors_enabled":false,"is_translator":false,"is_translation_enabled":false,"profile_background_color":"F5F8FA","profile_background_image_url":null,"profile_background_image_url_https":null,"profile_background_tile":false,"profile_image_url":"http:\/\/abs.twimg.com\/sticky\/default_profile_images\/default_profile_3_normal.png","profile_image_url_https":"https:\/\/abs.twimg.com\/sticky\/default_profile_images\/default_profile_3_normal.png","profile_link_color":"2B7BB9","profile_sidebar_border_color":"C0DEED","profile_sidebar_fill_color":"DDEEF6","profile_text_color":"333333","profile_use_background_image":true,"has_extended_profile":false,"default_profile":true,"default_profile_image":true,"following":null,"follow_request_sent":null,"notifications":null}},{"id":743893277934489600,"id_str":"743893277934489600","name":"Coding","uri":"\/mjr_tts\/lists\/coding","subscriber_count":0,"member_count":5,"mode":"public","description":"","slug":"coding","full_name":"@mjr_tts\/coding","created_at":"Fri
+        Jun 17 19:49:12 +0000 2016","following":false,"user":{"id":711995065347006465,"id_str":"711995065347006465","name":"test
+        less","screen_name":"mjr_tts","location":"","description":"","url":null,"entities":{"description":{"urls":[]}},"protected":false,"followers_count":4,"friends_count":10,"listed_count":0,"created_at":"Mon
+        Mar 21 19:17:06 +0000 2016","favourites_count":2,"utc_offset":null,"time_zone":null,"geo_enabled":false,"verified":false,"statuses_count":24,"lang":"en","contributors_enabled":false,"is_translator":false,"is_translation_enabled":false,"profile_background_color":"F5F8FA","profile_background_image_url":null,"profile_background_image_url_https":null,"profile_background_tile":false,"profile_image_url":"http:\/\/abs.twimg.com\/sticky\/default_profile_images\/default_profile_3_normal.png","profile_image_url_https":"https:\/\/abs.twimg.com\/sticky\/default_profile_images\/default_profile_3_normal.png","profile_link_color":"2B7BB9","profile_sidebar_border_color":"C0DEED","profile_sidebar_fill_color":"DDEEF6","profile_text_color":"333333","profile_use_background_image":true,"has_extended_profile":false,"default_profile":true,"default_profile_image":true,"following":null,"follow_request_sent":null,"notifications":null}},{"id":743889984701272064,"id_str":"743889984701272064","name":"Tech","uri":"\/mjr_tts\/lists\/tech","subscriber_count":0,"member_count":8,"mode":"public","description":"","slug":"tech","full_name":"@mjr_tts\/tech","created_at":"Fri
+        Jun 17 19:36:07 +0000 2016","following":false,"user":{"id":711995065347006465,"id_str":"711995065347006465","name":"test
+        less","screen_name":"mjr_tts","location":"","description":"","url":null,"entities":{"description":{"urls":[]}},"protected":false,"followers_count":4,"friends_count":10,"listed_count":0,"created_at":"Mon
+        Mar 21 19:17:06 +0000 2016","favourites_count":2,"utc_offset":null,"time_zone":null,"geo_enabled":false,"verified":false,"statuses_count":24,"lang":"en","contributors_enabled":false,"is_translator":false,"is_translation_enabled":false,"profile_background_color":"F5F8FA","profile_background_image_url":null,"profile_background_image_url_https":null,"profile_background_tile":false,"profile_image_url":"http:\/\/abs.twimg.com\/sticky\/default_profile_images\/default_profile_3_normal.png","profile_image_url_https":"https:\/\/abs.twimg.com\/sticky\/default_profile_images\/default_profile_3_normal.png","profile_link_color":"2B7BB9","profile_sidebar_border_color":"C0DEED","profile_sidebar_fill_color":"DDEEF6","profile_text_color":"333333","profile_use_background_image":true,"has_extended_profile":false,"default_profile":true,"default_profile_image":true,"following":null,"follow_request_sent":null,"notifications":null}},{"id":743140782333378560,"id_str":"743140782333378560","name":"heroku","uri":"\/mjr_tts\/lists\/heroku","subscriber_count":0,"member_count":4,"mode":"public","description":"","slug":"heroku","full_name":"@mjr_tts\/heroku","created_at":"Wed
+        Jun 15 17:59:04 +0000 2016","following":false,"user":{"id":711995065347006465,"id_str":"711995065347006465","name":"test
+        less","screen_name":"mjr_tts","location":"","description":"","url":null,"entities":{"description":{"urls":[]}},"protected":false,"followers_count":4,"friends_count":10,"listed_count":0,"created_at":"Mon
+        Mar 21 19:17:06 +0000 2016","favourites_count":2,"utc_offset":null,"time_zone":null,"geo_enabled":false,"verified":false,"statuses_count":24,"lang":"en","contributors_enabled":false,"is_translator":false,"is_translation_enabled":false,"profile_background_color":"F5F8FA","profile_background_image_url":null,"profile_background_image_url_https":null,"profile_background_tile":false,"profile_image_url":"http:\/\/abs.twimg.com\/sticky\/default_profile_images\/default_profile_3_normal.png","profile_image_url_https":"https:\/\/abs.twimg.com\/sticky\/default_profile_images\/default_profile_3_normal.png","profile_link_color":"2B7BB9","profile_sidebar_border_color":"C0DEED","profile_sidebar_fill_color":"DDEEF6","profile_text_color":"333333","profile_use_background_image":true,"has_extended_profile":false,"default_profile":true,"default_profile_image":true,"following":null,"follow_request_sent":null,"notifications":null}}]'
+    http_version: 
+  recorded_at: Sun, 19 Jun 2016 23:33:16 GMT
+- request:
+    method: get
+    uri: https://api.twitter.com/1.1/account/verify_credentials.json?skip_status=true
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      User-Agent:
+      - TwitterRubyGem/5.16.0
+      Authorization:
+      - OAuth oauth_consumer_key="PCvo50anGUpUUDusAPmiurzjM", oauth_nonce="b53a076f9613db989e386cb09c31dad8",
+        oauth_signature="okdKeZ%2B41lnQMkiMi4EJEsY0cM4%3D", oauth_signature_method="HMAC-SHA1",
+        oauth_timestamp="1466379196", oauth_token="711995065347006465-JLJWrBLyfySojWUz1C7mwaqx37Qv7vQ",
+        oauth_version="1.0"
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Cache-Control:
+      - no-cache, no-store, must-revalidate, pre-check=0, post-check=0
+      Content-Disposition:
+      - attachment; filename=json.json
+      Content-Length:
+      - '515'
+      Content-Type:
+      - application/json;charset=utf-8
+      Date:
+      - Sun, 19 Jun 2016 23:33:17 GMT
+      Expires:
+      - Tue, 31 Mar 1981 05:00:00 GMT
+      Last-Modified:
+      - Sun, 19 Jun 2016 23:33:17 GMT
+      Pragma:
+      - no-cache
+      Server:
+      - tsa_b
+      Set-Cookie:
+      - guest_id=v1%3A146637919720182069; Domain=.twitter.com; Path=/; Expires=Tue,
+        19-Jun-2018 23:33:17 UTC
+      - lang=en; Path=/
+      Status:
+      - 200 OK
+      Strict-Transport-Security:
+      - max-age=631138519
+      X-Access-Level:
+      - read-write-directmessages
+      X-Connection-Hash:
+      - 883d75296a67c9926c348e0896ff7fb7
+      X-Content-Type-Options:
+      - nosniff
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Rate-Limit-Limit:
+      - '15'
+      X-Rate-Limit-Remaining:
+      - '12'
+      X-Rate-Limit-Reset:
+      - '1466379202'
+      X-Response-Time:
+      - '18'
+      X-Transaction:
+      - 640e63e402252ca1
+      X-Twitter-Response-Tags:
+      - BouncerCompliant
+      - BouncerExempt
+      X-Xss-Protection:
+      - 1; mode=block
+    body:
+      encoding: ASCII-8BIT
+      string: '{"id":711995065347006465,"id_str":"711995065347006465","name":"test
+        less","screen_name":"mjr_tts","location":"","description":"","url":null,"entities":{"description":{"urls":[]}},"protected":false,"followers_count":4,"friends_count":10,"listed_count":0,"created_at":"Mon
+        Mar 21 19:17:06 +0000 2016","favourites_count":2,"utc_offset":null,"time_zone":null,"geo_enabled":false,"verified":false,"statuses_count":24,"lang":"en","contributors_enabled":false,"is_translator":false,"is_translation_enabled":false,"profile_background_color":"F5F8FA","profile_background_image_url":null,"profile_background_image_url_https":null,"profile_background_tile":false,"profile_image_url":"http:\/\/abs.twimg.com\/sticky\/default_profile_images\/default_profile_3_normal.png","profile_image_url_https":"https:\/\/abs.twimg.com\/sticky\/default_profile_images\/default_profile_3_normal.png","profile_link_color":"2B7BB9","profile_sidebar_border_color":"C0DEED","profile_sidebar_fill_color":"DDEEF6","profile_text_color":"333333","profile_use_background_image":true,"has_extended_profile":false,"default_profile":true,"default_profile_image":true,"following":false,"follow_request_sent":false,"notifications":false}'
+    http_version: 
+  recorded_at: Sun, 19 Jun 2016 23:33:16 GMT
+- request:
+    method: get
+    uri: https://api.twitter.com/1.1/lists/members.json?cursor=-1&list_id=743889984701272064&owner_id=711995065347006465
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      User-Agent:
+      - TwitterRubyGem/5.16.0
+      Authorization:
+      - OAuth oauth_consumer_key="PCvo50anGUpUUDusAPmiurzjM", oauth_nonce="5e851afce317f6c5b2d47ecf46c15e51",
+        oauth_signature="8QXtinMOBIoXQMy56Su4nLywjgo%3D", oauth_signature_method="HMAC-SHA1",
+        oauth_timestamp="1466379196", oauth_token="711995065347006465-JLJWrBLyfySojWUz1C7mwaqx37Qv7vQ",
+        oauth_version="1.0"
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Cache-Control:
+      - no-cache, no-store, must-revalidate, pre-check=0, post-check=0
+      Content-Disposition:
+      - attachment; filename=json.json
+      Content-Length:
+      - '5293'
+      Content-Type:
+      - application/json;charset=utf-8
+      Date:
+      - Sun, 19 Jun 2016 23:33:17 GMT
+      Expires:
+      - Tue, 31 Mar 1981 05:00:00 GMT
+      Last-Modified:
+      - Sun, 19 Jun 2016 23:33:17 GMT
+      Pragma:
+      - no-cache
+      Server:
+      - tsa_b
+      Set-Cookie:
+      - guest_id=v1%3A146637919737835992; Domain=.twitter.com; Path=/; Expires=Tue,
+        19-Jun-2018 23:33:17 UTC
+      - lang=en; Path=/
+      Status:
+      - 200 OK
+      Strict-Transport-Security:
+      - max-age=631138519
+      X-Access-Level:
+      - read-write-directmessages
+      X-Connection-Hash:
+      - 73b11c91ad2f52a66172b62970b955ea
+      X-Content-Type-Options:
+      - nosniff
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Rate-Limit-Limit:
+      - '180'
+      X-Rate-Limit-Remaining:
+      - '175'
+      X-Rate-Limit-Reset:
+      - '1466379202'
+      X-Response-Time:
+      - '73'
+      X-Transaction:
+      - a2d27ec6427941c7
+      X-Twitter-Response-Tags:
+      - BouncerCompliant
+      X-Xss-Protection:
+      - 1; mode=block
+    body:
+      encoding: ASCII-8BIT
+      string: '{"users":[{"id":1000842626,"id_str":"1000842626","name":"GoRails","screen_name":"GoRails","location":"","description":"Ruby
+        on Rails screencasts for aspiring developers by @excid3","url":"http:\/\/t.co\/ej10pLovzk","entities":{"url":{"urls":[{"url":"http:\/\/t.co\/ej10pLovzk","expanded_url":"http:\/\/gorails.com","display_url":"gorails.com","indices":[0,22]}]},"description":{"urls":[]}},"protected":false,"followers_count":1217,"friends_count":30,"listed_count":61,"created_at":"Mon
+        Dec 10 03:50:01 +0000 2012","favourites_count":2059,"utc_offset":null,"time_zone":null,"geo_enabled":false,"verified":false,"statuses_count":459,"lang":"en","status":{"created_at":"Wed
+        Jun 15 18:01:20 +0000 2016","id":743141356726476800,"id_str":"743141356726476800","text":"RT
+        @wolfieorama: @excid3 welcome knowledge doesn''t come cheaper than lunch....
+        Does it? @GoRails","truncated":false,"entities":{"hashtags":[],"symbols":[],"user_mentions":[{"screen_name":"wolfieorama","name":"Tweets
+        from Wolfie","id":24661632,"id_str":"24661632","indices":[3,15]},{"screen_name":"excid3","name":"Chris
+        Oliver","id":14057736,"id_str":"14057736","indices":[17,24]},{"screen_name":"GoRails","name":"GoRails","id":1000842626,"id_str":"1000842626","indices":[88,96]}],"urls":[]},"source":"\u003ca
+        href=\"https:\/\/about.twitter.com\/products\/tweetdeck\" rel=\"nofollow\"\u003eTweetDeck\u003c\/a\u003e","in_reply_to_status_id":null,"in_reply_to_status_id_str":null,"in_reply_to_user_id":null,"in_reply_to_user_id_str":null,"in_reply_to_screen_name":null,"geo":null,"coordinates":null,"place":null,"contributors":null,"retweeted_status":{"created_at":"Wed
+        Jun 15 16:36:04 +0000 2016","id":743119896565911553,"id_str":"743119896565911553","text":"@excid3
+        welcome knowledge doesn''t come cheaper than lunch.... Does it? @GoRails","truncated":false,"entities":{"hashtags":[],"symbols":[],"user_mentions":[{"screen_name":"excid3","name":"Chris
+        Oliver","id":14057736,"id_str":"14057736","indices":[0,7]},{"screen_name":"GoRails","name":"GoRails","id":1000842626,"id_str":"1000842626","indices":[71,79]}],"urls":[]},"source":"\u003ca
+        href=\"http:\/\/twitter.com\/download\/android\" rel=\"nofollow\"\u003eTwitter
+        for Android\u003c\/a\u003e","in_reply_to_status_id":743117015141908480,"in_reply_to_status_id_str":"743117015141908480","in_reply_to_user_id":14057736,"in_reply_to_user_id_str":"14057736","in_reply_to_screen_name":"excid3","geo":null,"coordinates":null,"place":null,"contributors":null,"is_quote_status":false,"retweet_count":1,"favorite_count":1,"favorited":false,"retweeted":false,"lang":"en"},"is_quote_status":false,"retweet_count":1,"favorite_count":0,"favorited":false,"retweeted":false,"lang":"en"},"contributors_enabled":false,"is_translator":false,"is_translation_enabled":false,"profile_background_color":"C0DEED","profile_background_image_url":"http:\/\/abs.twimg.com\/images\/themes\/theme1\/bg.png","profile_background_image_url_https":"https:\/\/abs.twimg.com\/images\/themes\/theme1\/bg.png","profile_background_tile":false,"profile_image_url":"http:\/\/pbs.twimg.com\/profile_images\/695303579440013312\/j4EEtvdZ_normal.png","profile_image_url_https":"https:\/\/pbs.twimg.com\/profile_images\/695303579440013312\/j4EEtvdZ_normal.png","profile_link_color":"EE6746","profile_sidebar_border_color":"C0DEED","profile_sidebar_fill_color":"DDEEF6","profile_text_color":"333333","profile_use_background_image":true,"has_extended_profile":false,"default_profile":false,"default_profile_image":false,"following":false,"follow_request_sent":false,"notifications":false},{"id":919290289,"id_str":"919290289","name":"Carson
+        Bland","screen_name":"carson_blah","location":"Raleigh, NC","description":"","url":null,"entities":{"description":{"urls":[]}},"protected":false,"followers_count":45,"friends_count":264,"listed_count":3,"created_at":"Thu
+        Nov 01 15:47:19 +0000 2012","favourites_count":52,"utc_offset":-14400,"time_zone":"Eastern
+        Time (US & Canada)","geo_enabled":false,"verified":false,"statuses_count":83,"lang":"en","status":{"created_at":"Mon
+        May 02 04:13:02 +0000 2016","id":726987841226551297,"id_str":"726987841226551297","text":"RT
+        @adubs: #GameofThrones I feel like everyone forgot Melisandra burned a small
+        child at the stake and acted all: https:\/\/t.co\/CkRmokhV5z","truncated":false,"entities":{"hashtags":[{"text":"GameofThrones","indices":[11,25]}],"symbols":[],"user_mentions":[{"screen_name":"adubs","name":"Angela","id":14317265,"id_str":"14317265","indices":[3,9]}],"urls":[],"media":[{"id":726960968731922432,"id_str":"726960968731922432","indices":[114,137],"media_url":"http:\/\/pbs.twimg.com\/tweet_video_thumb\/ChavJkLXEAAsilu.jpg","media_url_https":"https:\/\/pbs.twimg.com\/tweet_video_thumb\/ChavJkLXEAAsilu.jpg","url":"https:\/\/t.co\/CkRmokhV5z","display_url":"pic.twitter.com\/CkRmokhV5z","expanded_url":"http:\/\/twitter.com\/adubs\/status\/726961020984504322\/photo\/1","type":"photo","sizes":{"thumb":{"w":150,"h":150,"resize":"crop"},"large":{"w":354,"h":184,"resize":"fit"},"small":{"w":340,"h":177,"resize":"fit"},"medium":{"w":354,"h":184,"resize":"fit"}},"source_status_id":726961020984504322,"source_status_id_str":"726961020984504322","source_user_id":14317265,"source_user_id_str":"14317265"}]},"extended_entities":{"media":[{"id":726960968731922432,"id_str":"726960968731922432","indices":[114,137],"media_url":"http:\/\/pbs.twimg.com\/tweet_video_thumb\/ChavJkLXEAAsilu.jpg","media_url_https":"https:\/\/pbs.twimg.com\/tweet_video_thumb\/ChavJkLXEAAsilu.jpg","url":"https:\/\/t.co\/CkRmokhV5z","display_url":"pic.twitter.com\/CkRmokhV5z","expanded_url":"http:\/\/twitter.com\/adubs\/status\/726961020984504322\/photo\/1","type":"animated_gif","sizes":{"thumb":{"w":150,"h":150,"resize":"crop"},"large":{"w":354,"h":184,"resize":"fit"},"small":{"w":340,"h":177,"resize":"fit"},"medium":{"w":354,"h":184,"resize":"fit"}},"source_status_id":726961020984504322,"source_status_id_str":"726961020984504322","source_user_id":14317265,"source_user_id_str":"14317265","video_info":{"aspect_ratio":[177,92],"variants":[{"bitrate":0,"content_type":"video\/mp4","url":"https:\/\/pbs.twimg.com\/tweet_video\/ChavJkLXEAAsilu.mp4"}]}}]},"source":"\u003ca
+        href=\"http:\/\/twitter.com\/download\/android\" rel=\"nofollow\"\u003eTwitter
+        for Android\u003c\/a\u003e","in_reply_to_status_id":null,"in_reply_to_status_id_str":null,"in_reply_to_user_id":null,"in_reply_to_user_id_str":null,"in_reply_to_screen_name":null,"geo":null,"coordinates":null,"place":null,"contributors":null,"retweeted_status":{"created_at":"Mon
+        May 02 02:26:28 +0000 2016","id":726961020984504322,"id_str":"726961020984504322","text":"#GameofThrones
+        I feel like everyone forgot Melisandra burned a small child at the stake and
+        acted all: https:\/\/t.co\/CkRmokhV5z","truncated":false,"entities":{"hashtags":[{"text":"GameofThrones","indices":[0,14]}],"symbols":[],"user_mentions":[],"urls":[],"media":[{"id":726960968731922432,"id_str":"726960968731922432","indices":[103,126],"media_url":"http:\/\/pbs.twimg.com\/tweet_video_thumb\/ChavJkLXEAAsilu.jpg","media_url_https":"https:\/\/pbs.twimg.com\/tweet_video_thumb\/ChavJkLXEAAsilu.jpg","url":"https:\/\/t.co\/CkRmokhV5z","display_url":"pic.twitter.com\/CkRmokhV5z","expanded_url":"http:\/\/twitter.com\/adubs\/status\/726961020984504322\/photo\/1","type":"photo","sizes":{"thumb":{"w":150,"h":150,"resize":"crop"},"large":{"w":354,"h":184,"resize":"fit"},"small":{"w":340,"h":177,"resize":"fit"},"medium":{"w":354,"h":184,"resize":"fit"}}}]},"extended_entities":{"media":[{"id":726960968731922432,"id_str":"726960968731922432","indices":[103,126],"media_url":"http:\/\/pbs.twimg.com\/tweet_video_thumb\/ChavJkLXEAAsilu.jpg","media_url_https":"https:\/\/pbs.twimg.com\/tweet_video_thumb\/ChavJkLXEAAsilu.jpg","url":"https:\/\/t.co\/CkRmokhV5z","display_url":"pic.twitter.com\/CkRmokhV5z","expanded_url":"http:\/\/twitter.com\/adubs\/status\/726961020984504322\/photo\/1","type":"animated_gif","sizes":{"thumb":{"w":150,"h":150,"resize":"crop"},"large":{"w":354,"h":184,"resize":"fit"},"small":{"w":340,"h":177,"resize":"fit"},"medium":{"w":354,"h":184,"resize":"fit"}},"video_info":{"aspect_ratio":[177,92],"variants":[{"bitrate":0,"content_type":"video\/mp4","url":"https:\/\/pbs.twimg.com\/tweet_video\/ChavJkLXEAAsilu.mp4"}]}}]},"source":"\u003ca
+        href=\"http:\/\/twitter.com\/download\/android\" rel=\"nofollow\"\u003eTwitter
+        for Android\u003c\/a\u003e","in_reply_to_status_id":null,"in_reply_to_status_id_str":null,"in_reply_to_user_id":null,"in_reply_to_user_id_str":null,"in_reply_to_screen_name":null,"geo":null,"coordinates":null,"place":null,"contributors":null,"is_quote_status":false,"retweet_count":201,"favorite_count":392,"favorited":false,"retweeted":false,"possibly_sensitive":false,"lang":"en"},"is_quote_status":false,"retweet_count":201,"favorite_count":0,"favorited":false,"retweeted":false,"possibly_sensitive":false,"lang":"en"},"contributors_enabled":false,"is_translator":false,"is_translation_enabled":false,"profile_background_color":"131516","profile_background_image_url":"http:\/\/pbs.twimg.com\/profile_background_images\/712338853\/0b951f1d0e0aae4c089d313da6108870.jpeg","profile_background_image_url_https":"https:\/\/pbs.twimg.com\/profile_background_images\/712338853\/0b951f1d0e0aae4c089d313da6108870.jpeg","profile_background_tile":true,"profile_image_url":"http:\/\/pbs.twimg.com\/profile_images\/609068558316806144\/E-dgJrfB_normal.jpg","profile_image_url_https":"https:\/\/pbs.twimg.com\/profile_images\/609068558316806144\/E-dgJrfB_normal.jpg","profile_banner_url":"https:\/\/pbs.twimg.com\/profile_banners\/919290289\/1352999986","profile_link_color":"009999","profile_sidebar_border_color":"FFFFFF","profile_sidebar_fill_color":"EFEFEF","profile_text_color":"333333","profile_use_background_image":true,"has_extended_profile":false,"default_profile":false,"default_profile_image":false,"following":true,"follow_request_sent":false,"notifications":false},{"id":26257166,"id_str":"26257166","name":"SportsCenter","screen_name":"SportsCenter","location":"Bristol,
+        CT","description":"All things sports. Nominate top plays using #SCtop10. *If
+        you tweet or otherwise send us content, you consent to ESPN using and showcasing
+        it in any media.*","url":"https:\/\/t.co\/nCdopZzBRi","entities":{"url":{"urls":[{"url":"https:\/\/t.co\/nCdopZzBRi","expanded_url":"http:\/\/snapchat.com\/add\/sportscenter","display_url":"snapchat.com\/add\/sportscent\u2026","indices":[0,23]}]},"description":{"urls":[]}},"protected":false,"followers_count":28753593,"friends_count":1669,"listed_count":41945,"created_at":"Tue
+        Mar 24 15:28:02 +0000 2009","favourites_count":808,"utc_offset":-14400,"time_zone":"Eastern
+        Time (US & Canada)","geo_enabled":true,"verified":true,"statuses_count":80568,"lang":"en","status":{"created_at":"Sun
+        Jun 19 23:26:24 +0000 2016","id":744672712426037248,"id_str":"744672712426037248","text":"Some
+        Cavs fans infiltrated Warriors territory. https:\/\/t.co\/HOVnfDN8Xu","truncated":false,"entities":{"hashtags":[],"symbols":[],"user_mentions":[],"urls":[],"media":[{"id":744672704855343105,"id_str":"744672704855343105","indices":[47,70],"media_url":"http:\/\/pbs.twimg.com\/media\/ClWb4S7VAAE2fGL.jpg","media_url_https":"https:\/\/pbs.twimg.com\/media\/ClWb4S7VAAE2fGL.jpg","url":"https:\/\/t.co\/HOVnfDN8Xu","display_url":"pic.twitter.com\/HOVnfDN8Xu","expanded_url":"http:\/\/twitter.com\/SportsCenter\/status\/744672712426037248\/photo\/1","type":"photo","sizes":{"medium":{"w":900,"h":1200,"resize":"fit"},"small":{"w":510,"h":680,"resize":"fit"},"thumb":{"w":150,"h":150,"resize":"crop"},"large":{"w":1536,"h":2048,"resize":"fit"}}}]},"extended_entities":{"media":[{"id":744672704855343105,"id_str":"744672704855343105","indices":[47,70],"media_url":"http:\/\/pbs.twimg.com\/media\/ClWb4S7VAAE2fGL.jpg","media_url_https":"https:\/\/pbs.twimg.com\/media\/ClWb4S7VAAE2fGL.jpg","url":"https:\/\/t.co\/HOVnfDN8Xu","display_url":"pic.twitter.com\/HOVnfDN8Xu","expanded_url":"http:\/\/twitter.com\/SportsCenter\/status\/744672712426037248\/photo\/1","type":"photo","sizes":{"medium":{"w":900,"h":1200,"resize":"fit"},"small":{"w":510,"h":680,"resize":"fit"},"thumb":{"w":150,"h":150,"resize":"crop"},"large":{"w":1536,"h":2048,"resize":"fit"}}}]},"source":"\u003ca
+        href=\"http:\/\/twitter.com\/download\/iphone\" rel=\"nofollow\"\u003eTwitter
+        for iPhone\u003c\/a\u003e","in_reply_to_status_id":null,"in_reply_to_status_id_str":null,"in_reply_to_user_id":null,"in_reply_to_user_id_str":null,"in_reply_to_screen_name":null,"geo":null,"coordinates":null,"place":{"id":"07d9c92c6e087002","url":"https:\/\/api.twitter.com\/1.1\/geo\/id\/07d9c92c6e087002.json","place_type":"poi","name":"Oracle
+        Arena","full_name":"Oracle Arena","country_code":"US","country":"United States","contained_within":[],"bounding_box":{"type":"Polygon","coordinates":[[[-122.20290184020996,37.75026469428747],[-122.20290184020996,37.75026469428747],[-122.20290184020996,37.75026469428747],[-122.20290184020996,37.75026469428747]]]},"attributes":{}},"contributors":null,"is_quote_status":false,"retweet_count":1587,"favorite_count":2249,"favorited":false,"retweeted":false,"possibly_sensitive":false,"lang":"en"},"contributors_enabled":false,"is_translator":false,"is_translation_enabled":true,"profile_background_color":"131516","profile_background_image_url":"http:\/\/pbs.twimg.com\/profile_background_images\/480904536454750208\/mD9fyg2r.jpeg","profile_background_image_url_https":"https:\/\/pbs.twimg.com\/profile_background_images\/480904536454750208\/mD9fyg2r.jpeg","profile_background_tile":true,"profile_image_url":"http:\/\/pbs.twimg.com\/profile_images\/641252681017856001\/p6PL2KFg_normal.jpg","profile_image_url_https":"https:\/\/pbs.twimg.com\/profile_images\/641252681017856001\/p6PL2KFg_normal.jpg","profile_banner_url":"https:\/\/pbs.twimg.com\/profile_banners\/26257166\/1441721587","profile_link_color":"009999","profile_sidebar_border_color":"000000","profile_sidebar_fill_color":"EFEFEF","profile_text_color":"333333","profile_use_background_image":true,"has_extended_profile":false,"default_profile":false,"default_profile_image":false,"following":false,"follow_request_sent":false,"notifications":false},{"id":14761655,"id_str":"14761655","name":"Aaron
+        Patterson","screen_name":"tenderlove","location":"Seattle, WA","description":"\u3072\u3052\u306e\u5c71\u7537\nJob:
+        GitHub\nOpinions: Mine\n\nWhen I''m not trimming my beard, I''m hanging out
+        with my wife, @ebiltwin.","url":"http:\/\/t.co\/gN1GLubxAe","entities":{"url":{"urls":[{"url":"http:\/\/t.co\/gN1GLubxAe","expanded_url":"http:\/\/tenderlovemaking.com","display_url":"tenderlovemaking.com","indices":[0,22]}]},"description":{"urls":[]}},"protected":false,"followers_count":33096,"friends_count":603,"listed_count":1673,"created_at":"Tue
+        May 13 17:25:31 +0000 2008","favourites_count":8903,"utc_offset":-25200,"time_zone":"Pacific
+        Time (US & Canada)","geo_enabled":true,"verified":false,"statuses_count":43874,"lang":"en","status":{"created_at":"Sun
+        Jun 19 23:13:58 +0000 2016","id":744669581491347456,"id_str":"744669581491347456","text":"@bcjbcjbcj
+        Game Developers don\u2019t wear leggings (sees how impressed everyone is,
+        takes it one step further) I am a cat","truncated":false,"entities":{"hashtags":[],"symbols":[],"user_mentions":[{"screen_name":"bcjbcjbcj","name":"bcj","id":142761639,"id_str":"142761639","indices":[0,10]}],"urls":[]},"source":"\u003ca
+        href=\"http:\/\/www.echofon.com\/\" rel=\"nofollow\"\u003eEchofon\u003c\/a\u003e","in_reply_to_status_id":744667919657762817,"in_reply_to_status_id_str":"744667919657762817","in_reply_to_user_id":142761639,"in_reply_to_user_id_str":"142761639","in_reply_to_screen_name":"bcjbcjbcj","geo":null,"coordinates":null,"place":null,"contributors":null,"is_quote_status":false,"retweet_count":0,"favorite_count":1,"favorited":false,"retweeted":false,"lang":"en"},"contributors_enabled":false,"is_translator":false,"is_translation_enabled":false,"profile_background_color":"C0DEED","profile_background_image_url":"http:\/\/abs.twimg.com\/images\/themes\/theme1\/bg.png","profile_background_image_url_https":"https:\/\/abs.twimg.com\/images\/themes\/theme1\/bg.png","profile_background_tile":false,"profile_image_url":"http:\/\/pbs.twimg.com\/profile_images\/378800000325798111\/ca48276f8ebbbbac9c6ce83aac3c8548_normal.jpeg","profile_image_url_https":"https:\/\/pbs.twimg.com\/profile_images\/378800000325798111\/ca48276f8ebbbbac9c6ce83aac3c8548_normal.jpeg","profile_banner_url":"https:\/\/pbs.twimg.com\/profile_banners\/14761655\/1425591616","profile_link_color":"0084B4","profile_sidebar_border_color":"C0DEED","profile_sidebar_fill_color":"DDEEF6","profile_text_color":"333333","profile_use_background_image":true,"has_extended_profile":true,"default_profile":true,"default_profile_image":false,"following":true,"follow_request_sent":false,"notifications":false},{"id":3108351,"id_str":"3108351","name":"Wall
+        Street Journal","screen_name":"WSJ","location":"New York, NY","description":"Breaking
+        news and features from the WSJ.","url":"https:\/\/t.co\/GhhR6PLfem","entities":{"url":{"urls":[{"url":"https:\/\/t.co\/GhhR6PLfem","expanded_url":"http:\/\/wsj.com","display_url":"wsj.com","indices":[0,23]}]},"description":{"urls":[]}},"protected":false,"followers_count":11204319,"friends_count":1062,"listed_count":99294,"created_at":"Sun
+        Apr 01 06:22:13 +0000 2007","favourites_count":1296,"utc_offset":-14400,"time_zone":"Eastern
+        Time (US & Canada)","geo_enabled":true,"verified":true,"statuses_count":160875,"lang":"en","status":{"created_at":"Sun
+        Jun 19 23:22:07 +0000 2016","id":744671635949531136,"id_str":"744671635949531136","text":"This
+        week, Janet Yellen may provide clues about the future pace of raising rates
+        https:\/\/t.co\/cF6M0PTr8O","truncated":false,"entities":{"hashtags":[],"symbols":[],"user_mentions":[],"urls":[{"url":"https:\/\/t.co\/cF6M0PTr8O","expanded_url":"http:\/\/on.wsj.com\/1UqHzAg","display_url":"on.wsj.com\/1UqHzAg","indices":[81,104]}]},"source":"\u003ca
+        href=\"http:\/\/www.socialflow.com\" rel=\"nofollow\"\u003eSocialFlow\u003c\/a\u003e","in_reply_to_status_id":null,"in_reply_to_status_id_str":null,"in_reply_to_user_id":null,"in_reply_to_user_id_str":null,"in_reply_to_screen_name":null,"geo":null,"coordinates":null,"place":null,"contributors":null,"is_quote_status":false,"retweet_count":18,"favorite_count":14,"favorited":false,"retweeted":false,"possibly_sensitive":false,"lang":"en"},"contributors_enabled":false,"is_translator":false,"is_translation_enabled":true,"profile_background_color":"EDF2F5","profile_background_image_url":"http:\/\/pbs.twimg.com\/profile_background_images\/378800000026078008\/c07ad7d60f01c3a836dd701fc3f71233.jpeg","profile_background_image_url_https":"https:\/\/pbs.twimg.com\/profile_background_images\/378800000026078008\/c07ad7d60f01c3a836dd701fc3f71233.jpeg","profile_background_tile":false,"profile_image_url":"http:\/\/pbs.twimg.com\/profile_images\/685113343204585473\/jV72Zljq_normal.jpg","profile_image_url_https":"https:\/\/pbs.twimg.com\/profile_images\/685113343204585473\/jV72Zljq_normal.jpg","profile_banner_url":"https:\/\/pbs.twimg.com\/profile_banners\/3108351\/1462483236","profile_link_color":"1164B8","profile_sidebar_border_color":"FFFFFF","profile_sidebar_fill_color":"EFEFEF","profile_text_color":"333333","profile_use_background_image":false,"has_extended_profile":false,"default_profile":false,"default_profile_image":false,"following":true,"follow_request_sent":false,"notifications":false},{"id":2467791,"id_str":"2467791","name":"Washington
+        Post","screen_name":"washingtonpost","location":"Washington, DC","description":"Tweet-length
+        breaking news, analysis from around the world. Founded in 1877. Follow our
+        journalists on Twitter: https:\/\/t.co\/VV0UBAMHg8","url":"http:\/\/t.co\/Hq7hTYkOPg","entities":{"url":{"urls":[{"url":"http:\/\/t.co\/Hq7hTYkOPg","expanded_url":"http:\/\/washingtonpost.com","display_url":"washingtonpost.com","indices":[0,22]}]},"description":{"urls":[{"url":"https:\/\/t.co\/VV0UBAMHg8","expanded_url":"https:\/\/twitter.com\/washingtonpost\/lists\/washington-post-people","display_url":"twitter.com\/washingtonpost\u2026","indices":[112,135]}]}},"protected":false,"followers_count":6677971,"friends_count":1287,"listed_count":70070,"created_at":"Tue
+        Mar 27 11:19:39 +0000 2007","favourites_count":4260,"utc_offset":-14400,"time_zone":"Eastern
+        Time (US & Canada)","geo_enabled":true,"verified":true,"statuses_count":180808,"lang":"en","status":{"created_at":"Sun
+        Jun 19 23:27:14 +0000 2016","id":744672920207769604,"id_str":"744672920207769604","text":"\"Trump
+        just squandered a critical six weeks of the general election campaign\" https:\/\/t.co\/P6ETfAUpfM
+        by @TheFix","truncated":false,"entities":{"hashtags":[],"symbols":[],"user_mentions":[{"screen_name":"TheFix","name":"Chris
+        Cillizza","id":14412533,"id_str":"14412533","indices":[105,112]}],"urls":[{"url":"https:\/\/t.co\/P6ETfAUpfM","expanded_url":"http:\/\/wapo.st\/1ScrUjA","display_url":"wapo.st\/1ScrUjA","indices":[78,101]}]},"source":"\u003ca
+        href=\"http:\/\/www.socialflow.com\" rel=\"nofollow\"\u003eSocialFlow\u003c\/a\u003e","in_reply_to_status_id":null,"in_reply_to_status_id_str":null,"in_reply_to_user_id":null,"in_reply_to_user_id_str":null,"in_reply_to_screen_name":null,"geo":null,"coordinates":null,"place":null,"contributors":null,"is_quote_status":false,"retweet_count":32,"favorite_count":24,"favorited":false,"retweeted":false,"possibly_sensitive":false,"lang":"en"},"contributors_enabled":false,"is_translator":false,"is_translation_enabled":true,"profile_background_color":"333333","profile_background_image_url":"http:\/\/pbs.twimg.com\/profile_background_images\/464437503\/wp-capitol.png","profile_background_image_url_https":"https:\/\/pbs.twimg.com\/profile_background_images\/464437503\/wp-capitol.png","profile_background_tile":false,"profile_image_url":"http:\/\/pbs.twimg.com\/profile_images\/378800000252568100\/7a366ac8d0f934b5318e721ba049e9b1_normal.png","profile_image_url_https":"https:\/\/pbs.twimg.com\/profile_images\/378800000252568100\/7a366ac8d0f934b5318e721ba049e9b1_normal.png","profile_banner_url":"https:\/\/pbs.twimg.com\/profile_banners\/2467791\/1348076832","profile_link_color":"0057EC","profile_sidebar_border_color":"FFFFFF","profile_sidebar_fill_color":"DBDBDB","profile_text_color":"323232","profile_use_background_image":true,"has_extended_profile":false,"default_profile":false,"default_profile_image":false,"following":true,"follow_request_sent":false,"notifications":false},{"id":1344951,"id_str":"1344951","name":"WIRED","screen_name":"WIRED","location":"San
+        Francisco\/New York","description":"WIRED is where tomorrow is realized.","url":"http:\/\/t.co\/AbRkBRjcYo","entities":{"url":{"urls":[{"url":"http:\/\/t.co\/AbRkBRjcYo","expanded_url":"http:\/\/WIRED.com","display_url":"WIRED.com","indices":[0,22]}]},"description":{"urls":[]}},"protected":false,"followers_count":6220817,"friends_count":270,"listed_count":86801,"created_at":"Sat
+        Mar 17 09:57:25 +0000 2007","favourites_count":1715,"utc_offset":-25200,"time_zone":"Pacific
+        Time (US & Canada)","geo_enabled":false,"verified":true,"statuses_count":61965,"lang":"en","status":{"created_at":"Sun
+        Jun 19 23:16:22 +0000 2016","id":744670187287416832,"id_str":"744670187287416832","text":"These
+        new networking chips will transform the tech industry: https:\/\/t.co\/ydmBXtFz2E
+        https:\/\/t.co\/KNGFww7qCY","truncated":false,"entities":{"hashtags":[],"symbols":[],"user_mentions":[],"urls":[{"url":"https:\/\/t.co\/ydmBXtFz2E","expanded_url":"http:\/\/bit.ly\/1UAUYHt","display_url":"bit.ly\/1UAUYHt","indices":[61,84]}],"media":[{"id":744670183378329600,"id_str":"744670183378329600","indices":[85,108],"media_url":"http:\/\/pbs.twimg.com\/media\/ClWZlhsXIAAbXuj.jpg","media_url_https":"https:\/\/pbs.twimg.com\/media\/ClWZlhsXIAAbXuj.jpg","url":"https:\/\/t.co\/KNGFww7qCY","display_url":"pic.twitter.com\/KNGFww7qCY","expanded_url":"http:\/\/twitter.com\/WIRED\/status\/744670187287416832\/photo\/1","type":"photo","sizes":{"medium":{"w":1200,"h":630,"resize":"fit"},"thumb":{"w":150,"h":150,"resize":"crop"},"large":{"w":1200,"h":630,"resize":"fit"},"small":{"w":680,"h":357,"resize":"fit"}}}]},"extended_entities":{"media":[{"id":744670183378329600,"id_str":"744670183378329600","indices":[85,108],"media_url":"http:\/\/pbs.twimg.com\/media\/ClWZlhsXIAAbXuj.jpg","media_url_https":"https:\/\/pbs.twimg.com\/media\/ClWZlhsXIAAbXuj.jpg","url":"https:\/\/t.co\/KNGFww7qCY","display_url":"pic.twitter.com\/KNGFww7qCY","expanded_url":"http:\/\/twitter.com\/WIRED\/status\/744670187287416832\/photo\/1","type":"photo","sizes":{"medium":{"w":1200,"h":630,"resize":"fit"},"thumb":{"w":150,"h":150,"resize":"crop"},"large":{"w":1200,"h":630,"resize":"fit"},"small":{"w":680,"h":357,"resize":"fit"}}}]},"source":"\u003ca
+        href=\"http:\/\/www.socialflow.com\" rel=\"nofollow\"\u003eSocialFlow\u003c\/a\u003e","in_reply_to_status_id":null,"in_reply_to_status_id_str":null,"in_reply_to_user_id":null,"in_reply_to_user_id_str":null,"in_reply_to_screen_name":null,"geo":null,"coordinates":null,"place":null,"contributors":null,"is_quote_status":false,"retweet_count":49,"favorite_count":45,"favorited":false,"retweeted":false,"possibly_sensitive":false,"lang":"en"},"contributors_enabled":false,"is_translator":false,"is_translation_enabled":true,"profile_background_color":"000000","profile_background_image_url":"http:\/\/pbs.twimg.com\/profile_background_images\/734548027\/5e5ee18945d22a9e2d9971208971bfdd.jpeg","profile_background_image_url_https":"https:\/\/pbs.twimg.com\/profile_background_images\/734548027\/5e5ee18945d22a9e2d9971208971bfdd.jpeg","profile_background_tile":false,"profile_image_url":"http:\/\/pbs.twimg.com\/profile_images\/615598832726970372\/jsK-gBSt_normal.png","profile_image_url_https":"https:\/\/pbs.twimg.com\/profile_images\/615598832726970372\/jsK-gBSt_normal.png","profile_banner_url":"https:\/\/pbs.twimg.com\/profile_banners\/1344951\/1463606878","profile_link_color":"99DCF0","profile_sidebar_border_color":"FFFFFF","profile_sidebar_fill_color":"EEEEEE","profile_text_color":"000000","profile_use_background_image":false,"has_extended_profile":false,"default_profile":false,"default_profile_image":false,"following":true,"follow_request_sent":false,"notifications":false},{"id":807095,"id_str":"807095","name":"The
+        New York Times","screen_name":"nytimes","location":"New York City","description":"Where
+        the conversation begins. Follow for breaking news, special reports, RTs of
+        our journalists and more from https:\/\/t.co\/YapuoqX0HS.","url":"http:\/\/t.co\/ahvuWqicF9","entities":{"url":{"urls":[{"url":"http:\/\/t.co\/ahvuWqicF9","expanded_url":"http:\/\/www.nytimes.com\/","display_url":"nytimes.com","indices":[0,22]}]},"description":{"urls":[{"url":"https:\/\/t.co\/YapuoqX0HS","expanded_url":"http:\/\/NYTimes.com","display_url":"NYTimes.com","indices":[111,134]}]}},"protected":false,"followers_count":28238985,"friends_count":985,"listed_count":177561,"created_at":"Fri
+        Mar 02 20:41:42 +0000 2007","favourites_count":11644,"utc_offset":-14400,"time_zone":"Eastern
+        Time (US & Canada)","geo_enabled":false,"verified":true,"statuses_count":235980,"lang":"en","status":{"created_at":"Sun
+        Jun 19 23:33:11 +0000 2016","id":744674417326825473,"id_str":"744674417326825473","text":"Vegetarian
+        dishes you can cook in less than 30 minutes https:\/\/t.co\/JUsK6HKhZG https:\/\/t.co\/nnANUSY2v8","truncated":false,"entities":{"hashtags":[],"symbols":[],"user_mentions":[],"urls":[{"url":"https:\/\/t.co\/JUsK6HKhZG","expanded_url":"http:\/\/nyti.ms\/21tZBnb","display_url":"nyti.ms\/21tZBnb","indices":[55,78]}],"media":[{"id":744674413077999616,"id_str":"744674413077999616","indices":[79,102],"media_url":"http:\/\/pbs.twimg.com\/media\/ClWdbujWMAArgQR.jpg","media_url_https":"https:\/\/pbs.twimg.com\/media\/ClWdbujWMAArgQR.jpg","url":"https:\/\/t.co\/nnANUSY2v8","display_url":"pic.twitter.com\/nnANUSY2v8","expanded_url":"http:\/\/twitter.com\/nytimes\/status\/744674417326825473\/photo\/1","type":"photo","sizes":{"medium":{"w":1000,"h":560,"resize":"fit"},"small":{"w":680,"h":381,"resize":"fit"},"thumb":{"w":150,"h":150,"resize":"crop"},"large":{"w":1000,"h":560,"resize":"fit"}}}]},"extended_entities":{"media":[{"id":744674413077999616,"id_str":"744674413077999616","indices":[79,102],"media_url":"http:\/\/pbs.twimg.com\/media\/ClWdbujWMAArgQR.jpg","media_url_https":"https:\/\/pbs.twimg.com\/media\/ClWdbujWMAArgQR.jpg","url":"https:\/\/t.co\/nnANUSY2v8","display_url":"pic.twitter.com\/nnANUSY2v8","expanded_url":"http:\/\/twitter.com\/nytimes\/status\/744674417326825473\/photo\/1","type":"photo","sizes":{"medium":{"w":1000,"h":560,"resize":"fit"},"small":{"w":680,"h":381,"resize":"fit"},"thumb":{"w":150,"h":150,"resize":"crop"},"large":{"w":1000,"h":560,"resize":"fit"}}}]},"source":"\u003ca
+        href=\"http:\/\/www.socialflow.com\" rel=\"nofollow\"\u003eSocialFlow\u003c\/a\u003e","in_reply_to_status_id":null,"in_reply_to_status_id_str":null,"in_reply_to_user_id":null,"in_reply_to_user_id_str":null,"in_reply_to_screen_name":null,"geo":null,"coordinates":null,"place":null,"contributors":null,"is_quote_status":false,"retweet_count":0,"favorite_count":0,"favorited":false,"retweeted":false,"possibly_sensitive":false,"lang":"en"},"contributors_enabled":false,"is_translator":false,"is_translation_enabled":true,"profile_background_color":"131516","profile_background_image_url":"http:\/\/pbs.twimg.com\/profile_background_images\/736339684\/948f072cc2da4e3a5e9f2ebfb3b1a0e7.png","profile_background_image_url_https":"https:\/\/pbs.twimg.com\/profile_background_images\/736339684\/948f072cc2da4e3a5e9f2ebfb3b1a0e7.png","profile_background_tile":true,"profile_image_url":"http:\/\/pbs.twimg.com\/profile_images\/2044921128\/finals_normal.png","profile_image_url_https":"https:\/\/pbs.twimg.com\/profile_images\/2044921128\/finals_normal.png","profile_banner_url":"https:\/\/pbs.twimg.com\/profile_banners\/807095\/1355346050","profile_link_color":"607696","profile_sidebar_border_color":"FFFFFF","profile_sidebar_fill_color":"EFEFEF","profile_text_color":"333333","profile_use_background_image":true,"has_extended_profile":false,"default_profile":false,"default_profile_image":false,"following":true,"follow_request_sent":false,"notifications":false}],"next_cursor":0,"next_cursor_str":"0","previous_cursor":0,"previous_cursor_str":"0"}'
+    http_version: 
+  recorded_at: Sun, 19 Jun 2016 23:33:16 GMT
+- request:
+    method: post
+    uri: https://api.twitter.com/1.1/lists/members/destroy_all.json
+    body:
+      encoding: UTF-8
+      string: list_id=743889984701272064&owner_id=711995065347006465&screen_name=carson_blah
+    headers:
+      Accept:
+      - application/json
+      User-Agent:
+      - TwitterRubyGem/5.16.0
+      Authorization:
+      - OAuth oauth_consumer_key="PCvo50anGUpUUDusAPmiurzjM", oauth_nonce="22ac944bdb9a9b32ab28821460ab37b3",
+        oauth_signature="95599toM0MJSgGSzb%2FOXbed7N8I%3D", oauth_signature_method="HMAC-SHA1",
+        oauth_timestamp="1466379196", oauth_token="711995065347006465-JLJWrBLyfySojWUz1C7mwaqx37Qv7vQ",
+        oauth_version="1.0"
+      Content-Type:
+      - application/x-www-form-urlencoded
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Cache-Control:
+      - no-cache, no-store, must-revalidate, pre-check=0, post-check=0
+      Content-Disposition:
+      - attachment; filename=json.json
+      Content-Length:
+      - '628'
+      Content-Type:
+      - application/json;charset=utf-8
+      Date:
+      - Sun, 19 Jun 2016 23:33:17 GMT
+      Expires:
+      - Tue, 31 Mar 1981 05:00:00 GMT
+      Last-Modified:
+      - Sun, 19 Jun 2016 23:33:17 GMT
+      Pragma:
+      - no-cache
+      Server:
+      - tsa_b
+      Set-Cookie:
+      - guest_id=v1%3A146637919760467892; Domain=.twitter.com; Path=/; Expires=Tue,
+        19-Jun-2018 23:33:17 UTC
+      - lang=en; Path=/
+      Status:
+      - 200 OK
+      Strict-Transport-Security:
+      - max-age=631138519
+      X-Access-Level:
+      - read-write-directmessages
+      X-Connection-Hash:
+      - 2db2e43d6a7a228e56e60360a03fb369
+      X-Content-Type-Options:
+      - nosniff
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Response-Time:
+      - '95'
+      X-Transaction:
+      - bf2dd0713f3ed4fd
+      X-Tsa-Request-Body-Time:
+      - '0'
+      X-Twitter-Response-Tags:
+      - BouncerCompliant
+      X-Xss-Protection:
+      - 1; mode=block
+    body:
+      encoding: ASCII-8BIT
+      string: '{"id":743889984701272064,"id_str":"743889984701272064","name":"Tech","uri":"\/mjr_tts\/lists\/tech","subscriber_count":0,"member_count":7,"mode":"public","description":"","slug":"tech","full_name":"@mjr_tts\/tech","created_at":"Fri
+        Jun 17 19:36:07 +0000 2016","following":true,"user":{"id":711995065347006465,"id_str":"711995065347006465","name":"test
+        less","screen_name":"mjr_tts","location":"","description":"","url":null,"entities":{"description":{"urls":[]}},"protected":false,"followers_count":4,"friends_count":10,"listed_count":0,"created_at":"Mon
+        Mar 21 19:17:06 +0000 2016","favourites_count":2,"utc_offset":null,"time_zone":null,"geo_enabled":false,"verified":false,"statuses_count":24,"lang":"en","contributors_enabled":false,"is_translator":false,"is_translation_enabled":false,"profile_background_color":"F5F8FA","profile_background_image_url":null,"profile_background_image_url_https":null,"profile_background_tile":false,"profile_image_url":"http:\/\/abs.twimg.com\/sticky\/default_profile_images\/default_profile_3_normal.png","profile_image_url_https":"https:\/\/abs.twimg.com\/sticky\/default_profile_images\/default_profile_3_normal.png","profile_link_color":"2B7BB9","profile_sidebar_border_color":"C0DEED","profile_sidebar_fill_color":"DDEEF6","profile_text_color":"333333","profile_use_background_image":true,"has_extended_profile":false,"default_profile":true,"default_profile_image":true,"following":false,"follow_request_sent":false,"notifications":false}}'
+    http_version: 
+  recorded_at: Sun, 19 Jun 2016 23:33:17 GMT
+- request:
+    method: get
+    uri: https://api.twitter.com/1.1/lists/list.json?user_id=711995065347006465
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      User-Agent:
+      - TwitterRubyGem/5.16.0
+      Authorization:
+      - Bearer AAAAAAAAAAAAAAAAAAAAAPfmvAAAAAAAxuLnQIbL9WM5N3RJsBv%2BKM4fD%2B4%3D3SzoKa9kefI2w6PPiDb4kAzAmXwF7Ev2x3V4zHI9hXls3k39nX
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Cache-Control:
+      - no-cache, no-store, must-revalidate, pre-check=0, post-check=0
+      Content-Disposition:
+      - attachment; filename=json.json
+      Content-Length:
+      - '1021'
+      Content-Type:
+      - application/json;charset=utf-8
+      Date:
+      - Sun, 19 Jun 2016 23:33:17 GMT
+      Expires:
+      - Tue, 31 Mar 1981 05:00:00 GMT
+      Last-Modified:
+      - Sun, 19 Jun 2016 23:33:17 GMT
+      Pragma:
+      - no-cache
+      Server:
+      - tsa_b
+      Set-Cookie:
+      - guest_id=v1%3A146637919783661886; Domain=.twitter.com; Path=/; Expires=Tue,
+        19-Jun-2018 23:33:17 UTC
+      Status:
+      - 200 OK
+      Strict-Transport-Security:
+      - max-age=631138519
+      X-Access-Level:
+      - read
+      X-Connection-Hash:
+      - 3c3969bbaa4ce7e744f8171a615c4b14
+      X-Content-Type-Options:
+      - nosniff
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Rate-Limit-Limit:
+      - '15'
+      X-Rate-Limit-Remaining:
+      - '9'
+      X-Rate-Limit-Reset:
+      - '1466379201'
+      X-Response-Time:
+      - '33'
+      X-Transaction:
+      - aa88dd00786d43f0
+      X-Twitter-Response-Tags:
+      - BouncerCompliant
+      X-Xss-Protection:
+      - 1; mode=block
+    body:
+      encoding: ASCII-8BIT
+      string: '[{"id":744644615257591808,"id_str":"744644615257591808","name":"mikes
+        list","uri":"\/mjr_tts\/lists\/mikes-list","subscriber_count":0,"member_count":0,"mode":"public","description":"","slug":"mikes-list","full_name":"@mjr_tts\/mikes-list","created_at":"Sun
+        Jun 19 21:34:45 +0000 2016","following":false,"user":{"id":711995065347006465,"id_str":"711995065347006465","name":"test
+        less","screen_name":"mjr_tts","location":"","description":"","url":null,"entities":{"description":{"urls":[]}},"protected":false,"followers_count":4,"friends_count":10,"listed_count":0,"created_at":"Mon
+        Mar 21 19:17:06 +0000 2016","favourites_count":2,"utc_offset":null,"time_zone":null,"geo_enabled":false,"verified":false,"statuses_count":24,"lang":"en","contributors_enabled":false,"is_translator":false,"is_translation_enabled":false,"profile_background_color":"F5F8FA","profile_background_image_url":null,"profile_background_image_url_https":null,"profile_background_tile":false,"profile_image_url":"http:\/\/abs.twimg.com\/sticky\/default_profile_images\/default_profile_3_normal.png","profile_image_url_https":"https:\/\/abs.twimg.com\/sticky\/default_profile_images\/default_profile_3_normal.png","profile_link_color":"2B7BB9","profile_sidebar_border_color":"C0DEED","profile_sidebar_fill_color":"DDEEF6","profile_text_color":"333333","profile_use_background_image":true,"has_extended_profile":false,"default_profile":true,"default_profile_image":true,"following":null,"follow_request_sent":null,"notifications":null}},{"id":744626780523405316,"id_str":"744626780523405316","name":"Multiple","uri":"\/mjr_tts\/lists\/multiple","subscriber_count":0,"member_count":3,"mode":"public","description":"","slug":"multiple","full_name":"@mjr_tts\/multiple","created_at":"Sun
+        Jun 19 20:23:53 +0000 2016","following":false,"user":{"id":711995065347006465,"id_str":"711995065347006465","name":"test
+        less","screen_name":"mjr_tts","location":"","description":"","url":null,"entities":{"description":{"urls":[]}},"protected":false,"followers_count":4,"friends_count":10,"listed_count":0,"created_at":"Mon
+        Mar 21 19:17:06 +0000 2016","favourites_count":2,"utc_offset":null,"time_zone":null,"geo_enabled":false,"verified":false,"statuses_count":24,"lang":"en","contributors_enabled":false,"is_translator":false,"is_translation_enabled":false,"profile_background_color":"F5F8FA","profile_background_image_url":null,"profile_background_image_url_https":null,"profile_background_tile":false,"profile_image_url":"http:\/\/abs.twimg.com\/sticky\/default_profile_images\/default_profile_3_normal.png","profile_image_url_https":"https:\/\/abs.twimg.com\/sticky\/default_profile_images\/default_profile_3_normal.png","profile_link_color":"2B7BB9","profile_sidebar_border_color":"C0DEED","profile_sidebar_fill_color":"DDEEF6","profile_text_color":"333333","profile_use_background_image":true,"has_extended_profile":false,"default_profile":true,"default_profile_image":true,"following":null,"follow_request_sent":null,"notifications":null}},{"id":744299856911540224,"id_str":"744299856911540224","name":"Remote
+        List","uri":"\/mjr_tts\/lists\/remote-list","subscriber_count":0,"member_count":2,"mode":"public","description":"","slug":"remote-list","full_name":"@mjr_tts\/remote-list","created_at":"Sat
+        Jun 18 22:44:48 +0000 2016","following":false,"user":{"id":711995065347006465,"id_str":"711995065347006465","name":"test
+        less","screen_name":"mjr_tts","location":"","description":"","url":null,"entities":{"description":{"urls":[]}},"protected":false,"followers_count":4,"friends_count":10,"listed_count":0,"created_at":"Mon
+        Mar 21 19:17:06 +0000 2016","favourites_count":2,"utc_offset":null,"time_zone":null,"geo_enabled":false,"verified":false,"statuses_count":24,"lang":"en","contributors_enabled":false,"is_translator":false,"is_translation_enabled":false,"profile_background_color":"F5F8FA","profile_background_image_url":null,"profile_background_image_url_https":null,"profile_background_tile":false,"profile_image_url":"http:\/\/abs.twimg.com\/sticky\/default_profile_images\/default_profile_3_normal.png","profile_image_url_https":"https:\/\/abs.twimg.com\/sticky\/default_profile_images\/default_profile_3_normal.png","profile_link_color":"2B7BB9","profile_sidebar_border_color":"C0DEED","profile_sidebar_fill_color":"DDEEF6","profile_text_color":"333333","profile_use_background_image":true,"has_extended_profile":false,"default_profile":true,"default_profile_image":true,"following":null,"follow_request_sent":null,"notifications":null}},{"id":744272088551333888,"id_str":"744272088551333888","name":"Food","uri":"\/mjr_tts\/lists\/food","subscriber_count":0,"member_count":6,"mode":"public","description":"","slug":"food","full_name":"@mjr_tts\/food","created_at":"Sat
+        Jun 18 20:54:28 +0000 2016","following":false,"user":{"id":711995065347006465,"id_str":"711995065347006465","name":"test
+        less","screen_name":"mjr_tts","location":"","description":"","url":null,"entities":{"description":{"urls":[]}},"protected":false,"followers_count":4,"friends_count":10,"listed_count":0,"created_at":"Mon
+        Mar 21 19:17:06 +0000 2016","favourites_count":2,"utc_offset":null,"time_zone":null,"geo_enabled":false,"verified":false,"statuses_count":24,"lang":"en","contributors_enabled":false,"is_translator":false,"is_translation_enabled":false,"profile_background_color":"F5F8FA","profile_background_image_url":null,"profile_background_image_url_https":null,"profile_background_tile":false,"profile_image_url":"http:\/\/abs.twimg.com\/sticky\/default_profile_images\/default_profile_3_normal.png","profile_image_url_https":"https:\/\/abs.twimg.com\/sticky\/default_profile_images\/default_profile_3_normal.png","profile_link_color":"2B7BB9","profile_sidebar_border_color":"C0DEED","profile_sidebar_fill_color":"DDEEF6","profile_text_color":"333333","profile_use_background_image":true,"has_extended_profile":false,"default_profile":true,"default_profile_image":true,"following":null,"follow_request_sent":null,"notifications":null}},{"id":743893277934489600,"id_str":"743893277934489600","name":"Coding","uri":"\/mjr_tts\/lists\/coding","subscriber_count":0,"member_count":5,"mode":"public","description":"","slug":"coding","full_name":"@mjr_tts\/coding","created_at":"Fri
+        Jun 17 19:49:12 +0000 2016","following":false,"user":{"id":711995065347006465,"id_str":"711995065347006465","name":"test
+        less","screen_name":"mjr_tts","location":"","description":"","url":null,"entities":{"description":{"urls":[]}},"protected":false,"followers_count":4,"friends_count":10,"listed_count":0,"created_at":"Mon
+        Mar 21 19:17:06 +0000 2016","favourites_count":2,"utc_offset":null,"time_zone":null,"geo_enabled":false,"verified":false,"statuses_count":24,"lang":"en","contributors_enabled":false,"is_translator":false,"is_translation_enabled":false,"profile_background_color":"F5F8FA","profile_background_image_url":null,"profile_background_image_url_https":null,"profile_background_tile":false,"profile_image_url":"http:\/\/abs.twimg.com\/sticky\/default_profile_images\/default_profile_3_normal.png","profile_image_url_https":"https:\/\/abs.twimg.com\/sticky\/default_profile_images\/default_profile_3_normal.png","profile_link_color":"2B7BB9","profile_sidebar_border_color":"C0DEED","profile_sidebar_fill_color":"DDEEF6","profile_text_color":"333333","profile_use_background_image":true,"has_extended_profile":false,"default_profile":true,"default_profile_image":true,"following":null,"follow_request_sent":null,"notifications":null}},{"id":743889984701272064,"id_str":"743889984701272064","name":"Tech","uri":"\/mjr_tts\/lists\/tech","subscriber_count":0,"member_count":7,"mode":"public","description":"","slug":"tech","full_name":"@mjr_tts\/tech","created_at":"Fri
+        Jun 17 19:36:07 +0000 2016","following":false,"user":{"id":711995065347006465,"id_str":"711995065347006465","name":"test
+        less","screen_name":"mjr_tts","location":"","description":"","url":null,"entities":{"description":{"urls":[]}},"protected":false,"followers_count":4,"friends_count":10,"listed_count":0,"created_at":"Mon
+        Mar 21 19:17:06 +0000 2016","favourites_count":2,"utc_offset":null,"time_zone":null,"geo_enabled":false,"verified":false,"statuses_count":24,"lang":"en","contributors_enabled":false,"is_translator":false,"is_translation_enabled":false,"profile_background_color":"F5F8FA","profile_background_image_url":null,"profile_background_image_url_https":null,"profile_background_tile":false,"profile_image_url":"http:\/\/abs.twimg.com\/sticky\/default_profile_images\/default_profile_3_normal.png","profile_image_url_https":"https:\/\/abs.twimg.com\/sticky\/default_profile_images\/default_profile_3_normal.png","profile_link_color":"2B7BB9","profile_sidebar_border_color":"C0DEED","profile_sidebar_fill_color":"DDEEF6","profile_text_color":"333333","profile_use_background_image":true,"has_extended_profile":false,"default_profile":true,"default_profile_image":true,"following":null,"follow_request_sent":null,"notifications":null}},{"id":743140782333378560,"id_str":"743140782333378560","name":"heroku","uri":"\/mjr_tts\/lists\/heroku","subscriber_count":0,"member_count":4,"mode":"public","description":"","slug":"heroku","full_name":"@mjr_tts\/heroku","created_at":"Wed
+        Jun 15 17:59:04 +0000 2016","following":false,"user":{"id":711995065347006465,"id_str":"711995065347006465","name":"test
+        less","screen_name":"mjr_tts","location":"","description":"","url":null,"entities":{"description":{"urls":[]}},"protected":false,"followers_count":4,"friends_count":10,"listed_count":0,"created_at":"Mon
+        Mar 21 19:17:06 +0000 2016","favourites_count":2,"utc_offset":null,"time_zone":null,"geo_enabled":false,"verified":false,"statuses_count":24,"lang":"en","contributors_enabled":false,"is_translator":false,"is_translation_enabled":false,"profile_background_color":"F5F8FA","profile_background_image_url":null,"profile_background_image_url_https":null,"profile_background_tile":false,"profile_image_url":"http:\/\/abs.twimg.com\/sticky\/default_profile_images\/default_profile_3_normal.png","profile_image_url_https":"https:\/\/abs.twimg.com\/sticky\/default_profile_images\/default_profile_3_normal.png","profile_link_color":"2B7BB9","profile_sidebar_border_color":"C0DEED","profile_sidebar_fill_color":"DDEEF6","profile_text_color":"333333","profile_use_background_image":true,"has_extended_profile":false,"default_profile":true,"default_profile_image":true,"following":null,"follow_request_sent":null,"notifications":null}}]'
+    http_version: 
+  recorded_at: Sun, 19 Jun 2016 23:33:17 GMT
+- request:
+    method: get
+    uri: https://api.twitter.com/1.1/lists/members.json?cursor=-1&list_id=743889984701272064&owner_id=711995065347006465
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      User-Agent:
+      - TwitterRubyGem/5.16.0
+      Authorization:
+      - OAuth oauth_consumer_key="PCvo50anGUpUUDusAPmiurzjM", oauth_nonce="88446c3a202f6a23a1397fd136742a2a",
+        oauth_signature="o0XRC9arGYVH2n7wzvQeR0MRhCk%3D", oauth_signature_method="HMAC-SHA1",
+        oauth_timestamp="1466379197", oauth_token="711995065347006465-JLJWrBLyfySojWUz1C7mwaqx37Qv7vQ",
+        oauth_version="1.0"
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Cache-Control:
+      - no-cache, no-store, must-revalidate, pre-check=0, post-check=0
+      Content-Disposition:
+      - attachment; filename=json.json
+      Content-Length:
+      - '4627'
+      Content-Type:
+      - application/json;charset=utf-8
+      Date:
+      - Sun, 19 Jun 2016 23:33:18 GMT
+      Expires:
+      - Tue, 31 Mar 1981 05:00:00 GMT
+      Last-Modified:
+      - Sun, 19 Jun 2016 23:33:18 GMT
+      Pragma:
+      - no-cache
+      Server:
+      - tsa_b
+      Set-Cookie:
+      - guest_id=v1%3A146637919802128358; Domain=.twitter.com; Path=/; Expires=Tue,
+        19-Jun-2018 23:33:18 UTC
+      - lang=en; Path=/
+      Status:
+      - 200 OK
+      Strict-Transport-Security:
+      - max-age=631138519
+      X-Access-Level:
+      - read-write-directmessages
+      X-Connection-Hash:
+      - dc80fe5ff7115abf0f76edfdaf51a935
+      X-Content-Type-Options:
+      - nosniff
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Rate-Limit-Limit:
+      - '180'
+      X-Rate-Limit-Remaining:
+      - '174'
+      X-Rate-Limit-Reset:
+      - '1466379202'
+      X-Response-Time:
+      - '69'
+      X-Transaction:
+      - d3ed3a19a5030e1e
+      X-Twitter-Response-Tags:
+      - BouncerCompliant
+      X-Xss-Protection:
+      - 1; mode=block
+    body:
+      encoding: ASCII-8BIT
+      string: '{"users":[{"id":1000842626,"id_str":"1000842626","name":"GoRails","screen_name":"GoRails","location":"","description":"Ruby
+        on Rails screencasts for aspiring developers by @excid3","url":"http:\/\/t.co\/ej10pLovzk","entities":{"url":{"urls":[{"url":"http:\/\/t.co\/ej10pLovzk","expanded_url":"http:\/\/gorails.com","display_url":"gorails.com","indices":[0,22]}]},"description":{"urls":[]}},"protected":false,"followers_count":1217,"friends_count":30,"listed_count":61,"created_at":"Mon
+        Dec 10 03:50:01 +0000 2012","favourites_count":2059,"utc_offset":null,"time_zone":null,"geo_enabled":false,"verified":false,"statuses_count":459,"lang":"en","status":{"created_at":"Wed
+        Jun 15 18:01:20 +0000 2016","id":743141356726476800,"id_str":"743141356726476800","text":"RT
+        @wolfieorama: @excid3 welcome knowledge doesn''t come cheaper than lunch....
+        Does it? @GoRails","truncated":false,"entities":{"hashtags":[],"symbols":[],"user_mentions":[{"screen_name":"wolfieorama","name":"Tweets
+        from Wolfie","id":24661632,"id_str":"24661632","indices":[3,15]},{"screen_name":"excid3","name":"Chris
+        Oliver","id":14057736,"id_str":"14057736","indices":[17,24]},{"screen_name":"GoRails","name":"GoRails","id":1000842626,"id_str":"1000842626","indices":[88,96]}],"urls":[]},"source":"\u003ca
+        href=\"https:\/\/about.twitter.com\/products\/tweetdeck\" rel=\"nofollow\"\u003eTweetDeck\u003c\/a\u003e","in_reply_to_status_id":null,"in_reply_to_status_id_str":null,"in_reply_to_user_id":null,"in_reply_to_user_id_str":null,"in_reply_to_screen_name":null,"geo":null,"coordinates":null,"place":null,"contributors":null,"retweeted_status":{"created_at":"Wed
+        Jun 15 16:36:04 +0000 2016","id":743119896565911553,"id_str":"743119896565911553","text":"@excid3
+        welcome knowledge doesn''t come cheaper than lunch.... Does it? @GoRails","truncated":false,"entities":{"hashtags":[],"symbols":[],"user_mentions":[{"screen_name":"excid3","name":"Chris
+        Oliver","id":14057736,"id_str":"14057736","indices":[0,7]},{"screen_name":"GoRails","name":"GoRails","id":1000842626,"id_str":"1000842626","indices":[71,79]}],"urls":[]},"source":"\u003ca
+        href=\"http:\/\/twitter.com\/download\/android\" rel=\"nofollow\"\u003eTwitter
+        for Android\u003c\/a\u003e","in_reply_to_status_id":743117015141908480,"in_reply_to_status_id_str":"743117015141908480","in_reply_to_user_id":14057736,"in_reply_to_user_id_str":"14057736","in_reply_to_screen_name":"excid3","geo":null,"coordinates":null,"place":null,"contributors":null,"is_quote_status":false,"retweet_count":1,"favorite_count":1,"favorited":false,"retweeted":false,"lang":"en"},"is_quote_status":false,"retweet_count":1,"favorite_count":0,"favorited":false,"retweeted":false,"lang":"en"},"contributors_enabled":false,"is_translator":false,"is_translation_enabled":false,"profile_background_color":"C0DEED","profile_background_image_url":"http:\/\/abs.twimg.com\/images\/themes\/theme1\/bg.png","profile_background_image_url_https":"https:\/\/abs.twimg.com\/images\/themes\/theme1\/bg.png","profile_background_tile":false,"profile_image_url":"http:\/\/pbs.twimg.com\/profile_images\/695303579440013312\/j4EEtvdZ_normal.png","profile_image_url_https":"https:\/\/pbs.twimg.com\/profile_images\/695303579440013312\/j4EEtvdZ_normal.png","profile_link_color":"EE6746","profile_sidebar_border_color":"C0DEED","profile_sidebar_fill_color":"DDEEF6","profile_text_color":"333333","profile_use_background_image":true,"has_extended_profile":false,"default_profile":false,"default_profile_image":false,"following":false,"follow_request_sent":false,"notifications":false},{"id":26257166,"id_str":"26257166","name":"SportsCenter","screen_name":"SportsCenter","location":"Bristol,
+        CT","description":"All things sports. Nominate top plays using #SCtop10. *If
+        you tweet or otherwise send us content, you consent to ESPN using and showcasing
+        it in any media.*","url":"https:\/\/t.co\/nCdopZzBRi","entities":{"url":{"urls":[{"url":"https:\/\/t.co\/nCdopZzBRi","expanded_url":"http:\/\/snapchat.com\/add\/sportscenter","display_url":"snapchat.com\/add\/sportscent\u2026","indices":[0,23]}]},"description":{"urls":[]}},"protected":false,"followers_count":28753593,"friends_count":1669,"listed_count":41945,"created_at":"Tue
+        Mar 24 15:28:02 +0000 2009","favourites_count":808,"utc_offset":-14400,"time_zone":"Eastern
+        Time (US & Canada)","geo_enabled":true,"verified":true,"statuses_count":80568,"lang":"en","status":{"created_at":"Sun
+        Jun 19 23:26:24 +0000 2016","id":744672712426037248,"id_str":"744672712426037248","text":"Some
+        Cavs fans infiltrated Warriors territory. https:\/\/t.co\/HOVnfDN8Xu","truncated":false,"entities":{"hashtags":[],"symbols":[],"user_mentions":[],"urls":[],"media":[{"id":744672704855343105,"id_str":"744672704855343105","indices":[47,70],"media_url":"http:\/\/pbs.twimg.com\/media\/ClWb4S7VAAE2fGL.jpg","media_url_https":"https:\/\/pbs.twimg.com\/media\/ClWb4S7VAAE2fGL.jpg","url":"https:\/\/t.co\/HOVnfDN8Xu","display_url":"pic.twitter.com\/HOVnfDN8Xu","expanded_url":"http:\/\/twitter.com\/SportsCenter\/status\/744672712426037248\/photo\/1","type":"photo","sizes":{"medium":{"w":900,"h":1200,"resize":"fit"},"small":{"w":510,"h":680,"resize":"fit"},"thumb":{"w":150,"h":150,"resize":"crop"},"large":{"w":1536,"h":2048,"resize":"fit"}}}]},"extended_entities":{"media":[{"id":744672704855343105,"id_str":"744672704855343105","indices":[47,70],"media_url":"http:\/\/pbs.twimg.com\/media\/ClWb4S7VAAE2fGL.jpg","media_url_https":"https:\/\/pbs.twimg.com\/media\/ClWb4S7VAAE2fGL.jpg","url":"https:\/\/t.co\/HOVnfDN8Xu","display_url":"pic.twitter.com\/HOVnfDN8Xu","expanded_url":"http:\/\/twitter.com\/SportsCenter\/status\/744672712426037248\/photo\/1","type":"photo","sizes":{"medium":{"w":900,"h":1200,"resize":"fit"},"small":{"w":510,"h":680,"resize":"fit"},"thumb":{"w":150,"h":150,"resize":"crop"},"large":{"w":1536,"h":2048,"resize":"fit"}}}]},"source":"\u003ca
+        href=\"http:\/\/twitter.com\/download\/iphone\" rel=\"nofollow\"\u003eTwitter
+        for iPhone\u003c\/a\u003e","in_reply_to_status_id":null,"in_reply_to_status_id_str":null,"in_reply_to_user_id":null,"in_reply_to_user_id_str":null,"in_reply_to_screen_name":null,"geo":null,"coordinates":null,"place":{"id":"07d9c92c6e087002","url":"https:\/\/api.twitter.com\/1.1\/geo\/id\/07d9c92c6e087002.json","place_type":"poi","name":"Oracle
+        Arena","full_name":"Oracle Arena","country_code":"US","country":"United States","contained_within":[],"bounding_box":{"type":"Polygon","coordinates":[[[-122.20290184020996,37.75026469428747],[-122.20290184020996,37.75026469428747],[-122.20290184020996,37.75026469428747],[-122.20290184020996,37.75026469428747]]]},"attributes":{}},"contributors":null,"is_quote_status":false,"retweet_count":1587,"favorite_count":2251,"favorited":false,"retweeted":false,"possibly_sensitive":false,"lang":"en"},"contributors_enabled":false,"is_translator":false,"is_translation_enabled":true,"profile_background_color":"131516","profile_background_image_url":"http:\/\/pbs.twimg.com\/profile_background_images\/480904536454750208\/mD9fyg2r.jpeg","profile_background_image_url_https":"https:\/\/pbs.twimg.com\/profile_background_images\/480904536454750208\/mD9fyg2r.jpeg","profile_background_tile":true,"profile_image_url":"http:\/\/pbs.twimg.com\/profile_images\/641252681017856001\/p6PL2KFg_normal.jpg","profile_image_url_https":"https:\/\/pbs.twimg.com\/profile_images\/641252681017856001\/p6PL2KFg_normal.jpg","profile_banner_url":"https:\/\/pbs.twimg.com\/profile_banners\/26257166\/1441721587","profile_link_color":"009999","profile_sidebar_border_color":"000000","profile_sidebar_fill_color":"EFEFEF","profile_text_color":"333333","profile_use_background_image":true,"has_extended_profile":false,"default_profile":false,"default_profile_image":false,"following":false,"follow_request_sent":false,"notifications":false},{"id":14761655,"id_str":"14761655","name":"Aaron
+        Patterson","screen_name":"tenderlove","location":"Seattle, WA","description":"\u3072\u3052\u306e\u5c71\u7537\nJob:
+        GitHub\nOpinions: Mine\n\nWhen I''m not trimming my beard, I''m hanging out
+        with my wife, @ebiltwin.","url":"http:\/\/t.co\/gN1GLubxAe","entities":{"url":{"urls":[{"url":"http:\/\/t.co\/gN1GLubxAe","expanded_url":"http:\/\/tenderlovemaking.com","display_url":"tenderlovemaking.com","indices":[0,22]}]},"description":{"urls":[]}},"protected":false,"followers_count":33096,"friends_count":603,"listed_count":1673,"created_at":"Tue
+        May 13 17:25:31 +0000 2008","favourites_count":8903,"utc_offset":-25200,"time_zone":"Pacific
+        Time (US & Canada)","geo_enabled":true,"verified":false,"statuses_count":43874,"lang":"en","status":{"created_at":"Sun
+        Jun 19 23:13:58 +0000 2016","id":744669581491347456,"id_str":"744669581491347456","text":"@bcjbcjbcj
+        Game Developers don\u2019t wear leggings (sees how impressed everyone is,
+        takes it one step further) I am a cat","truncated":false,"entities":{"hashtags":[],"symbols":[],"user_mentions":[{"screen_name":"bcjbcjbcj","name":"bcj","id":142761639,"id_str":"142761639","indices":[0,10]}],"urls":[]},"source":"\u003ca
+        href=\"http:\/\/www.echofon.com\/\" rel=\"nofollow\"\u003eEchofon\u003c\/a\u003e","in_reply_to_status_id":744667919657762817,"in_reply_to_status_id_str":"744667919657762817","in_reply_to_user_id":142761639,"in_reply_to_user_id_str":"142761639","in_reply_to_screen_name":"bcjbcjbcj","geo":null,"coordinates":null,"place":null,"contributors":null,"is_quote_status":false,"retweet_count":0,"favorite_count":1,"favorited":false,"retweeted":false,"lang":"en"},"contributors_enabled":false,"is_translator":false,"is_translation_enabled":false,"profile_background_color":"C0DEED","profile_background_image_url":"http:\/\/abs.twimg.com\/images\/themes\/theme1\/bg.png","profile_background_image_url_https":"https:\/\/abs.twimg.com\/images\/themes\/theme1\/bg.png","profile_background_tile":false,"profile_image_url":"http:\/\/pbs.twimg.com\/profile_images\/378800000325798111\/ca48276f8ebbbbac9c6ce83aac3c8548_normal.jpeg","profile_image_url_https":"https:\/\/pbs.twimg.com\/profile_images\/378800000325798111\/ca48276f8ebbbbac9c6ce83aac3c8548_normal.jpeg","profile_banner_url":"https:\/\/pbs.twimg.com\/profile_banners\/14761655\/1425591616","profile_link_color":"0084B4","profile_sidebar_border_color":"C0DEED","profile_sidebar_fill_color":"DDEEF6","profile_text_color":"333333","profile_use_background_image":true,"has_extended_profile":true,"default_profile":true,"default_profile_image":false,"following":true,"follow_request_sent":false,"notifications":false},{"id":3108351,"id_str":"3108351","name":"Wall
+        Street Journal","screen_name":"WSJ","location":"New York, NY","description":"Breaking
+        news and features from the WSJ.","url":"https:\/\/t.co\/GhhR6PLfem","entities":{"url":{"urls":[{"url":"https:\/\/t.co\/GhhR6PLfem","expanded_url":"http:\/\/wsj.com","display_url":"wsj.com","indices":[0,23]}]},"description":{"urls":[]}},"protected":false,"followers_count":11204319,"friends_count":1062,"listed_count":99294,"created_at":"Sun
+        Apr 01 06:22:13 +0000 2007","favourites_count":1296,"utc_offset":-14400,"time_zone":"Eastern
+        Time (US & Canada)","geo_enabled":true,"verified":true,"statuses_count":160875,"lang":"en","status":{"created_at":"Sun
+        Jun 19 23:22:07 +0000 2016","id":744671635949531136,"id_str":"744671635949531136","text":"This
+        week, Janet Yellen may provide clues about the future pace of raising rates
+        https:\/\/t.co\/cF6M0PTr8O","truncated":false,"entities":{"hashtags":[],"symbols":[],"user_mentions":[],"urls":[{"url":"https:\/\/t.co\/cF6M0PTr8O","expanded_url":"http:\/\/on.wsj.com\/1UqHzAg","display_url":"on.wsj.com\/1UqHzAg","indices":[81,104]}]},"source":"\u003ca
+        href=\"http:\/\/www.socialflow.com\" rel=\"nofollow\"\u003eSocialFlow\u003c\/a\u003e","in_reply_to_status_id":null,"in_reply_to_status_id_str":null,"in_reply_to_user_id":null,"in_reply_to_user_id_str":null,"in_reply_to_screen_name":null,"geo":null,"coordinates":null,"place":null,"contributors":null,"is_quote_status":false,"retweet_count":18,"favorite_count":14,"favorited":false,"retweeted":false,"possibly_sensitive":false,"lang":"en"},"contributors_enabled":false,"is_translator":false,"is_translation_enabled":true,"profile_background_color":"EDF2F5","profile_background_image_url":"http:\/\/pbs.twimg.com\/profile_background_images\/378800000026078008\/c07ad7d60f01c3a836dd701fc3f71233.jpeg","profile_background_image_url_https":"https:\/\/pbs.twimg.com\/profile_background_images\/378800000026078008\/c07ad7d60f01c3a836dd701fc3f71233.jpeg","profile_background_tile":false,"profile_image_url":"http:\/\/pbs.twimg.com\/profile_images\/685113343204585473\/jV72Zljq_normal.jpg","profile_image_url_https":"https:\/\/pbs.twimg.com\/profile_images\/685113343204585473\/jV72Zljq_normal.jpg","profile_banner_url":"https:\/\/pbs.twimg.com\/profile_banners\/3108351\/1462483236","profile_link_color":"1164B8","profile_sidebar_border_color":"FFFFFF","profile_sidebar_fill_color":"EFEFEF","profile_text_color":"333333","profile_use_background_image":false,"has_extended_profile":false,"default_profile":false,"default_profile_image":false,"following":true,"follow_request_sent":false,"notifications":false},{"id":2467791,"id_str":"2467791","name":"Washington
+        Post","screen_name":"washingtonpost","location":"Washington, DC","description":"Tweet-length
+        breaking news, analysis from around the world. Founded in 1877. Follow our
+        journalists on Twitter: https:\/\/t.co\/VV0UBAMHg8","url":"http:\/\/t.co\/Hq7hTYkOPg","entities":{"url":{"urls":[{"url":"http:\/\/t.co\/Hq7hTYkOPg","expanded_url":"http:\/\/washingtonpost.com","display_url":"washingtonpost.com","indices":[0,22]}]},"description":{"urls":[{"url":"https:\/\/t.co\/VV0UBAMHg8","expanded_url":"https:\/\/twitter.com\/washingtonpost\/lists\/washington-post-people","display_url":"twitter.com\/washingtonpost\u2026","indices":[112,135]}]}},"protected":false,"followers_count":6677971,"friends_count":1287,"listed_count":70070,"created_at":"Tue
+        Mar 27 11:19:39 +0000 2007","favourites_count":4260,"utc_offset":-14400,"time_zone":"Eastern
+        Time (US & Canada)","geo_enabled":true,"verified":true,"statuses_count":180808,"lang":"en","status":{"created_at":"Sun
+        Jun 19 23:27:14 +0000 2016","id":744672920207769604,"id_str":"744672920207769604","text":"\"Trump
+        just squandered a critical six weeks of the general election campaign\" https:\/\/t.co\/P6ETfAUpfM
+        by @TheFix","truncated":false,"entities":{"hashtags":[],"symbols":[],"user_mentions":[{"screen_name":"TheFix","name":"Chris
+        Cillizza","id":14412533,"id_str":"14412533","indices":[105,112]}],"urls":[{"url":"https:\/\/t.co\/P6ETfAUpfM","expanded_url":"http:\/\/wapo.st\/1ScrUjA","display_url":"wapo.st\/1ScrUjA","indices":[78,101]}]},"source":"\u003ca
+        href=\"http:\/\/www.socialflow.com\" rel=\"nofollow\"\u003eSocialFlow\u003c\/a\u003e","in_reply_to_status_id":null,"in_reply_to_status_id_str":null,"in_reply_to_user_id":null,"in_reply_to_user_id_str":null,"in_reply_to_screen_name":null,"geo":null,"coordinates":null,"place":null,"contributors":null,"is_quote_status":false,"retweet_count":32,"favorite_count":24,"favorited":false,"retweeted":false,"possibly_sensitive":false,"lang":"en"},"contributors_enabled":false,"is_translator":false,"is_translation_enabled":true,"profile_background_color":"333333","profile_background_image_url":"http:\/\/pbs.twimg.com\/profile_background_images\/464437503\/wp-capitol.png","profile_background_image_url_https":"https:\/\/pbs.twimg.com\/profile_background_images\/464437503\/wp-capitol.png","profile_background_tile":false,"profile_image_url":"http:\/\/pbs.twimg.com\/profile_images\/378800000252568100\/7a366ac8d0f934b5318e721ba049e9b1_normal.png","profile_image_url_https":"https:\/\/pbs.twimg.com\/profile_images\/378800000252568100\/7a366ac8d0f934b5318e721ba049e9b1_normal.png","profile_banner_url":"https:\/\/pbs.twimg.com\/profile_banners\/2467791\/1348076832","profile_link_color":"0057EC","profile_sidebar_border_color":"FFFFFF","profile_sidebar_fill_color":"DBDBDB","profile_text_color":"323232","profile_use_background_image":true,"has_extended_profile":false,"default_profile":false,"default_profile_image":false,"following":true,"follow_request_sent":false,"notifications":false},{"id":1344951,"id_str":"1344951","name":"WIRED","screen_name":"WIRED","location":"San
+        Francisco\/New York","description":"WIRED is where tomorrow is realized.","url":"http:\/\/t.co\/AbRkBRjcYo","entities":{"url":{"urls":[{"url":"http:\/\/t.co\/AbRkBRjcYo","expanded_url":"http:\/\/WIRED.com","display_url":"WIRED.com","indices":[0,22]}]},"description":{"urls":[]}},"protected":false,"followers_count":6220817,"friends_count":270,"listed_count":86801,"created_at":"Sat
+        Mar 17 09:57:25 +0000 2007","favourites_count":1715,"utc_offset":-25200,"time_zone":"Pacific
+        Time (US & Canada)","geo_enabled":false,"verified":true,"statuses_count":61965,"lang":"en","status":{"created_at":"Sun
+        Jun 19 23:16:22 +0000 2016","id":744670187287416832,"id_str":"744670187287416832","text":"These
+        new networking chips will transform the tech industry: https:\/\/t.co\/ydmBXtFz2E
+        https:\/\/t.co\/KNGFww7qCY","truncated":false,"entities":{"hashtags":[],"symbols":[],"user_mentions":[],"urls":[{"url":"https:\/\/t.co\/ydmBXtFz2E","expanded_url":"http:\/\/bit.ly\/1UAUYHt","display_url":"bit.ly\/1UAUYHt","indices":[61,84]}],"media":[{"id":744670183378329600,"id_str":"744670183378329600","indices":[85,108],"media_url":"http:\/\/pbs.twimg.com\/media\/ClWZlhsXIAAbXuj.jpg","media_url_https":"https:\/\/pbs.twimg.com\/media\/ClWZlhsXIAAbXuj.jpg","url":"https:\/\/t.co\/KNGFww7qCY","display_url":"pic.twitter.com\/KNGFww7qCY","expanded_url":"http:\/\/twitter.com\/WIRED\/status\/744670187287416832\/photo\/1","type":"photo","sizes":{"medium":{"w":1200,"h":630,"resize":"fit"},"thumb":{"w":150,"h":150,"resize":"crop"},"large":{"w":1200,"h":630,"resize":"fit"},"small":{"w":680,"h":357,"resize":"fit"}}}]},"extended_entities":{"media":[{"id":744670183378329600,"id_str":"744670183378329600","indices":[85,108],"media_url":"http:\/\/pbs.twimg.com\/media\/ClWZlhsXIAAbXuj.jpg","media_url_https":"https:\/\/pbs.twimg.com\/media\/ClWZlhsXIAAbXuj.jpg","url":"https:\/\/t.co\/KNGFww7qCY","display_url":"pic.twitter.com\/KNGFww7qCY","expanded_url":"http:\/\/twitter.com\/WIRED\/status\/744670187287416832\/photo\/1","type":"photo","sizes":{"medium":{"w":1200,"h":630,"resize":"fit"},"thumb":{"w":150,"h":150,"resize":"crop"},"large":{"w":1200,"h":630,"resize":"fit"},"small":{"w":680,"h":357,"resize":"fit"}}}]},"source":"\u003ca
+        href=\"http:\/\/www.socialflow.com\" rel=\"nofollow\"\u003eSocialFlow\u003c\/a\u003e","in_reply_to_status_id":null,"in_reply_to_status_id_str":null,"in_reply_to_user_id":null,"in_reply_to_user_id_str":null,"in_reply_to_screen_name":null,"geo":null,"coordinates":null,"place":null,"contributors":null,"is_quote_status":false,"retweet_count":49,"favorite_count":45,"favorited":false,"retweeted":false,"possibly_sensitive":false,"lang":"en"},"contributors_enabled":false,"is_translator":false,"is_translation_enabled":true,"profile_background_color":"000000","profile_background_image_url":"http:\/\/pbs.twimg.com\/profile_background_images\/734548027\/5e5ee18945d22a9e2d9971208971bfdd.jpeg","profile_background_image_url_https":"https:\/\/pbs.twimg.com\/profile_background_images\/734548027\/5e5ee18945d22a9e2d9971208971bfdd.jpeg","profile_background_tile":false,"profile_image_url":"http:\/\/pbs.twimg.com\/profile_images\/615598832726970372\/jsK-gBSt_normal.png","profile_image_url_https":"https:\/\/pbs.twimg.com\/profile_images\/615598832726970372\/jsK-gBSt_normal.png","profile_banner_url":"https:\/\/pbs.twimg.com\/profile_banners\/1344951\/1463606878","profile_link_color":"99DCF0","profile_sidebar_border_color":"FFFFFF","profile_sidebar_fill_color":"EEEEEE","profile_text_color":"000000","profile_use_background_image":false,"has_extended_profile":false,"default_profile":false,"default_profile_image":false,"following":true,"follow_request_sent":false,"notifications":false},{"id":807095,"id_str":"807095","name":"The
+        New York Times","screen_name":"nytimes","location":"New York City","description":"Where
+        the conversation begins. Follow for breaking news, special reports, RTs of
+        our journalists and more from https:\/\/t.co\/YapuoqX0HS.","url":"http:\/\/t.co\/ahvuWqicF9","entities":{"url":{"urls":[{"url":"http:\/\/t.co\/ahvuWqicF9","expanded_url":"http:\/\/www.nytimes.com\/","display_url":"nytimes.com","indices":[0,22]}]},"description":{"urls":[{"url":"https:\/\/t.co\/YapuoqX0HS","expanded_url":"http:\/\/NYTimes.com","display_url":"NYTimes.com","indices":[111,134]}]}},"protected":false,"followers_count":28238985,"friends_count":985,"listed_count":177561,"created_at":"Fri
+        Mar 02 20:41:42 +0000 2007","favourites_count":11644,"utc_offset":-14400,"time_zone":"Eastern
+        Time (US & Canada)","geo_enabled":false,"verified":true,"statuses_count":235980,"lang":"en","status":{"created_at":"Sun
+        Jun 19 23:33:11 +0000 2016","id":744674417326825473,"id_str":"744674417326825473","text":"Vegetarian
+        dishes you can cook in less than 30 minutes https:\/\/t.co\/JUsK6HKhZG https:\/\/t.co\/nnANUSY2v8","truncated":false,"entities":{"hashtags":[],"symbols":[],"user_mentions":[],"urls":[{"url":"https:\/\/t.co\/JUsK6HKhZG","expanded_url":"http:\/\/nyti.ms\/21tZBnb","display_url":"nyti.ms\/21tZBnb","indices":[55,78]}],"media":[{"id":744674413077999616,"id_str":"744674413077999616","indices":[79,102],"media_url":"http:\/\/pbs.twimg.com\/media\/ClWdbujWMAArgQR.jpg","media_url_https":"https:\/\/pbs.twimg.com\/media\/ClWdbujWMAArgQR.jpg","url":"https:\/\/t.co\/nnANUSY2v8","display_url":"pic.twitter.com\/nnANUSY2v8","expanded_url":"http:\/\/twitter.com\/nytimes\/status\/744674417326825473\/photo\/1","type":"photo","sizes":{"small":{"w":680,"h":381,"resize":"fit"},"large":{"w":1000,"h":560,"resize":"fit"},"thumb":{"w":150,"h":150,"resize":"crop"},"medium":{"w":1000,"h":560,"resize":"fit"}}}]},"extended_entities":{"media":[{"id":744674413077999616,"id_str":"744674413077999616","indices":[79,102],"media_url":"http:\/\/pbs.twimg.com\/media\/ClWdbujWMAArgQR.jpg","media_url_https":"https:\/\/pbs.twimg.com\/media\/ClWdbujWMAArgQR.jpg","url":"https:\/\/t.co\/nnANUSY2v8","display_url":"pic.twitter.com\/nnANUSY2v8","expanded_url":"http:\/\/twitter.com\/nytimes\/status\/744674417326825473\/photo\/1","type":"photo","sizes":{"small":{"w":680,"h":381,"resize":"fit"},"large":{"w":1000,"h":560,"resize":"fit"},"thumb":{"w":150,"h":150,"resize":"crop"},"medium":{"w":1000,"h":560,"resize":"fit"}}}]},"source":"\u003ca
+        href=\"http:\/\/www.socialflow.com\" rel=\"nofollow\"\u003eSocialFlow\u003c\/a\u003e","in_reply_to_status_id":null,"in_reply_to_status_id_str":null,"in_reply_to_user_id":null,"in_reply_to_user_id_str":null,"in_reply_to_screen_name":null,"geo":null,"coordinates":null,"place":null,"contributors":null,"is_quote_status":false,"retweet_count":0,"favorite_count":0,"favorited":false,"retweeted":false,"possibly_sensitive":false,"lang":"en"},"contributors_enabled":false,"is_translator":false,"is_translation_enabled":true,"profile_background_color":"131516","profile_background_image_url":"http:\/\/pbs.twimg.com\/profile_background_images\/736339684\/948f072cc2da4e3a5e9f2ebfb3b1a0e7.png","profile_background_image_url_https":"https:\/\/pbs.twimg.com\/profile_background_images\/736339684\/948f072cc2da4e3a5e9f2ebfb3b1a0e7.png","profile_background_tile":true,"profile_image_url":"http:\/\/pbs.twimg.com\/profile_images\/2044921128\/finals_normal.png","profile_image_url_https":"https:\/\/pbs.twimg.com\/profile_images\/2044921128\/finals_normal.png","profile_banner_url":"https:\/\/pbs.twimg.com\/profile_banners\/807095\/1355346050","profile_link_color":"607696","profile_sidebar_border_color":"FFFFFF","profile_sidebar_fill_color":"EFEFEF","profile_text_color":"333333","profile_use_background_image":true,"has_extended_profile":false,"default_profile":false,"default_profile_image":false,"following":true,"follow_request_sent":false,"notifications":false}],"next_cursor":0,"next_cursor_str":"0","previous_cursor":0,"previous_cursor_str":"0"}'
+    http_version: 
+  recorded_at: Sun, 19 Jun 2016 23:33:17 GMT
+- request:
+    method: get
+    uri: https://api.twitter.com/1.1/lists/list.json?user_id=711995065347006465
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      User-Agent:
+      - TwitterRubyGem/5.16.0
+      Authorization:
+      - Bearer AAAAAAAAAAAAAAAAAAAAAPfmvAAAAAAAxuLnQIbL9WM5N3RJsBv%2BKM4fD%2B4%3D3SzoKa9kefI2w6PPiDb4kAzAmXwF7Ev2x3V4zHI9hXls3k39nX
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Cache-Control:
+      - no-cache, no-store, must-revalidate, pre-check=0, post-check=0
+      Content-Disposition:
+      - attachment; filename=json.json
+      Content-Length:
+      - '1021'
+      Content-Type:
+      - application/json;charset=utf-8
+      Date:
+      - Sun, 19 Jun 2016 23:33:18 GMT
+      Expires:
+      - Tue, 31 Mar 1981 05:00:00 GMT
+      Last-Modified:
+      - Sun, 19 Jun 2016 23:33:18 GMT
+      Pragma:
+      - no-cache
+      Server:
+      - tsa_b
+      Set-Cookie:
+      - guest_id=v1%3A146637919827743089; Domain=.twitter.com; Path=/; Expires=Tue,
+        19-Jun-2018 23:33:18 UTC
+      Status:
+      - 200 OK
+      Strict-Transport-Security:
+      - max-age=631138519
+      X-Access-Level:
+      - read
+      X-Connection-Hash:
+      - e93f7ce6bd2708dc2cd82458273b8e9b
+      X-Content-Type-Options:
+      - nosniff
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Rate-Limit-Limit:
+      - '15'
+      X-Rate-Limit-Remaining:
+      - '8'
+      X-Rate-Limit-Reset:
+      - '1466379201'
+      X-Response-Time:
+      - '38'
+      X-Transaction:
+      - 59ebcb4770aba9d8
+      X-Twitter-Response-Tags:
+      - BouncerCompliant
+      X-Xss-Protection:
+      - 1; mode=block
+    body:
+      encoding: ASCII-8BIT
+      string: '[{"id":744644615257591808,"id_str":"744644615257591808","name":"mikes
+        list","uri":"\/mjr_tts\/lists\/mikes-list","subscriber_count":0,"member_count":0,"mode":"public","description":"","slug":"mikes-list","full_name":"@mjr_tts\/mikes-list","created_at":"Sun
+        Jun 19 21:34:45 +0000 2016","following":false,"user":{"id":711995065347006465,"id_str":"711995065347006465","name":"test
+        less","screen_name":"mjr_tts","location":"","description":"","url":null,"entities":{"description":{"urls":[]}},"protected":false,"followers_count":4,"friends_count":10,"listed_count":0,"created_at":"Mon
+        Mar 21 19:17:06 +0000 2016","favourites_count":2,"utc_offset":null,"time_zone":null,"geo_enabled":false,"verified":false,"statuses_count":24,"lang":"en","contributors_enabled":false,"is_translator":false,"is_translation_enabled":false,"profile_background_color":"F5F8FA","profile_background_image_url":null,"profile_background_image_url_https":null,"profile_background_tile":false,"profile_image_url":"http:\/\/abs.twimg.com\/sticky\/default_profile_images\/default_profile_3_normal.png","profile_image_url_https":"https:\/\/abs.twimg.com\/sticky\/default_profile_images\/default_profile_3_normal.png","profile_link_color":"2B7BB9","profile_sidebar_border_color":"C0DEED","profile_sidebar_fill_color":"DDEEF6","profile_text_color":"333333","profile_use_background_image":true,"has_extended_profile":false,"default_profile":true,"default_profile_image":true,"following":null,"follow_request_sent":null,"notifications":null}},{"id":744626780523405316,"id_str":"744626780523405316","name":"Multiple","uri":"\/mjr_tts\/lists\/multiple","subscriber_count":0,"member_count":3,"mode":"public","description":"","slug":"multiple","full_name":"@mjr_tts\/multiple","created_at":"Sun
+        Jun 19 20:23:53 +0000 2016","following":false,"user":{"id":711995065347006465,"id_str":"711995065347006465","name":"test
+        less","screen_name":"mjr_tts","location":"","description":"","url":null,"entities":{"description":{"urls":[]}},"protected":false,"followers_count":4,"friends_count":10,"listed_count":0,"created_at":"Mon
+        Mar 21 19:17:06 +0000 2016","favourites_count":2,"utc_offset":null,"time_zone":null,"geo_enabled":false,"verified":false,"statuses_count":24,"lang":"en","contributors_enabled":false,"is_translator":false,"is_translation_enabled":false,"profile_background_color":"F5F8FA","profile_background_image_url":null,"profile_background_image_url_https":null,"profile_background_tile":false,"profile_image_url":"http:\/\/abs.twimg.com\/sticky\/default_profile_images\/default_profile_3_normal.png","profile_image_url_https":"https:\/\/abs.twimg.com\/sticky\/default_profile_images\/default_profile_3_normal.png","profile_link_color":"2B7BB9","profile_sidebar_border_color":"C0DEED","profile_sidebar_fill_color":"DDEEF6","profile_text_color":"333333","profile_use_background_image":true,"has_extended_profile":false,"default_profile":true,"default_profile_image":true,"following":null,"follow_request_sent":null,"notifications":null}},{"id":744299856911540224,"id_str":"744299856911540224","name":"Remote
+        List","uri":"\/mjr_tts\/lists\/remote-list","subscriber_count":0,"member_count":2,"mode":"public","description":"","slug":"remote-list","full_name":"@mjr_tts\/remote-list","created_at":"Sat
+        Jun 18 22:44:48 +0000 2016","following":false,"user":{"id":711995065347006465,"id_str":"711995065347006465","name":"test
+        less","screen_name":"mjr_tts","location":"","description":"","url":null,"entities":{"description":{"urls":[]}},"protected":false,"followers_count":4,"friends_count":10,"listed_count":0,"created_at":"Mon
+        Mar 21 19:17:06 +0000 2016","favourites_count":2,"utc_offset":null,"time_zone":null,"geo_enabled":false,"verified":false,"statuses_count":24,"lang":"en","contributors_enabled":false,"is_translator":false,"is_translation_enabled":false,"profile_background_color":"F5F8FA","profile_background_image_url":null,"profile_background_image_url_https":null,"profile_background_tile":false,"profile_image_url":"http:\/\/abs.twimg.com\/sticky\/default_profile_images\/default_profile_3_normal.png","profile_image_url_https":"https:\/\/abs.twimg.com\/sticky\/default_profile_images\/default_profile_3_normal.png","profile_link_color":"2B7BB9","profile_sidebar_border_color":"C0DEED","profile_sidebar_fill_color":"DDEEF6","profile_text_color":"333333","profile_use_background_image":true,"has_extended_profile":false,"default_profile":true,"default_profile_image":true,"following":null,"follow_request_sent":null,"notifications":null}},{"id":744272088551333888,"id_str":"744272088551333888","name":"Food","uri":"\/mjr_tts\/lists\/food","subscriber_count":0,"member_count":6,"mode":"public","description":"","slug":"food","full_name":"@mjr_tts\/food","created_at":"Sat
+        Jun 18 20:54:28 +0000 2016","following":false,"user":{"id":711995065347006465,"id_str":"711995065347006465","name":"test
+        less","screen_name":"mjr_tts","location":"","description":"","url":null,"entities":{"description":{"urls":[]}},"protected":false,"followers_count":4,"friends_count":10,"listed_count":0,"created_at":"Mon
+        Mar 21 19:17:06 +0000 2016","favourites_count":2,"utc_offset":null,"time_zone":null,"geo_enabled":false,"verified":false,"statuses_count":24,"lang":"en","contributors_enabled":false,"is_translator":false,"is_translation_enabled":false,"profile_background_color":"F5F8FA","profile_background_image_url":null,"profile_background_image_url_https":null,"profile_background_tile":false,"profile_image_url":"http:\/\/abs.twimg.com\/sticky\/default_profile_images\/default_profile_3_normal.png","profile_image_url_https":"https:\/\/abs.twimg.com\/sticky\/default_profile_images\/default_profile_3_normal.png","profile_link_color":"2B7BB9","profile_sidebar_border_color":"C0DEED","profile_sidebar_fill_color":"DDEEF6","profile_text_color":"333333","profile_use_background_image":true,"has_extended_profile":false,"default_profile":true,"default_profile_image":true,"following":null,"follow_request_sent":null,"notifications":null}},{"id":743893277934489600,"id_str":"743893277934489600","name":"Coding","uri":"\/mjr_tts\/lists\/coding","subscriber_count":0,"member_count":5,"mode":"public","description":"","slug":"coding","full_name":"@mjr_tts\/coding","created_at":"Fri
+        Jun 17 19:49:12 +0000 2016","following":false,"user":{"id":711995065347006465,"id_str":"711995065347006465","name":"test
+        less","screen_name":"mjr_tts","location":"","description":"","url":null,"entities":{"description":{"urls":[]}},"protected":false,"followers_count":4,"friends_count":10,"listed_count":0,"created_at":"Mon
+        Mar 21 19:17:06 +0000 2016","favourites_count":2,"utc_offset":null,"time_zone":null,"geo_enabled":false,"verified":false,"statuses_count":24,"lang":"en","contributors_enabled":false,"is_translator":false,"is_translation_enabled":false,"profile_background_color":"F5F8FA","profile_background_image_url":null,"profile_background_image_url_https":null,"profile_background_tile":false,"profile_image_url":"http:\/\/abs.twimg.com\/sticky\/default_profile_images\/default_profile_3_normal.png","profile_image_url_https":"https:\/\/abs.twimg.com\/sticky\/default_profile_images\/default_profile_3_normal.png","profile_link_color":"2B7BB9","profile_sidebar_border_color":"C0DEED","profile_sidebar_fill_color":"DDEEF6","profile_text_color":"333333","profile_use_background_image":true,"has_extended_profile":false,"default_profile":true,"default_profile_image":true,"following":null,"follow_request_sent":null,"notifications":null}},{"id":743889984701272064,"id_str":"743889984701272064","name":"Tech","uri":"\/mjr_tts\/lists\/tech","subscriber_count":0,"member_count":7,"mode":"public","description":"","slug":"tech","full_name":"@mjr_tts\/tech","created_at":"Fri
+        Jun 17 19:36:07 +0000 2016","following":false,"user":{"id":711995065347006465,"id_str":"711995065347006465","name":"test
+        less","screen_name":"mjr_tts","location":"","description":"","url":null,"entities":{"description":{"urls":[]}},"protected":false,"followers_count":4,"friends_count":10,"listed_count":0,"created_at":"Mon
+        Mar 21 19:17:06 +0000 2016","favourites_count":2,"utc_offset":null,"time_zone":null,"geo_enabled":false,"verified":false,"statuses_count":24,"lang":"en","contributors_enabled":false,"is_translator":false,"is_translation_enabled":false,"profile_background_color":"F5F8FA","profile_background_image_url":null,"profile_background_image_url_https":null,"profile_background_tile":false,"profile_image_url":"http:\/\/abs.twimg.com\/sticky\/default_profile_images\/default_profile_3_normal.png","profile_image_url_https":"https:\/\/abs.twimg.com\/sticky\/default_profile_images\/default_profile_3_normal.png","profile_link_color":"2B7BB9","profile_sidebar_border_color":"C0DEED","profile_sidebar_fill_color":"DDEEF6","profile_text_color":"333333","profile_use_background_image":true,"has_extended_profile":false,"default_profile":true,"default_profile_image":true,"following":null,"follow_request_sent":null,"notifications":null}},{"id":743140782333378560,"id_str":"743140782333378560","name":"heroku","uri":"\/mjr_tts\/lists\/heroku","subscriber_count":0,"member_count":4,"mode":"public","description":"","slug":"heroku","full_name":"@mjr_tts\/heroku","created_at":"Wed
+        Jun 15 17:59:04 +0000 2016","following":false,"user":{"id":711995065347006465,"id_str":"711995065347006465","name":"test
+        less","screen_name":"mjr_tts","location":"","description":"","url":null,"entities":{"description":{"urls":[]}},"protected":false,"followers_count":4,"friends_count":10,"listed_count":0,"created_at":"Mon
+        Mar 21 19:17:06 +0000 2016","favourites_count":2,"utc_offset":null,"time_zone":null,"geo_enabled":false,"verified":false,"statuses_count":24,"lang":"en","contributors_enabled":false,"is_translator":false,"is_translation_enabled":false,"profile_background_color":"F5F8FA","profile_background_image_url":null,"profile_background_image_url_https":null,"profile_background_tile":false,"profile_image_url":"http:\/\/abs.twimg.com\/sticky\/default_profile_images\/default_profile_3_normal.png","profile_image_url_https":"https:\/\/abs.twimg.com\/sticky\/default_profile_images\/default_profile_3_normal.png","profile_link_color":"2B7BB9","profile_sidebar_border_color":"C0DEED","profile_sidebar_fill_color":"DDEEF6","profile_text_color":"333333","profile_use_background_image":true,"has_extended_profile":false,"default_profile":true,"default_profile_image":true,"following":null,"follow_request_sent":null,"notifications":null}}]'
+    http_version: 
+  recorded_at: Sun, 19 Jun 2016 23:33:17 GMT
+- request:
+    method: get
+    uri: https://api.twitter.com/1.1/account/verify_credentials.json?skip_status=true
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      User-Agent:
+      - TwitterRubyGem/5.16.0
+      Authorization:
+      - OAuth oauth_consumer_key="PCvo50anGUpUUDusAPmiurzjM", oauth_nonce="856cd5aa2be1140688e1e30178ec74b7",
+        oauth_signature="raZa4HYGq08YI%2Bh%2FCEh1utYaWdc%3D", oauth_signature_method="HMAC-SHA1",
+        oauth_timestamp="1466379197", oauth_token="711995065347006465-JLJWrBLyfySojWUz1C7mwaqx37Qv7vQ",
+        oauth_version="1.0"
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Cache-Control:
+      - no-cache, no-store, must-revalidate, pre-check=0, post-check=0
+      Content-Disposition:
+      - attachment; filename=json.json
+      Content-Length:
+      - '515'
+      Content-Type:
+      - application/json;charset=utf-8
+      Date:
+      - Sun, 19 Jun 2016 23:33:18 GMT
+      Expires:
+      - Tue, 31 Mar 1981 05:00:00 GMT
+      Last-Modified:
+      - Sun, 19 Jun 2016 23:33:18 GMT
+      Pragma:
+      - no-cache
+      Server:
+      - tsa_b
+      Set-Cookie:
+      - guest_id=v1%3A146637919848347641; Domain=.twitter.com; Path=/; Expires=Tue,
+        19-Jun-2018 23:33:18 UTC
+      - lang=en; Path=/
+      Status:
+      - 200 OK
+      Strict-Transport-Security:
+      - max-age=631138519
+      X-Access-Level:
+      - read-write-directmessages
+      X-Connection-Hash:
+      - 644db50fbc60363838d32f22ae446111
+      X-Content-Type-Options:
+      - nosniff
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Rate-Limit-Limit:
+      - '15'
+      X-Rate-Limit-Remaining:
+      - '11'
+      X-Rate-Limit-Reset:
+      - '1466379202'
+      X-Response-Time:
+      - '20'
+      X-Transaction:
+      - 3f931e65c7d6eda4
+      X-Twitter-Response-Tags:
+      - BouncerCompliant
+      - BouncerExempt
+      X-Xss-Protection:
+      - 1; mode=block
+    body:
+      encoding: ASCII-8BIT
+      string: '{"id":711995065347006465,"id_str":"711995065347006465","name":"test
+        less","screen_name":"mjr_tts","location":"","description":"","url":null,"entities":{"description":{"urls":[]}},"protected":false,"followers_count":4,"friends_count":10,"listed_count":0,"created_at":"Mon
+        Mar 21 19:17:06 +0000 2016","favourites_count":2,"utc_offset":null,"time_zone":null,"geo_enabled":false,"verified":false,"statuses_count":24,"lang":"en","contributors_enabled":false,"is_translator":false,"is_translation_enabled":false,"profile_background_color":"F5F8FA","profile_background_image_url":null,"profile_background_image_url_https":null,"profile_background_tile":false,"profile_image_url":"http:\/\/abs.twimg.com\/sticky\/default_profile_images\/default_profile_3_normal.png","profile_image_url_https":"https:\/\/abs.twimg.com\/sticky\/default_profile_images\/default_profile_3_normal.png","profile_link_color":"2B7BB9","profile_sidebar_border_color":"C0DEED","profile_sidebar_fill_color":"DDEEF6","profile_text_color":"333333","profile_use_background_image":true,"has_extended_profile":false,"default_profile":true,"default_profile_image":true,"following":false,"follow_request_sent":false,"notifications":false}'
+    http_version: 
+  recorded_at: Sun, 19 Jun 2016 23:33:17 GMT
+- request:
+    method: get
+    uri: https://api.twitter.com/1.1/lists/members.json?cursor=-1&list_id=744626780523405316&owner_id=711995065347006465
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      User-Agent:
+      - TwitterRubyGem/5.16.0
+      Authorization:
+      - OAuth oauth_consumer_key="PCvo50anGUpUUDusAPmiurzjM", oauth_nonce="56c696da60f8cec4921c7e47e21ba9b1",
+        oauth_signature="4dte1S9wBumYei89mgZ2AZgq2tI%3D", oauth_signature_method="HMAC-SHA1",
+        oauth_timestamp="1466379197", oauth_token="711995065347006465-JLJWrBLyfySojWUz1C7mwaqx37Qv7vQ",
+        oauth_version="1.0"
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Cache-Control:
+      - no-cache, no-store, must-revalidate, pre-check=0, post-check=0
+      Content-Disposition:
+      - attachment; filename=json.json
+      Content-Length:
+      - '2683'
+      Content-Type:
+      - application/json;charset=utf-8
+      Date:
+      - Sun, 19 Jun 2016 23:33:18 GMT
+      Expires:
+      - Tue, 31 Mar 1981 05:00:00 GMT
+      Last-Modified:
+      - Sun, 19 Jun 2016 23:33:18 GMT
+      Pragma:
+      - no-cache
+      Server:
+      - tsa_b
+      Set-Cookie:
+      - guest_id=v1%3A146637919867670495; Domain=.twitter.com; Path=/; Expires=Tue,
+        19-Jun-2018 23:33:18 UTC
+      - lang=en; Path=/
+      Status:
+      - 200 OK
+      Strict-Transport-Security:
+      - max-age=631138519
+      X-Access-Level:
+      - read-write-directmessages
+      X-Connection-Hash:
+      - 8397d1278b35703fbedca9e036ef921d
+      X-Content-Type-Options:
+      - nosniff
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Rate-Limit-Limit:
+      - '180'
+      X-Rate-Limit-Remaining:
+      - '173'
+      X-Rate-Limit-Reset:
+      - '1466379202'
+      X-Response-Time:
+      - '52'
+      X-Transaction:
+      - 63d6ba153f9d9931
+      X-Twitter-Response-Tags:
+      - BouncerCompliant
+      X-Xss-Protection:
+      - 1; mode=block
+    body:
+      encoding: ASCII-8BIT
+      string: '{"users":[{"id":1000842626,"id_str":"1000842626","name":"GoRails","screen_name":"GoRails","location":"","description":"Ruby
+        on Rails screencasts for aspiring developers by @excid3","url":"http:\/\/t.co\/ej10pLovzk","entities":{"url":{"urls":[{"url":"http:\/\/t.co\/ej10pLovzk","expanded_url":"http:\/\/gorails.com","display_url":"gorails.com","indices":[0,22]}]},"description":{"urls":[]}},"protected":false,"followers_count":1217,"friends_count":30,"listed_count":61,"created_at":"Mon
+        Dec 10 03:50:01 +0000 2012","favourites_count":2059,"utc_offset":null,"time_zone":null,"geo_enabled":false,"verified":false,"statuses_count":459,"lang":"en","status":{"created_at":"Wed
+        Jun 15 18:01:20 +0000 2016","id":743141356726476800,"id_str":"743141356726476800","text":"RT
+        @wolfieorama: @excid3 welcome knowledge doesn''t come cheaper than lunch....
+        Does it? @GoRails","truncated":false,"entities":{"hashtags":[],"symbols":[],"user_mentions":[{"screen_name":"wolfieorama","name":"Tweets
+        from Wolfie","id":24661632,"id_str":"24661632","indices":[3,15]},{"screen_name":"excid3","name":"Chris
+        Oliver","id":14057736,"id_str":"14057736","indices":[17,24]},{"screen_name":"GoRails","name":"GoRails","id":1000842626,"id_str":"1000842626","indices":[88,96]}],"urls":[]},"source":"\u003ca
+        href=\"https:\/\/about.twitter.com\/products\/tweetdeck\" rel=\"nofollow\"\u003eTweetDeck\u003c\/a\u003e","in_reply_to_status_id":null,"in_reply_to_status_id_str":null,"in_reply_to_user_id":null,"in_reply_to_user_id_str":null,"in_reply_to_screen_name":null,"geo":null,"coordinates":null,"place":null,"contributors":null,"retweeted_status":{"created_at":"Wed
+        Jun 15 16:36:04 +0000 2016","id":743119896565911553,"id_str":"743119896565911553","text":"@excid3
+        welcome knowledge doesn''t come cheaper than lunch.... Does it? @GoRails","truncated":false,"entities":{"hashtags":[],"symbols":[],"user_mentions":[{"screen_name":"excid3","name":"Chris
+        Oliver","id":14057736,"id_str":"14057736","indices":[0,7]},{"screen_name":"GoRails","name":"GoRails","id":1000842626,"id_str":"1000842626","indices":[71,79]}],"urls":[]},"source":"\u003ca
+        href=\"http:\/\/twitter.com\/download\/android\" rel=\"nofollow\"\u003eTwitter
+        for Android\u003c\/a\u003e","in_reply_to_status_id":743117015141908480,"in_reply_to_status_id_str":"743117015141908480","in_reply_to_user_id":14057736,"in_reply_to_user_id_str":"14057736","in_reply_to_screen_name":"excid3","geo":null,"coordinates":null,"place":null,"contributors":null,"is_quote_status":false,"retweet_count":1,"favorite_count":1,"favorited":false,"retweeted":false,"lang":"en"},"is_quote_status":false,"retweet_count":1,"favorite_count":0,"favorited":false,"retweeted":false,"lang":"en"},"contributors_enabled":false,"is_translator":false,"is_translation_enabled":false,"profile_background_color":"C0DEED","profile_background_image_url":"http:\/\/abs.twimg.com\/images\/themes\/theme1\/bg.png","profile_background_image_url_https":"https:\/\/abs.twimg.com\/images\/themes\/theme1\/bg.png","profile_background_tile":false,"profile_image_url":"http:\/\/pbs.twimg.com\/profile_images\/695303579440013312\/j4EEtvdZ_normal.png","profile_image_url_https":"https:\/\/pbs.twimg.com\/profile_images\/695303579440013312\/j4EEtvdZ_normal.png","profile_link_color":"EE6746","profile_sidebar_border_color":"C0DEED","profile_sidebar_fill_color":"DDEEF6","profile_text_color":"333333","profile_use_background_image":true,"has_extended_profile":false,"default_profile":false,"default_profile_image":false,"following":false,"follow_request_sent":false,"notifications":false},{"id":26257166,"id_str":"26257166","name":"SportsCenter","screen_name":"SportsCenter","location":"Bristol,
+        CT","description":"All things sports. Nominate top plays using #SCtop10. *If
+        you tweet or otherwise send us content, you consent to ESPN using and showcasing
+        it in any media.*","url":"https:\/\/t.co\/nCdopZzBRi","entities":{"url":{"urls":[{"url":"https:\/\/t.co\/nCdopZzBRi","expanded_url":"http:\/\/snapchat.com\/add\/sportscenter","display_url":"snapchat.com\/add\/sportscent\u2026","indices":[0,23]}]},"description":{"urls":[]}},"protected":false,"followers_count":28753594,"friends_count":1669,"listed_count":41945,"created_at":"Tue
+        Mar 24 15:28:02 +0000 2009","favourites_count":808,"utc_offset":-14400,"time_zone":"Eastern
+        Time (US & Canada)","geo_enabled":true,"verified":true,"statuses_count":80568,"lang":"en","status":{"created_at":"Sun
+        Jun 19 23:26:24 +0000 2016","id":744672712426037248,"id_str":"744672712426037248","text":"Some
+        Cavs fans infiltrated Warriors territory. https:\/\/t.co\/HOVnfDN8Xu","truncated":false,"entities":{"hashtags":[],"symbols":[],"user_mentions":[],"urls":[],"media":[{"id":744672704855343105,"id_str":"744672704855343105","indices":[47,70],"media_url":"http:\/\/pbs.twimg.com\/media\/ClWb4S7VAAE2fGL.jpg","media_url_https":"https:\/\/pbs.twimg.com\/media\/ClWb4S7VAAE2fGL.jpg","url":"https:\/\/t.co\/HOVnfDN8Xu","display_url":"pic.twitter.com\/HOVnfDN8Xu","expanded_url":"http:\/\/twitter.com\/SportsCenter\/status\/744672712426037248\/photo\/1","type":"photo","sizes":{"medium":{"w":900,"h":1200,"resize":"fit"},"small":{"w":510,"h":680,"resize":"fit"},"thumb":{"w":150,"h":150,"resize":"crop"},"large":{"w":1536,"h":2048,"resize":"fit"}}}]},"extended_entities":{"media":[{"id":744672704855343105,"id_str":"744672704855343105","indices":[47,70],"media_url":"http:\/\/pbs.twimg.com\/media\/ClWb4S7VAAE2fGL.jpg","media_url_https":"https:\/\/pbs.twimg.com\/media\/ClWb4S7VAAE2fGL.jpg","url":"https:\/\/t.co\/HOVnfDN8Xu","display_url":"pic.twitter.com\/HOVnfDN8Xu","expanded_url":"http:\/\/twitter.com\/SportsCenter\/status\/744672712426037248\/photo\/1","type":"photo","sizes":{"medium":{"w":900,"h":1200,"resize":"fit"},"small":{"w":510,"h":680,"resize":"fit"},"thumb":{"w":150,"h":150,"resize":"crop"},"large":{"w":1536,"h":2048,"resize":"fit"}}}]},"source":"\u003ca
+        href=\"http:\/\/twitter.com\/download\/iphone\" rel=\"nofollow\"\u003eTwitter
+        for iPhone\u003c\/a\u003e","in_reply_to_status_id":null,"in_reply_to_status_id_str":null,"in_reply_to_user_id":null,"in_reply_to_user_id_str":null,"in_reply_to_screen_name":null,"geo":null,"coordinates":null,"place":{"id":"07d9c92c6e087002","url":"https:\/\/api.twitter.com\/1.1\/geo\/id\/07d9c92c6e087002.json","place_type":"poi","name":"Oracle
+        Arena","full_name":"Oracle Arena","country_code":"US","country":"United States","contained_within":[],"bounding_box":{"type":"Polygon","coordinates":[[[-122.20290184020996,37.75026469428747],[-122.20290184020996,37.75026469428747],[-122.20290184020996,37.75026469428747],[-122.20290184020996,37.75026469428747]]]},"attributes":{}},"contributors":null,"is_quote_status":false,"retweet_count":1588,"favorite_count":2256,"favorited":false,"retweeted":false,"possibly_sensitive":false,"lang":"en"},"contributors_enabled":false,"is_translator":false,"is_translation_enabled":true,"profile_background_color":"131516","profile_background_image_url":"http:\/\/pbs.twimg.com\/profile_background_images\/480904536454750208\/mD9fyg2r.jpeg","profile_background_image_url_https":"https:\/\/pbs.twimg.com\/profile_background_images\/480904536454750208\/mD9fyg2r.jpeg","profile_background_tile":true,"profile_image_url":"http:\/\/pbs.twimg.com\/profile_images\/641252681017856001\/p6PL2KFg_normal.jpg","profile_image_url_https":"https:\/\/pbs.twimg.com\/profile_images\/641252681017856001\/p6PL2KFg_normal.jpg","profile_banner_url":"https:\/\/pbs.twimg.com\/profile_banners\/26257166\/1441721587","profile_link_color":"009999","profile_sidebar_border_color":"000000","profile_sidebar_fill_color":"EFEFEF","profile_text_color":"333333","profile_use_background_image":true,"has_extended_profile":false,"default_profile":false,"default_profile_image":false,"following":false,"follow_request_sent":false,"notifications":false},{"id":1344951,"id_str":"1344951","name":"WIRED","screen_name":"WIRED","location":"San
+        Francisco\/New York","description":"WIRED is where tomorrow is realized.","url":"http:\/\/t.co\/AbRkBRjcYo","entities":{"url":{"urls":[{"url":"http:\/\/t.co\/AbRkBRjcYo","expanded_url":"http:\/\/WIRED.com","display_url":"WIRED.com","indices":[0,22]}]},"description":{"urls":[]}},"protected":false,"followers_count":6220817,"friends_count":270,"listed_count":86801,"created_at":"Sat
+        Mar 17 09:57:25 +0000 2007","favourites_count":1715,"utc_offset":-25200,"time_zone":"Pacific
+        Time (US & Canada)","geo_enabled":false,"verified":true,"statuses_count":61965,"lang":"en","status":{"created_at":"Sun
+        Jun 19 23:16:22 +0000 2016","id":744670187287416832,"id_str":"744670187287416832","text":"These
+        new networking chips will transform the tech industry: https:\/\/t.co\/ydmBXtFz2E
+        https:\/\/t.co\/KNGFww7qCY","truncated":false,"entities":{"hashtags":[],"symbols":[],"user_mentions":[],"urls":[{"url":"https:\/\/t.co\/ydmBXtFz2E","expanded_url":"http:\/\/bit.ly\/1UAUYHt","display_url":"bit.ly\/1UAUYHt","indices":[61,84]}],"media":[{"id":744670183378329600,"id_str":"744670183378329600","indices":[85,108],"media_url":"http:\/\/pbs.twimg.com\/media\/ClWZlhsXIAAbXuj.jpg","media_url_https":"https:\/\/pbs.twimg.com\/media\/ClWZlhsXIAAbXuj.jpg","url":"https:\/\/t.co\/KNGFww7qCY","display_url":"pic.twitter.com\/KNGFww7qCY","expanded_url":"http:\/\/twitter.com\/WIRED\/status\/744670187287416832\/photo\/1","type":"photo","sizes":{"medium":{"w":1200,"h":630,"resize":"fit"},"thumb":{"w":150,"h":150,"resize":"crop"},"large":{"w":1200,"h":630,"resize":"fit"},"small":{"w":680,"h":357,"resize":"fit"}}}]},"extended_entities":{"media":[{"id":744670183378329600,"id_str":"744670183378329600","indices":[85,108],"media_url":"http:\/\/pbs.twimg.com\/media\/ClWZlhsXIAAbXuj.jpg","media_url_https":"https:\/\/pbs.twimg.com\/media\/ClWZlhsXIAAbXuj.jpg","url":"https:\/\/t.co\/KNGFww7qCY","display_url":"pic.twitter.com\/KNGFww7qCY","expanded_url":"http:\/\/twitter.com\/WIRED\/status\/744670187287416832\/photo\/1","type":"photo","sizes":{"medium":{"w":1200,"h":630,"resize":"fit"},"thumb":{"w":150,"h":150,"resize":"crop"},"large":{"w":1200,"h":630,"resize":"fit"},"small":{"w":680,"h":357,"resize":"fit"}}}]},"source":"\u003ca
+        href=\"http:\/\/www.socialflow.com\" rel=\"nofollow\"\u003eSocialFlow\u003c\/a\u003e","in_reply_to_status_id":null,"in_reply_to_status_id_str":null,"in_reply_to_user_id":null,"in_reply_to_user_id_str":null,"in_reply_to_screen_name":null,"geo":null,"coordinates":null,"place":null,"contributors":null,"is_quote_status":false,"retweet_count":49,"favorite_count":45,"favorited":false,"retweeted":false,"possibly_sensitive":false,"lang":"en"},"contributors_enabled":false,"is_translator":false,"is_translation_enabled":true,"profile_background_color":"000000","profile_background_image_url":"http:\/\/pbs.twimg.com\/profile_background_images\/734548027\/5e5ee18945d22a9e2d9971208971bfdd.jpeg","profile_background_image_url_https":"https:\/\/pbs.twimg.com\/profile_background_images\/734548027\/5e5ee18945d22a9e2d9971208971bfdd.jpeg","profile_background_tile":false,"profile_image_url":"http:\/\/pbs.twimg.com\/profile_images\/615598832726970372\/jsK-gBSt_normal.png","profile_image_url_https":"https:\/\/pbs.twimg.com\/profile_images\/615598832726970372\/jsK-gBSt_normal.png","profile_banner_url":"https:\/\/pbs.twimg.com\/profile_banners\/1344951\/1463606878","profile_link_color":"99DCF0","profile_sidebar_border_color":"FFFFFF","profile_sidebar_fill_color":"EEEEEE","profile_text_color":"000000","profile_use_background_image":false,"has_extended_profile":false,"default_profile":false,"default_profile_image":false,"following":true,"follow_request_sent":false,"notifications":false}],"next_cursor":0,"next_cursor_str":"0","previous_cursor":0,"previous_cursor_str":"0"}'
+    http_version: 
+  recorded_at: Sun, 19 Jun 2016 23:33:18 GMT
+- request:
+    method: post
+    uri: https://api.twitter.com/1.1/lists/members/destroy_all.json
+    body:
+      encoding: UTF-8
+      string: list_id=744626780523405316&owner_id=711995065347006465&screen_name=WIRED
+    headers:
+      Accept:
+      - application/json
+      User-Agent:
+      - TwitterRubyGem/5.16.0
+      Authorization:
+      - OAuth oauth_consumer_key="PCvo50anGUpUUDusAPmiurzjM", oauth_nonce="48d88cf5831d920569493072829d7532",
+        oauth_signature="Kiq8hjFtYG6PhDgZHylIrz9LDKs%3D", oauth_signature_method="HMAC-SHA1",
+        oauth_timestamp="1466379198", oauth_token="711995065347006465-JLJWrBLyfySojWUz1C7mwaqx37Qv7vQ",
+        oauth_version="1.0"
+      Content-Type:
+      - application/x-www-form-urlencoded
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Cache-Control:
+      - no-cache, no-store, must-revalidate, pre-check=0, post-check=0
+      Content-Disposition:
+      - attachment; filename=json.json
+      Content-Length:
+      - '632'
+      Content-Type:
+      - application/json;charset=utf-8
+      Date:
+      - Sun, 19 Jun 2016 23:33:18 GMT
+      Expires:
+      - Tue, 31 Mar 1981 05:00:00 GMT
+      Last-Modified:
+      - Sun, 19 Jun 2016 23:33:18 GMT
+      Pragma:
+      - no-cache
+      Server:
+      - tsa_b
+      Set-Cookie:
+      - guest_id=v1%3A146637919887566736; Domain=.twitter.com; Path=/; Expires=Tue,
+        19-Jun-2018 23:33:18 UTC
+      - lang=en; Path=/
+      Status:
+      - 200 OK
+      Strict-Transport-Security:
+      - max-age=631138519
+      X-Access-Level:
+      - read-write-directmessages
+      X-Connection-Hash:
+      - 0faafc057ad1280016986f80f96dabea
+      X-Content-Type-Options:
+      - nosniff
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Response-Time:
+      - '103'
+      X-Transaction:
+      - 26ea46dc55267ea7
+      X-Tsa-Request-Body-Time:
+      - '1'
+      X-Twitter-Response-Tags:
+      - BouncerCompliant
+      X-Xss-Protection:
+      - 1; mode=block
+    body:
+      encoding: ASCII-8BIT
+      string: '{"id":744626780523405316,"id_str":"744626780523405316","name":"Multiple","uri":"\/mjr_tts\/lists\/multiple","subscriber_count":0,"member_count":2,"mode":"public","description":"","slug":"multiple","full_name":"@mjr_tts\/multiple","created_at":"Sun
+        Jun 19 20:23:53 +0000 2016","following":true,"user":{"id":711995065347006465,"id_str":"711995065347006465","name":"test
+        less","screen_name":"mjr_tts","location":"","description":"","url":null,"entities":{"description":{"urls":[]}},"protected":false,"followers_count":4,"friends_count":10,"listed_count":0,"created_at":"Mon
+        Mar 21 19:17:06 +0000 2016","favourites_count":2,"utc_offset":null,"time_zone":null,"geo_enabled":false,"verified":false,"statuses_count":24,"lang":"en","contributors_enabled":false,"is_translator":false,"is_translation_enabled":false,"profile_background_color":"F5F8FA","profile_background_image_url":null,"profile_background_image_url_https":null,"profile_background_tile":false,"profile_image_url":"http:\/\/abs.twimg.com\/sticky\/default_profile_images\/default_profile_3_normal.png","profile_image_url_https":"https:\/\/abs.twimg.com\/sticky\/default_profile_images\/default_profile_3_normal.png","profile_link_color":"2B7BB9","profile_sidebar_border_color":"C0DEED","profile_sidebar_fill_color":"DDEEF6","profile_text_color":"333333","profile_use_background_image":true,"has_extended_profile":false,"default_profile":true,"default_profile_image":true,"following":false,"follow_request_sent":false,"notifications":false}}'
+    http_version: 
+  recorded_at: Sun, 19 Jun 2016 23:33:18 GMT
+- request:
+    method: get
+    uri: https://api.twitter.com/1.1/lists/list.json?user_id=711995065347006465
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      User-Agent:
+      - TwitterRubyGem/5.16.0
+      Authorization:
+      - Bearer AAAAAAAAAAAAAAAAAAAAAPfmvAAAAAAAxuLnQIbL9WM5N3RJsBv%2BKM4fD%2B4%3D3SzoKa9kefI2w6PPiDb4kAzAmXwF7Ev2x3V4zHI9hXls3k39nX
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Cache-Control:
+      - no-cache, no-store, must-revalidate, pre-check=0, post-check=0
+      Content-Disposition:
+      - attachment; filename=json.json
+      Content-Length:
+      - '1021'
+      Content-Type:
+      - application/json;charset=utf-8
+      Date:
+      - Sun, 19 Jun 2016 23:33:19 GMT
+      Expires:
+      - Tue, 31 Mar 1981 05:00:00 GMT
+      Last-Modified:
+      - Sun, 19 Jun 2016 23:33:19 GMT
+      Pragma:
+      - no-cache
+      Server:
+      - tsa_b
+      Set-Cookie:
+      - guest_id=v1%3A146637919915153643; Domain=.twitter.com; Path=/; Expires=Tue,
+        19-Jun-2018 23:33:19 UTC
+      Status:
+      - 200 OK
+      Strict-Transport-Security:
+      - max-age=631138519
+      X-Access-Level:
+      - read
+      X-Connection-Hash:
+      - 944f139dfe7ccd70312a9872888fd98b
+      X-Content-Type-Options:
+      - nosniff
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Rate-Limit-Limit:
+      - '15'
+      X-Rate-Limit-Remaining:
+      - '7'
+      X-Rate-Limit-Reset:
+      - '1466379201'
+      X-Response-Time:
+      - '39'
+      X-Transaction:
+      - d36d861a9aa4e1f9
+      X-Twitter-Response-Tags:
+      - BouncerCompliant
+      X-Xss-Protection:
+      - 1; mode=block
+    body:
+      encoding: ASCII-8BIT
+      string: '[{"id":744644615257591808,"id_str":"744644615257591808","name":"mikes
+        list","uri":"\/mjr_tts\/lists\/mikes-list","subscriber_count":0,"member_count":0,"mode":"public","description":"","slug":"mikes-list","full_name":"@mjr_tts\/mikes-list","created_at":"Sun
+        Jun 19 21:34:45 +0000 2016","following":false,"user":{"id":711995065347006465,"id_str":"711995065347006465","name":"test
+        less","screen_name":"mjr_tts","location":"","description":"","url":null,"entities":{"description":{"urls":[]}},"protected":false,"followers_count":4,"friends_count":10,"listed_count":0,"created_at":"Mon
+        Mar 21 19:17:06 +0000 2016","favourites_count":2,"utc_offset":null,"time_zone":null,"geo_enabled":false,"verified":false,"statuses_count":24,"lang":"en","contributors_enabled":false,"is_translator":false,"is_translation_enabled":false,"profile_background_color":"F5F8FA","profile_background_image_url":null,"profile_background_image_url_https":null,"profile_background_tile":false,"profile_image_url":"http:\/\/abs.twimg.com\/sticky\/default_profile_images\/default_profile_3_normal.png","profile_image_url_https":"https:\/\/abs.twimg.com\/sticky\/default_profile_images\/default_profile_3_normal.png","profile_link_color":"2B7BB9","profile_sidebar_border_color":"C0DEED","profile_sidebar_fill_color":"DDEEF6","profile_text_color":"333333","profile_use_background_image":true,"has_extended_profile":false,"default_profile":true,"default_profile_image":true,"following":null,"follow_request_sent":null,"notifications":null}},{"id":744626780523405316,"id_str":"744626780523405316","name":"Multiple","uri":"\/mjr_tts\/lists\/multiple","subscriber_count":0,"member_count":2,"mode":"public","description":"","slug":"multiple","full_name":"@mjr_tts\/multiple","created_at":"Sun
+        Jun 19 20:23:53 +0000 2016","following":false,"user":{"id":711995065347006465,"id_str":"711995065347006465","name":"test
+        less","screen_name":"mjr_tts","location":"","description":"","url":null,"entities":{"description":{"urls":[]}},"protected":false,"followers_count":4,"friends_count":10,"listed_count":0,"created_at":"Mon
+        Mar 21 19:17:06 +0000 2016","favourites_count":2,"utc_offset":null,"time_zone":null,"geo_enabled":false,"verified":false,"statuses_count":24,"lang":"en","contributors_enabled":false,"is_translator":false,"is_translation_enabled":false,"profile_background_color":"F5F8FA","profile_background_image_url":null,"profile_background_image_url_https":null,"profile_background_tile":false,"profile_image_url":"http:\/\/abs.twimg.com\/sticky\/default_profile_images\/default_profile_3_normal.png","profile_image_url_https":"https:\/\/abs.twimg.com\/sticky\/default_profile_images\/default_profile_3_normal.png","profile_link_color":"2B7BB9","profile_sidebar_border_color":"C0DEED","profile_sidebar_fill_color":"DDEEF6","profile_text_color":"333333","profile_use_background_image":true,"has_extended_profile":false,"default_profile":true,"default_profile_image":true,"following":null,"follow_request_sent":null,"notifications":null}},{"id":744299856911540224,"id_str":"744299856911540224","name":"Remote
+        List","uri":"\/mjr_tts\/lists\/remote-list","subscriber_count":0,"member_count":2,"mode":"public","description":"","slug":"remote-list","full_name":"@mjr_tts\/remote-list","created_at":"Sat
+        Jun 18 22:44:48 +0000 2016","following":false,"user":{"id":711995065347006465,"id_str":"711995065347006465","name":"test
+        less","screen_name":"mjr_tts","location":"","description":"","url":null,"entities":{"description":{"urls":[]}},"protected":false,"followers_count":4,"friends_count":10,"listed_count":0,"created_at":"Mon
+        Mar 21 19:17:06 +0000 2016","favourites_count":2,"utc_offset":null,"time_zone":null,"geo_enabled":false,"verified":false,"statuses_count":24,"lang":"en","contributors_enabled":false,"is_translator":false,"is_translation_enabled":false,"profile_background_color":"F5F8FA","profile_background_image_url":null,"profile_background_image_url_https":null,"profile_background_tile":false,"profile_image_url":"http:\/\/abs.twimg.com\/sticky\/default_profile_images\/default_profile_3_normal.png","profile_image_url_https":"https:\/\/abs.twimg.com\/sticky\/default_profile_images\/default_profile_3_normal.png","profile_link_color":"2B7BB9","profile_sidebar_border_color":"C0DEED","profile_sidebar_fill_color":"DDEEF6","profile_text_color":"333333","profile_use_background_image":true,"has_extended_profile":false,"default_profile":true,"default_profile_image":true,"following":null,"follow_request_sent":null,"notifications":null}},{"id":744272088551333888,"id_str":"744272088551333888","name":"Food","uri":"\/mjr_tts\/lists\/food","subscriber_count":0,"member_count":6,"mode":"public","description":"","slug":"food","full_name":"@mjr_tts\/food","created_at":"Sat
+        Jun 18 20:54:28 +0000 2016","following":false,"user":{"id":711995065347006465,"id_str":"711995065347006465","name":"test
+        less","screen_name":"mjr_tts","location":"","description":"","url":null,"entities":{"description":{"urls":[]}},"protected":false,"followers_count":4,"friends_count":10,"listed_count":0,"created_at":"Mon
+        Mar 21 19:17:06 +0000 2016","favourites_count":2,"utc_offset":null,"time_zone":null,"geo_enabled":false,"verified":false,"statuses_count":24,"lang":"en","contributors_enabled":false,"is_translator":false,"is_translation_enabled":false,"profile_background_color":"F5F8FA","profile_background_image_url":null,"profile_background_image_url_https":null,"profile_background_tile":false,"profile_image_url":"http:\/\/abs.twimg.com\/sticky\/default_profile_images\/default_profile_3_normal.png","profile_image_url_https":"https:\/\/abs.twimg.com\/sticky\/default_profile_images\/default_profile_3_normal.png","profile_link_color":"2B7BB9","profile_sidebar_border_color":"C0DEED","profile_sidebar_fill_color":"DDEEF6","profile_text_color":"333333","profile_use_background_image":true,"has_extended_profile":false,"default_profile":true,"default_profile_image":true,"following":null,"follow_request_sent":null,"notifications":null}},{"id":743893277934489600,"id_str":"743893277934489600","name":"Coding","uri":"\/mjr_tts\/lists\/coding","subscriber_count":0,"member_count":5,"mode":"public","description":"","slug":"coding","full_name":"@mjr_tts\/coding","created_at":"Fri
+        Jun 17 19:49:12 +0000 2016","following":false,"user":{"id":711995065347006465,"id_str":"711995065347006465","name":"test
+        less","screen_name":"mjr_tts","location":"","description":"","url":null,"entities":{"description":{"urls":[]}},"protected":false,"followers_count":4,"friends_count":10,"listed_count":0,"created_at":"Mon
+        Mar 21 19:17:06 +0000 2016","favourites_count":2,"utc_offset":null,"time_zone":null,"geo_enabled":false,"verified":false,"statuses_count":24,"lang":"en","contributors_enabled":false,"is_translator":false,"is_translation_enabled":false,"profile_background_color":"F5F8FA","profile_background_image_url":null,"profile_background_image_url_https":null,"profile_background_tile":false,"profile_image_url":"http:\/\/abs.twimg.com\/sticky\/default_profile_images\/default_profile_3_normal.png","profile_image_url_https":"https:\/\/abs.twimg.com\/sticky\/default_profile_images\/default_profile_3_normal.png","profile_link_color":"2B7BB9","profile_sidebar_border_color":"C0DEED","profile_sidebar_fill_color":"DDEEF6","profile_text_color":"333333","profile_use_background_image":true,"has_extended_profile":false,"default_profile":true,"default_profile_image":true,"following":null,"follow_request_sent":null,"notifications":null}},{"id":743889984701272064,"id_str":"743889984701272064","name":"Tech","uri":"\/mjr_tts\/lists\/tech","subscriber_count":0,"member_count":7,"mode":"public","description":"","slug":"tech","full_name":"@mjr_tts\/tech","created_at":"Fri
+        Jun 17 19:36:07 +0000 2016","following":false,"user":{"id":711995065347006465,"id_str":"711995065347006465","name":"test
+        less","screen_name":"mjr_tts","location":"","description":"","url":null,"entities":{"description":{"urls":[]}},"protected":false,"followers_count":4,"friends_count":10,"listed_count":0,"created_at":"Mon
+        Mar 21 19:17:06 +0000 2016","favourites_count":2,"utc_offset":null,"time_zone":null,"geo_enabled":false,"verified":false,"statuses_count":24,"lang":"en","contributors_enabled":false,"is_translator":false,"is_translation_enabled":false,"profile_background_color":"F5F8FA","profile_background_image_url":null,"profile_background_image_url_https":null,"profile_background_tile":false,"profile_image_url":"http:\/\/abs.twimg.com\/sticky\/default_profile_images\/default_profile_3_normal.png","profile_image_url_https":"https:\/\/abs.twimg.com\/sticky\/default_profile_images\/default_profile_3_normal.png","profile_link_color":"2B7BB9","profile_sidebar_border_color":"C0DEED","profile_sidebar_fill_color":"DDEEF6","profile_text_color":"333333","profile_use_background_image":true,"has_extended_profile":false,"default_profile":true,"default_profile_image":true,"following":null,"follow_request_sent":null,"notifications":null}},{"id":743140782333378560,"id_str":"743140782333378560","name":"heroku","uri":"\/mjr_tts\/lists\/heroku","subscriber_count":0,"member_count":4,"mode":"public","description":"","slug":"heroku","full_name":"@mjr_tts\/heroku","created_at":"Wed
+        Jun 15 17:59:04 +0000 2016","following":false,"user":{"id":711995065347006465,"id_str":"711995065347006465","name":"test
+        less","screen_name":"mjr_tts","location":"","description":"","url":null,"entities":{"description":{"urls":[]}},"protected":false,"followers_count":4,"friends_count":10,"listed_count":0,"created_at":"Mon
+        Mar 21 19:17:06 +0000 2016","favourites_count":2,"utc_offset":null,"time_zone":null,"geo_enabled":false,"verified":false,"statuses_count":24,"lang":"en","contributors_enabled":false,"is_translator":false,"is_translation_enabled":false,"profile_background_color":"F5F8FA","profile_background_image_url":null,"profile_background_image_url_https":null,"profile_background_tile":false,"profile_image_url":"http:\/\/abs.twimg.com\/sticky\/default_profile_images\/default_profile_3_normal.png","profile_image_url_https":"https:\/\/abs.twimg.com\/sticky\/default_profile_images\/default_profile_3_normal.png","profile_link_color":"2B7BB9","profile_sidebar_border_color":"C0DEED","profile_sidebar_fill_color":"DDEEF6","profile_text_color":"333333","profile_use_background_image":true,"has_extended_profile":false,"default_profile":true,"default_profile_image":true,"following":null,"follow_request_sent":null,"notifications":null}}]'
+    http_version: 
+  recorded_at: Sun, 19 Jun 2016 23:33:18 GMT
+- request:
+    method: get
+    uri: https://api.twitter.com/1.1/lists/members.json?cursor=-1&list_id=744626780523405316&owner_id=711995065347006465
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      User-Agent:
+      - TwitterRubyGem/5.16.0
+      Authorization:
+      - OAuth oauth_consumer_key="PCvo50anGUpUUDusAPmiurzjM", oauth_nonce="b1ee102d58ec3d599cb176b0373ae196",
+        oauth_signature="uQ8n%2FN42DEg93HuVDbNj3DGxIFU%3D", oauth_signature_method="HMAC-SHA1",
+        oauth_timestamp="1466379198", oauth_token="711995065347006465-JLJWrBLyfySojWUz1C7mwaqx37Qv7vQ",
+        oauth_version="1.0"
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Cache-Control:
+      - no-cache, no-store, must-revalidate, pre-check=0, post-check=0
+      Content-Disposition:
+      - attachment; filename=json.json
+      Content-Length:
+      - '2125'
+      Content-Type:
+      - application/json;charset=utf-8
+      Date:
+      - Sun, 19 Jun 2016 23:33:19 GMT
+      Expires:
+      - Tue, 31 Mar 1981 05:00:00 GMT
+      Last-Modified:
+      - Sun, 19 Jun 2016 23:33:19 GMT
+      Pragma:
+      - no-cache
+      Server:
+      - tsa_b
+      Set-Cookie:
+      - guest_id=v1%3A146637919934988547; Domain=.twitter.com; Path=/; Expires=Tue,
+        19-Jun-2018 23:33:19 UTC
+      - lang=en; Path=/
+      Status:
+      - 200 OK
+      Strict-Transport-Security:
+      - max-age=631138519
+      X-Access-Level:
+      - read-write-directmessages
+      X-Connection-Hash:
+      - 2b604b30735761f7759cb243c9df15b4
+      X-Content-Type-Options:
+      - nosniff
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Rate-Limit-Limit:
+      - '180'
+      X-Rate-Limit-Remaining:
+      - '172'
+      X-Rate-Limit-Reset:
+      - '1466379202'
+      X-Response-Time:
+      - '71'
+      X-Transaction:
+      - 38bc48b944ab6b65
+      X-Twitter-Response-Tags:
+      - BouncerCompliant
+      X-Xss-Protection:
+      - 1; mode=block
+    body:
+      encoding: ASCII-8BIT
+      string: '{"users":[{"id":1000842626,"id_str":"1000842626","name":"GoRails","screen_name":"GoRails","location":"","description":"Ruby
+        on Rails screencasts for aspiring developers by @excid3","url":"http:\/\/t.co\/ej10pLovzk","entities":{"url":{"urls":[{"url":"http:\/\/t.co\/ej10pLovzk","expanded_url":"http:\/\/gorails.com","display_url":"gorails.com","indices":[0,22]}]},"description":{"urls":[]}},"protected":false,"followers_count":1217,"friends_count":30,"listed_count":61,"created_at":"Mon
+        Dec 10 03:50:01 +0000 2012","favourites_count":2059,"utc_offset":null,"time_zone":null,"geo_enabled":false,"verified":false,"statuses_count":459,"lang":"en","status":{"created_at":"Wed
+        Jun 15 18:01:20 +0000 2016","id":743141356726476800,"id_str":"743141356726476800","text":"RT
+        @wolfieorama: @excid3 welcome knowledge doesn''t come cheaper than lunch....
+        Does it? @GoRails","truncated":false,"entities":{"hashtags":[],"symbols":[],"user_mentions":[{"screen_name":"wolfieorama","name":"Tweets
+        from Wolfie","id":24661632,"id_str":"24661632","indices":[3,15]},{"screen_name":"excid3","name":"Chris
+        Oliver","id":14057736,"id_str":"14057736","indices":[17,24]},{"screen_name":"GoRails","name":"GoRails","id":1000842626,"id_str":"1000842626","indices":[88,96]}],"urls":[]},"source":"\u003ca
+        href=\"https:\/\/about.twitter.com\/products\/tweetdeck\" rel=\"nofollow\"\u003eTweetDeck\u003c\/a\u003e","in_reply_to_status_id":null,"in_reply_to_status_id_str":null,"in_reply_to_user_id":null,"in_reply_to_user_id_str":null,"in_reply_to_screen_name":null,"geo":null,"coordinates":null,"place":null,"contributors":null,"retweeted_status":{"created_at":"Wed
+        Jun 15 16:36:04 +0000 2016","id":743119896565911553,"id_str":"743119896565911553","text":"@excid3
+        welcome knowledge doesn''t come cheaper than lunch.... Does it? @GoRails","truncated":false,"entities":{"hashtags":[],"symbols":[],"user_mentions":[{"screen_name":"excid3","name":"Chris
+        Oliver","id":14057736,"id_str":"14057736","indices":[0,7]},{"screen_name":"GoRails","name":"GoRails","id":1000842626,"id_str":"1000842626","indices":[71,79]}],"urls":[]},"source":"\u003ca
+        href=\"http:\/\/twitter.com\/download\/android\" rel=\"nofollow\"\u003eTwitter
+        for Android\u003c\/a\u003e","in_reply_to_status_id":743117015141908480,"in_reply_to_status_id_str":"743117015141908480","in_reply_to_user_id":14057736,"in_reply_to_user_id_str":"14057736","in_reply_to_screen_name":"excid3","geo":null,"coordinates":null,"place":null,"contributors":null,"is_quote_status":false,"retweet_count":1,"favorite_count":1,"favorited":false,"retweeted":false,"lang":"en"},"is_quote_status":false,"retweet_count":1,"favorite_count":0,"favorited":false,"retweeted":false,"lang":"en"},"contributors_enabled":false,"is_translator":false,"is_translation_enabled":false,"profile_background_color":"C0DEED","profile_background_image_url":"http:\/\/abs.twimg.com\/images\/themes\/theme1\/bg.png","profile_background_image_url_https":"https:\/\/abs.twimg.com\/images\/themes\/theme1\/bg.png","profile_background_tile":false,"profile_image_url":"http:\/\/pbs.twimg.com\/profile_images\/695303579440013312\/j4EEtvdZ_normal.png","profile_image_url_https":"https:\/\/pbs.twimg.com\/profile_images\/695303579440013312\/j4EEtvdZ_normal.png","profile_link_color":"EE6746","profile_sidebar_border_color":"C0DEED","profile_sidebar_fill_color":"DDEEF6","profile_text_color":"333333","profile_use_background_image":true,"has_extended_profile":false,"default_profile":false,"default_profile_image":false,"following":false,"follow_request_sent":false,"notifications":false},{"id":26257166,"id_str":"26257166","name":"SportsCenter","screen_name":"SportsCenter","location":"Bristol,
+        CT","description":"All things sports. Nominate top plays using #SCtop10. *If
+        you tweet or otherwise send us content, you consent to ESPN using and showcasing
+        it in any media.*","url":"https:\/\/t.co\/nCdopZzBRi","entities":{"url":{"urls":[{"url":"https:\/\/t.co\/nCdopZzBRi","expanded_url":"http:\/\/snapchat.com\/add\/sportscenter","display_url":"snapchat.com\/add\/sportscent\u2026","indices":[0,23]}]},"description":{"urls":[]}},"protected":false,"followers_count":28753594,"friends_count":1669,"listed_count":41945,"created_at":"Tue
+        Mar 24 15:28:02 +0000 2009","favourites_count":808,"utc_offset":-14400,"time_zone":"Eastern
+        Time (US & Canada)","geo_enabled":true,"verified":true,"statuses_count":80568,"lang":"en","status":{"created_at":"Sun
+        Jun 19 23:26:24 +0000 2016","id":744672712426037248,"id_str":"744672712426037248","text":"Some
+        Cavs fans infiltrated Warriors territory. https:\/\/t.co\/HOVnfDN8Xu","truncated":false,"entities":{"hashtags":[],"symbols":[],"user_mentions":[],"urls":[],"media":[{"id":744672704855343105,"id_str":"744672704855343105","indices":[47,70],"media_url":"http:\/\/pbs.twimg.com\/media\/ClWb4S7VAAE2fGL.jpg","media_url_https":"https:\/\/pbs.twimg.com\/media\/ClWb4S7VAAE2fGL.jpg","url":"https:\/\/t.co\/HOVnfDN8Xu","display_url":"pic.twitter.com\/HOVnfDN8Xu","expanded_url":"http:\/\/twitter.com\/SportsCenter\/status\/744672712426037248\/photo\/1","type":"photo","sizes":{"medium":{"w":900,"h":1200,"resize":"fit"},"small":{"w":510,"h":680,"resize":"fit"},"thumb":{"w":150,"h":150,"resize":"crop"},"large":{"w":1536,"h":2048,"resize":"fit"}}}]},"extended_entities":{"media":[{"id":744672704855343105,"id_str":"744672704855343105","indices":[47,70],"media_url":"http:\/\/pbs.twimg.com\/media\/ClWb4S7VAAE2fGL.jpg","media_url_https":"https:\/\/pbs.twimg.com\/media\/ClWb4S7VAAE2fGL.jpg","url":"https:\/\/t.co\/HOVnfDN8Xu","display_url":"pic.twitter.com\/HOVnfDN8Xu","expanded_url":"http:\/\/twitter.com\/SportsCenter\/status\/744672712426037248\/photo\/1","type":"photo","sizes":{"medium":{"w":900,"h":1200,"resize":"fit"},"small":{"w":510,"h":680,"resize":"fit"},"thumb":{"w":150,"h":150,"resize":"crop"},"large":{"w":1536,"h":2048,"resize":"fit"}}}]},"source":"\u003ca
+        href=\"http:\/\/twitter.com\/download\/iphone\" rel=\"nofollow\"\u003eTwitter
+        for iPhone\u003c\/a\u003e","in_reply_to_status_id":null,"in_reply_to_status_id_str":null,"in_reply_to_user_id":null,"in_reply_to_user_id_str":null,"in_reply_to_screen_name":null,"geo":null,"coordinates":null,"place":{"id":"07d9c92c6e087002","url":"https:\/\/api.twitter.com\/1.1\/geo\/id\/07d9c92c6e087002.json","place_type":"poi","name":"Oracle
+        Arena","full_name":"Oracle Arena","country_code":"US","country":"United States","contained_within":[],"bounding_box":{"type":"Polygon","coordinates":[[[-122.20290184020996,37.75026469428747],[-122.20290184020996,37.75026469428747],[-122.20290184020996,37.75026469428747],[-122.20290184020996,37.75026469428747]]]},"attributes":{}},"contributors":null,"is_quote_status":false,"retweet_count":1590,"favorite_count":2260,"favorited":false,"retweeted":false,"possibly_sensitive":false,"lang":"en"},"contributors_enabled":false,"is_translator":false,"is_translation_enabled":true,"profile_background_color":"131516","profile_background_image_url":"http:\/\/pbs.twimg.com\/profile_background_images\/480904536454750208\/mD9fyg2r.jpeg","profile_background_image_url_https":"https:\/\/pbs.twimg.com\/profile_background_images\/480904536454750208\/mD9fyg2r.jpeg","profile_background_tile":true,"profile_image_url":"http:\/\/pbs.twimg.com\/profile_images\/641252681017856001\/p6PL2KFg_normal.jpg","profile_image_url_https":"https:\/\/pbs.twimg.com\/profile_images\/641252681017856001\/p6PL2KFg_normal.jpg","profile_banner_url":"https:\/\/pbs.twimg.com\/profile_banners\/26257166\/1441721587","profile_link_color":"009999","profile_sidebar_border_color":"000000","profile_sidebar_fill_color":"EFEFEF","profile_text_color":"333333","profile_use_background_image":true,"has_extended_profile":false,"default_profile":false,"default_profile_image":false,"following":false,"follow_request_sent":false,"notifications":false}],"next_cursor":0,"next_cursor_str":"0","previous_cursor":0,"previous_cursor_str":"0"}'
+    http_version: 
+  recorded_at: Sun, 19 Jun 2016 23:33:18 GMT
+- request:
+    method: post
+    uri: https://api.twitter.com/1.1/lists/members/create_all.json
+    body:
+      encoding: UTF-8
+      string: list_id=744626780523405316&owner_id=711995065347006465&screen_name=jasoncummings86
+    headers:
+      Accept:
+      - application/json
+      User-Agent:
+      - TwitterRubyGem/5.16.0
+      Authorization:
+      - OAuth oauth_consumer_key="PCvo50anGUpUUDusAPmiurzjM", oauth_nonce="5ef55549d144a13caec2d7f4a0d6242a",
+        oauth_signature="pYdeRKzkCFgFRDZrF%2BluZelF9MI%3D", oauth_signature_method="HMAC-SHA1",
+        oauth_timestamp="1466379198", oauth_token="711995065347006465-JLJWrBLyfySojWUz1C7mwaqx37Qv7vQ",
+        oauth_version="1.0"
+      Content-Type:
+      - application/x-www-form-urlencoded
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Cache-Control:
+      - no-cache, no-store, must-revalidate, pre-check=0, post-check=0
+      Content-Disposition:
+      - attachment; filename=json.json
+      Content-Length:
+      - '631'
+      Content-Type:
+      - application/json;charset=utf-8
+      Date:
+      - Sun, 19 Jun 2016 23:33:19 GMT
+      Expires:
+      - Tue, 31 Mar 1981 05:00:00 GMT
+      Last-Modified:
+      - Sun, 19 Jun 2016 23:33:19 GMT
+      Pragma:
+      - no-cache
+      Server:
+      - tsa_b
+      Set-Cookie:
+      - guest_id=v1%3A146637919957044856; Domain=.twitter.com; Path=/; Expires=Tue,
+        19-Jun-2018 23:33:19 UTC
+      - lang=en; Path=/
+      Status:
+      - 200 OK
+      Strict-Transport-Security:
+      - max-age=631138519
+      X-Access-Level:
+      - read-write-directmessages
+      X-Connection-Hash:
+      - 52194a97b5cc2eae243f9fc88f52cfdb
+      X-Content-Type-Options:
+      - nosniff
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Response-Time:
+      - '100'
+      X-Transaction:
+      - 361096dae4c537c0
+      X-Tsa-Request-Body-Time:
+      - '0'
+      X-Twitter-Response-Tags:
+      - BouncerCompliant
+      X-Xss-Protection:
+      - 1; mode=block
+    body:
+      encoding: ASCII-8BIT
+      string: '{"id":744626780523405316,"id_str":"744626780523405316","name":"Multiple","uri":"\/mjr_tts\/lists\/multiple","subscriber_count":0,"member_count":3,"mode":"public","description":"","slug":"multiple","full_name":"@mjr_tts\/multiple","created_at":"Sun
+        Jun 19 20:23:53 +0000 2016","following":true,"user":{"id":711995065347006465,"id_str":"711995065347006465","name":"test
+        less","screen_name":"mjr_tts","location":"","description":"","url":null,"entities":{"description":{"urls":[]}},"protected":false,"followers_count":4,"friends_count":10,"listed_count":0,"created_at":"Mon
+        Mar 21 19:17:06 +0000 2016","favourites_count":2,"utc_offset":null,"time_zone":null,"geo_enabled":false,"verified":false,"statuses_count":24,"lang":"en","contributors_enabled":false,"is_translator":false,"is_translation_enabled":false,"profile_background_color":"F5F8FA","profile_background_image_url":null,"profile_background_image_url_https":null,"profile_background_tile":false,"profile_image_url":"http:\/\/abs.twimg.com\/sticky\/default_profile_images\/default_profile_3_normal.png","profile_image_url_https":"https:\/\/abs.twimg.com\/sticky\/default_profile_images\/default_profile_3_normal.png","profile_link_color":"2B7BB9","profile_sidebar_border_color":"C0DEED","profile_sidebar_fill_color":"DDEEF6","profile_text_color":"333333","profile_use_background_image":true,"has_extended_profile":false,"default_profile":true,"default_profile_image":true,"following":false,"follow_request_sent":false,"notifications":false}}'
+    http_version: 
+  recorded_at: Sun, 19 Jun 2016 23:33:18 GMT
+- request:
     method: post
     uri: https://api.twitter.com/oauth2/token
     body:
@@ -31,11 +1300,11 @@ http_interactions:
       Content-Type:
       - application/json;charset=utf-8
       Date:
-      - Wed, 08 Jun 2016 21:10:26 GMT
+      - Sun, 19 Jun 2016 23:35:02 GMT
       Expires:
       - Tue, 31 Mar 1981 05:00:00 GMT
       Last-Modified:
-      - Wed, 08 Jun 2016 21:10:26 GMT
+      - Sun, 19 Jun 2016 23:35:02 GMT
       Ml:
       - A
       Pragma:
@@ -43,24 +1312,24 @@ http_interactions:
       Server:
       - tsa_b
       Set-Cookie:
-      - guest_id=v1%3A146542022636188493; Domain=.twitter.com; Path=/; Expires=Fri,
-        08-Jun-2018 21:10:26 UTC
+      - guest_id=v1%3A146637930283699959; Domain=.twitter.com; Path=/; Expires=Tue,
+        19-Jun-2018 23:35:02 UTC
       Status:
       - 200 OK
       Strict-Transport-Security:
       - max-age=631138519
       X-Connection-Hash:
-      - cfb9b5df6fdb0fd90fe16aa2028ca26c
+      - 9a7fabff357639a952d1e6edc497e2f2
       X-Content-Type-Options:
       - nosniff
       X-Frame-Options:
       - DENY
       X-Response-Time:
-      - '28'
+      - '31'
       X-Transaction:
-      - 6c7bcd81c0e99951
+      - a7a2d95919dfa47e
       X-Tsa-Request-Body-Time:
-      - '1'
+      - '0'
       X-Twitter-Response-Tags:
       - BouncerCompliant
       X-Ua-Compatible:
@@ -71,516 +1340,22 @@ http_interactions:
       encoding: ASCII-8BIT
       string: '{"token_type":"bearer","access_token":"AAAAAAAAAAAAAAAAAAAAAPfmvAAAAAAAxuLnQIbL9WM5N3RJsBv%2BKM4fD%2B4%3D3SzoKa9kefI2w6PPiDb4kAzAmXwF7Ev2x3V4zHI9hXls3k39nX"}'
     http_version: 
-  recorded_at: Wed, 08 Jun 2016 21:10:26 GMT
-- request:
-    method: get
-    uri: https://api.twitter.com/1.1/lists/list.json?user_id=711995065347006465
-    body:
-      encoding: US-ASCII
-      string: ''
-    headers:
-      Accept:
-      - application/json
-      User-Agent:
-      - TwitterRubyGem/5.16.0
-      Authorization:
-      - Bearer AAAAAAAAAAAAAAAAAAAAAPfmvAAAAAAAxuLnQIbL9WM5N3RJsBv%2BKM4fD%2B4%3D3SzoKa9kefI2w6PPiDb4kAzAmXwF7Ev2x3V4zHI9hXls3k39nX
-      Accept-Encoding:
-      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
-  response:
-    status:
-      code: 200
-      message: OK
-    headers:
-      Cache-Control:
-      - no-cache, no-store, must-revalidate, pre-check=0, post-check=0
-      Content-Disposition:
-      - attachment; filename=json.json
-      Content-Length:
-      - '815'
-      Content-Type:
-      - application/json;charset=utf-8
-      Date:
-      - Wed, 08 Jun 2016 21:10:26 GMT
-      Expires:
-      - Tue, 31 Mar 1981 05:00:00 GMT
-      Last-Modified:
-      - Wed, 08 Jun 2016 21:10:26 GMT
-      Pragma:
-      - no-cache
-      Server:
-      - tsa_b
-      Set-Cookie:
-      - guest_id=v1%3A146542022653993541; Domain=.twitter.com; Path=/; Expires=Fri,
-        08-Jun-2018 21:10:26 UTC
-      Status:
-      - 200 OK
-      Strict-Transport-Security:
-      - max-age=631138519
-      X-Access-Level:
-      - read
-      X-Connection-Hash:
-      - 32e323ab1ce73b8df40499a1dda3fa5b
-      X-Content-Type-Options:
-      - nosniff
-      X-Frame-Options:
-      - SAMEORIGIN
-      X-Rate-Limit-Limit:
-      - '15'
-      X-Rate-Limit-Remaining:
-      - '14'
-      X-Rate-Limit-Reset:
-      - '1465421126'
-      X-Response-Time:
-      - '29'
-      X-Transaction:
-      - 85062bd1d9efeb2c
-      X-Twitter-Response-Tags:
-      - BouncerCompliant
-      X-Xss-Protection:
-      - 1; mode=block
-    body:
-      encoding: ASCII-8BIT
-      string: '[{"id":740596227935457281,"id_str":"740596227935457281","name":"testing","uri":"\/mjr_tts\/lists\/testing","subscriber_count":0,"member_count":0,"mode":"public","description":"","slug":"testing","full_name":"@mjr_tts\/testing","created_at":"Wed
-        Jun 08 17:27:55 +0000 2016","following":false,"user":{"id":711995065347006465,"id_str":"711995065347006465","name":"test
-        less","screen_name":"mjr_tts","location":"","description":"","url":null,"entities":{"description":{"urls":[]}},"protected":false,"followers_count":5,"friends_count":10,"listed_count":0,"created_at":"Mon
-        Mar 21 19:17:06 +0000 2016","favourites_count":1,"utc_offset":null,"time_zone":null,"geo_enabled":false,"verified":false,"statuses_count":24,"lang":"en","contributors_enabled":false,"is_translator":false,"is_translation_enabled":false,"profile_background_color":"F5F8FA","profile_background_image_url":null,"profile_background_image_url_https":null,"profile_background_tile":false,"profile_image_url":"http:\/\/abs.twimg.com\/sticky\/default_profile_images\/default_profile_3_normal.png","profile_image_url_https":"https:\/\/abs.twimg.com\/sticky\/default_profile_images\/default_profile_3_normal.png","profile_link_color":"2B7BB9","profile_sidebar_border_color":"C0DEED","profile_sidebar_fill_color":"DDEEF6","profile_text_color":"333333","profile_use_background_image":true,"has_extended_profile":false,"default_profile":true,"default_profile_image":true,"following":null,"follow_request_sent":null,"notifications":null}},{"id":740594753486659585,"id_str":"740594753486659585","name":"Clothing","uri":"\/mjr_tts\/lists\/clothing","subscriber_count":0,"member_count":3,"mode":"public","description":"","slug":"clothing","full_name":"@mjr_tts\/clothing","created_at":"Wed
-        Jun 08 17:22:03 +0000 2016","following":false,"user":{"id":711995065347006465,"id_str":"711995065347006465","name":"test
-        less","screen_name":"mjr_tts","location":"","description":"","url":null,"entities":{"description":{"urls":[]}},"protected":false,"followers_count":5,"friends_count":10,"listed_count":0,"created_at":"Mon
-        Mar 21 19:17:06 +0000 2016","favourites_count":1,"utc_offset":null,"time_zone":null,"geo_enabled":false,"verified":false,"statuses_count":24,"lang":"en","contributors_enabled":false,"is_translator":false,"is_translation_enabled":false,"profile_background_color":"F5F8FA","profile_background_image_url":null,"profile_background_image_url_https":null,"profile_background_tile":false,"profile_image_url":"http:\/\/abs.twimg.com\/sticky\/default_profile_images\/default_profile_3_normal.png","profile_image_url_https":"https:\/\/abs.twimg.com\/sticky\/default_profile_images\/default_profile_3_normal.png","profile_link_color":"2B7BB9","profile_sidebar_border_color":"C0DEED","profile_sidebar_fill_color":"DDEEF6","profile_text_color":"333333","profile_use_background_image":true,"has_extended_profile":false,"default_profile":true,"default_profile_image":true,"following":null,"follow_request_sent":null,"notifications":null}},{"id":740583642125205504,"id_str":"740583642125205504","name":"Sports","uri":"\/mjr_tts\/lists\/sports","subscriber_count":0,"member_count":1,"mode":"public","description":"","slug":"sports","full_name":"@mjr_tts\/sports","created_at":"Wed
-        Jun 08 16:37:54 +0000 2016","following":false,"user":{"id":711995065347006465,"id_str":"711995065347006465","name":"test
-        less","screen_name":"mjr_tts","location":"","description":"","url":null,"entities":{"description":{"urls":[]}},"protected":false,"followers_count":5,"friends_count":10,"listed_count":0,"created_at":"Mon
-        Mar 21 19:17:06 +0000 2016","favourites_count":1,"utc_offset":null,"time_zone":null,"geo_enabled":false,"verified":false,"statuses_count":24,"lang":"en","contributors_enabled":false,"is_translator":false,"is_translation_enabled":false,"profile_background_color":"F5F8FA","profile_background_image_url":null,"profile_background_image_url_https":null,"profile_background_tile":false,"profile_image_url":"http:\/\/abs.twimg.com\/sticky\/default_profile_images\/default_profile_3_normal.png","profile_image_url_https":"https:\/\/abs.twimg.com\/sticky\/default_profile_images\/default_profile_3_normal.png","profile_link_color":"2B7BB9","profile_sidebar_border_color":"C0DEED","profile_sidebar_fill_color":"DDEEF6","profile_text_color":"333333","profile_use_background_image":true,"has_extended_profile":false,"default_profile":true,"default_profile_image":true,"following":null,"follow_request_sent":null,"notifications":null}},{"id":740551191566913537,"id_str":"740551191566913537","name":"Code","uri":"\/mjr_tts\/lists\/code","subscriber_count":0,"member_count":4,"mode":"public","description":"","slug":"code","full_name":"@mjr_tts\/code","created_at":"Wed
-        Jun 08 14:28:57 +0000 2016","following":false,"user":{"id":711995065347006465,"id_str":"711995065347006465","name":"test
-        less","screen_name":"mjr_tts","location":"","description":"","url":null,"entities":{"description":{"urls":[]}},"protected":false,"followers_count":5,"friends_count":10,"listed_count":0,"created_at":"Mon
-        Mar 21 19:17:06 +0000 2016","favourites_count":1,"utc_offset":null,"time_zone":null,"geo_enabled":false,"verified":false,"statuses_count":24,"lang":"en","contributors_enabled":false,"is_translator":false,"is_translation_enabled":false,"profile_background_color":"F5F8FA","profile_background_image_url":null,"profile_background_image_url_https":null,"profile_background_tile":false,"profile_image_url":"http:\/\/abs.twimg.com\/sticky\/default_profile_images\/default_profile_3_normal.png","profile_image_url_https":"https:\/\/abs.twimg.com\/sticky\/default_profile_images\/default_profile_3_normal.png","profile_link_color":"2B7BB9","profile_sidebar_border_color":"C0DEED","profile_sidebar_fill_color":"DDEEF6","profile_text_color":"333333","profile_use_background_image":true,"has_extended_profile":false,"default_profile":true,"default_profile_image":true,"following":null,"follow_request_sent":null,"notifications":null}}]'
-    http_version: 
-  recorded_at: Wed, 08 Jun 2016 21:10:26 GMT
-- request:
-    method: get
-    uri: https://api.twitter.com/1.1/lists/list.json?user_id=711995065347006465
-    body:
-      encoding: US-ASCII
-      string: ''
-    headers:
-      Accept:
-      - application/json
-      User-Agent:
-      - TwitterRubyGem/5.16.0
-      Authorization:
-      - Bearer AAAAAAAAAAAAAAAAAAAAAPfmvAAAAAAAxuLnQIbL9WM5N3RJsBv%2BKM4fD%2B4%3D3SzoKa9kefI2w6PPiDb4kAzAmXwF7Ev2x3V4zHI9hXls3k39nX
-      Accept-Encoding:
-      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
-  response:
-    status:
-      code: 200
-      message: OK
-    headers:
-      Cache-Control:
-      - no-cache, no-store, must-revalidate, pre-check=0, post-check=0
-      Content-Disposition:
-      - attachment; filename=json.json
-      Content-Length:
-      - '815'
-      Content-Type:
-      - application/json;charset=utf-8
-      Date:
-      - Wed, 08 Jun 2016 21:10:26 GMT
-      Expires:
-      - Tue, 31 Mar 1981 05:00:00 GMT
-      Last-Modified:
-      - Wed, 08 Jun 2016 21:10:26 GMT
-      Pragma:
-      - no-cache
-      Server:
-      - tsa_b
-      Set-Cookie:
-      - guest_id=v1%3A146542022671674974; Domain=.twitter.com; Path=/; Expires=Fri,
-        08-Jun-2018 21:10:26 UTC
-      Status:
-      - 200 OK
-      Strict-Transport-Security:
-      - max-age=631138519
-      X-Access-Level:
-      - read
-      X-Connection-Hash:
-      - 99d9d2fe8cd87eae08e459788088e795
-      X-Content-Type-Options:
-      - nosniff
-      X-Frame-Options:
-      - SAMEORIGIN
-      X-Rate-Limit-Limit:
-      - '15'
-      X-Rate-Limit-Remaining:
-      - '13'
-      X-Rate-Limit-Reset:
-      - '1465421126'
-      X-Response-Time:
-      - '31'
-      X-Transaction:
-      - 898ce2945d1474ff
-      X-Twitter-Response-Tags:
-      - BouncerCompliant
-      X-Xss-Protection:
-      - 1; mode=block
-    body:
-      encoding: ASCII-8BIT
-      string: '[{"id":740596227935457281,"id_str":"740596227935457281","name":"testing","uri":"\/mjr_tts\/lists\/testing","subscriber_count":0,"member_count":0,"mode":"public","description":"","slug":"testing","full_name":"@mjr_tts\/testing","created_at":"Wed
-        Jun 08 17:27:55 +0000 2016","following":false,"user":{"id":711995065347006465,"id_str":"711995065347006465","name":"test
-        less","screen_name":"mjr_tts","location":"","description":"","url":null,"entities":{"description":{"urls":[]}},"protected":false,"followers_count":5,"friends_count":10,"listed_count":0,"created_at":"Mon
-        Mar 21 19:17:06 +0000 2016","favourites_count":1,"utc_offset":null,"time_zone":null,"geo_enabled":false,"verified":false,"statuses_count":24,"lang":"en","contributors_enabled":false,"is_translator":false,"is_translation_enabled":false,"profile_background_color":"F5F8FA","profile_background_image_url":null,"profile_background_image_url_https":null,"profile_background_tile":false,"profile_image_url":"http:\/\/abs.twimg.com\/sticky\/default_profile_images\/default_profile_3_normal.png","profile_image_url_https":"https:\/\/abs.twimg.com\/sticky\/default_profile_images\/default_profile_3_normal.png","profile_link_color":"2B7BB9","profile_sidebar_border_color":"C0DEED","profile_sidebar_fill_color":"DDEEF6","profile_text_color":"333333","profile_use_background_image":true,"has_extended_profile":false,"default_profile":true,"default_profile_image":true,"following":null,"follow_request_sent":null,"notifications":null}},{"id":740594753486659585,"id_str":"740594753486659585","name":"Clothing","uri":"\/mjr_tts\/lists\/clothing","subscriber_count":0,"member_count":3,"mode":"public","description":"","slug":"clothing","full_name":"@mjr_tts\/clothing","created_at":"Wed
-        Jun 08 17:22:03 +0000 2016","following":false,"user":{"id":711995065347006465,"id_str":"711995065347006465","name":"test
-        less","screen_name":"mjr_tts","location":"","description":"","url":null,"entities":{"description":{"urls":[]}},"protected":false,"followers_count":5,"friends_count":10,"listed_count":0,"created_at":"Mon
-        Mar 21 19:17:06 +0000 2016","favourites_count":1,"utc_offset":null,"time_zone":null,"geo_enabled":false,"verified":false,"statuses_count":24,"lang":"en","contributors_enabled":false,"is_translator":false,"is_translation_enabled":false,"profile_background_color":"F5F8FA","profile_background_image_url":null,"profile_background_image_url_https":null,"profile_background_tile":false,"profile_image_url":"http:\/\/abs.twimg.com\/sticky\/default_profile_images\/default_profile_3_normal.png","profile_image_url_https":"https:\/\/abs.twimg.com\/sticky\/default_profile_images\/default_profile_3_normal.png","profile_link_color":"2B7BB9","profile_sidebar_border_color":"C0DEED","profile_sidebar_fill_color":"DDEEF6","profile_text_color":"333333","profile_use_background_image":true,"has_extended_profile":false,"default_profile":true,"default_profile_image":true,"following":null,"follow_request_sent":null,"notifications":null}},{"id":740583642125205504,"id_str":"740583642125205504","name":"Sports","uri":"\/mjr_tts\/lists\/sports","subscriber_count":0,"member_count":1,"mode":"public","description":"","slug":"sports","full_name":"@mjr_tts\/sports","created_at":"Wed
-        Jun 08 16:37:54 +0000 2016","following":false,"user":{"id":711995065347006465,"id_str":"711995065347006465","name":"test
-        less","screen_name":"mjr_tts","location":"","description":"","url":null,"entities":{"description":{"urls":[]}},"protected":false,"followers_count":5,"friends_count":10,"listed_count":0,"created_at":"Mon
-        Mar 21 19:17:06 +0000 2016","favourites_count":1,"utc_offset":null,"time_zone":null,"geo_enabled":false,"verified":false,"statuses_count":24,"lang":"en","contributors_enabled":false,"is_translator":false,"is_translation_enabled":false,"profile_background_color":"F5F8FA","profile_background_image_url":null,"profile_background_image_url_https":null,"profile_background_tile":false,"profile_image_url":"http:\/\/abs.twimg.com\/sticky\/default_profile_images\/default_profile_3_normal.png","profile_image_url_https":"https:\/\/abs.twimg.com\/sticky\/default_profile_images\/default_profile_3_normal.png","profile_link_color":"2B7BB9","profile_sidebar_border_color":"C0DEED","profile_sidebar_fill_color":"DDEEF6","profile_text_color":"333333","profile_use_background_image":true,"has_extended_profile":false,"default_profile":true,"default_profile_image":true,"following":null,"follow_request_sent":null,"notifications":null}},{"id":740551191566913537,"id_str":"740551191566913537","name":"Code","uri":"\/mjr_tts\/lists\/code","subscriber_count":0,"member_count":4,"mode":"public","description":"","slug":"code","full_name":"@mjr_tts\/code","created_at":"Wed
-        Jun 08 14:28:57 +0000 2016","following":false,"user":{"id":711995065347006465,"id_str":"711995065347006465","name":"test
-        less","screen_name":"mjr_tts","location":"","description":"","url":null,"entities":{"description":{"urls":[]}},"protected":false,"followers_count":5,"friends_count":10,"listed_count":0,"created_at":"Mon
-        Mar 21 19:17:06 +0000 2016","favourites_count":1,"utc_offset":null,"time_zone":null,"geo_enabled":false,"verified":false,"statuses_count":24,"lang":"en","contributors_enabled":false,"is_translator":false,"is_translation_enabled":false,"profile_background_color":"F5F8FA","profile_background_image_url":null,"profile_background_image_url_https":null,"profile_background_tile":false,"profile_image_url":"http:\/\/abs.twimg.com\/sticky\/default_profile_images\/default_profile_3_normal.png","profile_image_url_https":"https:\/\/abs.twimg.com\/sticky\/default_profile_images\/default_profile_3_normal.png","profile_link_color":"2B7BB9","profile_sidebar_border_color":"C0DEED","profile_sidebar_fill_color":"DDEEF6","profile_text_color":"333333","profile_use_background_image":true,"has_extended_profile":false,"default_profile":true,"default_profile_image":true,"following":null,"follow_request_sent":null,"notifications":null}}]'
-    http_version: 
-  recorded_at: Wed, 08 Jun 2016 21:10:26 GMT
-- request:
-    method: get
-    uri: https://api.twitter.com/1.1/account/verify_credentials.json?skip_status=true
-    body:
-      encoding: US-ASCII
-      string: ''
-    headers:
-      Accept:
-      - application/json
-      User-Agent:
-      - TwitterRubyGem/5.16.0
-      Authorization:
-      - OAuth oauth_consumer_key="PCvo50anGUpUUDusAPmiurzjM", oauth_nonce="d52db40cdfd633323cef2cac0152a098",
-        oauth_signature="EKtPws6wZPkmFQDFUuYMrnpvcNE%3D", oauth_signature_method="HMAC-SHA1",
-        oauth_timestamp="1465420226", oauth_token="711995065347006465-JLJWrBLyfySojWUz1C7mwaqx37Qv7vQ",
-        oauth_version="1.0"
-      Accept-Encoding:
-      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
-  response:
-    status:
-      code: 200
-      message: OK
-    headers:
-      Cache-Control:
-      - no-cache, no-store, must-revalidate, pre-check=0, post-check=0
-      Content-Disposition:
-      - attachment; filename=json.json
-      Content-Length:
-      - '516'
-      Content-Type:
-      - application/json;charset=utf-8
-      Date:
-      - Wed, 08 Jun 2016 21:10:26 GMT
-      Expires:
-      - Tue, 31 Mar 1981 05:00:00 GMT
-      Last-Modified:
-      - Wed, 08 Jun 2016 21:10:26 GMT
-      Pragma:
-      - no-cache
-      Server:
-      - tsa_b
-      Set-Cookie:
-      - guest_id=v1%3A146542022691143793; Domain=.twitter.com; Path=/; Expires=Fri,
-        08-Jun-2018 21:10:26 UTC
-      - lang=en; Path=/
-      Status:
-      - 200 OK
-      Strict-Transport-Security:
-      - max-age=631138519
-      X-Access-Level:
-      - read-write-directmessages
-      X-Connection-Hash:
-      - 890757946aa5572927d4a3ab44417f2c
-      X-Content-Type-Options:
-      - nosniff
-      X-Frame-Options:
-      - SAMEORIGIN
-      X-Rate-Limit-Limit:
-      - '15'
-      X-Rate-Limit-Remaining:
-      - '14'
-      X-Rate-Limit-Reset:
-      - '1465421126'
-      X-Response-Time:
-      - '33'
-      X-Transaction:
-      - b2e583eb43d75e12
-      X-Twitter-Response-Tags:
-      - BouncerCompliant
-      - BouncerExempt
-      X-Xss-Protection:
-      - 1; mode=block
-    body:
-      encoding: ASCII-8BIT
-      string: '{"id":711995065347006465,"id_str":"711995065347006465","name":"test
-        less","screen_name":"mjr_tts","location":"","description":"","url":null,"entities":{"description":{"urls":[]}},"protected":false,"followers_count":5,"friends_count":10,"listed_count":0,"created_at":"Mon
-        Mar 21 19:17:06 +0000 2016","favourites_count":1,"utc_offset":null,"time_zone":null,"geo_enabled":false,"verified":false,"statuses_count":24,"lang":"en","contributors_enabled":false,"is_translator":false,"is_translation_enabled":false,"profile_background_color":"F5F8FA","profile_background_image_url":null,"profile_background_image_url_https":null,"profile_background_tile":false,"profile_image_url":"http:\/\/abs.twimg.com\/sticky\/default_profile_images\/default_profile_3_normal.png","profile_image_url_https":"https:\/\/abs.twimg.com\/sticky\/default_profile_images\/default_profile_3_normal.png","profile_link_color":"2B7BB9","profile_sidebar_border_color":"C0DEED","profile_sidebar_fill_color":"DDEEF6","profile_text_color":"333333","profile_use_background_image":true,"has_extended_profile":false,"default_profile":true,"default_profile_image":true,"following":false,"follow_request_sent":false,"notifications":false}'
-    http_version: 
-  recorded_at: Wed, 08 Jun 2016 21:10:27 GMT
-- request:
-    method: get
-    uri: https://api.twitter.com/1.1/lists/list.json?user_id=711995065347006465
-    body:
-      encoding: US-ASCII
-      string: ''
-    headers:
-      Accept:
-      - application/json
-      User-Agent:
-      - TwitterRubyGem/5.16.0
-      Authorization:
-      - Bearer AAAAAAAAAAAAAAAAAAAAAPfmvAAAAAAAxuLnQIbL9WM5N3RJsBv%2BKM4fD%2B4%3D3SzoKa9kefI2w6PPiDb4kAzAmXwF7Ev2x3V4zHI9hXls3k39nX
-      Accept-Encoding:
-      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
-  response:
-    status:
-      code: 200
-      message: OK
-    headers:
-      Cache-Control:
-      - no-cache, no-store, must-revalidate, pre-check=0, post-check=0
-      Content-Disposition:
-      - attachment; filename=json.json
-      Content-Length:
-      - '815'
-      Content-Type:
-      - application/json;charset=utf-8
-      Date:
-      - Wed, 08 Jun 2016 21:10:27 GMT
-      Expires:
-      - Tue, 31 Mar 1981 05:00:00 GMT
-      Last-Modified:
-      - Wed, 08 Jun 2016 21:10:27 GMT
-      Pragma:
-      - no-cache
-      Server:
-      - tsa_b
-      Set-Cookie:
-      - guest_id=v1%3A146542022714282729; Domain=.twitter.com; Path=/; Expires=Fri,
-        08-Jun-2018 21:10:27 UTC
-      Status:
-      - 200 OK
-      Strict-Transport-Security:
-      - max-age=631138519
-      X-Access-Level:
-      - read
-      X-Connection-Hash:
-      - 859a2a42ba3f4697c39ffbb36c29d03a
-      X-Content-Type-Options:
-      - nosniff
-      X-Frame-Options:
-      - SAMEORIGIN
-      X-Rate-Limit-Limit:
-      - '15'
-      X-Rate-Limit-Remaining:
-      - '12'
-      X-Rate-Limit-Reset:
-      - '1465421126'
-      X-Response-Time:
-      - '29'
-      X-Transaction:
-      - cfddec0b8165dcda
-      X-Twitter-Response-Tags:
-      - BouncerCompliant
-      X-Xss-Protection:
-      - 1; mode=block
-    body:
-      encoding: ASCII-8BIT
-      string: '[{"id":740596227935457281,"id_str":"740596227935457281","name":"testing","uri":"\/mjr_tts\/lists\/testing","subscriber_count":0,"member_count":0,"mode":"public","description":"","slug":"testing","full_name":"@mjr_tts\/testing","created_at":"Wed
-        Jun 08 17:27:55 +0000 2016","following":false,"user":{"id":711995065347006465,"id_str":"711995065347006465","name":"test
-        less","screen_name":"mjr_tts","location":"","description":"","url":null,"entities":{"description":{"urls":[]}},"protected":false,"followers_count":5,"friends_count":10,"listed_count":0,"created_at":"Mon
-        Mar 21 19:17:06 +0000 2016","favourites_count":1,"utc_offset":null,"time_zone":null,"geo_enabled":false,"verified":false,"statuses_count":24,"lang":"en","contributors_enabled":false,"is_translator":false,"is_translation_enabled":false,"profile_background_color":"F5F8FA","profile_background_image_url":null,"profile_background_image_url_https":null,"profile_background_tile":false,"profile_image_url":"http:\/\/abs.twimg.com\/sticky\/default_profile_images\/default_profile_3_normal.png","profile_image_url_https":"https:\/\/abs.twimg.com\/sticky\/default_profile_images\/default_profile_3_normal.png","profile_link_color":"2B7BB9","profile_sidebar_border_color":"C0DEED","profile_sidebar_fill_color":"DDEEF6","profile_text_color":"333333","profile_use_background_image":true,"has_extended_profile":false,"default_profile":true,"default_profile_image":true,"following":null,"follow_request_sent":null,"notifications":null}},{"id":740594753486659585,"id_str":"740594753486659585","name":"Clothing","uri":"\/mjr_tts\/lists\/clothing","subscriber_count":0,"member_count":3,"mode":"public","description":"","slug":"clothing","full_name":"@mjr_tts\/clothing","created_at":"Wed
-        Jun 08 17:22:03 +0000 2016","following":false,"user":{"id":711995065347006465,"id_str":"711995065347006465","name":"test
-        less","screen_name":"mjr_tts","location":"","description":"","url":null,"entities":{"description":{"urls":[]}},"protected":false,"followers_count":5,"friends_count":10,"listed_count":0,"created_at":"Mon
-        Mar 21 19:17:06 +0000 2016","favourites_count":1,"utc_offset":null,"time_zone":null,"geo_enabled":false,"verified":false,"statuses_count":24,"lang":"en","contributors_enabled":false,"is_translator":false,"is_translation_enabled":false,"profile_background_color":"F5F8FA","profile_background_image_url":null,"profile_background_image_url_https":null,"profile_background_tile":false,"profile_image_url":"http:\/\/abs.twimg.com\/sticky\/default_profile_images\/default_profile_3_normal.png","profile_image_url_https":"https:\/\/abs.twimg.com\/sticky\/default_profile_images\/default_profile_3_normal.png","profile_link_color":"2B7BB9","profile_sidebar_border_color":"C0DEED","profile_sidebar_fill_color":"DDEEF6","profile_text_color":"333333","profile_use_background_image":true,"has_extended_profile":false,"default_profile":true,"default_profile_image":true,"following":null,"follow_request_sent":null,"notifications":null}},{"id":740583642125205504,"id_str":"740583642125205504","name":"Sports","uri":"\/mjr_tts\/lists\/sports","subscriber_count":0,"member_count":1,"mode":"public","description":"","slug":"sports","full_name":"@mjr_tts\/sports","created_at":"Wed
-        Jun 08 16:37:54 +0000 2016","following":false,"user":{"id":711995065347006465,"id_str":"711995065347006465","name":"test
-        less","screen_name":"mjr_tts","location":"","description":"","url":null,"entities":{"description":{"urls":[]}},"protected":false,"followers_count":5,"friends_count":10,"listed_count":0,"created_at":"Mon
-        Mar 21 19:17:06 +0000 2016","favourites_count":1,"utc_offset":null,"time_zone":null,"geo_enabled":false,"verified":false,"statuses_count":24,"lang":"en","contributors_enabled":false,"is_translator":false,"is_translation_enabled":false,"profile_background_color":"F5F8FA","profile_background_image_url":null,"profile_background_image_url_https":null,"profile_background_tile":false,"profile_image_url":"http:\/\/abs.twimg.com\/sticky\/default_profile_images\/default_profile_3_normal.png","profile_image_url_https":"https:\/\/abs.twimg.com\/sticky\/default_profile_images\/default_profile_3_normal.png","profile_link_color":"2B7BB9","profile_sidebar_border_color":"C0DEED","profile_sidebar_fill_color":"DDEEF6","profile_text_color":"333333","profile_use_background_image":true,"has_extended_profile":false,"default_profile":true,"default_profile_image":true,"following":null,"follow_request_sent":null,"notifications":null}},{"id":740551191566913537,"id_str":"740551191566913537","name":"Code","uri":"\/mjr_tts\/lists\/code","subscriber_count":0,"member_count":4,"mode":"public","description":"","slug":"code","full_name":"@mjr_tts\/code","created_at":"Wed
-        Jun 08 14:28:57 +0000 2016","following":false,"user":{"id":711995065347006465,"id_str":"711995065347006465","name":"test
-        less","screen_name":"mjr_tts","location":"","description":"","url":null,"entities":{"description":{"urls":[]}},"protected":false,"followers_count":5,"friends_count":10,"listed_count":0,"created_at":"Mon
-        Mar 21 19:17:06 +0000 2016","favourites_count":1,"utc_offset":null,"time_zone":null,"geo_enabled":false,"verified":false,"statuses_count":24,"lang":"en","contributors_enabled":false,"is_translator":false,"is_translation_enabled":false,"profile_background_color":"F5F8FA","profile_background_image_url":null,"profile_background_image_url_https":null,"profile_background_tile":false,"profile_image_url":"http:\/\/abs.twimg.com\/sticky\/default_profile_images\/default_profile_3_normal.png","profile_image_url_https":"https:\/\/abs.twimg.com\/sticky\/default_profile_images\/default_profile_3_normal.png","profile_link_color":"2B7BB9","profile_sidebar_border_color":"C0DEED","profile_sidebar_fill_color":"DDEEF6","profile_text_color":"333333","profile_use_background_image":true,"has_extended_profile":false,"default_profile":true,"default_profile_image":true,"following":null,"follow_request_sent":null,"notifications":null}}]'
-    http_version: 
-  recorded_at: Wed, 08 Jun 2016 21:10:27 GMT
-- request:
-    method: get
-    uri: https://api.twitter.com/1.1/lists/list.json?user_id=711995065347006465
-    body:
-      encoding: US-ASCII
-      string: ''
-    headers:
-      Accept:
-      - application/json
-      User-Agent:
-      - TwitterRubyGem/5.16.0
-      Authorization:
-      - Bearer AAAAAAAAAAAAAAAAAAAAAPfmvAAAAAAAxuLnQIbL9WM5N3RJsBv%2BKM4fD%2B4%3D3SzoKa9kefI2w6PPiDb4kAzAmXwF7Ev2x3V4zHI9hXls3k39nX
-      Accept-Encoding:
-      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
-  response:
-    status:
-      code: 200
-      message: OK
-    headers:
-      Cache-Control:
-      - no-cache, no-store, must-revalidate, pre-check=0, post-check=0
-      Content-Disposition:
-      - attachment; filename=json.json
-      Content-Length:
-      - '815'
-      Content-Type:
-      - application/json;charset=utf-8
-      Date:
-      - Wed, 08 Jun 2016 21:10:27 GMT
-      Expires:
-      - Tue, 31 Mar 1981 05:00:00 GMT
-      Last-Modified:
-      - Wed, 08 Jun 2016 21:10:27 GMT
-      Pragma:
-      - no-cache
-      Server:
-      - tsa_b
-      Set-Cookie:
-      - guest_id=v1%3A146542022732773633; Domain=.twitter.com; Path=/; Expires=Fri,
-        08-Jun-2018 21:10:27 UTC
-      Status:
-      - 200 OK
-      Strict-Transport-Security:
-      - max-age=631138519
-      X-Access-Level:
-      - read
-      X-Connection-Hash:
-      - 78510d8d15473e6a3abd4e7dd9d9ee6d
-      X-Content-Type-Options:
-      - nosniff
-      X-Frame-Options:
-      - SAMEORIGIN
-      X-Rate-Limit-Limit:
-      - '15'
-      X-Rate-Limit-Remaining:
-      - '11'
-      X-Rate-Limit-Reset:
-      - '1465421126'
-      X-Response-Time:
-      - '34'
-      X-Transaction:
-      - 959c78d8687c8c17
-      X-Twitter-Response-Tags:
-      - BouncerCompliant
-      X-Xss-Protection:
-      - 1; mode=block
-    body:
-      encoding: ASCII-8BIT
-      string: '[{"id":740596227935457281,"id_str":"740596227935457281","name":"testing","uri":"\/mjr_tts\/lists\/testing","subscriber_count":0,"member_count":0,"mode":"public","description":"","slug":"testing","full_name":"@mjr_tts\/testing","created_at":"Wed
-        Jun 08 17:27:55 +0000 2016","following":false,"user":{"id":711995065347006465,"id_str":"711995065347006465","name":"test
-        less","screen_name":"mjr_tts","location":"","description":"","url":null,"entities":{"description":{"urls":[]}},"protected":false,"followers_count":5,"friends_count":10,"listed_count":0,"created_at":"Mon
-        Mar 21 19:17:06 +0000 2016","favourites_count":1,"utc_offset":null,"time_zone":null,"geo_enabled":false,"verified":false,"statuses_count":24,"lang":"en","contributors_enabled":false,"is_translator":false,"is_translation_enabled":false,"profile_background_color":"F5F8FA","profile_background_image_url":null,"profile_background_image_url_https":null,"profile_background_tile":false,"profile_image_url":"http:\/\/abs.twimg.com\/sticky\/default_profile_images\/default_profile_3_normal.png","profile_image_url_https":"https:\/\/abs.twimg.com\/sticky\/default_profile_images\/default_profile_3_normal.png","profile_link_color":"2B7BB9","profile_sidebar_border_color":"C0DEED","profile_sidebar_fill_color":"DDEEF6","profile_text_color":"333333","profile_use_background_image":true,"has_extended_profile":false,"default_profile":true,"default_profile_image":true,"following":null,"follow_request_sent":null,"notifications":null}},{"id":740594753486659585,"id_str":"740594753486659585","name":"Clothing","uri":"\/mjr_tts\/lists\/clothing","subscriber_count":0,"member_count":3,"mode":"public","description":"","slug":"clothing","full_name":"@mjr_tts\/clothing","created_at":"Wed
-        Jun 08 17:22:03 +0000 2016","following":false,"user":{"id":711995065347006465,"id_str":"711995065347006465","name":"test
-        less","screen_name":"mjr_tts","location":"","description":"","url":null,"entities":{"description":{"urls":[]}},"protected":false,"followers_count":5,"friends_count":10,"listed_count":0,"created_at":"Mon
-        Mar 21 19:17:06 +0000 2016","favourites_count":1,"utc_offset":null,"time_zone":null,"geo_enabled":false,"verified":false,"statuses_count":24,"lang":"en","contributors_enabled":false,"is_translator":false,"is_translation_enabled":false,"profile_background_color":"F5F8FA","profile_background_image_url":null,"profile_background_image_url_https":null,"profile_background_tile":false,"profile_image_url":"http:\/\/abs.twimg.com\/sticky\/default_profile_images\/default_profile_3_normal.png","profile_image_url_https":"https:\/\/abs.twimg.com\/sticky\/default_profile_images\/default_profile_3_normal.png","profile_link_color":"2B7BB9","profile_sidebar_border_color":"C0DEED","profile_sidebar_fill_color":"DDEEF6","profile_text_color":"333333","profile_use_background_image":true,"has_extended_profile":false,"default_profile":true,"default_profile_image":true,"following":null,"follow_request_sent":null,"notifications":null}},{"id":740583642125205504,"id_str":"740583642125205504","name":"Sports","uri":"\/mjr_tts\/lists\/sports","subscriber_count":0,"member_count":1,"mode":"public","description":"","slug":"sports","full_name":"@mjr_tts\/sports","created_at":"Wed
-        Jun 08 16:37:54 +0000 2016","following":false,"user":{"id":711995065347006465,"id_str":"711995065347006465","name":"test
-        less","screen_name":"mjr_tts","location":"","description":"","url":null,"entities":{"description":{"urls":[]}},"protected":false,"followers_count":5,"friends_count":10,"listed_count":0,"created_at":"Mon
-        Mar 21 19:17:06 +0000 2016","favourites_count":1,"utc_offset":null,"time_zone":null,"geo_enabled":false,"verified":false,"statuses_count":24,"lang":"en","contributors_enabled":false,"is_translator":false,"is_translation_enabled":false,"profile_background_color":"F5F8FA","profile_background_image_url":null,"profile_background_image_url_https":null,"profile_background_tile":false,"profile_image_url":"http:\/\/abs.twimg.com\/sticky\/default_profile_images\/default_profile_3_normal.png","profile_image_url_https":"https:\/\/abs.twimg.com\/sticky\/default_profile_images\/default_profile_3_normal.png","profile_link_color":"2B7BB9","profile_sidebar_border_color":"C0DEED","profile_sidebar_fill_color":"DDEEF6","profile_text_color":"333333","profile_use_background_image":true,"has_extended_profile":false,"default_profile":true,"default_profile_image":true,"following":null,"follow_request_sent":null,"notifications":null}},{"id":740551191566913537,"id_str":"740551191566913537","name":"Code","uri":"\/mjr_tts\/lists\/code","subscriber_count":0,"member_count":4,"mode":"public","description":"","slug":"code","full_name":"@mjr_tts\/code","created_at":"Wed
-        Jun 08 14:28:57 +0000 2016","following":false,"user":{"id":711995065347006465,"id_str":"711995065347006465","name":"test
-        less","screen_name":"mjr_tts","location":"","description":"","url":null,"entities":{"description":{"urls":[]}},"protected":false,"followers_count":5,"friends_count":10,"listed_count":0,"created_at":"Mon
-        Mar 21 19:17:06 +0000 2016","favourites_count":1,"utc_offset":null,"time_zone":null,"geo_enabled":false,"verified":false,"statuses_count":24,"lang":"en","contributors_enabled":false,"is_translator":false,"is_translation_enabled":false,"profile_background_color":"F5F8FA","profile_background_image_url":null,"profile_background_image_url_https":null,"profile_background_tile":false,"profile_image_url":"http:\/\/abs.twimg.com\/sticky\/default_profile_images\/default_profile_3_normal.png","profile_image_url_https":"https:\/\/abs.twimg.com\/sticky\/default_profile_images\/default_profile_3_normal.png","profile_link_color":"2B7BB9","profile_sidebar_border_color":"C0DEED","profile_sidebar_fill_color":"DDEEF6","profile_text_color":"333333","profile_use_background_image":true,"has_extended_profile":false,"default_profile":true,"default_profile_image":true,"following":null,"follow_request_sent":null,"notifications":null}}]'
-    http_version: 
-  recorded_at: Wed, 08 Jun 2016 21:10:27 GMT
-- request:
-    method: get
-    uri: https://api.twitter.com/1.1/account/verify_credentials.json?skip_status=true
-    body:
-      encoding: US-ASCII
-      string: ''
-    headers:
-      Accept:
-      - application/json
-      User-Agent:
-      - TwitterRubyGem/5.16.0
-      Authorization:
-      - OAuth oauth_consumer_key="PCvo50anGUpUUDusAPmiurzjM", oauth_nonce="16ecdbc7368274f5dc000ec2e56fbac0",
-        oauth_signature="MZQQG7iy9WL82k9vpXJ8y4hQ79I%3D", oauth_signature_method="HMAC-SHA1",
-        oauth_timestamp="1465420227", oauth_token="711995065347006465-JLJWrBLyfySojWUz1C7mwaqx37Qv7vQ",
-        oauth_version="1.0"
-      Accept-Encoding:
-      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
-  response:
-    status:
-      code: 200
-      message: OK
-    headers:
-      Cache-Control:
-      - no-cache, no-store, must-revalidate, pre-check=0, post-check=0
-      Content-Disposition:
-      - attachment; filename=json.json
-      Content-Length:
-      - '516'
-      Content-Type:
-      - application/json;charset=utf-8
-      Date:
-      - Wed, 08 Jun 2016 21:10:27 GMT
-      Expires:
-      - Tue, 31 Mar 1981 05:00:00 GMT
-      Last-Modified:
-      - Wed, 08 Jun 2016 21:10:27 GMT
-      Pragma:
-      - no-cache
-      Server:
-      - tsa_b
-      Set-Cookie:
-      - guest_id=v1%3A146542022750960532; Domain=.twitter.com; Path=/; Expires=Fri,
-        08-Jun-2018 21:10:27 UTC
-      - lang=en; Path=/
-      Status:
-      - 200 OK
-      Strict-Transport-Security:
-      - max-age=631138519
-      X-Access-Level:
-      - read-write-directmessages
-      X-Connection-Hash:
-      - 9b5bec96fcc0be194d8e692af443a0ef
-      X-Content-Type-Options:
-      - nosniff
-      X-Frame-Options:
-      - SAMEORIGIN
-      X-Rate-Limit-Limit:
-      - '15'
-      X-Rate-Limit-Remaining:
-      - '13'
-      X-Rate-Limit-Reset:
-      - '1465421126'
-      X-Response-Time:
-      - '83'
-      X-Transaction:
-      - 632d47a9bfb62b32
-      X-Twitter-Response-Tags:
-      - BouncerCompliant
-      - BouncerExempt
-      X-Xss-Protection:
-      - 1; mode=block
-    body:
-      encoding: ASCII-8BIT
-      string: '{"id":711995065347006465,"id_str":"711995065347006465","name":"test
-        less","screen_name":"mjr_tts","location":"","description":"","url":null,"entities":{"description":{"urls":[]}},"protected":false,"followers_count":5,"friends_count":10,"listed_count":0,"created_at":"Mon
-        Mar 21 19:17:06 +0000 2016","favourites_count":1,"utc_offset":null,"time_zone":null,"geo_enabled":false,"verified":false,"statuses_count":24,"lang":"en","contributors_enabled":false,"is_translator":false,"is_translation_enabled":false,"profile_background_color":"F5F8FA","profile_background_image_url":null,"profile_background_image_url_https":null,"profile_background_tile":false,"profile_image_url":"http:\/\/abs.twimg.com\/sticky\/default_profile_images\/default_profile_3_normal.png","profile_image_url_https":"https:\/\/abs.twimg.com\/sticky\/default_profile_images\/default_profile_3_normal.png","profile_link_color":"2B7BB9","profile_sidebar_border_color":"C0DEED","profile_sidebar_fill_color":"DDEEF6","profile_text_color":"333333","profile_use_background_image":true,"has_extended_profile":false,"default_profile":true,"default_profile_image":true,"following":false,"follow_request_sent":false,"notifications":false}'
-    http_version: 
-  recorded_at: Wed, 08 Jun 2016 21:10:27 GMT
+  recorded_at: Sun, 19 Jun 2016 23:35:02 GMT
 - request:
     method: post
     uri: https://api.twitter.com/1.1/lists/members/create_all.json
     body:
       encoding: UTF-8
-      string: list_id=739942637654921216&owner_id=711995065347006465&screen_name=SkySportsFL%2CSkySportsFL%2Ckendricklamar
+      string: list_id=744626780523405316&owner_id=711995065347006465&screen_name=jasoncummings86
     headers:
       Accept:
       - application/json
       User-Agent:
       - TwitterRubyGem/5.16.0
       Authorization:
-      - OAuth oauth_consumer_key="PCvo50anGUpUUDusAPmiurzjM", oauth_nonce="b6789fd04640973a293795564f5fc26e",
-        oauth_signature="fFGf%2BPWQMvE2GGYPX1uwD24z8MA%3D", oauth_signature_method="HMAC-SHA1",
-        oauth_timestamp="1465420227", oauth_token="711995065347006465-JLJWrBLyfySojWUz1C7mwaqx37Qv7vQ",
+      - OAuth oauth_consumer_key="PCvo50anGUpUUDusAPmiurzjM", oauth_nonce="67cce593118f5b0085169de501c7fe05",
+        oauth_signature="wqgOKygqsvgRrLhy5%2B2NSeWyL7Y%3D", oauth_signature_method="HMAC-SHA1",
+        oauth_timestamp="1466381412", oauth_token="711995065347006465-JLJWrBLyfySojWUz1C7mwaqx37Qv7vQ",
         oauth_version="1.0"
       Content-Type:
       - application/x-www-form-urlencoded
@@ -588,47 +1363,47 @@ http_interactions:
       - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
   response:
     status:
-      code: 404
-      message: Not Found
+      code: 200
+      message: OK
     headers:
       Cache-Control:
       - no-cache, no-store, must-revalidate, pre-check=0, post-check=0
       Content-Disposition:
       - attachment; filename=json.json
       Content-Length:
-      - '93'
+      - '631'
       Content-Type:
       - application/json;charset=utf-8
       Date:
-      - Wed, 08 Jun 2016 21:10:27 GMT
+      - Mon, 20 Jun 2016 00:10:13 GMT
       Expires:
       - Tue, 31 Mar 1981 05:00:00 GMT
       Last-Modified:
-      - Wed, 08 Jun 2016 21:10:27 GMT
+      - Mon, 20 Jun 2016 00:10:13 GMT
       Pragma:
       - no-cache
       Server:
       - tsa_b
       Set-Cookie:
-      - guest_id=v1%3A146542022774276493; Domain=.twitter.com; Path=/; Expires=Fri,
-        08-Jun-2018 21:10:27 UTC
+      - guest_id=v1%3A146638141333732592; Domain=.twitter.com; Path=/; Expires=Wed,
+        20-Jun-2018 00:10:13 UTC
       - lang=en; Path=/
       Status:
-      - 404 Not Found
+      - 200 OK
       Strict-Transport-Security:
       - max-age=631138519
       X-Access-Level:
       - read-write-directmessages
       X-Connection-Hash:
-      - df40cc3fbdb34c97557cd088018dcc60
+      - c52b1ddef58e411d57f709e71420cb40
       X-Content-Type-Options:
       - nosniff
       X-Frame-Options:
       - SAMEORIGIN
       X-Response-Time:
-      - '14'
+      - '79'
       X-Transaction:
-      - 445754031b409dd3
+      - 4725e93521664141
       X-Tsa-Request-Body-Time:
       - '0'
       X-Twitter-Response-Tags:
@@ -637,7 +1412,10 @@ http_interactions:
       - 1; mode=block
     body:
       encoding: ASCII-8BIT
-      string: '{"errors":[{"code":34,"message":"Sorry, that page does not exist."}]}'
+      string: '{"id":744626780523405316,"id_str":"744626780523405316","name":"Multiple","uri":"\/mjr_tts\/lists\/multiple","subscriber_count":0,"member_count":4,"mode":"public","description":"","slug":"multiple","full_name":"@mjr_tts\/multiple","created_at":"Sun
+        Jun 19 20:23:53 +0000 2016","following":true,"user":{"id":711995065347006465,"id_str":"711995065347006465","name":"test
+        less","screen_name":"mjr_tts","location":"","description":"","url":null,"entities":{"description":{"urls":[]}},"protected":false,"followers_count":4,"friends_count":10,"listed_count":0,"created_at":"Mon
+        Mar 21 19:17:06 +0000 2016","favourites_count":2,"utc_offset":null,"time_zone":null,"geo_enabled":false,"verified":false,"statuses_count":24,"lang":"en","contributors_enabled":false,"is_translator":false,"is_translation_enabled":false,"profile_background_color":"F5F8FA","profile_background_image_url":null,"profile_background_image_url_https":null,"profile_background_tile":false,"profile_image_url":"http:\/\/abs.twimg.com\/sticky\/default_profile_images\/default_profile_3_normal.png","profile_image_url_https":"https:\/\/abs.twimg.com\/sticky\/default_profile_images\/default_profile_3_normal.png","profile_link_color":"2B7BB9","profile_sidebar_border_color":"C0DEED","profile_sidebar_fill_color":"DDEEF6","profile_text_color":"333333","profile_use_background_image":true,"has_extended_profile":false,"default_profile":true,"default_profile_image":true,"following":false,"follow_request_sent":false,"notifications":false}}'
     http_version: 
-  recorded_at: Wed, 08 Jun 2016 21:10:27 GMT
-recorded_with: VCR 3.0.1
+  recorded_at: Mon, 20 Jun 2016 00:10:12 GMT
+recorded_with: VCR 3.0.3

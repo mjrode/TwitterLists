@@ -22,20 +22,20 @@ class Lists::AddFriendsToMultipleListsTest < ActiveSupport::TestCase
       { "list_id" => "", "schedule" => "4", "friend_id" => "130" },
       { "list_id" => "", "schedule" => "4", "friend_id" => "131" },
       { "list_id" => "", "schedule" => "4", "friend_id" => "132" },
-      { "list_id" => "112996373", "schedule" => "1", "friend_id" => "133448" },
-      { "list_id" => "112996376", "schedule" => "2", "friend_id" => "133456" }
+      { "list_id" => lists(:food).id, "schedule" => "1", "friend_id" => "133495" },
+      { "list_id" => lists(:multiple).id, "schedule" => "2", "friend_id" => "1334 " }
     ]
   end
 
   test "friends get added to multiple lists" do
     user_log_in
-    assert FriendListSchedule.where(list_id: "112996373", friend_id: "133448").count == 0
-    assert FriendListSchedule.where(list_id: "112996374", friend_id: "133456").count == 0
+    assert FriendListSchedule.where(list_id: lists(:food).id, friend_id: "133495").count == 0
+    assert FriendListSchedule.where(list_id: lists(:multiple).id, friend_id: "1334 ").count == 0
     use_cassette("add friends to multiple lists") do
       AddFriendsToMultipleLists.run(friends_hash: @friend_list_schedules, user: @user)
     end
-    assert FriendListSchedule.where(list_id: "112996373", friend_id: "133448").count != 0
-    assert FriendListSchedule.where(list_id: "112996374", friend_id: "133456").count == 0
+    assert FriendListSchedule.where(list_id: lists(:food).id, friend_id: "133495").count != 0
+    assert FriendListSchedule.where(list_id: lists(:multiple).id, friend_id: "1334 ").count != 0
   end
 
   private
@@ -44,6 +44,7 @@ class Lists::AddFriendsToMultipleListsTest < ActiveSupport::TestCase
     use_cassette("import remote friends and lists") do
       Users::ImportUsersFriends.run(user: @user)
       Lists::ImportLists.run(username: @user.username)
+      FriendListSchedule.where(list_id: lists(:food).id, friend_id: "133495").first.destroy
     end
   end
 end
