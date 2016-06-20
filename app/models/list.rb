@@ -60,6 +60,10 @@ class List < ActiveRecord::Base
     next_rotation <= Time.zone.now
   end
 
+  def group_by_schedule
+    self.friend_list_schedules.reorder("schedule").map(&:friend)
+  end
+
   def avatar_sample
     if self.friends.count < 4
       self.friends.select(:avatar).sample

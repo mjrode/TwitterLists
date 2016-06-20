@@ -21,7 +21,7 @@ class ListsController < ApplicationController
   end
 
   def select_friends
-    @friends = current_user.friends
+    @friends = @list.group_by_schedule
   end
 
   def add_friends
@@ -41,7 +41,7 @@ class ListsController < ApplicationController
 
   def edit
     @list = List.find(params[:id])
-    @friends = current_user.friends
+    @friends = @list.group_by_schedule
     @user = current_user
   end
 
