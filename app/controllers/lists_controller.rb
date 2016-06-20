@@ -42,6 +42,7 @@ class ListsController < ApplicationController
   def edit
     @list = List.find(params[:id])
     @friends = current_user.friends
+    @user = current_user
   end
 
   def destroy

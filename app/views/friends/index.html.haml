@@ -9,7 +9,7 @@
         .center.bio.align-right= friend.bio_extra
         %br
         
-        =select_tag "friends[][list_id]", content_tag(:option,'Select One...',:value=>"")+options_from_collection_for_select(List.all, 'id', 'name'), class: "float-right small-form"
+        =select_tag "friends[][list_id]", content_tag(:option,'Select One...',:value=>"")+options_from_collection_for_select(@user.lists.all, 'id', 'name'), class: "float-right small-form"
         %br/
         =select_tag "friends[][schedule]", options_for_select(FriendListSchedule.schedules, friend.current_schedule(@list)), class: "float-right small-form clear"
         =hidden_field_tag "friends[][friend_id]", friend.id
