@@ -27,7 +27,6 @@
     display:inline;
     width: 49%;
     height: 8em;
-
   }
   .margin-top-2{
     margin-top: 2em;
@@ -37,6 +36,9 @@
   }
   .tag{
     font-family: 'Handlee', cursive;
+  }
+  .marg-top{
+    margin-top: 1em;
   }
   .title{
     font-family: 'Bungee', cursive;
@@ -62,6 +64,9 @@
     background-repeat: no-repeat;
     background-position: center;
 
+  }
+  .border-right{
+    border-right: 1px solid #cacaca;
   }
   .collage{
    width: 24%;
@@ -94,6 +99,9 @@
 }
 
 /*All CSS*/
+  .small-width{
+    width: 25%;
+  }
   .title-small{
     font-family: 'Bungee', cursive;
     font-size: 4em;
@@ -272,9 +280,6 @@ body.home{
 }
 .row-height{
   height: 3em;
-}
-.border-right{
-  border-right: 1px solid #cacaca;
 }
 .push-down-2{
   margin-bottom: 2em;

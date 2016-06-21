@@ -1,9 +1,9 @@
 %body.home
   %h1.title.center
     Less-Tweets
-  %h2.tag.center
-    Choose an Option
   -if current_user
+    %h2.tag.center
+      Choose an Option
     .row
       .large-6.large-offset-3.small-12.columns
         =link_to "View Tweets", tweets_path, class: "yellow large button half-width float-center"
@@ -23,4 +23,4 @@
 
 
   -else
-    =link_to "Log In", "/auth/twitter", class: "button yellow float-center half-width large"
+    =link_to "Log In", "/auth/twitter", class: "button yellow float-center small-width large"
