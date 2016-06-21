@@ -5,7 +5,7 @@ class RepliesController < ApplicationController
   def create
     Replies::SendReply.run(
       message: params[:body],
-      remote_tweet_id: params[:status_id],
+      remote_tweet_id: params[:remote_tweet_id],
       user_id: params[:user_id],
       tweet_id: params[:tweet_id]
     )
