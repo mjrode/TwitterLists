@@ -26,6 +26,11 @@ class List < ActiveRecord::Base
     self.friends.reorder('friend_list_schedules.schedule')
   end
 
+
+  def name_for_select
+    name.titleize
+  end
+
   def new_list?(user)
     names_of_lists = TWITTER_CLIENT.lists(user.remote_id).map(&:name)
     !names_of_lists.include?(self.name)

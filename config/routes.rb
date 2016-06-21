@@ -35,4 +35,7 @@ Rails.application.routes.draw do
   delete '/logout', to: 'sessions#destroy'
   get '/logout', to: 'sessions#destroy'
   get '/auth/:provider/callback', to: 'sessions#create'
+
+  #delayed-jobs
+  match "/delayed_job" => DelayedJobWeb, :anchor => false, via: [:get, :post]
 end
