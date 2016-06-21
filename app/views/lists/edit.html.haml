@@ -9,9 +9,14 @@
 %hr.shrink-me
 
 
+%row#always-on
+%row#frequently-on
+%row#sometimes-on
+
 = form_tag(add_friends_list_path(@list)) do 
+  %hr.shrink-me
   - @friends.each_with_index do |friend, index|
-    .row.shrink-me.middle
+    .row.shrink-me.middle{id: "move-me-#{index}"}
       .large-3.columns.border-right.row-height
         =image_tag friend.avatar, class: "circle middle"
       .large-3.columns.border-right.row-height{class: "color-me-#{index}"}
@@ -22,5 +27,7 @@
         = select_tag "friends[][schedule]", options_for_select(FriendListSchedule.schedules, friend.current_schedule(@list)), class: "middle", id: "friend-list-options-#{index}"
         =hidden_field_tag "friends[][friend_id]", friend.id
         =hidden_field_tag "list", @list.id 
-    %hr.shrink-me
+    %hr.shrink-me-hr{id: "move-hr-#{index}"}
+      
   =submit_tag "Submit", class: "button success large float-center half-width"
+    

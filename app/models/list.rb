@@ -22,6 +22,10 @@ class List < ActiveRecord::Base
   scope :needs_rotation, -> { where("(updated_at + (days_until_rotation || ' DAY')::INTERVAL) <= CURRENT_TIMESTAMP") }
   # rubocop:enable all
 
+  def ordered
+    self.friends.reorder('friend_list_schedules.schedule')
+  end
+
   def new_list?(user)
     names_of_lists = TWITTER_CLIENT.lists(user.remote_id).map(&:name)
     !names_of_lists.include?(self.name)

@@ -1,5 +1,6 @@
 class ListsController < ApplicationController
   before_action :set_list, only: [:view, :show, :destroy, :add_friends, :select_friends]
+  before_action :authenticate
 
   def index
     @friends = Friend.all
@@ -41,7 +42,7 @@ class ListsController < ApplicationController
 
   def edit
     @list = List.find(params[:id])
-    @friends = @list.group_by_schedule
+    @friends = current_user.friends
     @user = current_user
   end
 
@@ -61,6 +62,10 @@ class ListsController < ApplicationController
   end
 
   private
+
+  def authenticate
+    redirect_to root_path unless current_user
+  end
 
   def set_list
     @list = List.find(params[:id])

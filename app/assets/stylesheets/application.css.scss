@@ -143,6 +143,11 @@
   width: 75%;
 }
 
+.shrink-me-hr{
+  width: 75%;
+  display: inline-grid;
+}
+
 .move-down-new{
   margin-top: 1em;
 }
@@ -252,10 +257,13 @@ body.home{
   width: 35%;
 }
 .row-height{
-  height: 2.5em;
+  height: 3em;
 }
 .border-right{
   border-right: 1px solid #cacaca;
+}
+.push-down-2{
+  margin-bottom: 2em;
 }
 
 
