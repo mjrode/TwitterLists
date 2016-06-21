@@ -8,8 +8,8 @@ class Users::UserAuthenticationFromOauth < Less::Interaction
     self.message = set_message
     self.user = user
     # read into active job
-    Users::ImportUsersFriends.run(user: self.user)
-    Lists::ImportLists.run(username: self.user.username)
+    Users::ImportUsersFriends.delay.run(user: self.user)
+    Lists::ImportLists.delay.run(username: self.user.username)
     self
   end
 
