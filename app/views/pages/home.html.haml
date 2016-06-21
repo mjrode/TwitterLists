@@ -6,6 +6,8 @@
   -if current_user
     .row
       .large-6.large-offset-3.small-12.columns
+        =link_to "View Tweets", tweets_path, class: "yellow large button half-width float-center"
+      .large-6.large-offset-3.small-12.columns
         = link_to "Make a New List", new_list_path, class: "yellow large button half-width float-center"
       .large-6.large-offset-3.small-12.columns
         = link_to "Manage an Exisiting List", "#", class: "yellow large button half-width float-center", id: "show-find-list"
