@@ -11025,7 +11025,7 @@ if ( !noGlobal ) {
 
 return jQuery;
 }));
-$(document).foundation()
+
 ;
 $("document").ready(function() {
  
