@@ -1,0 +1,657 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api.twitter.com/1.1/statuses/user_timeline.json?count=200&exclude_replies=true&include_rts=false&screen_name=mjrode&trim_user=true
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      User-Agent:
+      - TwitterRubyGem/5.16.0
+      Authorization:
+      - OAuth oauth_consumer_key="PCvo50anGUpUUDusAPmiurzjM", oauth_nonce="2909268725733e98885db425eb95b408",
+        oauth_signature="PVnv%2FVxNKeT5R7ccEBoYEUHI0QM%3D", oauth_signature_method="HMAC-SHA1",
+        oauth_timestamp="1466526179", oauth_token="711995065347006465-JLJWrBLyfySojWUz1C7mwaqx37Qv7vQ",
+        oauth_version="1.0"
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Cache-Control:
+      - no-cache, no-store, must-revalidate, pre-check=0, post-check=0
+      Content-Disposition:
+      - attachment; filename=json.json
+      Content-Length:
+      - '1358'
+      Content-Type:
+      - application/json;charset=utf-8
+      Date:
+      - Tue, 21 Jun 2016 16:22:59 GMT
+      Expires:
+      - Tue, 31 Mar 1981 05:00:00 GMT
+      Last-Modified:
+      - Tue, 21 Jun 2016 16:22:59 GMT
+      Pragma:
+      - no-cache
+      Server:
+      - tsa_b
+      Set-Cookie:
+      - guest_id=v1%3A146652617924337682; Domain=.twitter.com; Path=/; Expires=Thu,
+        21-Jun-2018 16:22:59 UTC
+      - lang=en; Path=/
+      Status:
+      - 200 OK
+      Strict-Transport-Security:
+      - max-age=631138519
+      X-Access-Level:
+      - read-write-directmessages
+      X-Connection-Hash:
+      - 1cca7c996ea7283a4f0907a92cc4d795
+      X-Content-Type-Options:
+      - nosniff
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Rate-Limit-Limit:
+      - '180'
+      X-Rate-Limit-Remaining:
+      - '177'
+      X-Rate-Limit-Reset:
+      - '1466526907'
+      X-Response-Time:
+      - '46'
+      X-Transaction:
+      - 7917c843fa3539f1
+      X-Twitter-Response-Tags:
+      - BouncerCompliant
+      X-Xss-Protection:
+      - 1; mode=block
+    body:
+      encoding: ASCII-8BIT
+      string: '[{"created_at":"Fri Jun 17 04:05:14 +0000 2016","id":743655719170367488,"id_str":"743655719170367488","text":"\u201cteach
+        yourself programming in 10 years\u201d\u200a\u2014\u200a@ossia https:\/\/t.co\/75gYw9wynd
+        https:\/\/t.co\/LE5TpUgCzZ","truncated":false,"entities":{"hashtags":[],"symbols":[],"user_mentions":[{"screen_name":"ossia","name":"Quincy
+        Larson","id":341643950,"id_str":"341643950","indices":[43,49]}],"urls":[{"url":"https:\/\/t.co\/75gYw9wynd","expanded_url":"https:\/\/medium.freecodecamp.com\/lets-explore-the-universe-of-programming-resources-together-77ff382a4c52#---173-211.cn2m8o48c","display_url":"medium.freecodecamp.com\/lets-explore-t\u2026","indices":[50,73]}],"media":[{"id":743655716200775680,"id_str":"743655716200775680","indices":[74,97],"media_url":"http:\/\/pbs.twimg.com\/media\/ClH-7w9WAAAQJTu.jpg","media_url_https":"https:\/\/pbs.twimg.com\/media\/ClH-7w9WAAAQJTu.jpg","url":"https:\/\/t.co\/LE5TpUgCzZ","display_url":"pic.twitter.com\/LE5TpUgCzZ","expanded_url":"http:\/\/twitter.com\/mjrode\/status\/743655719170367488\/photo\/1","type":"photo","sizes":{"large":{"w":750,"h":403,"resize":"fit"},"thumb":{"w":150,"h":150,"resize":"crop"},"small":{"w":680,"h":365,"resize":"fit"},"medium":{"w":750,"h":403,"resize":"fit"}}}]},"extended_entities":{"media":[{"id":743655716200775680,"id_str":"743655716200775680","indices":[74,97],"media_url":"http:\/\/pbs.twimg.com\/media\/ClH-7w9WAAAQJTu.jpg","media_url_https":"https:\/\/pbs.twimg.com\/media\/ClH-7w9WAAAQJTu.jpg","url":"https:\/\/t.co\/LE5TpUgCzZ","display_url":"pic.twitter.com\/LE5TpUgCzZ","expanded_url":"http:\/\/twitter.com\/mjrode\/status\/743655719170367488\/photo\/1","type":"photo","sizes":{"large":{"w":750,"h":403,"resize":"fit"},"thumb":{"w":150,"h":150,"resize":"crop"},"small":{"w":680,"h":365,"resize":"fit"},"medium":{"w":750,"h":403,"resize":"fit"}}}]},"source":"\u003ca
+        href=\"https:\/\/medium.com\" rel=\"nofollow\"\u003eMedium\u003c\/a\u003e","in_reply_to_status_id":null,"in_reply_to_status_id_str":null,"in_reply_to_user_id":null,"in_reply_to_user_id_str":null,"in_reply_to_screen_name":null,"user":{"id":172021389,"id_str":"172021389"},"geo":null,"coordinates":null,"place":null,"contributors":null,"is_quote_status":false,"retweet_count":0,"favorite_count":1,"favorited":false,"retweeted":false,"possibly_sensitive":false,"lang":"en"},{"created_at":"Fri
+        Jun 17 03:07:16 +0000 2016","id":743641130957316096,"id_str":"743641130957316096","text":"After
+        watching this talk I finally figured out how Git works. It''s long but does
+        a great job explaining Git. https:\/\/t.co\/ZahJFRovLC","truncated":false,"entities":{"hashtags":[],"symbols":[],"user_mentions":[],"urls":[{"url":"https:\/\/t.co\/ZahJFRovLC","expanded_url":"https:\/\/www.youtube.com\/watch?v=1ffBJ4sVUb4","display_url":"youtube.com\/watch?v=1ffBJ4\u2026","indices":[109,132]}]},"source":"\u003ca
+        href=\"http:\/\/twitter.com\" rel=\"nofollow\"\u003eTwitter Web Client\u003c\/a\u003e","in_reply_to_status_id":null,"in_reply_to_status_id_str":null,"in_reply_to_user_id":null,"in_reply_to_user_id_str":null,"in_reply_to_screen_name":null,"user":{"id":172021389,"id_str":"172021389"},"geo":null,"coordinates":null,"place":null,"contributors":null,"is_quote_status":false,"retweet_count":0,"favorite_count":0,"favorited":false,"retweeted":false,"possibly_sensitive":false,"lang":"en"},{"created_at":"Wed
+        Jun 15 03:49:53 +0000 2016","id":742927081550536704,"id_str":"742927081550536704","text":"\u201cAdd
+        \/ change \/ remove columns from Rails console\u201d by @raphaelwcosta https:\/\/t.co\/GN6wDkevCv","truncated":false,"entities":{"hashtags":[],"symbols":[],"user_mentions":[{"screen_name":"raphaelwcosta","name":"Raphael
+        Costa","id":39825387,"id_str":"39825387","indices":[54,68]}],"urls":[{"url":"https:\/\/t.co\/GN6wDkevCv","expanded_url":"https:\/\/raphaelcosta.net\/add-change-remove-columns-from-rails-console-81631bffa75d#.szbud6e6t","display_url":"raphaelcosta.net\/add-change-rem\u2026","indices":[69,92]}]},"source":"\u003ca
+        href=\"http:\/\/twitter.com\" rel=\"nofollow\"\u003eTwitter Web Client\u003c\/a\u003e","in_reply_to_status_id":null,"in_reply_to_status_id_str":null,"in_reply_to_user_id":null,"in_reply_to_user_id_str":null,"in_reply_to_screen_name":null,"user":{"id":172021389,"id_str":"172021389"},"geo":null,"coordinates":null,"place":null,"contributors":null,"is_quote_status":false,"retweet_count":0,"favorite_count":0,"favorited":false,"retweeted":false,"possibly_sensitive":false,"lang":"en"},{"created_at":"Fri
+        Jun 03 02:50:47 +0000 2016","id":738563553054097409,"id_str":"738563553054097409","text":"I
+        am predicting that JR Smith is going to be the deciding factor in this fourth
+        quarter. #NBAFinals","truncated":false,"entities":{"hashtags":[{"text":"NBAFinals","indices":[89,99]}],"symbols":[],"user_mentions":[],"urls":[]},"source":"\u003ca
+        href=\"http:\/\/twitter.com\" rel=\"nofollow\"\u003eTwitter Web Client\u003c\/a\u003e","in_reply_to_status_id":null,"in_reply_to_status_id_str":null,"in_reply_to_user_id":null,"in_reply_to_user_id_str":null,"in_reply_to_screen_name":null,"user":{"id":172021389,"id_str":"172021389"},"geo":null,"coordinates":null,"place":null,"contributors":null,"is_quote_status":false,"retweet_count":0,"favorite_count":0,"favorited":false,"retweeted":false,"lang":"en"}]'
+    http_version: 
+  recorded_at: Tue, 21 Jun 2016 16:22:59 GMT
+- request:
+    method: get
+    uri: https://api.twitter.com/1.1/statuses/oembed.json?id=743655719170367488
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.9.2
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Cache-Control:
+      - must-revalidate, max-age=3153600000
+      Content-Disposition:
+      - attachment; filename=json.json
+      Content-Length:
+      - '471'
+      Content-Type:
+      - application/json; charset=utf-8
+      Date:
+      - Tue, 21 Jun 2016 16:22:59 GMT
+      Expires:
+      - Thu, 28 May 2116 16:22:59 GMT
+      Last-Modified:
+      - Tue, 21 Jun 2016 16:22:59 GMT
+      Server:
+      - tsa_b
+      Set-Cookie:
+      - guest_id=v1%3A146652617943100653; Domain=.twitter.com; Path=/; Expires=Thu,
+        21-Jun-2018 16:22:59 UTC
+      Strict-Transport-Security:
+      - max-age=631138519
+      X-Connection-Hash:
+      - f839d97a748f284d3502316ba43a6ed1
+      X-Content-Type-Options:
+      - nosniff
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Response-Time:
+      - '18'
+      X-Xss-Protection:
+      - 1; mode=block
+    body:
+      encoding: ASCII-8BIT
+      string: !binary |-
+        eyJ1cmwiOiJodHRwczpcL1wvdHdpdHRlci5jb21cL21qcm9kZVwvc3RhdHVz
+        XC83NDM2NTU3MTkxNzAzNjc0ODgiLCJhdXRob3JfbmFtZSI6Ik1pY2hhZWwg
+        Um9kZSIsImF1dGhvcl91cmwiOiJodHRwczpcL1wvdHdpdHRlci5jb21cL21q
+        cm9kZSIsImh0bWwiOiJcdTAwM0NibG9ja3F1b3RlIGNsYXNzPVwidHdpdHRl
+        ci10d2VldFwiXHUwMDNFXHUwMDNDcCBsYW5nPVwiZW5cIiBkaXI9XCJsdHJc
+        Ilx1MDAzReKAnHRlYWNoIHlvdXJzZWxmIHByb2dyYW1taW5nIGluIDEwIHll
+        YXJz4oCd4oCK4oCU4oCKXHUwMDNDYSBocmVmPVwiaHR0cHM6XC9cL3R3aXR0
+        ZXIuY29tXC9vc3NpYVwiXHUwMDNFQG9zc2lhXHUwMDNDXC9hXHUwMDNFIFx1
+        MDAzQ2EgaHJlZj1cImh0dHBzOlwvXC90LmNvXC83NWdZdzl3eW5kXCJcdTAw
+        M0VodHRwczpcL1wvdC5jb1wvNzVnWXc5d3luZFx1MDAzQ1wvYVx1MDAzRSBc
+        dTAwM0NhIGhyZWY9XCJodHRwczpcL1wvdC5jb1wvTEU1VHBVZ0N6WlwiXHUw
+        MDNFcGljLnR3aXR0ZXIuY29tXC9MRTVUcFVnQ3paXHUwMDNDXC9hXHUwMDNF
+        XHUwMDNDXC9wXHUwMDNFJm1kYXNoOyBNaWNoYWVsIFJvZGUgKEBtanJvZGUp
+        IFx1MDAzQ2EgaHJlZj1cImh0dHBzOlwvXC90d2l0dGVyLmNvbVwvbWpyb2Rl
+        XC9zdGF0dXNcLzc0MzY1NTcxOTE3MDM2NzQ4OFwiXHUwMDNFSnVuZSAxNywg
+        MjAxNlx1MDAzQ1wvYVx1MDAzRVx1MDAzQ1wvYmxvY2txdW90ZVx1MDAzRVxu
+        XHUwMDNDc2NyaXB0IGFzeW5jIHNyYz1cIlwvXC9wbGF0Zm9ybS50d2l0dGVy
+        LmNvbVwvd2lkZ2V0cy5qc1wiIGNoYXJzZXQ9XCJ1dGYtOFwiXHUwMDNFXHUw
+        MDNDXC9zY3JpcHRcdTAwM0UiLCJ3aWR0aCI6NTUwLCJoZWlnaHQiOm51bGws
+        InR5cGUiOiJyaWNoIiwiY2FjaGVfYWdlIjoiMzE1MzYwMDAwMCIsInByb3Zp
+        ZGVyX25hbWUiOiJUd2l0dGVyIiwicHJvdmlkZXJfdXJsIjoiaHR0cHM6XC9c
+        L3R3aXR0ZXIuY29tIiwidmVyc2lvbiI6IjEuMCJ9
+    http_version: 
+  recorded_at: Tue, 21 Jun 2016 16:22:59 GMT
+- request:
+    method: get
+    uri: https://api.twitter.com/1.1/statuses/oembed.json?id=743641130957316096
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.9.2
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Cache-Control:
+      - must-revalidate, max-age=3153600000
+      Content-Disposition:
+      - attachment; filename=json.json
+      Content-Length:
+      - '466'
+      Content-Type:
+      - application/json; charset=utf-8
+      Date:
+      - Tue, 21 Jun 2016 16:22:59 GMT
+      Expires:
+      - Thu, 28 May 2116 16:22:59 GMT
+      Last-Modified:
+      - Tue, 21 Jun 2016 16:22:59 GMT
+      Server:
+      - tsa_b
+      Set-Cookie:
+      - guest_id=v1%3A146652617972065721; Domain=.twitter.com; Path=/; Expires=Thu,
+        21-Jun-2018 16:22:59 UTC
+      Strict-Transport-Security:
+      - max-age=631138519
+      X-Connection-Hash:
+      - ee8c548006c503675a52f3dfefc34f94
+      X-Content-Type-Options:
+      - nosniff
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Response-Time:
+      - '13'
+      X-Xss-Protection:
+      - 1; mode=block
+    body:
+      encoding: ASCII-8BIT
+      string: '{"url":"https:\/\/twitter.com\/mjrode\/status\/743641130957316096","author_name":"Michael
+        Rode","author_url":"https:\/\/twitter.com\/mjrode","html":"\u003Cblockquote
+        class=\"twitter-tweet\"\u003E\u003Cp lang=\"en\" dir=\"ltr\"\u003EAfter watching
+        this talk I finally figured out how Git works. It&#39;s long but does a great
+        job explaining Git. \u003Ca href=\"https:\/\/t.co\/ZahJFRovLC\"\u003Ehttps:\/\/t.co\/ZahJFRovLC\u003C\/a\u003E\u003C\/p\u003E&mdash;
+        Michael Rode (@mjrode) \u003Ca href=\"https:\/\/twitter.com\/mjrode\/status\/743641130957316096\"\u003EJune
+        17, 2016\u003C\/a\u003E\u003C\/blockquote\u003E\n\u003Cscript async src=\"\/\/platform.twitter.com\/widgets.js\"
+        charset=\"utf-8\"\u003E\u003C\/script\u003E","width":550,"height":null,"type":"rich","cache_age":"3153600000","provider_name":"Twitter","provider_url":"https:\/\/twitter.com","version":"1.0"}'
+    http_version: 
+  recorded_at: Tue, 21 Jun 2016 16:22:59 GMT
+- request:
+    method: get
+    uri: https://api.twitter.com/1.1/statuses/oembed.json?id=742927081550536704
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.9.2
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Cache-Control:
+      - must-revalidate, max-age=3153600000
+      Content-Disposition:
+      - attachment; filename=json.json
+      Content-Length:
+      - '454'
+      Content-Type:
+      - application/json; charset=utf-8
+      Date:
+      - Tue, 21 Jun 2016 16:22:59 GMT
+      Expires:
+      - Thu, 28 May 2116 16:22:59 GMT
+      Last-Modified:
+      - Tue, 21 Jun 2016 16:22:59 GMT
+      Server:
+      - tsa_b
+      Set-Cookie:
+      - guest_id=v1%3A146652617988010825; Domain=.twitter.com; Path=/; Expires=Thu,
+        21-Jun-2018 16:22:59 UTC
+      Strict-Transport-Security:
+      - max-age=631138519
+      X-Connection-Hash:
+      - 21c89902dc9dca6cd30ee7ceb530e1c6
+      X-Content-Type-Options:
+      - nosniff
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Response-Time:
+      - '14'
+      X-Xss-Protection:
+      - 1; mode=block
+    body:
+      encoding: ASCII-8BIT
+      string: !binary |-
+        eyJ1cmwiOiJodHRwczpcL1wvdHdpdHRlci5jb21cL21qcm9kZVwvc3RhdHVz
+        XC83NDI5MjcwODE1NTA1MzY3MDQiLCJhdXRob3JfbmFtZSI6Ik1pY2hhZWwg
+        Um9kZSIsImF1dGhvcl91cmwiOiJodHRwczpcL1wvdHdpdHRlci5jb21cL21q
+        cm9kZSIsImh0bWwiOiJcdTAwM0NibG9ja3F1b3RlIGNsYXNzPVwidHdpdHRl
+        ci10d2VldFwiXHUwMDNFXHUwMDNDcCBsYW5nPVwiZW5cIiBkaXI9XCJsdHJc
+        Ilx1MDAzReKAnEFkZCBcLyBjaGFuZ2UgXC8gcmVtb3ZlIGNvbHVtbnMgZnJv
+        bSBSYWlscyBjb25zb2xl4oCdIGJ5IFx1MDAzQ2EgaHJlZj1cImh0dHBzOlwv
+        XC90d2l0dGVyLmNvbVwvcmFwaGFlbHdjb3N0YVwiXHUwMDNFQHJhcGhhZWx3
+        Y29zdGFcdTAwM0NcL2FcdTAwM0UgXHUwMDNDYSBocmVmPVwiaHR0cHM6XC9c
+        L3QuY29cL0dONndEa2V2Q3ZcIlx1MDAzRWh0dHBzOlwvXC90LmNvXC9HTjZ3
+        RGtldkN2XHUwMDNDXC9hXHUwMDNFXHUwMDNDXC9wXHUwMDNFJm1kYXNoOyBN
+        aWNoYWVsIFJvZGUgKEBtanJvZGUpIFx1MDAzQ2EgaHJlZj1cImh0dHBzOlwv
+        XC90d2l0dGVyLmNvbVwvbWpyb2RlXC9zdGF0dXNcLzc0MjkyNzA4MTU1MDUz
+        NjcwNFwiXHUwMDNFSnVuZSAxNSwgMjAxNlx1MDAzQ1wvYVx1MDAzRVx1MDAz
+        Q1wvYmxvY2txdW90ZVx1MDAzRVxuXHUwMDNDc2NyaXB0IGFzeW5jIHNyYz1c
+        IlwvXC9wbGF0Zm9ybS50d2l0dGVyLmNvbVwvd2lkZ2V0cy5qc1wiIGNoYXJz
+        ZXQ9XCJ1dGYtOFwiXHUwMDNFXHUwMDNDXC9zY3JpcHRcdTAwM0UiLCJ3aWR0
+        aCI6NTUwLCJoZWlnaHQiOm51bGwsInR5cGUiOiJyaWNoIiwiY2FjaGVfYWdl
+        IjoiMzE1MzYwMDAwMCIsInByb3ZpZGVyX25hbWUiOiJUd2l0dGVyIiwicHJv
+        dmlkZXJfdXJsIjoiaHR0cHM6XC9cL3R3aXR0ZXIuY29tIiwidmVyc2lvbiI6
+        IjEuMCJ9
+    http_version: 
+  recorded_at: Tue, 21 Jun 2016 16:22:59 GMT
+- request:
+    method: get
+    uri: https://api.twitter.com/1.1/statuses/oembed.json?id=738563553054097409
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.9.2
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Cache-Control:
+      - must-revalidate, max-age=3153600000
+      Content-Disposition:
+      - attachment; filename=json.json
+      Content-Length:
+      - '449'
+      Content-Type:
+      - application/json; charset=utf-8
+      Date:
+      - Tue, 21 Jun 2016 16:23:00 GMT
+      Expires:
+      - Thu, 28 May 2116 16:23:00 GMT
+      Last-Modified:
+      - Tue, 21 Jun 2016 16:23:00 GMT
+      Server:
+      - tsa_b
+      Set-Cookie:
+      - guest_id=v1%3A146652618003864657; Domain=.twitter.com; Path=/; Expires=Thu,
+        21-Jun-2018 16:23:00 UTC
+      Strict-Transport-Security:
+      - max-age=631138519
+      X-Connection-Hash:
+      - 5afa0d30343ae24556429a53968b2ce3
+      X-Content-Type-Options:
+      - nosniff
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Response-Time:
+      - '14'
+      X-Xss-Protection:
+      - 1; mode=block
+    body:
+      encoding: ASCII-8BIT
+      string: '{"url":"https:\/\/twitter.com\/mjrode\/status\/738563553054097409","author_name":"Michael
+        Rode","author_url":"https:\/\/twitter.com\/mjrode","html":"\u003Cblockquote
+        class=\"twitter-tweet\"\u003E\u003Cp lang=\"en\" dir=\"ltr\"\u003EI am predicting
+        that JR Smith is going to be the deciding factor in this fourth quarter. \u003Ca
+        href=\"https:\/\/twitter.com\/hashtag\/NBAFinals?src=hash\"\u003E#NBAFinals\u003C\/a\u003E\u003C\/p\u003E&mdash;
+        Michael Rode (@mjrode) \u003Ca href=\"https:\/\/twitter.com\/mjrode\/status\/738563553054097409\"\u003EJune
+        3, 2016\u003C\/a\u003E\u003C\/blockquote\u003E\n\u003Cscript async src=\"\/\/platform.twitter.com\/widgets.js\"
+        charset=\"utf-8\"\u003E\u003C\/script\u003E","width":550,"height":null,"type":"rich","cache_age":"3153600000","provider_name":"Twitter","provider_url":"https:\/\/twitter.com","version":"1.0"}'
+    http_version: 
+  recorded_at: Tue, 21 Jun 2016 16:23:00 GMT
+- request:
+    method: get
+    uri: https://api.twitter.com/1.1/statuses/user_timeline.json?count=200&exclude_replies=true&include_rts=false&screen_name=mjrode&trim_user=true
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      User-Agent:
+      - TwitterRubyGem/5.16.0
+      Authorization:
+      - OAuth oauth_consumer_key="PCvo50anGUpUUDusAPmiurzjM", oauth_nonce="8ee793c32ecb3cbca63a0261e075c1b9",
+        oauth_signature="sgE9GAdwXnwiaMkWi1ZXIDwO4rQ%3D", oauth_signature_method="HMAC-SHA1",
+        oauth_timestamp="1466526180", oauth_token="711995065347006465-JLJWrBLyfySojWUz1C7mwaqx37Qv7vQ",
+        oauth_version="1.0"
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Cache-Control:
+      - no-cache, no-store, must-revalidate, pre-check=0, post-check=0
+      Content-Disposition:
+      - attachment; filename=json.json
+      Content-Length:
+      - '1358'
+      Content-Type:
+      - application/json;charset=utf-8
+      Date:
+      - Tue, 21 Jun 2016 16:23:00 GMT
+      Expires:
+      - Tue, 31 Mar 1981 05:00:00 GMT
+      Last-Modified:
+      - Tue, 21 Jun 2016 16:23:00 GMT
+      Pragma:
+      - no-cache
+      Server:
+      - tsa_b
+      Set-Cookie:
+      - guest_id=v1%3A146652618021023417; Domain=.twitter.com; Path=/; Expires=Thu,
+        21-Jun-2018 16:23:00 UTC
+      - lang=en; Path=/
+      Status:
+      - 200 OK
+      Strict-Transport-Security:
+      - max-age=631138519
+      X-Access-Level:
+      - read-write-directmessages
+      X-Connection-Hash:
+      - 613d9537e42508c8c26a4b217b23d9f3
+      X-Content-Type-Options:
+      - nosniff
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Rate-Limit-Limit:
+      - '180'
+      X-Rate-Limit-Remaining:
+      - '176'
+      X-Rate-Limit-Reset:
+      - '1466526907'
+      X-Response-Time:
+      - '130'
+      X-Transaction:
+      - fa679c365310a4a4
+      X-Twitter-Response-Tags:
+      - BouncerCompliant
+      X-Xss-Protection:
+      - 1; mode=block
+    body:
+      encoding: ASCII-8BIT
+      string: '[{"created_at":"Fri Jun 17 04:05:14 +0000 2016","id":743655719170367488,"id_str":"743655719170367488","text":"\u201cteach
+        yourself programming in 10 years\u201d\u200a\u2014\u200a@ossia https:\/\/t.co\/75gYw9wynd
+        https:\/\/t.co\/LE5TpUgCzZ","truncated":false,"entities":{"hashtags":[],"symbols":[],"user_mentions":[{"screen_name":"ossia","name":"Quincy
+        Larson","id":341643950,"id_str":"341643950","indices":[43,49]}],"urls":[{"url":"https:\/\/t.co\/75gYw9wynd","expanded_url":"https:\/\/medium.freecodecamp.com\/lets-explore-the-universe-of-programming-resources-together-77ff382a4c52#---173-211.cn2m8o48c","display_url":"medium.freecodecamp.com\/lets-explore-t\u2026","indices":[50,73]}],"media":[{"id":743655716200775680,"id_str":"743655716200775680","indices":[74,97],"media_url":"http:\/\/pbs.twimg.com\/media\/ClH-7w9WAAAQJTu.jpg","media_url_https":"https:\/\/pbs.twimg.com\/media\/ClH-7w9WAAAQJTu.jpg","url":"https:\/\/t.co\/LE5TpUgCzZ","display_url":"pic.twitter.com\/LE5TpUgCzZ","expanded_url":"http:\/\/twitter.com\/mjrode\/status\/743655719170367488\/photo\/1","type":"photo","sizes":{"large":{"w":750,"h":403,"resize":"fit"},"thumb":{"w":150,"h":150,"resize":"crop"},"small":{"w":680,"h":365,"resize":"fit"},"medium":{"w":750,"h":403,"resize":"fit"}}}]},"extended_entities":{"media":[{"id":743655716200775680,"id_str":"743655716200775680","indices":[74,97],"media_url":"http:\/\/pbs.twimg.com\/media\/ClH-7w9WAAAQJTu.jpg","media_url_https":"https:\/\/pbs.twimg.com\/media\/ClH-7w9WAAAQJTu.jpg","url":"https:\/\/t.co\/LE5TpUgCzZ","display_url":"pic.twitter.com\/LE5TpUgCzZ","expanded_url":"http:\/\/twitter.com\/mjrode\/status\/743655719170367488\/photo\/1","type":"photo","sizes":{"large":{"w":750,"h":403,"resize":"fit"},"thumb":{"w":150,"h":150,"resize":"crop"},"small":{"w":680,"h":365,"resize":"fit"},"medium":{"w":750,"h":403,"resize":"fit"}}}]},"source":"\u003ca
+        href=\"https:\/\/medium.com\" rel=\"nofollow\"\u003eMedium\u003c\/a\u003e","in_reply_to_status_id":null,"in_reply_to_status_id_str":null,"in_reply_to_user_id":null,"in_reply_to_user_id_str":null,"in_reply_to_screen_name":null,"user":{"id":172021389,"id_str":"172021389"},"geo":null,"coordinates":null,"place":null,"contributors":null,"is_quote_status":false,"retweet_count":0,"favorite_count":1,"favorited":false,"retweeted":false,"possibly_sensitive":false,"lang":"en"},{"created_at":"Fri
+        Jun 17 03:07:16 +0000 2016","id":743641130957316096,"id_str":"743641130957316096","text":"After
+        watching this talk I finally figured out how Git works. It''s long but does
+        a great job explaining Git. https:\/\/t.co\/ZahJFRovLC","truncated":false,"entities":{"hashtags":[],"symbols":[],"user_mentions":[],"urls":[{"url":"https:\/\/t.co\/ZahJFRovLC","expanded_url":"https:\/\/www.youtube.com\/watch?v=1ffBJ4sVUb4","display_url":"youtube.com\/watch?v=1ffBJ4\u2026","indices":[109,132]}]},"source":"\u003ca
+        href=\"http:\/\/twitter.com\" rel=\"nofollow\"\u003eTwitter Web Client\u003c\/a\u003e","in_reply_to_status_id":null,"in_reply_to_status_id_str":null,"in_reply_to_user_id":null,"in_reply_to_user_id_str":null,"in_reply_to_screen_name":null,"user":{"id":172021389,"id_str":"172021389"},"geo":null,"coordinates":null,"place":null,"contributors":null,"is_quote_status":false,"retweet_count":0,"favorite_count":0,"favorited":false,"retweeted":false,"possibly_sensitive":false,"lang":"en"},{"created_at":"Wed
+        Jun 15 03:49:53 +0000 2016","id":742927081550536704,"id_str":"742927081550536704","text":"\u201cAdd
+        \/ change \/ remove columns from Rails console\u201d by @raphaelwcosta https:\/\/t.co\/GN6wDkevCv","truncated":false,"entities":{"hashtags":[],"symbols":[],"user_mentions":[{"screen_name":"raphaelwcosta","name":"Raphael
+        Costa","id":39825387,"id_str":"39825387","indices":[54,68]}],"urls":[{"url":"https:\/\/t.co\/GN6wDkevCv","expanded_url":"https:\/\/raphaelcosta.net\/add-change-remove-columns-from-rails-console-81631bffa75d#.szbud6e6t","display_url":"raphaelcosta.net\/add-change-rem\u2026","indices":[69,92]}]},"source":"\u003ca
+        href=\"http:\/\/twitter.com\" rel=\"nofollow\"\u003eTwitter Web Client\u003c\/a\u003e","in_reply_to_status_id":null,"in_reply_to_status_id_str":null,"in_reply_to_user_id":null,"in_reply_to_user_id_str":null,"in_reply_to_screen_name":null,"user":{"id":172021389,"id_str":"172021389"},"geo":null,"coordinates":null,"place":null,"contributors":null,"is_quote_status":false,"retweet_count":0,"favorite_count":0,"favorited":false,"retweeted":false,"possibly_sensitive":false,"lang":"en"},{"created_at":"Fri
+        Jun 03 02:50:47 +0000 2016","id":738563553054097409,"id_str":"738563553054097409","text":"I
+        am predicting that JR Smith is going to be the deciding factor in this fourth
+        quarter. #NBAFinals","truncated":false,"entities":{"hashtags":[{"text":"NBAFinals","indices":[89,99]}],"symbols":[],"user_mentions":[],"urls":[]},"source":"\u003ca
+        href=\"http:\/\/twitter.com\" rel=\"nofollow\"\u003eTwitter Web Client\u003c\/a\u003e","in_reply_to_status_id":null,"in_reply_to_status_id_str":null,"in_reply_to_user_id":null,"in_reply_to_user_id_str":null,"in_reply_to_screen_name":null,"user":{"id":172021389,"id_str":"172021389"},"geo":null,"coordinates":null,"place":null,"contributors":null,"is_quote_status":false,"retweet_count":0,"favorite_count":0,"favorited":false,"retweeted":false,"lang":"en"}]'
+    http_version: 
+  recorded_at: Tue, 21 Jun 2016 16:23:00 GMT
+- request:
+    method: get
+    uri: https://api.twitter.com/1.1/statuses/oembed.json?id=743641130957316096
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.9.2
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Cache-Control:
+      - must-revalidate, max-age=3153600000
+      Content-Disposition:
+      - attachment; filename=json.json
+      Content-Length:
+      - '466'
+      Content-Type:
+      - application/json; charset=utf-8
+      Date:
+      - Tue, 21 Jun 2016 16:23:00 GMT
+      Expires:
+      - Thu, 28 May 2116 16:23:00 GMT
+      Last-Modified:
+      - Tue, 21 Jun 2016 16:23:00 GMT
+      Server:
+      - tsa_b
+      Set-Cookie:
+      - guest_id=v1%3A146652618048625500; Domain=.twitter.com; Path=/; Expires=Thu,
+        21-Jun-2018 16:23:00 UTC
+      Strict-Transport-Security:
+      - max-age=631138519
+      X-Connection-Hash:
+      - 1534330df9e2605afdc67c1091826ba1
+      X-Content-Type-Options:
+      - nosniff
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Response-Time:
+      - '15'
+      X-Xss-Protection:
+      - 1; mode=block
+    body:
+      encoding: ASCII-8BIT
+      string: '{"url":"https:\/\/twitter.com\/mjrode\/status\/743641130957316096","author_name":"Michael
+        Rode","author_url":"https:\/\/twitter.com\/mjrode","html":"\u003Cblockquote
+        class=\"twitter-tweet\"\u003E\u003Cp lang=\"en\" dir=\"ltr\"\u003EAfter watching
+        this talk I finally figured out how Git works. It&#39;s long but does a great
+        job explaining Git. \u003Ca href=\"https:\/\/t.co\/ZahJFRovLC\"\u003Ehttps:\/\/t.co\/ZahJFRovLC\u003C\/a\u003E\u003C\/p\u003E&mdash;
+        Michael Rode (@mjrode) \u003Ca href=\"https:\/\/twitter.com\/mjrode\/status\/743641130957316096\"\u003EJune
+        17, 2016\u003C\/a\u003E\u003C\/blockquote\u003E\n\u003Cscript async src=\"\/\/platform.twitter.com\/widgets.js\"
+        charset=\"utf-8\"\u003E\u003C\/script\u003E","width":550,"height":null,"type":"rich","cache_age":"3153600000","provider_name":"Twitter","provider_url":"https:\/\/twitter.com","version":"1.0"}'
+    http_version: 
+  recorded_at: Tue, 21 Jun 2016 16:23:00 GMT
+- request:
+    method: get
+    uri: https://api.twitter.com/1.1/statuses/oembed.json?id=742927081550536704
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.9.2
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Cache-Control:
+      - must-revalidate, max-age=3153600000
+      Content-Disposition:
+      - attachment; filename=json.json
+      Content-Length:
+      - '454'
+      Content-Type:
+      - application/json; charset=utf-8
+      Date:
+      - Tue, 21 Jun 2016 16:23:00 GMT
+      Expires:
+      - Thu, 28 May 2116 16:23:00 GMT
+      Last-Modified:
+      - Tue, 21 Jun 2016 16:23:00 GMT
+      Server:
+      - tsa_b
+      Set-Cookie:
+      - guest_id=v1%3A146652618064619027; Domain=.twitter.com; Path=/; Expires=Thu,
+        21-Jun-2018 16:23:00 UTC
+      Strict-Transport-Security:
+      - max-age=631138519
+      X-Connection-Hash:
+      - 306d0b53485b0a52580e5207400427a7
+      X-Content-Type-Options:
+      - nosniff
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Response-Time:
+      - '18'
+      X-Xss-Protection:
+      - 1; mode=block
+    body:
+      encoding: ASCII-8BIT
+      string: !binary |-
+        eyJ1cmwiOiJodHRwczpcL1wvdHdpdHRlci5jb21cL21qcm9kZVwvc3RhdHVz
+        XC83NDI5MjcwODE1NTA1MzY3MDQiLCJhdXRob3JfbmFtZSI6Ik1pY2hhZWwg
+        Um9kZSIsImF1dGhvcl91cmwiOiJodHRwczpcL1wvdHdpdHRlci5jb21cL21q
+        cm9kZSIsImh0bWwiOiJcdTAwM0NibG9ja3F1b3RlIGNsYXNzPVwidHdpdHRl
+        ci10d2VldFwiXHUwMDNFXHUwMDNDcCBsYW5nPVwiZW5cIiBkaXI9XCJsdHJc
+        Ilx1MDAzReKAnEFkZCBcLyBjaGFuZ2UgXC8gcmVtb3ZlIGNvbHVtbnMgZnJv
+        bSBSYWlscyBjb25zb2xl4oCdIGJ5IFx1MDAzQ2EgaHJlZj1cImh0dHBzOlwv
+        XC90d2l0dGVyLmNvbVwvcmFwaGFlbHdjb3N0YVwiXHUwMDNFQHJhcGhhZWx3
+        Y29zdGFcdTAwM0NcL2FcdTAwM0UgXHUwMDNDYSBocmVmPVwiaHR0cHM6XC9c
+        L3QuY29cL0dONndEa2V2Q3ZcIlx1MDAzRWh0dHBzOlwvXC90LmNvXC9HTjZ3
+        RGtldkN2XHUwMDNDXC9hXHUwMDNFXHUwMDNDXC9wXHUwMDNFJm1kYXNoOyBN
+        aWNoYWVsIFJvZGUgKEBtanJvZGUpIFx1MDAzQ2EgaHJlZj1cImh0dHBzOlwv
+        XC90d2l0dGVyLmNvbVwvbWpyb2RlXC9zdGF0dXNcLzc0MjkyNzA4MTU1MDUz
+        NjcwNFwiXHUwMDNFSnVuZSAxNSwgMjAxNlx1MDAzQ1wvYVx1MDAzRVx1MDAz
+        Q1wvYmxvY2txdW90ZVx1MDAzRVxuXHUwMDNDc2NyaXB0IGFzeW5jIHNyYz1c
+        IlwvXC9wbGF0Zm9ybS50d2l0dGVyLmNvbVwvd2lkZ2V0cy5qc1wiIGNoYXJz
+        ZXQ9XCJ1dGYtOFwiXHUwMDNFXHUwMDNDXC9zY3JpcHRcdTAwM0UiLCJ3aWR0
+        aCI6NTUwLCJoZWlnaHQiOm51bGwsInR5cGUiOiJyaWNoIiwiY2FjaGVfYWdl
+        IjoiMzE1MzYwMDAwMCIsInByb3ZpZGVyX25hbWUiOiJUd2l0dGVyIiwicHJv
+        dmlkZXJfdXJsIjoiaHR0cHM6XC9cL3R3aXR0ZXIuY29tIiwidmVyc2lvbiI6
+        IjEuMCJ9
+    http_version: 
+  recorded_at: Tue, 21 Jun 2016 16:23:00 GMT
+- request:
+    method: get
+    uri: https://api.twitter.com/1.1/statuses/oembed.json?id=738563553054097409
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.9.2
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Cache-Control:
+      - must-revalidate, max-age=3153600000
+      Content-Disposition:
+      - attachment; filename=json.json
+      Content-Length:
+      - '449'
+      Content-Type:
+      - application/json; charset=utf-8
+      Date:
+      - Tue, 21 Jun 2016 16:23:00 GMT
+      Expires:
+      - Thu, 28 May 2116 16:23:00 GMT
+      Last-Modified:
+      - Tue, 21 Jun 2016 16:23:00 GMT
+      Server:
+      - tsa_b
+      Set-Cookie:
+      - guest_id=v1%3A146652618082140668; Domain=.twitter.com; Path=/; Expires=Thu,
+        21-Jun-2018 16:23:00 UTC
+      Strict-Transport-Security:
+      - max-age=631138519
+      X-Connection-Hash:
+      - 408c3f0209d47c90ee0b095ff471f1be
+      X-Content-Type-Options:
+      - nosniff
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Response-Time:
+      - '18'
+      X-Xss-Protection:
+      - 1; mode=block
+    body:
+      encoding: ASCII-8BIT
+      string: '{"url":"https:\/\/twitter.com\/mjrode\/status\/738563553054097409","author_name":"Michael
+        Rode","author_url":"https:\/\/twitter.com\/mjrode","html":"\u003Cblockquote
+        class=\"twitter-tweet\"\u003E\u003Cp lang=\"en\" dir=\"ltr\"\u003EI am predicting
+        that JR Smith is going to be the deciding factor in this fourth quarter. \u003Ca
+        href=\"https:\/\/twitter.com\/hashtag\/NBAFinals?src=hash\"\u003E#NBAFinals\u003C\/a\u003E\u003C\/p\u003E&mdash;
+        Michael Rode (@mjrode) \u003Ca href=\"https:\/\/twitter.com\/mjrode\/status\/738563553054097409\"\u003EJune
+        3, 2016\u003C\/a\u003E\u003C\/blockquote\u003E\n\u003Cscript async src=\"\/\/platform.twitter.com\/widgets.js\"
+        charset=\"utf-8\"\u003E\u003C\/script\u003E","width":550,"height":null,"type":"rich","cache_age":"3153600000","provider_name":"Twitter","provider_url":"https:\/\/twitter.com","version":"1.0"}'
+    http_version: 
+  recorded_at: Tue, 21 Jun 2016 16:23:00 GMT
+recorded_with: VCR 3.0.3

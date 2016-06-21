@@ -29,6 +29,12 @@ sports:
   name: "Football League"
   bio: "The official site of Sky Sports Football League coverage"
   remote_id: 443668407
+  
+michael: 
+  id: 4444
+  username: "mjrode"
+  user_id: 12
+  name: "Michael Rode"
 
 jasoncummings86: 
   id: 1334

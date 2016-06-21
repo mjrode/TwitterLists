@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160621153552) do
+ActiveRecord::Schema.define(version: 201606211553501) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -82,7 +82,7 @@ ActiveRecord::Schema.define(version: 20160621153552) do
 
   create_table "tweets", force: :cascade do |t|
     t.string   "tweet_text"
-    t.integer  "remote_user_id"
+    t.integer  "user_id"
     t.integer  "remote_tweet_id",         limit: 8
     t.string   "source"
     t.integer  "emails_count"

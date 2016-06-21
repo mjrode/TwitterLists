@@ -1,4 +1,4 @@
-class Tweets::GetTweets < Less::Interaction
+class Friends::GetTweets < Less::Interaction
   expects :friend
   expects :user
 
@@ -26,7 +26,7 @@ class Tweets::GetTweets < Less::Interaction
       exclude_replies: true,
       trim_user: true,
       include_rts: false,
-      count: 50
+      count: 200
     )
   rescue Twitter::Error => e
     Honeybadger.notify e
@@ -54,7 +54,8 @@ class Tweets::GetTweets < Less::Interaction
       source: tweet.url,
       remote_tweet_created_at: tweet.created_at,
       html_block: html_block,
-      friend_id: friend.user_id
+      friend_id: friend.user_id,
+      user_id: user.id
     )
   end
 end
