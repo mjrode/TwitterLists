@@ -14,7 +14,7 @@ Rails.application.routes.draw do
       get :find_list
     end
   end
-
+  resources :tweets
   resources :friends do
     collection do
       get :all
@@ -27,6 +27,8 @@ Rails.application.routes.draw do
   get '/about', to: 'pages#about'
   root 'pages#home'
 
+  #replies
+  post 'replies/create', to: "replies#create"
 
   # sessions
   post '/update_email', to: 'sessions#update_email'

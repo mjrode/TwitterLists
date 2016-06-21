@@ -1,0 +1,83 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://api.twitter.com/1.1/statuses/update.json
+    body:
+      encoding: UTF-8
+      string: in_reply_to_status_id=%23%3CTweet%3A0x007ffbbfd8c288%3E&status=This+is+a+test+message
+    headers:
+      Accept:
+      - application/json
+      User-Agent:
+      - TwitterRubyGem/5.16.0
+      Authorization:
+      - OAuth oauth_consumer_key="PCvo50anGUpUUDusAPmiurzjM", oauth_nonce="3829c297b275e55111f8c8fe226ccc6a",
+        oauth_signature="M%2Ff%2FmfzPsPmQ1uIRuruEcKvCpmM%3D", oauth_signature_method="HMAC-SHA1",
+        oauth_timestamp="1466530108", oauth_token="172021389-Z5qATOSSXKgyNsHUFTXbFXnENU2D5K0L67Hrvbp8",
+        oauth_version="1.0"
+      Content-Type:
+      - application/x-www-form-urlencoded
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Cache-Control:
+      - no-cache, no-store, must-revalidate, pre-check=0, post-check=0
+      Content-Disposition:
+      - attachment; filename=json.json
+      Content-Length:
+      - '951'
+      Content-Type:
+      - application/json;charset=utf-8
+      Date:
+      - Tue, 21 Jun 2016 17:28:28 GMT
+      Expires:
+      - Tue, 31 Mar 1981 05:00:00 GMT
+      Last-Modified:
+      - Tue, 21 Jun 2016 17:28:28 GMT
+      Pragma:
+      - no-cache
+      Server:
+      - tsa_b
+      Set-Cookie:
+      - guest_id=v1%3A146653010877522108; Domain=.twitter.com; Path=/; Expires=Thu,
+        21-Jun-2018 17:28:28 UTC
+      - lang=en; Path=/
+      Status:
+      - 200 OK
+      Strict-Transport-Security:
+      - max-age=631138519
+      X-Access-Level:
+      - read-write-directmessages
+      X-Connection-Hash:
+      - bad74dad4687eb57ee58a7d4e8b6fb2d
+      X-Content-Type-Options:
+      - nosniff
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Response-Time:
+      - '177'
+      X-Transaction:
+      - 4f35603c3c12e62b
+      X-Tsa-Request-Body-Time:
+      - '0'
+      X-Twitter-Response-Tags:
+      - BouncerCompliant
+      X-Xss-Protection:
+      - 1; mode=block
+    body:
+      encoding: ASCII-8BIT
+      string: '{"created_at":"Tue Jun 21 17:28:28 +0000 2016","id":745307411892805632,"id_str":"745307411892805632","text":"This
+        is a test message","truncated":false,"entities":{"hashtags":[],"symbols":[],"user_mentions":[],"urls":[]},"source":"\u003ca
+        href=\"http:\/\/127.0.0.1:3000\" rel=\"nofollow\"\u003eLessTwitterList\u003c\/a\u003e","in_reply_to_status_id":null,"in_reply_to_status_id_str":null,"in_reply_to_user_id":null,"in_reply_to_user_id_str":null,"in_reply_to_screen_name":null,"user":{"id":172021389,"id_str":"172021389","name":"Michael
+        Rode","screen_name":"mjrode","location":"Jacksonville Beach, FL","description":"Developer
+        in training","url":"https:\/\/t.co\/BT1uvwqgIf","entities":{"url":{"urls":[{"url":"https:\/\/t.co\/BT1uvwqgIf","expanded_url":"http:\/\/www.MJR.tech","display_url":"MJR.tech","indices":[0,23]}]},"description":{"urls":[]}},"protected":false,"followers_count":125,"friends_count":274,"listed_count":3,"created_at":"Wed
+        Jul 28 18:42:59 +0000 2010","favourites_count":83,"utc_offset":-10800,"time_zone":"Atlantic
+        Time (Canada)","geo_enabled":false,"verified":false,"statuses_count":11,"lang":"en","contributors_enabled":false,"is_translator":false,"is_translation_enabled":false,"profile_background_color":"1A1B1F","profile_background_image_url":"http:\/\/abs.twimg.com\/images\/themes\/theme9\/bg.gif","profile_background_image_url_https":"https:\/\/abs.twimg.com\/images\/themes\/theme9\/bg.gif","profile_background_tile":false,"profile_image_url":"http:\/\/pbs.twimg.com\/profile_images\/667417996911071233\/nSEbKQV__normal.png","profile_image_url_https":"https:\/\/pbs.twimg.com\/profile_images\/667417996911071233\/nSEbKQV__normal.png","profile_banner_url":"https:\/\/pbs.twimg.com\/profile_banners\/172021389\/1447537951","profile_link_color":"2FC2EF","profile_sidebar_border_color":"181A1E","profile_sidebar_fill_color":"252429","profile_text_color":"666666","profile_use_background_image":true,"has_extended_profile":true,"default_profile":false,"default_profile_image":false,"following":false,"follow_request_sent":false,"notifications":false},"geo":null,"coordinates":null,"place":null,"contributors":null,"is_quote_status":false,"retweet_count":0,"favorite_count":0,"favorited":false,"retweeted":false,"lang":"en"}'
+    http_version: 
+  recorded_at: Tue, 21 Jun 2016 17:28:28 GMT
+recorded_with: VCR 3.0.3

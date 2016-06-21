@@ -28,4 +28,11 @@ class Friends::GetTweetsTest < ActiveSupport::TestCase
       end
     end
   end
+
+  test "check that tweets belong to user" do 
+    use_cassette("user_signs_in") do 
+      Friends::GetTweets.run(friend: @friend, user: @user)  
+    end
+    assert @user.tweets.count.present?
+  end
 end

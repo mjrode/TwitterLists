@@ -21,6 +21,11 @@ class User < ActiveRecord::Base
   has_many :friends, dependent: :destroy
   has_many :lists, dependent: :destroy
   has_many :friend_list_schedules, through: :lists
+  has_many :tweets
+
+  def sort(params)
+    tweets.where(replied: false).order("remote_tweet_created_at DESC").page(params[:page])
+  end
 
   def unassigned_friends
     unassigned_friends = []
@@ -33,15 +38,4 @@ class User < ActiveRecord::Base
     end
     unassigned_friends
   end
-
-  # def unassigned_friends
-  #   unassigned_friends = []
-  #   self.friends.each do |friend|
-  #     friend.friend_list_schedules.where(schedule: 4) do |schedule|
-  #       unassigned_friend = Friend.find(schedule.friend_id)
-  #       unassigned_friends << unassigned_friend
-  #     end
-  #   end
-  #   unassigned_friends
-  # end
 end
