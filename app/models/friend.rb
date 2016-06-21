@@ -10,11 +10,14 @@
 #  name       :string
 #  bio        :string
 #  remote_id  :integer
+#  avatar     :string
+#  following  :boolean
 #
 
 class Friend < ActiveRecord::Base
   validates :username, uniqueness: true
   has_many :friend_list_schedules, dependent: :destroy
+  has_many :tweets, dependent: :destroy
   has_many :users, through: :friend_list_schedules
 
   def current_schedule(list)

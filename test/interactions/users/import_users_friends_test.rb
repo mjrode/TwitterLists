@@ -10,7 +10,7 @@ class Users::ImportUsersFriendsTest < ActiveSupport::TestCase
   end
 
   test "adds friends to database" do
-    use_cassette("import_friends") do
+    use_cassette("user_signs_in") do
       assert_changed -> { Friend.count } do
         Users::ImportUsersFriends.run(user: @user)
       end
@@ -18,31 +18,39 @@ class Users::ImportUsersFriendsTest < ActiveSupport::TestCase
   end
 
   test "adds friends that are only on a list to database" do
-    use_cassette("import_friends") do
+    use_cassette("user_signs_in") do
       Users::ImportUsersFriends.run(user: @user)
     end
     assert Friend.find_by_username("Coalboat").present?
   end
 
   test "It does not remove local friends that are present remotely" do
-    use_cassette("import_friends") do
+    use_cassette("user_signs_in") do
       Users::ImportUsersFriends.run(user: @user)
     end
     assert Friend.find_by_username("jasoncummings86").present?    
   end
 
   test "followers that are not your friends do not get added" do
-    use_cassette("import_friends") do
+    use_cassette("user_signs_in") do
       Users::ImportUsersFriends.run(user: @user)
     end
-    assert Friend.find_by_username("mjrode").blank?
+    assert Friend.find_by_username("marketmembrane").nil?
   end
 
   test "If you unfollow a friend on twitter they are deleted from the database" do
     assert Friend.find_by_username("deleteme").present?
-    use_cassette("delete_friends") do
+    use_cassette("user_signs_in") do
       Users::ImportUsersFriends.run(user: @user)
     end
     assert Friend.find_by_username("deleteme").nil?
+  end
+
+  test "Tweets get added to database when friend logs in" do 
+    use_cassette("user_signs_in") do 
+      assert_changed -> { Tweet.count } do 
+        Users::ImportUsersFriends.run(user: @user)
+      end
+    end
   end
 end

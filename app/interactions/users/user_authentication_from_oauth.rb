@@ -7,9 +7,8 @@ class Users::UserAuthenticationFromOauth < Less::Interaction
     initialize_user
     self.message = set_message
     self.user = user
-    # read into active job
-    Users::ImportUsersFriends.delay.run(user: self.user)
-    Lists::ImportLists.delay.run(username: self.user.username)
+    Users::ImportUsersFriends.delay.run(user: self.user) if friends_count < 5_000
+    Lists::ImportLists.delay.run(username: self.user.username) if friends_count < 5_000
     self
   end
 
@@ -22,6 +21,20 @@ class Users::UserAuthenticationFromOauth < Less::Interaction
 
   def set_message
     "Welcome, #{user.name}"
+  end
+
+  def friends_count
+    set_twitter_client
+    @client.user(user.username).friends_count
+  end
+
+  def set_twitter_client
+    @client = Twitter::REST::Client.new do |config|
+      config.consumer_key        = ENV["twitter_consumer_key"]
+      config.consumer_secret     = ENV["twitter_secret_key"]
+      config.access_token        = user.token
+      config.access_token_secret = user.secret
+    end
   end
 
   def set_attributes

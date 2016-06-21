@@ -10,6 +10,8 @@
 #  name       :string
 #  bio        :string
 #  remote_id  :integer
+#  avatar     :string
+#  following  :boolean
 #
 
 require 'test_helper'
