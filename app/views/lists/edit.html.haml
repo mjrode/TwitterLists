@@ -13,7 +13,7 @@
 %row#frequently-on
 %row#sometimes-on
 
-= form_tag(add_friends_list_path(@list)) do 
+= form_tag(add_friends_list_path(@list), class: "seperate-lists")  do 
   %hr.shrink-me
   - @friends.each_with_index do |friend, index|
     .row.shrink-me.middle{id: "move-me-#{index}"}
