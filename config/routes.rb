@@ -14,7 +14,12 @@ Rails.application.routes.draw do
       get :find_list
     end
   end
-  resources :tweets
+  resources :tweets do
+    collection do 
+      get :fetch
+    end
+  end
+
   resources :friends do
     collection do
       get :all

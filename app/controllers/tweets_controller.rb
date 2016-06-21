@@ -5,10 +5,15 @@ class TweetsController < ApplicationController
   def index
     @friends = Friend.all
     @user = current_user
-    @tweets = @user.tweets.page(params[:page])
+    @tweets = @user.sort(params)
   end
 
   def new
+  end
+
+  def fetch
+    Users::ImportUsersFriends.delay.run(user: current_user)
+    redirect_to tweets_path
   end
 
   def show
