@@ -19,7 +19,6 @@ class Replies::SendReplyTest < ActiveSupport::TestCase
         tweet_id: @tweet_id
       )
     end
-    binding.pry
     assert Tweet.find(@tweet_id).replied == true
   end
 end
