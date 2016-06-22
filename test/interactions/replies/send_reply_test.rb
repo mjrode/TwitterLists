@@ -5,6 +5,7 @@ class Replies::SendReplyTest < ActiveSupport::TestCase
     @message = "This is a test message"
     @user = users(:mike)
     @tweet_id = tweets(:tweet).id
+    @tweet = tweets(:tweet)
     @remote_tweet_id = tweets(:tweet).remote_tweet_id
   end
 
@@ -18,6 +19,7 @@ class Replies::SendReplyTest < ActiveSupport::TestCase
         tweet_id: @tweet_id
       )
     end
+    binding.pry
     assert Tweet.find(@tweet_id).replied == true
   end
 end
