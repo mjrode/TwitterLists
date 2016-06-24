@@ -99,4 +99,154 @@ http_interactions:
         Mar 21 19:17:06 +0000 2016","favourites_count":2,"utc_offset":null,"time_zone":null,"geo_enabled":false,"verified":false,"statuses_count":28,"lang":"en","contributors_enabled":false,"is_translator":false,"is_translation_enabled":false,"profile_background_color":"F5F8FA","profile_background_image_url":null,"profile_background_image_url_https":null,"profile_background_tile":false,"profile_image_url":"http:\/\/abs.twimg.com\/sticky\/default_profile_images\/default_profile_3_normal.png","profile_image_url_https":"https:\/\/abs.twimg.com\/sticky\/default_profile_images\/default_profile_3_normal.png","profile_link_color":"2B7BB9","profile_sidebar_border_color":"C0DEED","profile_sidebar_fill_color":"DDEEF6","profile_text_color":"333333","profile_use_background_image":true,"has_extended_profile":false,"default_profile":true,"default_profile_image":true,"following":null,"follow_request_sent":null,"notifications":null}}]'
     http_version: 
   recorded_at: Wed, 22 Jun 2016 01:12:13 GMT
+- request:
+    method: post
+    uri: https://api.twitter.com/oauth2/token
+    body:
+      encoding: UTF-8
+      string: grant_type=client_credentials
+    headers:
+      Accept:
+      - "*/*"
+      User-Agent:
+      - TwitterRubyGem/5.16.0
+      Authorization:
+      - Basic UEN2bzUwYW5HVXBVVUR1c0FQbWl1cnpqTTpuTEo4VGJYeFc2YVR5VDZxelpqalhCa01mOXVEOUNWUXpjVTlhWGdJV1A5WkRGTk9BSw==
+      Content-Type:
+      - application/x-www-form-urlencoded; charset=UTF-8
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Cache-Control:
+      - no-cache, no-store, must-revalidate, pre-check=0, post-check=0
+      Content-Disposition:
+      - attachment; filename=json.json
+      Content-Length:
+      - '154'
+      Content-Type:
+      - application/json;charset=utf-8
+      Date:
+      - Fri, 24 Jun 2016 20:54:09 GMT
+      Expires:
+      - Tue, 31 Mar 1981 05:00:00 GMT
+      Last-Modified:
+      - Fri, 24 Jun 2016 20:54:09 GMT
+      Ml:
+      - A
+      Pragma:
+      - no-cache
+      Server:
+      - tsa_b
+      Set-Cookie:
+      - guest_id=v1%3A146680164909240895; Domain=.twitter.com; Path=/; Expires=Sun,
+        24-Jun-2018 20:54:09 UTC
+      Status:
+      - 200 OK
+      Strict-Transport-Security:
+      - max-age=631138519
+      X-Connection-Hash:
+      - b66c99b53803b06c638ee2be891cf9c2
+      X-Content-Type-Options:
+      - nosniff
+      X-Frame-Options:
+      - DENY
+      X-Response-Time:
+      - '35'
+      X-Transaction:
+      - 00e7954b00d95bdb
+      X-Tsa-Request-Body-Time:
+      - '0'
+      X-Twitter-Response-Tags:
+      - BouncerCompliant
+      X-Ua-Compatible:
+      - IE=edge,chrome=1
+      X-Xss-Protection:
+      - 1; mode=block
+    body:
+      encoding: ASCII-8BIT
+      string: '{"token_type":"bearer","access_token":"AAAAAAAAAAAAAAAAAAAAAPfmvAAAAAAAxuLnQIbL9WM5N3RJsBv%2BKM4fD%2B4%3D3SzoKa9kefI2w6PPiDb4kAzAmXwF7Ev2x3V4zHI9hXls3k39nX"}'
+    http_version: 
+  recorded_at: Fri, 24 Jun 2016 20:54:09 GMT
+- request:
+    method: post
+    uri: https://api.twitter.com/1.1/lists/create.json
+    body:
+      encoding: UTF-8
+      string: name=pizza+list
+    headers:
+      Accept:
+      - application/json
+      User-Agent:
+      - TwitterRubyGem/5.16.0
+      Authorization:
+      - OAuth oauth_consumer_key="PCvo50anGUpUUDusAPmiurzjM", oauth_nonce="926179ed01ec052d1a445d1ab31448b5",
+        oauth_signature="crGbgDbbkwXD06HiHIX43JnuqaI%3D", oauth_signature_method="HMAC-SHA1",
+        oauth_timestamp="1466801649", oauth_token="711995065347006465-JLJWrBLyfySojWUz1C7mwaqx37Qv7vQ",
+        oauth_version="1.0"
+      Content-Type:
+      - application/x-www-form-urlencoded
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Cache-Control:
+      - no-cache, no-store, must-revalidate, pre-check=0, post-check=0
+      Content-Disposition:
+      - attachment; filename=json.json
+      Content-Length:
+      - '632'
+      Content-Type:
+      - application/json;charset=utf-8
+      Date:
+      - Fri, 24 Jun 2016 20:54:09 GMT
+      Expires:
+      - Tue, 31 Mar 1981 05:00:00 GMT
+      Last-Modified:
+      - Fri, 24 Jun 2016 20:54:09 GMT
+      Pragma:
+      - no-cache
+      Server:
+      - tsa_b
+      Set-Cookie:
+      - guest_id=v1%3A146680164935714218; Domain=.twitter.com; Path=/; Expires=Sun,
+        24-Jun-2018 20:54:09 UTC
+      - lang=en; Path=/
+      Status:
+      - 200 OK
+      Strict-Transport-Security:
+      - max-age=631138519
+      X-Access-Level:
+      - read-write-directmessages
+      X-Connection-Hash:
+      - ade31a169979b8bcc895e98076717820
+      X-Content-Type-Options:
+      - nosniff
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Response-Time:
+      - '58'
+      X-Transaction:
+      - 00bf9051001af75b
+      X-Tsa-Request-Body-Time:
+      - '0'
+      X-Twitter-Response-Tags:
+      - BouncerCompliant
+      X-Xss-Protection:
+      - 1; mode=block
+    body:
+      encoding: ASCII-8BIT
+      string: '{"id":746446335646269440,"id_str":"746446335646269440","name":"pizza
+        list","uri":"\/mjr_tts\/lists\/pizza-list","subscriber_count":0,"member_count":0,"mode":"public","description":"","slug":"pizza-list","full_name":"@mjr_tts\/pizza-list","created_at":"Fri
+        Jun 24 20:54:09 +0000 2016","following":false,"user":{"id":711995065347006465,"id_str":"711995065347006465","name":"test
+        less","screen_name":"mjr_tts","location":"","description":"","url":null,"entities":{"description":{"urls":[]}},"protected":false,"followers_count":3,"friends_count":10,"listed_count":0,"created_at":"Mon
+        Mar 21 19:17:06 +0000 2016","favourites_count":2,"utc_offset":null,"time_zone":null,"geo_enabled":false,"verified":false,"statuses_count":28,"lang":"en","contributors_enabled":false,"is_translator":false,"is_translation_enabled":false,"profile_background_color":"F5F8FA","profile_background_image_url":null,"profile_background_image_url_https":null,"profile_background_tile":false,"profile_image_url":"http:\/\/abs.twimg.com\/sticky\/default_profile_images\/default_profile_3_normal.png","profile_image_url_https":"https:\/\/abs.twimg.com\/sticky\/default_profile_images\/default_profile_3_normal.png","profile_link_color":"2B7BB9","profile_sidebar_border_color":"C0DEED","profile_sidebar_fill_color":"DDEEF6","profile_text_color":"333333","profile_use_background_image":true,"has_extended_profile":false,"default_profile":true,"default_profile_image":true,"following":false,"follow_request_sent":false,"notifications":false}}'
+    http_version: 
+  recorded_at: Fri, 24 Jun 2016 20:54:09 GMT
 recorded_with: VCR 3.0.3

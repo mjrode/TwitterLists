@@ -17,7 +17,7 @@ class Lists::CreateListTest < ActiveSupport::TestCase
   end
 
   test "able to create unique list" do
-    local_list = List.new(name: "mikes list")
+    local_list = List.new(name: "pizza list")
     use_cassette("create_list") do
       assert_changed -> { List.count } do
         Lists::CreateList.run(

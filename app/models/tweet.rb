@@ -19,7 +19,5 @@
 class Tweet < ActiveRecord::Base
   belongs_to :friend, touch: true
   belongs_to :user
-  has_many :emails, dependent: :destroy
-  has_many :direct_messages, dependent: :destroy
   paginates_per 25
 end
