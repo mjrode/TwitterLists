@@ -6,7 +6,7 @@ class Listmailer < ApplicationMailer
     @list = list
     mail(
       to: @email,
-      subject: "Your list has been updated"
+      subject: "All of your information has been imported!"
     )
   end
 end
