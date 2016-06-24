@@ -4,6 +4,7 @@
 %h1 Current Members
 -@new_list.each do |schedule|
   %ul
+    =binding.pry if schedule.friend == nil
     %li= schedule.friend.name
     
 
