@@ -71,7 +71,7 @@ Rails.application.configure do
 
   # Send deprecation notices to registered listeners.
   config.active_support.deprecation = :notify
-  Rails.application.routes.default_url_options[:host] = '???'
+  Rails.application.routes.default_url_options[:host] = 'lesseverything.com'
 
 
   # Use default logging formatter so that PID and timestamp are not suppressed.
