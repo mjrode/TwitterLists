@@ -26,7 +26,6 @@ class List < ActiveRecord::Base
     self.friends.reorder('friend_list_schedules.schedule')
   end
 
-
   def name_for_select
     name.titleize
   end

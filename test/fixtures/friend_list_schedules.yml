@@ -34,6 +34,20 @@ three:
   friend_id: 1334
   schedule: "3"
 
+#always on list
+on1: 
+  list: multiple
+  friend_id: 1334
+  schedule: "4"
+on2: 
+  list: multiple
+  friend_id: 4444
+  schedule: "4"
+on3: 
+  list: multiple
+  friend_id: 133495
+  schedule: "4"
+
 four:
   list_id: 1234
   friend_id: 1331
