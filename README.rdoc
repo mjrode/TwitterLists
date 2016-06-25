@@ -3,4 +3,4 @@
 [About TwitterLists] (https://twitterlists.herokuapp.com/about)
 
 
-<tt>rake doc:app</tt>.
+<tt>Michael Rode</tt>.
