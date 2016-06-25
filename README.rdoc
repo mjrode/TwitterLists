@@ -1,6 +1,6 @@
 == TwitterLists
-[TwitterLists](https://twitterlists.herokuapp.com)
-[About TwitterLists](https://twitterlists.herokuapp.com/about)
+[TwitterLists] (https://twitterlists.herokuapp.com)
+[About TwitterLists] (https://twitterlists.herokuapp.com/about)
 
 
 <tt>rake doc:app</tt>.
