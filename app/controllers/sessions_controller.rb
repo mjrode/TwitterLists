@@ -4,7 +4,9 @@ class SessionsController < ApplicationController
     @user = response.user
     session[:user_id] = @user.id
     flash[:success] = response.message
-    redirect_to pages_home_path
+    redirect_to '/sessions/set_email' if @user.email.nil?
+    redirect_to pages_home_path unless @user.email.nil?
+      
   end
 
   def set_email

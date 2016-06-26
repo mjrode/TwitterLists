@@ -6,6 +6,15 @@ class Listmailer < ApplicationMailer
     @list = list
     mail(
       to: @email,
+      subject: "Your new list has been created!"
+    )
+  end
+
+  def user_logged_in_email(user)
+    @user = user
+    @email = user.email
+    mail(
+      to: @email,
       subject: "All of your information has been imported!"
     )
   end

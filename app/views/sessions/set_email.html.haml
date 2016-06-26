@@ -1,6 +1,7 @@
 %body
   #pink
     %h2.new-title.center Add Your Email
+    %p.center We will send you an email when all of your information is ready.
     .move-down-new.small-12.columns.large-6.float-left.large-offset-3
       =form_tag('/update_email') do
         =text_field_tag :email,"",placeholder: "example@email.com", class: "form-control em3"

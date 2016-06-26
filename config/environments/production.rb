@@ -71,7 +71,16 @@ Rails.application.configure do
 
   # Send deprecation notices to registered listeners.
   config.active_support.deprecation = :notify
-  Rails.application.routes.default_url_options[:host] = 'lesseverything.com'
+  
+  config.action_mailer.smtp_settings = {
+    address:              'smtp.gmail.com', 
+    port:                 587, 
+    domain:               'https://twitterlists.herokuapp.com', 
+    user_name:            ENV['email'], 
+    password:             ENV['password'], 
+    authentication:       'plain', 
+    enable_starttls_auto: true 
+  }
 
 
   # Use default logging formatter so that PID and timestamp are not suppressed.
