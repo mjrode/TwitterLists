@@ -23,6 +23,11 @@
         color: black;
       }
   %body
+    - flash.each do |key, value|
+      .alert-box{"data-alert" => ""}
+        = value
+        %a.close{:href => "#"} ×
+        
     / Small Navigation Commenting out - this is showing above medium nav
     -# .title-bar{"data-hide-for" => "medium", "data-responsive-toggle" => "nav-menu"}
     -#   %a.logo-small.show-for-small-only{:href => "#"}

@@ -19,6 +19,15 @@
   #select-list{
     display: none;
   }
+  .alert-box{
+    position: absolute;
+    top: 2em;
+    font-size: 2em;
+    color: black;
+    background: rgba(255, 255, 255, 0.4);
+    padding: .2em;
+    border-radius: .4em;
+  }
 
 /*Small Screens*/
 @media only screen and (max-width: 600px) { 

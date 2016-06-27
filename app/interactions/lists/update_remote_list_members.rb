@@ -46,6 +46,8 @@ class Lists::UpdateRemoteListMembers < Less::Interaction
   def add_members
     friends_to_add = list_of_randomized_friends - current_list_of_friends
     twitter_client.add_list_members(list.remote_id, friends_to_add)
+  rescue Twitter::Error::NotFound
+    return false
   end
 
   def list_of_randomized_friends

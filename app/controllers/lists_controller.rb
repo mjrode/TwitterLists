@@ -26,9 +26,13 @@ class ListsController < ApplicationController
   end
 
   def add_friends
-    Lists::AddFriends.run(add_friends_params)
-    flash[:notice] = "Check out your new list here #{@list.name}"
-    redirect_to root_path
+    if Lists::AddFriends.run(add_friends_params)
+      flash[:notice] = "Check out your new list here #{@list.name}"
+      redirect_to root_path
+    else
+      flash[:notice] = "That list is no longer available"
+      redirect_to root_path
+    end
   end
 
   def show

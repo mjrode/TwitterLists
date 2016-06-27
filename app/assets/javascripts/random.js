@@ -8,6 +8,9 @@ $("document").ready(function() {
       });
       $('.goaway').toggle();
   });
+  $('.close').click(function(){
+    $('.alert-box').toggle();
+  });
   
 
   $('.shrink-me').each(function (index, value) { 
