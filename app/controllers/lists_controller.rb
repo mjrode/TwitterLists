@@ -85,5 +85,6 @@ class ListsController < ApplicationController
       list: @list,
       user: current_user
     }
+    binding.pry
   end
 end
