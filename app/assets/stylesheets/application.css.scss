@@ -16,13 +16,15 @@
 @import url(https://fonts.googleapis.com/css?family=Patrick+Hand+SC);
 @import 'https://fonts.googleapis.com/css?family=Fjalla+One|PT+Sans|Ubuntu';
 
+  #select-list{
+    display: none;
+  }
 
 /*Small Screens*/
 @media only screen and (max-width: 600px) { 
   .bio{
     clear: both;
   }
-
   .collage{
     display:inline;
     width: 49%;

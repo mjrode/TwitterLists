@@ -5,7 +5,6 @@ class Lists::ImportLists < Less::Interaction
   def run
     set_twitter_client
     fetch_remote_lists
-    Listmailer.user_logged_in_email(user).deliver_now if user.email.present?
   end
 
   private
