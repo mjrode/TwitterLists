@@ -12,7 +12,7 @@ class TweetsController < ApplicationController
   end
 
   def fetch
-    Users::ImportUsersFriends.delay.run(user: current_user)
+    Users::ImportTwitterAccountInformation.delay.run(user: current_user)
     redirect_to tweets_path
   end
 

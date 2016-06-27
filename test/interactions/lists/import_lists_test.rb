@@ -8,14 +8,14 @@ class Lists::ImportListsTest < ActiveSupport::TestCase
       secret: 'Efmd45AlTJml6nIcsaBVjLuyZwPpx9Bn9ktICwiPxNIRF'
     )
     use_cassette("import_friends_setup") do
-      Users::ImportUsersFriends.run(user: @user)
+      Users::ImportTwitterAccountInformation.run(user: @user)
     end
   end
 
   test "local lists get saved" do
     use_cassette("import_lists") do
       assert_changed -> { List.count } do
-        Lists::ImportLists.run(username: @user.username)
+        Lists::ImportLists.run(user: @user)
       end
     end
   end
@@ -23,7 +23,7 @@ class Lists::ImportListsTest < ActiveSupport::TestCase
   test "friend list schedule gets created" do
     use_cassette("import_lists") do
       assert_changed -> { FriendListSchedule.count } do
-        Lists::ImportLists.run(username: @user.username)
+        Lists::ImportLists.run(user: @user)
       end
     end
   end

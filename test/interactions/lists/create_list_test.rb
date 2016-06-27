@@ -9,8 +9,8 @@ class Lists::CreateListTest < ActiveSupport::TestCase
     )
     use_cassette("import_friends_and_lists") do
       Users::UserAuthenticationFromOauth.run(auth_hash: omniauth_hash)
-      Users::ImportUsersFriends.run(user: @user)
-      Lists::ImportLists.run(username: @user.username)
+      Users::ImportTwitterAccountInformation.run(user: @user)
+      Lists::ImportLists.run(user: @user)
     end
     @local_list = List.last
     @days_until_rotation = 3

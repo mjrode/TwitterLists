@@ -1,17 +1,17 @@
 # Creates local copies of remote lists when user signs in
 class Lists::ImportLists < Less::Interaction
-  expects :username
+  expects :user
 
   def run
     set_twitter_client
     fetch_remote_lists
-    Listmailer.user_logged_in_email(User.find_by_username(username)).deliver_now if User.find_by_username(username).email.present?
+    Listmailer.user_logged_in_email(user).deliver_now if user.email.present?
   end
 
   private
 
   def set_twitter_client
-    @user = User.find_by_username(username)
+    @user = user
     @client = Twitter::REST::Client.new do |config|
       config.consumer_key        = ENV["twitter_consumer_key"]
       config.consumer_secret     = ENV["twitter_secret_key"]
@@ -21,7 +21,7 @@ class Lists::ImportLists < Less::Interaction
   end
 
   def remote_lists
-    @client.lists(username)
+    @client.lists(user.username)
   end
 
   def fetch_remote_lists
@@ -32,7 +32,6 @@ class Lists::ImportLists < Less::Interaction
   end
 
   def save_local_list(remote_list)
-    user = User.find_by_username(username)
     List.create(
       name: remote_list.name,
       remote_id:  remote_list.id,
@@ -42,7 +41,7 @@ class Lists::ImportLists < Less::Interaction
   end
 
   def remote_members(remote_list)
-    @client.list_members(username, remote_list.id)
+    @client.list_members(user.username, remote_list.id)
   end
 
   def local_list(remote_list)

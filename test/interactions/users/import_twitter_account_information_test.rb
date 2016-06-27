@@ -1,6 +1,6 @@
 require 'test_helper'
 
-class Users::ImportUsersFriendsTest < ActiveSupport::TestCase
+class Users::ImportTwitterAccountInformationTest < ActiveSupport::TestCase
   def setup
     @user = User.new(
       username: "mjr_tts",
@@ -12,28 +12,28 @@ class Users::ImportUsersFriendsTest < ActiveSupport::TestCase
   test "adds friends to database" do
     use_cassette("user_signs_in") do
       assert_changed -> { Friend.count } do
-        Users::ImportUsersFriends.run(user: @user)
+        Users::ImportTwitterAccountInformation.run(user: @user)
       end
     end
   end
 
   test "adds friends that are only on a list to database" do
     use_cassette("user_signs_in") do
-      Users::ImportUsersFriends.run(user: @user)
+      Users::ImportTwitterAccountInformation.run(user: @user)
     end
     assert Friend.find_by_username("Coalboat").present?
   end
 
   test "It does not remove local friends that are present remotely" do
     use_cassette("user_signs_in") do
-      Users::ImportUsersFriends.run(user: @user)
+      Users::ImportTwitterAccountInformation.run(user: @user)
     end
     assert Friend.find_by_username("jasoncummings86").present?    
   end
 
   test "followers that are not your friends do not get added" do
     use_cassette("user_signs_in") do
-      Users::ImportUsersFriends.run(user: @user)
+      Users::ImportTwitterAccountInformation.run(user: @user)
     end
     assert Friend.find_by_username("marketmembrane").nil?
   end
@@ -41,7 +41,7 @@ class Users::ImportUsersFriendsTest < ActiveSupport::TestCase
   test "If you unfollow a friend on twitter they are deleted from the database" do
     assert Friend.find_by_username("deleteme").present?
     use_cassette("user_signs_in") do
-      Users::ImportUsersFriends.run(user: @user)
+      Users::ImportTwitterAccountInformation.run(user: @user)
     end
     assert Friend.find_by_username("deleteme").nil?
   end
@@ -49,7 +49,7 @@ class Users::ImportUsersFriendsTest < ActiveSupport::TestCase
   test "Tweets get added to database when friend logs in" do 
     use_cassette("user_signs_in") do 
       assert_changed -> { Tweet.count } do 
-        Users::ImportUsersFriends.run(user: @user)
+        Users::ImportTwitterAccountInformation.run(user: @user)
       end
     end
   end

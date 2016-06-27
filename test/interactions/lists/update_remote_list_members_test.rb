@@ -39,7 +39,7 @@ class Lists::UpdateRemoteListMembersTest < ActiveSupport::TestCase
 
   def user_signs_in
     VCR.use_cassette("user_signs_in") do 
-      Users::ImportUsersFriends.run(user: @user)
+      Users::ImportTwitterAccountInformation.run(user: @user)
     end
   end
 

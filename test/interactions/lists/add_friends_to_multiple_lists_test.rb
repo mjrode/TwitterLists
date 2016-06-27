@@ -42,8 +42,8 @@ class Lists::AddFriendsToMultipleListsTest < ActiveSupport::TestCase
 
   def user_log_in
     use_cassette("import remote friends and lists") do
-      Users::ImportUsersFriends.run(user: @user)
-      Lists::ImportLists.run(username: @user.username)
+      Users::ImportTwitterAccountInformation.run(user: @user)
+      Lists::ImportLists.run(user: @user)
       FriendListSchedule.where(list_id: lists(:food).id, friend_id: "133495").first.destroy
     end
   end

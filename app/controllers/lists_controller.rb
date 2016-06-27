@@ -22,7 +22,7 @@ class ListsController < ApplicationController
   end
 
   def select_friends
-    @friends = @list.group_by_schedule
+    @friends = current_user.friends
   end
 
   def add_friends
@@ -55,7 +55,7 @@ class ListsController < ApplicationController
   def import
     # Need to delay these first two api calls - this method takes a while to run
     # Need to rate limit this call
-    Users::ImportUsersFriends.run(user: current_user)
+    Users::ImportTwitterAccountInformation.run(user: current_user)
     Lists::UpdateLocalLists.run(username: current_user.username)
     flash[:success] = "Your lists have been updated!"
     redirect_to root_path

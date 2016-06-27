@@ -2,7 +2,8 @@
 # Sets FriendListSchedule for friends imported from current lists
 # Deletes local copy of friend if you stopped following them
 # Fetches Tweets for all friends and list members
-class Users::ImportUsersFriends < Less::Interaction
+# Imports lists and creates local copies
+class Users::ImportTwitterAccountInformation < Less::Interaction
   expects :user
 
   def run
@@ -10,6 +11,7 @@ class Users::ImportUsersFriends < Less::Interaction
     fetch_all_friends
     fetch_all_list_members
     remove_local_friends
+    Lists::ImportLists.run(user: user)
     fetch_tweets
     self
   end
@@ -75,7 +77,7 @@ class Users::ImportUsersFriends < Less::Interaction
 
   def fetch_tweets
     Friend.all.each do |friend|
-      Friends::GetTweets.run(friend: friend, user: user)
+      Friends::GetTweets.delay.run(friend: friend, user: user)
       sleep 3 unless Rails.env.test?
     end
   end
