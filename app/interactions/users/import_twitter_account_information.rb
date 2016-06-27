@@ -77,7 +77,7 @@ class Users::ImportTwitterAccountInformation < Less::Interaction
 
   def fetch_tweets
     Friend.all.each do |friend|
-      Friends::GetTweets.delay.run(friend: friend, user: user)
+      Friends::GetTweets.run(friend: friend, user: user)
       sleep 3 unless Rails.env.test?
     end
   end
