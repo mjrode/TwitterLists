@@ -3,6 +3,7 @@
   %head
     %meta{:charset => "utf-8"}/
     %meta{:content => "width=device-width, initial-scale=1.0", :name => "viewport"}/
+    %link{:rel => "stylesheet", :href => "https://cdnjs.cloudflare.com/ajax/libs/foundation/6.2.3/foundation-flex.css"}/
     = javascript_include_tag "application", 'data-turbolinks-track' => false
     = stylesheet_link_tag    "application"
     = csrf_meta_tags
@@ -64,4 +65,5 @@
     .row
       = yield
     = render partial: "partials/google_analytics_pageview"
+    %script{:src => "https://cdnjs.cloudflare.com/ajax/libs/foundation/6.2.3/foundation.js"} 
     
