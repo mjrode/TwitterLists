@@ -30,7 +30,6 @@ class Lists::AddFriendsToMultipleListsTest < ActiveSupport::TestCase
   test "friends get added to multiple lists" do
     user_log_in
     assert FriendListSchedule.where(list_id: lists(:food).id, friend_id: "133495").count == 0
-    assert FriendListSchedule.where(list_id: lists(:tech).id, friend_id: "4444").count == 0
     use_cassette("add friends to multiple lists") do
       AddFriendsToMultipleLists.run(friends_hash: @friend_list_schedules, user: @user)
     end

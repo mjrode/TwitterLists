@@ -23,6 +23,7 @@ class Lists::ImportListsTest < ActiveSupport::TestCase
 
   test "friend list schedule gets created" do
     use_cassette("import_lists") do
+      User.find_by_username("mjrode").destroy
       assert_changed -> { FriendListSchedule.count } do
         Lists::ImportLists.run(user: @user)
       end
