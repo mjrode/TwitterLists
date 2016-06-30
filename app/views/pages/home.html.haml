@@ -1,8 +1,8 @@
 %body.home
-  %h1.title.center
+  %h1.full-width.title.center
     Less-Tweets
   -if current_user
-    %h2.tag.center
+    %h2.tag.center.full-width
       Choose an Option
     .row
       .large-6.large-offset-3.small-12.columns
@@ -23,4 +23,4 @@
 
 
   -else
-    =link_to "Log In", "/auth/twitter", class: "button yellow float-center small-width large"
+    =link_to "Log In", "/auth/twitter", class: "button yellow"

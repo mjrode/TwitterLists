@@ -13,7 +13,6 @@ gem 'kaminari'
 gem 'honeybadger'
 gem 'haml-rails'
 gem 'delayed_job_active_record'
-gem 'delayed_job_web'
 gem 'draper'
 gem 'twitter', '5.16.0'
 gem 'omniauth-twitter'
@@ -25,6 +24,7 @@ group :development, :test do
   gem 'pry-rails'
   gem 'annotate'
   gem 'letter_opener'
+  gem 'delayed_job_web'
 end
 
 group :test do
