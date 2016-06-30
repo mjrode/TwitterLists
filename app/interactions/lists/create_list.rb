@@ -22,6 +22,7 @@ class Lists::CreateList < Less::Interaction
   def attempt_to_create_list
     if unique
       create_remote_list
+      self.message = "Your list was successfully created!"
       self.success = true
     else
       self.message = "This name list name has already been taken"

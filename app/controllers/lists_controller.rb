@@ -1,6 +1,5 @@
 class ListsController < ApplicationController
   before_action :set_list, only: [:view, :show, :destroy, :add_friends, :select_friends]
-  before_action :authenticate
 
   def index
     @friends = Friend.all
@@ -26,12 +25,8 @@ class ListsController < ApplicationController
   end
 
   def add_friends
-    if Lists::AddFriends.run(add_friends_params)
-      flash[:notice] = "#{@list.name} has been updated!"
-    else
-      @list.destroy
-      flash[:notice] = "That list is no longer available and has been removed"
-    end
+    result = Lists::AddFriends.run(add_friends_params)
+    flash[:notice] = result.message
     redirect_to root_path
   end
 
@@ -57,7 +52,6 @@ class ListsController < ApplicationController
   end
 
   def import
-    # Need to delay these first two api calls - this method takes a while to run
     # Need to rate limit this call
     Users::ImportTwitterAccountInformation.run(user: current_user)
     Lists::UpdateLocalLists.run(username: current_user.username)
@@ -66,10 +60,6 @@ class ListsController < ApplicationController
   end
 
   private
-
-  def authenticate
-    redirect_to root_path unless current_user
-  end
 
   def set_list
     @list = List.find(params[:id])

@@ -1,7 +1,7 @@
 %body.home
-  %h1.full-width.title.center
-    Less-Tweets
   -if current_user
+    %h1.full-width.title.center
+      Less-Tweets
     %h2.tag.center.full-width
       Choose an Option
     .row
@@ -23,4 +23,6 @@
 
 
   -else
-    =link_to "Log In", "/auth/twitter", class: "button yellow"
+    %h1.full-width.title.center.lower
+      Less-Tweets
+    =link_to "Log In", "/auth/twitter", class: "yellow large button half-width float-center"

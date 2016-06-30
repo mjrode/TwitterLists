@@ -1,6 +1,5 @@
 class TweetsController < ApplicationController
   before_action :set_tweet, only: [:edit, :destroy, :show]
-  before_action :authenticate
 
   def index
     @friends = Friend.all

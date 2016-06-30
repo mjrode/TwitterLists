@@ -1,4 +1,5 @@
 class SessionsController < ApplicationController
+  skip_before_action :authenticate
   def create
     response = Users::UserAuthenticationFromOauth.run(auth_hash: request.env["omniauth.auth"])
     @user = response.user

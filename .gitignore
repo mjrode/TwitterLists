@@ -25,3 +25,6 @@
 
 # Ignore Passwords
 /config/initializers/app_env_vars.rb
+
+/stylesheets/foundation.css
+/stylesheets/foundation.min.css
