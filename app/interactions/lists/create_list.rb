@@ -43,7 +43,7 @@ class Lists::CreateList < Less::Interaction
       name: remote_list.name,
       remote_id:  remote_list.id,
       user_id:  user.id,
-      days_until_rotation: days_until_rotation, 
+      days_until_rotation: days_until_rotation,
       url: remote_list.url
     )
   end

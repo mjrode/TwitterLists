@@ -4,7 +4,7 @@
 #
 #  id                      :integer          not null, primary key
 #  tweet_text              :string
-#  remote_user_id          :integer
+#  user_id                 :integer
 #  remote_tweet_id         :integer
 #  source                  :string
 #  emails_count            :integer
@@ -14,6 +14,7 @@
 #  created_at              :datetime         not null
 #  updated_at              :datetime         not null
 #  friend_id               :integer
+#  replied                 :boolean
 #
 
 require 'test_helper'
