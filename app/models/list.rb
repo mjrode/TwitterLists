@@ -69,7 +69,7 @@ class List < ActiveRecord::Base
   end
 
   def group_by_schedule
-    self.friend_list_schedules.reorder("schedule").map(&:friend)
+    self.friend_list_schedules.reorder("schedule").includes(:friend).map(&:friend)
   end
 
   def avatar_sample

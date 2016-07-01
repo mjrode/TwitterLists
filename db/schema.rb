@@ -89,10 +89,10 @@ ActiveRecord::Schema.define(version: 201606211553501) do
     t.string   "html_block"
     t.datetime "remote_tweet_created_at"
     t.integer  "direct_messages_count"
-    t.datetime "created_at",                        null: false
-    t.datetime "updated_at",                        null: false
+    t.datetime "created_at",                                        null: false
+    t.datetime "updated_at",                                        null: false
     t.integer  "friend_id"
-    t.boolean  "replied"
+    t.boolean  "replied",                           default: false
   end
 
   create_table "users", force: :cascade do |t|

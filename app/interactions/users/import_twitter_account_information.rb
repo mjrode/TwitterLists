@@ -13,7 +13,7 @@ class Users::ImportTwitterAccountInformation < Less::Interaction
     remove_local_friends
     Lists::ImportLists.run(user: user)
     fetch_tweets
-    Listmailer.user_logged_in_email(user).deliver_later if user.email.present?
+    LoggedInMailer.user_logged_in_email(user).deliver_later if user.email.present?
     self
   end
 
