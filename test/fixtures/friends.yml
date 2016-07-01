@@ -44,6 +44,7 @@ jasoncummings86:
   name: "Jason Cummings"
   bio: "Software Developer @ Hashrocket."
   remote_id: 2806203971
+  user_id: 22
 
 deleteme: 
   id: 133444
@@ -51,6 +52,7 @@ deleteme:
   user_id: 40
   name: "Delete Me"
   remote_id: 280620397144
+  user_id: 22
 
 wsj:
   id: 133495

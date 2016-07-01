@@ -26,16 +26,4 @@ class User < ActiveRecord::Base
   def sort(params)
     tweets.where(replied: false).order("remote_tweet_created_at DESC").page(params[:page])
   end
-
-  def unassigned_friends
-    unassigned_friends = []
-    self.friends.find_each do |friend|
-      unassigned_friends << friends if friend.friend_list_schedules.empty?
-      friend.friend_list_schedules.where(schedule: 4).find_each do |schedule|
-        unassigned_friend = Friend.find(schedule.friend_id)
-        unassigned_friends << unassigned_friend
-      end
-    end
-    unassigned_friends
-  end
 end

@@ -10,7 +10,7 @@ class Replies::SendReplyTest < ActiveSupport::TestCase
   end
 
   test "tweet status gets set to replied" do 
-    assert Tweet.find(@tweet_id).replied == false
+    refute Tweet.find(@tweet_id).replied
     use_cassette("send_reply_to_tweet") do 
       Replies::SendReply.run(
         message: @message,
