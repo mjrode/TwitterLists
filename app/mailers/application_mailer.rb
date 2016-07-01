@@ -1,4 +1,4 @@
 class ApplicationMailer < ActionMailer::Base
-  default from: "LessTweets.com"
+  default from: "Michael@lesseverything.com"
   layout 'mailer'
 end

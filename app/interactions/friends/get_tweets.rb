@@ -3,22 +3,13 @@ class Friends::GetTweets < Less::Interaction
   expects :user
 
   def run
-    set_twitter_client
+    @client = Shared::SetTwitterClient.run(user: user)
     tweets = get_tweets
     save_tweets(tweets)
     @new_tweets
   end
 
   private
-
-  def set_twitter_client
-    @client = Twitter::REST::Client.new do |config|
-      config.consumer_key        = ENV["twitter_consumer_key"]
-      config.consumer_secret     = ENV["twitter_secret_key"]
-      config.access_token        = user.token
-      config.access_token_secret = user.secret
-    end
-  end
 
   def get_tweets
     @client.user_timeline(
@@ -33,8 +24,11 @@ class Friends::GetTweets < Less::Interaction
     []
   end
 
+  def new_tweets
+    @new_tweets ||= []
+  end
+
   def save_tweets(tweets)
-    @new_tweets = []
     tweets.each do |remote_tweet|
       store_tweet(remote_tweet)
     end
@@ -44,7 +38,7 @@ class Friends::GetTweets < Less::Interaction
     if !Tweet.exists?(remote_tweet_id: remote_tweet.id) && remote_tweet.media?
       html_block = Tweets::Oembed.run(remote_tweet_id: remote_tweet.id)
       local_tweet = create_local_tweet(remote_tweet, html_block)
-      @new_tweets.push(local_tweet)
+      new_tweets.push(local_tweet)
     end
   end
 

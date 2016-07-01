@@ -15,7 +15,7 @@ class Replies::SendReplyTest < ActiveSupport::TestCase
       Replies::SendReply.run(
         message: @message,
         remote_tweet_id: @remote_tweet_id,
-        user_id: @user.id,
+        user: @user,
         tweet_id: @tweet_id
       )
     end

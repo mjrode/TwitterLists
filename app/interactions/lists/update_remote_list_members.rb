@@ -4,7 +4,8 @@ class Lists::UpdateRemoteListMembers < Less::Interaction
   expects :user_id
 
   def run
-    update_friends
+    remove_members
+    add_members
   end
 
   def twitter_client
@@ -20,11 +21,6 @@ class Lists::UpdateRemoteListMembers < Less::Interaction
 
   def user
     @user ||= User.find(user_id)
-  end
-
-  def update_friends
-    remove_members
-    add_members
   end
 
   def current_list_of_friends
@@ -51,6 +47,6 @@ class Lists::UpdateRemoteListMembers < Less::Interaction
   end
 
   def list_of_randomized_friends
-    randomized_list_of_friends.inject([]) { |a, e| a << e.friend.username }
+    randomized_list_of_friends.map { |e| e.friend.username }
   end
 end

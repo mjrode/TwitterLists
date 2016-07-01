@@ -13,7 +13,7 @@ class Lists::UpdateLocalListsTest < ActiveSupport::TestCase
     use_cassette("update local lists") do
       assert List.find_by_name("Heroku").nil?
       Users::ImportTwitterAccountInformation.run(user: @user)
-      Lists::UpdateLocalLists.run(username: @user.username)
+      Lists::UpdateLocalLists.run(user: @user)
       assert List.find_by_name("heroku").present?
     end
   end
@@ -22,7 +22,7 @@ class Lists::UpdateLocalListsTest < ActiveSupport::TestCase
     assert List.find_by_name("random").present?
     use_cassette("update local lists") do
       Users::ImportTwitterAccountInformation.run(user: @user)
-      Lists::UpdateLocalLists.run(username: @user.username)
+      Lists::UpdateLocalLists.run(user: @user)
       assert List.find_by_name("random").nil?
     end
   end
@@ -31,7 +31,7 @@ class Lists::UpdateLocalListsTest < ActiveSupport::TestCase
     assert List.find_by_name("Tech").present?
     use_cassette("update local lists") do
       Users::ImportTwitterAccountInformation.run(user: @user)
-      Lists::UpdateLocalLists.run(username: @user.username)
+      Lists::UpdateLocalLists.run(user: @user)
       assert List.find_by_name("Tech").present?
     end
   end
@@ -41,7 +41,7 @@ class Lists::UpdateLocalListsTest < ActiveSupport::TestCase
     assert FriendListSchedule.find(friend_list_schedule_id).present?
     use_cassette("update local lists") do
       Users::ImportTwitterAccountInformation.run(user: @user)
-      Lists::UpdateLocalLists.run(username: @user.username)
+      Lists::UpdateLocalLists.run(user: @user)
     end
     assert FriendListSchedule.find_by_id(friend_list_schedule_id).nil?
   end

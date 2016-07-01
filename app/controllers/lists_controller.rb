@@ -54,7 +54,7 @@ class ListsController < ApplicationController
   def import
     # Need to rate limit this call
     Users::ImportTwitterAccountInformation.run(user: current_user)
-    Lists::UpdateLocalLists.run(username: current_user.username)
+    Lists::UpdateLocalLists.run(user: current_user)
     flash[:success] = "Your lists have been updated!"
     redirect_to root_path
   end

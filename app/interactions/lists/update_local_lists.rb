@@ -1,27 +1,17 @@
 # Updates local lists to reflect changes made on Twitter.com
 class Lists::UpdateLocalLists < Less::Interaction
-  expects :username
+  expects :user
 
   def run
-    set_twitter_client
+    @client = Shared::SetTwitterClient.run(user: user)
     delay.fetch_remote_lists
     delay.remove_deleted_lists
   end
 
   private
 
-  def set_twitter_client
-    @user = User.find_by_username(username)
-    @client = Twitter::REST::Client.new do |config|
-      config.consumer_key        = ENV["twitter_consumer_key"]
-      config.consumer_secret     = ENV["twitter_secret_key"]
-      config.access_token        = @user.token
-      config.access_token_secret = @user.secret
-    end
-  end
-
   def remote_lists
-    @remote_lists ||= @client.lists(username)
+    @remote_lists ||= @client.lists(user.username)
   end
 
   def remove_deleted_lists
@@ -41,7 +31,6 @@ class Lists::UpdateLocalLists < Less::Interaction
   end
 
   def save_local_list(remote_list)
-    user = User.find_by_username(username)
     List.create(
       name: remote_list.name,
       remote_id:  remote_list.id,
@@ -50,7 +39,7 @@ class Lists::UpdateLocalLists < Less::Interaction
   end
 
   def remote_members(remote_list)
-    @client.list_members(username, remote_list.id)
+    @client.list_members(user.username, remote_list.id)
   end
 
   def local_list(remote_list)

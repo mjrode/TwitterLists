@@ -3,21 +3,11 @@ class Lists::ImportLists < Less::Interaction
   expects :user
 
   def run
-    set_twitter_client
+    @client = Shared::SetTwitterClient.run(user: user)
     fetch_remote_lists
   end
 
   private
-
-  def set_twitter_client
-    @user = user
-    @client = Twitter::REST::Client.new do |config|
-      config.consumer_key        = ENV["twitter_consumer_key"]
-      config.consumer_secret     = ENV["twitter_secret_key"]
-      config.access_token        = @user.token
-      config.access_token_secret = @user.secret
-    end
-  end
 
   def remote_lists
     @client.lists(user.username)
