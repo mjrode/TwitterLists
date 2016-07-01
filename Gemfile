@@ -24,7 +24,6 @@ group :development, :test do
   gem 'pry-rails'
   gem 'annotate'
   gem 'letter_opener'
-  gem 'delayed_job_web'
 end
 
 group :test do

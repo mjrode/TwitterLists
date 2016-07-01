@@ -68,10 +68,6 @@ GEM
     delayed_job_active_record (4.1.1)
       activerecord (>= 3.0, < 5.1)
       delayed_job (>= 3.0, < 5)
-    delayed_job_web (1.2.10)
-      activerecord (> 3.0.0)
-      delayed_job (> 2.0.3)
-      sinatra (>= 1.4.4)
     domain_name (0.5.20160310)
       unf (>= 0.0.5, < 1.0.0)
     draper (2.1.0)
@@ -179,8 +175,6 @@ GEM
     pry-rails (0.3.4)
       pry (>= 0.9.10)
     rack (1.6.4)
-    rack-protection (1.5.3)
-      rack
     rack-test (0.6.3)
       rack (>= 1.0)
     rails (4.2.5)
@@ -234,10 +228,6 @@ GEM
       rdoc (~> 4.0)
     sexp_processor (4.7.0)
     simple_oauth (0.3.1)
-    sinatra (1.4.7)
-      rack (~> 1.5)
-      rack-protection (~> 1.4)
-      tilt (>= 1.3, < 3)
     slop (3.6.0)
     spring (1.7.1)
     sprockets (3.6.0)
@@ -292,7 +282,6 @@ DEPENDENCIES
   byebug
   coffee-rails (~> 4.1.0)
   delayed_job_active_record
-  delayed_job_web
   draper
   figaro
   foundation-rails
