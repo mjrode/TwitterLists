@@ -39,6 +39,14 @@ $("document").ready(function() {
 
   });
 
+  $('.tweets').each(function (index, value){
+      $("#reply-box-"+index).click(function(){
+        $("#tweet-reply-"+index).slideDown( "fast", function() {
+   // Animation complete.
+ });
+      });
+  });
+   
 
 
 

@@ -5,8 +5,9 @@
   height: 2em;
   }
 
-%h1.center= "Edit #{@list.name} (#{@list.mode})" 
-%p= "#{@list.mode} list" if @list.mode
+%h1.center
+  = "Edit #{@list.name}" 
+  .smaller= "(#{@list.mode})"  if @list.mode
 %hr.shrink-me
 
 
