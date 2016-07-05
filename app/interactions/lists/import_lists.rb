@@ -25,7 +25,8 @@ class Lists::ImportLists < Less::Interaction
       name: remote_list.name,
       remote_id:  remote_list.id,
       user_id:  user.id,
-      url: remote_list.url
+      url: remote_list.url, 
+      mode: remote_list.mode
     )
   end
 

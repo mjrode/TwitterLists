@@ -5,7 +5,10 @@
   height: 2em;
   }
 
-%h1.center= "#{@list.name}" 
+%h1.center 
+  ="#{@list.name}"
+  .smaller
+    ="(#{@list.mode})"
 %hr.shrink-me
 
 

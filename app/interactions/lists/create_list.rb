@@ -35,7 +35,7 @@ class Lists::CreateList < Less::Interaction
   end
 
   def create_remote_list
-    remote_list = @client.create_list(local_list.name)
+    remote_list = @client.create_list(local_list.name, mode: "private")
     create_local_copy(remote_list)
   end
 
@@ -45,7 +45,8 @@ class Lists::CreateList < Less::Interaction
       remote_id:  remote_list.id,
       user_id:  user.id,
       days_until_rotation: days_until_rotation,
-      url: remote_list.url
+      url: remote_list.url, 
+      mode: 'private'
     )
   end
 end

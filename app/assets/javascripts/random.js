@@ -22,13 +22,14 @@ $("document").ready(function() {
       var value = $(this).val();      
       $(".color-me-"+index).css('background', colors[value]);
       $("#move-me-"+index).appendTo(div[value]);
+      console.log("click worked");
       if(value != 'default'){
         $("#move-hr-"+index).remove();
       }
     });
 
       var colors = {'always_on': GREEN, 'frequently_on': YELLOW, 'sometimes_on': RED, 'never-on': 'white' };
-           var div = {'always_on': '#always-on', 'frequently_on': '#frequently-on', 'sometimes_on': '#sometimes-on'};
+      var div = {'always_on': '#always-on', 'frequently_on': '#frequently-on', 'sometimes_on': '#sometimes-on'};
       var value = $("#friend-list-options-"+index).val();      
       $(".color-me-"+index).css('background', colors[value]);
       $(".color-me-"+index).css('background', colors[value]);
