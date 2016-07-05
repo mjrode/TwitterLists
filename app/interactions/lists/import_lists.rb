@@ -47,6 +47,9 @@ class Lists::ImportLists < Less::Interaction
       friend_id: local_friend(remote_member.id).id,
       schedule: 1
     )
+  rescue NoMethodError
+    puts remote_list.name
+    puts remote_member.username
   end
 
   def create_friend_list_schedules(remote_list)

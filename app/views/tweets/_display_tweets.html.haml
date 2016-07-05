@@ -1,7 +1,7 @@
-.large-5.large-offset-3.small-12.columns
+.small-5.small-offset-3.columns
   = link_to "Load New Tweets", fetch_tweets_path, class: "yellow large button full-width float-center margin-top-2"
 -@tweets.each do |tweet|
-  .columns.large-5.large-offset-3.center.small-12
+  .columns.small-5.small-offset-3.center
     =tweet.html_block.html_safe
     =form_tag replies_create_path do 
       .form-group

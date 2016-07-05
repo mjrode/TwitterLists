@@ -1,7 +1,7 @@
 $("document").ready(function() {
-  const RED = 'rgba(232, 68, 68, 0.529412)';
-  const YELLOW = '#fee873';
-  const GREEN = 'rgba(53, 214, 37, 0.639216)';
+  var RED = 'rgba(232, 68, 68, 0.529412)';
+  var YELLOW = '#fee873';
+  var GREEN = 'rgba(53, 214, 37, 0.639216)';
  
   $('#select-list').hide();
   $('#show-find-list').click(function() {
@@ -17,23 +17,23 @@ $("document").ready(function() {
   
   $('.shrink-me').each(function (index, value) { 
     $("#friend-list-options-"+index).change(function(){
-      var colors = {1: GREEN, 2: YELLOW, 3: RED, 4: 'white' };
-      var div = {1: '#always-on', 2: '#frequently-on', 3: '#sometimes-on'};
+      var colors = {'always_on': GREEN, 'frequently_on': YELLOW, 'sometimes_on': RED, 'never-on': 'white' };
+      var div = {'always_on': '#always-on', 'frequently_on': '#frequently-on', 'sometimes_on': '#sometimes-on'};
       var value = $(this).val();      
       $(".color-me-"+index).css('background', colors[value]);
       $("#move-me-"+index).appendTo(div[value]);
-      if(value!=4){
+      if(value != 'default'){
         $("#move-hr-"+index).remove();
       }
     });
 
-      var div = {1: '#always-on', 2: '#frequently-on', 3: '#sometimes-on'};
-      var colors = {1: GREEN, 2: YELLOW, 3: RED, 4: 'white' };
+      var colors = {'always_on': GREEN, 'frequently_on': YELLOW, 'sometimes_on': RED, 'never-on': 'white' };
+           var div = {'always_on': '#always-on', 'frequently_on': '#frequently-on', 'sometimes_on': '#sometimes-on'};
       var value = $("#friend-list-options-"+index).val();      
       $(".color-me-"+index).css('background', colors[value]);
       $(".color-me-"+index).css('background', colors[value]);
       $("#move-me-"+index).appendTo(div[value]);
-      if(value!=4){
+      if(value != 'default'){
         $("#move-hr-"+index).remove();
       }
 
