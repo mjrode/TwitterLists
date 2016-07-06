@@ -10,6 +10,7 @@
 #  remote_id           :integer
 #  url                 :string
 #  days_until_rotation :integer
+#  mode                :string
 #
 
 require 'test_helper'

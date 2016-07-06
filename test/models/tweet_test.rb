@@ -15,6 +15,7 @@
 #  updated_at              :datetime         not null
 #  friend_id               :integer
 #  replied                 :boolean          default(FALSE)
+#  viewed                  :boolean          default(FALSE)
 #
 
 require 'test_helper'

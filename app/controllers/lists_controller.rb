@@ -59,6 +59,10 @@ class ListsController < ApplicationController
     redirect_to root_path
   end
 
+  def viewed
+    
+  end
+
   private
 
   def set_list
