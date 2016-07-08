@@ -8,10 +8,9 @@ class Replies::SendReply < Less::Interaction
     @client = Shared::SetTwitterClient.run(user: user)
     reply
     set_status_as_replied
-  rescue Twitter::Error::Forbidden
+  rescue Twitter::Error::Forbidden  => e
+    binding.pry
     false
-  else
-    true
   end
 
   private
@@ -20,6 +19,7 @@ class Replies::SendReply < Less::Interaction
     tweet = Tweet.find(tweet_id)
     tweet.replied = true
     tweet.save
+    binding.pry
   end
 
   def reply

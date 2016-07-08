@@ -1,12 +1,28 @@
+:javascript
+  //$(document).ready(function(){
+    //console.log('ok we made it');
+    //$('.tweet-form').on('submit', function(e){
+     // console.log('submitted!');
+    //});
+  //});
+  $(document).ready(function(){
+    $('.tweet-form').on('submit', function(e) {
+      e.preventDefault();
+      var data = $(this).serialize();
+      $.post('/replies/create', data, function(response) {
+        //if response 
+        // $(this).parents('.tweets').hide()
+      }, 'json');
+    });
+  });
 :css 
   .reply{
   display: none;
   }
-
 -@tweets.each_with_index do |tweet, index|
   .columns.small-5.small-offset-3.center.tweets
     =tweet.html_block.html_safe
-    =form_tag replies_create_path do 
+    =form_tag replies_create_path, id: "form-tweet-#{tweet.id}", class: 'tweet-form' do 
       .form-group
         Reply
         =text_area_tag :body, "@#{tweet.friend.username}", class: "full-width form-control resize-reply", id: "reply-box-#{index}"

@@ -1,0 +1,6 @@
+$('document').ready(function(){
+  $('.tweet-form').on('ajax:complete', function() {
+    console.log($(this));
+     $(this).closest('.tweets').fadeOut();
+  });
+})

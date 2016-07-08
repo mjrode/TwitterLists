@@ -17,6 +17,7 @@ Rails.application.routes.draw do
   resources :tweets do
     collection do 
       get :fetch
+      get :text
     end
   end
 
@@ -25,19 +26,19 @@ Rails.application.routes.draw do
       get :all
     end
   end
-  get 'find_list', to: 'pages#find_list'
+  get '/find_list', to: 'pages#find_list'
 
   # pages
-  get 'pages/home'
+  get '/pages/home'
   get '/about', to: 'pages#about'
   root 'pages#home'
 
   #replies
-  post 'replies/create', to: "replies#create"
+  post '/replies/create', to: "replies#create"
 
   # sessions
   post '/update_email', to: 'sessions#update_email'
-  get 'sessions/create'
+  get '/sessions/create'
   get '/sessions/set_email', to: 'sessions#set_email'
   delete '/logout', to: 'sessions#destroy'
   get '/logout', to: 'sessions#destroy'

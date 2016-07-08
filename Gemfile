@@ -18,6 +18,7 @@ gem 'twitter', '5.16.0'
 gem 'omniauth-twitter'
 gem 'figaro'
 gem 'foundation-rails'
+gem 'responders'
 
 group :development, :test do
   gem 'byebug'

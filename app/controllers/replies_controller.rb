@@ -3,15 +3,17 @@ class RepliesController < ApplicationController
   end
 
   def create
-    Replies::SendReply.run(
+    result = Replies::SendReply.run(
       message: params[:body],
       remote_tweet_id: params[:remote_tweet_id],
       tweet_id: params[:tweet_id],
       user: current_user
     )
-    redirect_to :back
-  rescue Twitter::Error => e
-    flash[:notice] = "Unable to send reply due to #{e}"
-    redirect_to :back
+    respond_to do |format|
+      format.html {redirect_to :back}
+      format.json  { render json: result.to_json }
+    end
+   rescue Twitter::Error => e
+     flash[:notice] = "Unable to send reply due to #{e}"
   end
 end
