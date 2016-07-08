@@ -8,3 +8,14 @@ $(document).ready(function(){
     }, 'json');
   });
 });
+
+$(document).ready(function(){
+  $('.share-form').on('submit', function(e) {
+    e.preventDefault();
+    var data = $(this).serialize();
+    $(this).hide();
+    $.post('/tweets/share', data, function(response) {
+      return response
+    }, 'json');
+  });
+});

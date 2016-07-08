@@ -106,9 +106,10 @@ ActiveRecord::Schema.define(version: 201606211553501) do
     t.string   "token"
     t.string   "secret"
     t.integer  "remote_id",  limit: 8
-    t.datetime "created_at",           null: false
-    t.datetime "updated_at",           null: false
+    t.datetime "created_at",                           null: false
+    t.datetime "updated_at",                           null: false
     t.string   "email"
+    t.boolean  "shared",               default: false
   end
 
 end

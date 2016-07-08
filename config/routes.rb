@@ -35,6 +35,9 @@ Rails.application.routes.draw do
 
   #replies
   post '/replies/create', to: "replies#create"
+  #share
+  post '/tweets/share', to: "tweets#share"
+
 
   # sessions
   post '/update_email', to: 'sessions#update_email'

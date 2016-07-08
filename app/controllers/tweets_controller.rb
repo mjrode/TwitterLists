@@ -10,6 +10,16 @@ class TweetsController < ApplicationController
   def new
   end
 
+  def share
+    result = Tweets::ShareApp.run(
+      message: params[:body],
+      user: current_user
+    )
+    respond_to do |format|
+      format.json  { render json: result.to_json }
+    end
+  end
+
   def fetch
     Users::ImportTwitterAccountInformation.delay.run(user: current_user)
     redirect_to tweets_path

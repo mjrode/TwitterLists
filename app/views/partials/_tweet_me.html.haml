@@ -1,4 +1,9 @@
 
-= link_to image_tag("http://vignette4.wikia.nocookie.net/simpsons/images/1/11/Twitter_bird_icon.png/revision/latest?cb=20111228065136"), "#", class: "tweet-me"
-%p.center.tweet-me-text Share with Friends
-
+-# = link_to image_tag(), "#", class: "tweet-me"
+-unless current_user.shared?
+  =form_tag replies_create_path, id: "form-tweet", class: 'share-form' do 
+    %p.tweet-me-text Share with Friends
+    .form-group
+      =hidden_field_tag :body, "LessTweets will reduce your twitter clutter: https://twitterlists.herokuapp.com", class: "full-width form-control resize-reply", id: "reply-box"
+    .form-group
+      =image_submit_tag "http://vignette4.wikia.nocookie.net/simpsons/images/1/11/Twitter_bird_icon.png/revision/latest?cb=20111228065136", class: "tweet-me", id: "tweet-reply"
