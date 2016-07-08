@@ -6,10 +6,10 @@ class Replies::SendReply < Less::Interaction
 
   def run
     @client = Shared::SetTwitterClient.run(user: user)
-    reply
+    reply if Rails.env.production?
     set_status_as_replied
   rescue Twitter::Error::Forbidden  => e
-    binding.pry
+    puts e
     false
   end
 
@@ -19,7 +19,6 @@ class Replies::SendReply < Less::Interaction
     tweet = Tweet.find(tweet_id)
     tweet.replied = true
     tweet.save
-    binding.pry
   end
 
   def reply

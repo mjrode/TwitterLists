@@ -13,6 +13,7 @@
 //= require jquery
 //= require foundation
 //= require jquery_ujs
+//= require sugar
 //= require_tree
 
 

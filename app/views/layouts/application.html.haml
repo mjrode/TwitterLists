@@ -8,6 +8,7 @@
     = csrf_meta_tags
     %link{href: "https://fonts.googleapis.com/css?family=Bungee|Bungee+Outline|Handlee|Mogra", rel: "stylesheet"}/
     = render partial: "partials/google_analytics"
+    %script{:src => "//cdn.jsdelivr.net/velocity/1.2.3/velocity.min.js"}
     %title
       TwitterLists
     :css
@@ -27,14 +28,6 @@
       .alert-box{"data-alert" => ""}
         = value
         %a.close{:href => "#"} ×
-        
-    / Small Navigation Commenting out - this is showing above medium nav
-    -# .title-bar{"data-hide-for" => "medium", "data-responsive-toggle" => "nav-menu"}
-    -#   %a.logo-small.show-for-small-only{:href => "#"}
-    -#     =image_tag "logo.png", class: "img min"
-    -#   %button.menu-icon{"data-toggle" => "", :type => "button"}
-    -#   .title-bar-title Menu
-    / Medium-Up Navigation
     %nav#nav-menu.top-bar.custom
       .logo-wrapper.hide-for-small-only
         .logo
@@ -63,5 +56,6 @@
               =link_to "Log In", "/auth/twitter"
     .row
       = yield
+    = render partial: "partials/tweet_me"
     = render partial: "partials/google_analytics_pageview"
     

@@ -50,7 +50,7 @@ class Lists::ImportLists < Less::Interaction
     )
   rescue NoMethodError
     puts remote_list.name
-    puts remote_member.username
+    puts remote_member.screen_name
   end
 
   def create_friend_list_schedules(remote_list)

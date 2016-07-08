@@ -45,5 +45,9 @@ $("document").ready(function() {
       });
   });
 
-});
+  $('.tweet-me').click(function (){
+    console.log("clicked")
+    $('.share').toggle();
+  })
 
+});
