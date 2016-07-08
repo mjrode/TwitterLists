@@ -6,7 +6,7 @@ class Replies::SendReply < Less::Interaction
 
   def run
     @client = Shared::SetTwitterClient.run(user: user)
-    reply if Rails.env.production?
+    reply #if Rails.env.production?
     set_status_as_replied
   rescue Twitter::Error::Forbidden  => e
     Honeybadger.notify e
