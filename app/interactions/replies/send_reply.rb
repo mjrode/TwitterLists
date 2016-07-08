@@ -9,7 +9,7 @@ class Replies::SendReply < Less::Interaction
     reply if Rails.env.production?
     set_status_as_replied
   rescue Twitter::Error::Forbidden  => e
-    puts e
+    Honeybadger.notify e
     false
   end
 
