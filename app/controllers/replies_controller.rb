@@ -10,12 +10,11 @@ class RepliesController < ApplicationController
       user: current_user
     )
     respond_to do |format|
-      format.html {redirect_to :back}
+      format.html { redirect_to :back }
       format.json  { render json: result.to_json }
       format.js  { render text: 'ajax done' }
-
     end
-   rescue Twitter::Error => e
+  rescue Twitter::Error => e
      flash[:notice] = "Unable to send reply due to #{e}"
   end
 end

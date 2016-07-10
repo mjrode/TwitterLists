@@ -40,7 +40,7 @@ class ListsController < ApplicationController
   end
 
   def edit
-    @list = List.find(params[:id])
+    @list = current_user.lists.find(params[:id])
     @friends = current_user.friends
     @user = current_user
   end
@@ -66,7 +66,7 @@ class ListsController < ApplicationController
   private
 
   def set_list
-    @list = List.find(params[:id])
+    @list = current_user.lists.find(params[:id])
   end
 
   def create_list_params

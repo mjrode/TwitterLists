@@ -17,7 +17,7 @@
   %row#sometimes-on
   %hr.shrink-me
   - @friends.each_with_index do |friend, index|
-    .row.shrink-me.middle{id: "move-me-#{index}"}
+    .row.shrink-me.middle.bump-up{id: "move-me-#{index}"}
       .large-3.columns.border-right.row-height
         =image_tag friend.avatar, class: "circle middle"
       .large-3.columns.border-right.row-height{class: "color-me-#{index}"}
@@ -30,5 +30,5 @@
         =hidden_field_tag "list", @list.id 
     %hr.shrink-me-hr{id: "move-hr-#{index}"}
       
-  =submit_tag "Submit", class: "button success large float-center half-width"
+  =submit_tag "Submit", class: "button success large float-center half-width", id: "stay-down"
     
