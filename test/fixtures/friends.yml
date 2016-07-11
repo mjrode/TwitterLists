@@ -13,6 +13,12 @@
 #  avatar     :string
 #  following  :boolean
 #
+michael: 
+  id: 4444
+  username: "mjrode"
+  user_id: 12
+  name: "Michael Rode"
+  remote_id: 172021389
 
 kendrick:
   id: 1619
@@ -30,12 +36,6 @@ sports:
   bio: "The official site of Sky Sports Football League coverage"
   remote_id: 443668407
   
-michael: 
-  id: 4444
-  username: "mjrode"
-  user_id: 12
-  name: "Michael Rode"
-  remote_id: 172021389
 
 jasoncummings86: 
   id: 1334

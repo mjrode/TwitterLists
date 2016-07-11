@@ -20,5 +20,5 @@
 
 tweet:
   remote_tweet_id: "709187877150859264"
-  friend: michael
+  friend_id: 4444
   replied: false

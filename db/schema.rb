@@ -110,6 +110,7 @@ ActiveRecord::Schema.define(version: 201606211553501) do
     t.datetime "updated_at",                           null: false
     t.string   "email"
     t.boolean  "shared",               default: false
+    t.boolean  "imported",             default: false
   end
 
 end

@@ -35494,4 +35494,859 @@ http_interactions:
         href=\"http:\/\/sites.google.com\/site\/yorufukurou\/\" rel=\"nofollow\"\u003eYoruFukurou\u003c\/a\u003e","in_reply_to_status_id":null,"in_reply_to_status_id_str":null,"in_reply_to_user_id":null,"in_reply_to_user_id_str":null,"in_reply_to_screen_name":null,"geo":null,"coordinates":null,"place":null,"contributors":null,"is_quote_status":false,"retweet_count":181,"favorite_count":135,"favorited":false,"retweeted":false,"possibly_sensitive":false,"lang":"en"},"contributors_enabled":false,"is_translator":false,"is_translation_enabled":false,"profile_background_color":"EBEBEB","profile_background_image_url":"http:\/\/abs.twimg.com\/images\/themes\/theme7\/bg.gif","profile_background_image_url_https":"https:\/\/abs.twimg.com\/images\/themes\/theme7\/bg.gif","profile_background_tile":false,"profile_image_url":"http:\/\/pbs.twimg.com\/profile_images\/691206086955790336\/CDMbA57p_normal.png","profile_image_url_https":"https:\/\/pbs.twimg.com\/profile_images\/691206086955790336\/CDMbA57p_normal.png","profile_banner_url":"https:\/\/pbs.twimg.com\/profile_banners\/3116191\/1453219159","profile_link_color":"990000","profile_sidebar_border_color":"DFDFDF","profile_sidebar_fill_color":"F3F3F3","profile_text_color":"333333","profile_use_background_image":true,"has_extended_profile":false,"default_profile":false,"default_profile_image":false,"following":false,"follow_request_sent":false,"notifications":false}],"next_cursor":0,"next_cursor_str":"0","previous_cursor":0,"previous_cursor_str":"0"}'
     http_version: 
   recorded_at: Mon, 27 Jun 2016 18:41:30 GMT
+- request:
+    method: get
+    uri: https://api.twitter.com/1.1/statuses/user_timeline.json?count=200&exclude_replies=true&include_rts=false&screen_name=kendricklamar&trim_user=true
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      User-Agent:
+      - TwitterRubyGem/5.16.0
+      Authorization:
+      - OAuth oauth_consumer_key="92ZwZKHSMlKh9GRkdonSVIc7L", oauth_nonce="7354997c3b73f74cf2bc09eaf6b0806a",
+        oauth_signature="37lkQPcgsUIv%2Fa4whMVlZnZPtGY%3D", oauth_signature_method="HMAC-SHA1",
+        oauth_timestamp="1468248597", oauth_token="711995065347006465-JLJWrBLyfySojWUz1C7mwaqx37Qv7vQ",
+        oauth_version="1.0"
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 401
+      message: Authorization Required
+    headers:
+      Content-Length:
+      - '89'
+      Content-Type:
+      - application/json; charset=utf-8
+      Date:
+      - Mon, 11 Jul 2016 14:50:00 GMT
+      Server:
+      - tsa_b
+      Set-Cookie:
+      - guest_id=v1%3A146824860008483113; Domain=.twitter.com; Path=/; Expires=Wed,
+        11-Jul-2018 14:50:00 UTC
+      Strict-Transport-Security:
+      - max-age=631138519
+      X-Connection-Hash:
+      - a3d6bd1779fcc2e9fb67098fa7af9108
+      X-Response-Time:
+      - '7'
+    body:
+      encoding: ASCII-8BIT
+      string: '{"errors":[{"code":32,"message":"Could not authenticate you."}]}'
+    http_version: 
+  recorded_at: Mon, 11 Jul 2016 14:49:59 GMT
+- request:
+    method: get
+    uri: https://api.twitter.com/1.1/statuses/user_timeline.json?count=200&exclude_replies=true&include_rts=false&screen_name=SkySportsFL&trim_user=true
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      User-Agent:
+      - TwitterRubyGem/5.16.0
+      Authorization:
+      - OAuth oauth_consumer_key="92ZwZKHSMlKh9GRkdonSVIc7L", oauth_nonce="3b7a32224934ab2dd5c57789d57f2967",
+        oauth_signature="s%2BHiohZj%2F9kMDzYniWbsEBGRUXI%3D", oauth_signature_method="HMAC-SHA1",
+        oauth_timestamp="1468248599", oauth_token="711995065347006465-JLJWrBLyfySojWUz1C7mwaqx37Qv7vQ",
+        oauth_version="1.0"
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 401
+      message: Authorization Required
+    headers:
+      Content-Length:
+      - '89'
+      Content-Type:
+      - application/json; charset=utf-8
+      Date:
+      - Mon, 11 Jul 2016 14:50:00 GMT
+      Server:
+      - tsa_b
+      Set-Cookie:
+      - guest_id=v1%3A146824860039073522; Domain=.twitter.com; Path=/; Expires=Wed,
+        11-Jul-2018 14:50:00 UTC
+      Strict-Transport-Security:
+      - max-age=631138519
+      X-Connection-Hash:
+      - 821dcce5844b76924a88ab63cc4218f1
+      X-Response-Time:
+      - '8'
+    body:
+      encoding: ASCII-8BIT
+      string: '{"errors":[{"code":32,"message":"Could not authenticate you."}]}'
+    http_version: 
+  recorded_at: Mon, 11 Jul 2016 14:49:59 GMT
+- request:
+    method: get
+    uri: https://api.twitter.com/1.1/statuses/user_timeline.json?count=200&exclude_replies=true&include_rts=false&screen_name=deleteme&trim_user=true
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      User-Agent:
+      - TwitterRubyGem/5.16.0
+      Authorization:
+      - OAuth oauth_consumer_key="92ZwZKHSMlKh9GRkdonSVIc7L", oauth_nonce="b97094de89fb7f5101cd1a4862c0d1ea",
+        oauth_signature="4tEClTXWKl4IalKXHvtAFZxG7jY%3D", oauth_signature_method="HMAC-SHA1",
+        oauth_timestamp="1468248599", oauth_token="711995065347006465-JLJWrBLyfySojWUz1C7mwaqx37Qv7vQ",
+        oauth_version="1.0"
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 401
+      message: Authorization Required
+    headers:
+      Content-Length:
+      - '89'
+      Content-Type:
+      - application/json; charset=utf-8
+      Date:
+      - Mon, 11 Jul 2016 14:50:00 GMT
+      Server:
+      - tsa_b
+      Set-Cookie:
+      - guest_id=v1%3A146824860089108750; Domain=.twitter.com; Path=/; Expires=Wed,
+        11-Jul-2018 14:50:00 UTC
+      Strict-Transport-Security:
+      - max-age=631138519
+      X-Connection-Hash:
+      - 0635da6de18bcb417b5d34c620b4f577
+      X-Response-Time:
+      - '13'
+    body:
+      encoding: ASCII-8BIT
+      string: '{"errors":[{"code":32,"message":"Could not authenticate you."}]}'
+    http_version: 
+  recorded_at: Mon, 11 Jul 2016 14:49:59 GMT
+- request:
+    method: get
+    uri: https://api.twitter.com/1.1/statuses/user_timeline.json?count=200&exclude_replies=true&include_rts=false&screen_name=coalboat&trim_user=true
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      User-Agent:
+      - TwitterRubyGem/5.16.0
+      Authorization:
+      - OAuth oauth_consumer_key="92ZwZKHSMlKh9GRkdonSVIc7L", oauth_nonce="ce33573572905f578504cacd7ac21ffc",
+        oauth_signature="oBizyHrr5IDnDm6OXLQdg%2Ff0Y%2Bs%3D", oauth_signature_method="HMAC-SHA1",
+        oauth_timestamp="1468248601", oauth_token="711995065347006465-JLJWrBLyfySojWUz1C7mwaqx37Qv7vQ",
+        oauth_version="1.0"
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 401
+      message: Authorization Required
+    headers:
+      Content-Length:
+      - '89'
+      Content-Type:
+      - application/json; charset=utf-8
+      Date:
+      - Mon, 11 Jul 2016 14:50:02 GMT
+      Server:
+      - tsa_b
+      Set-Cookie:
+      - guest_id=v1%3A146824860230817822; Domain=.twitter.com; Path=/; Expires=Wed,
+        11-Jul-2018 14:50:02 UTC
+      Strict-Transport-Security:
+      - max-age=631138519
+      X-Connection-Hash:
+      - 96d1ae74f5fa1f52ae85716e961c3839
+      X-Response-Time:
+      - '8'
+    body:
+      encoding: ASCII-8BIT
+      string: '{"errors":[{"code":32,"message":"Could not authenticate you."}]}'
+    http_version: 
+  recorded_at: Mon, 11 Jul 2016 14:50:01 GMT
+- request:
+    method: get
+    uri: https://api.twitter.com/1.1/statuses/user_timeline.json?count=100&screen_name=kendricklamar
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      User-Agent:
+      - TwitterRubyGem/5.16.0
+      Authorization:
+      - OAuth oauth_consumer_key="92ZwZKHSMlKh9GRkdonSVIc7L", oauth_nonce="bc36ecd7c215416f36e7d464c8152207",
+        oauth_signature="tN4vgjoldjRu1El%2BHXPOZx%2F21bc%3D", oauth_signature_method="HMAC-SHA1",
+        oauth_timestamp="1468251617", oauth_token="711995065347006465-JLJWrBLyfySojWUz1C7mwaqx37Qv7vQ",
+        oauth_version="1.0"
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 401
+      message: Authorization Required
+    headers:
+      Content-Length:
+      - '89'
+      Content-Type:
+      - application/json; charset=utf-8
+      Date:
+      - Mon, 11 Jul 2016 15:40:18 GMT
+      Server:
+      - tsa_b
+      Set-Cookie:
+      - guest_id=v1%3A146825161803395099; Domain=.twitter.com; Path=/; Expires=Wed,
+        11-Jul-2018 15:40:18 UTC
+      Strict-Transport-Security:
+      - max-age=631138519
+      X-Connection-Hash:
+      - b3f86f8e4bad79d006758f6471284228
+      X-Response-Time:
+      - '8'
+    body:
+      encoding: ASCII-8BIT
+      string: '{"errors":[{"code":32,"message":"Could not authenticate you."}]}'
+    http_version: 
+  recorded_at: Mon, 11 Jul 2016 15:40:18 GMT
+- request:
+    method: get
+    uri: https://api.twitter.com/1.1/statuses/user_timeline.json?count=100&screen_name=SkySportsFL
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      User-Agent:
+      - TwitterRubyGem/5.16.0
+      Authorization:
+      - OAuth oauth_consumer_key="92ZwZKHSMlKh9GRkdonSVIc7L", oauth_nonce="8a1a5b4ef45ede13e928792305ea5f78",
+        oauth_signature="BC4Mo0pCIv%2Bw7DPLl6mPOGnMh1o%3D", oauth_signature_method="HMAC-SHA1",
+        oauth_timestamp="1468251618", oauth_token="711995065347006465-JLJWrBLyfySojWUz1C7mwaqx37Qv7vQ",
+        oauth_version="1.0"
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 401
+      message: Authorization Required
+    headers:
+      Content-Length:
+      - '89'
+      Content-Type:
+      - application/json; charset=utf-8
+      Date:
+      - Mon, 11 Jul 2016 15:40:18 GMT
+      Server:
+      - tsa_b
+      Set-Cookie:
+      - guest_id=v1%3A146825161837809798; Domain=.twitter.com; Path=/; Expires=Wed,
+        11-Jul-2018 15:40:18 UTC
+      Strict-Transport-Security:
+      - max-age=631138519
+      X-Connection-Hash:
+      - 463790b47d98995a6c966ab237596e34
+      X-Response-Time:
+      - '10'
+    body:
+      encoding: ASCII-8BIT
+      string: '{"errors":[{"code":32,"message":"Could not authenticate you."}]}'
+    http_version: 
+  recorded_at: Mon, 11 Jul 2016 15:40:18 GMT
+- request:
+    method: get
+    uri: https://api.twitter.com/1.1/statuses/user_timeline.json?count=100&screen_name=mjrode
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      User-Agent:
+      - TwitterRubyGem/5.16.0
+      Authorization:
+      - OAuth oauth_consumer_key="92ZwZKHSMlKh9GRkdonSVIc7L", oauth_nonce="f927bb61efbdb6e4573ec4083cd92428",
+        oauth_signature="EiJN%2FA7%2B%2FDihnhmCG61X4N1nyng%3D", oauth_signature_method="HMAC-SHA1",
+        oauth_timestamp="1468251618", oauth_token="711995065347006465-JLJWrBLyfySojWUz1C7mwaqx37Qv7vQ",
+        oauth_version="1.0"
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 401
+      message: Authorization Required
+    headers:
+      Content-Length:
+      - '89'
+      Content-Type:
+      - application/json; charset=utf-8
+      Date:
+      - Mon, 11 Jul 2016 15:40:18 GMT
+      Server:
+      - tsa_b
+      Set-Cookie:
+      - guest_id=v1%3A146825161862717574; Domain=.twitter.com; Path=/; Expires=Wed,
+        11-Jul-2018 15:40:18 UTC
+      Strict-Transport-Security:
+      - max-age=631138519
+      X-Connection-Hash:
+      - b3c5d75452b948a616b680a8a3c362ce
+      X-Response-Time:
+      - '8'
+    body:
+      encoding: ASCII-8BIT
+      string: '{"errors":[{"code":32,"message":"Could not authenticate you."}]}'
+    http_version: 
+  recorded_at: Mon, 11 Jul 2016 15:40:18 GMT
+- request:
+    method: get
+    uri: https://api.twitter.com/1.1/statuses/user_timeline.json?count=100&screen_name=jasoncummings86
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      User-Agent:
+      - TwitterRubyGem/5.16.0
+      Authorization:
+      - OAuth oauth_consumer_key="92ZwZKHSMlKh9GRkdonSVIc7L", oauth_nonce="9753c4d677fda6b58a30a2fe04d3ba15",
+        oauth_signature="UbhuVedglsE28fY0zvDttZyfr3Y%3D", oauth_signature_method="HMAC-SHA1",
+        oauth_timestamp="1468251618", oauth_token="711995065347006465-JLJWrBLyfySojWUz1C7mwaqx37Qv7vQ",
+        oauth_version="1.0"
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 401
+      message: Authorization Required
+    headers:
+      Content-Length:
+      - '89'
+      Content-Type:
+      - application/json; charset=utf-8
+      Date:
+      - Mon, 11 Jul 2016 15:40:18 GMT
+      Server:
+      - tsa_b
+      Set-Cookie:
+      - guest_id=v1%3A146825161886958608; Domain=.twitter.com; Path=/; Expires=Wed,
+        11-Jul-2018 15:40:18 UTC
+      Strict-Transport-Security:
+      - max-age=631138519
+      X-Connection-Hash:
+      - 10b6e4c5dde42f080979b1881c84cbe5
+      X-Response-Time:
+      - '7'
+    body:
+      encoding: ASCII-8BIT
+      string: '{"errors":[{"code":32,"message":"Could not authenticate you."}]}'
+    http_version: 
+  recorded_at: Mon, 11 Jul 2016 15:40:18 GMT
+- request:
+    method: get
+    uri: https://api.twitter.com/1.1/statuses/user_timeline.json?count=100&screen_name=deleteme
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      User-Agent:
+      - TwitterRubyGem/5.16.0
+      Authorization:
+      - OAuth oauth_consumer_key="92ZwZKHSMlKh9GRkdonSVIc7L", oauth_nonce="a3cd350356bc23bb6aeb7975e09752d6",
+        oauth_signature="Nm2Oyyr2nQFGQDJNJYrGxyryfAU%3D", oauth_signature_method="HMAC-SHA1",
+        oauth_timestamp="1468251618", oauth_token="711995065347006465-JLJWrBLyfySojWUz1C7mwaqx37Qv7vQ",
+        oauth_version="1.0"
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 401
+      message: Authorization Required
+    headers:
+      Content-Length:
+      - '89'
+      Content-Type:
+      - application/json; charset=utf-8
+      Date:
+      - Mon, 11 Jul 2016 15:40:19 GMT
+      Server:
+      - tsa_b
+      Set-Cookie:
+      - guest_id=v1%3A146825161909927279; Domain=.twitter.com; Path=/; Expires=Wed,
+        11-Jul-2018 15:40:19 UTC
+      Strict-Transport-Security:
+      - max-age=631138519
+      X-Connection-Hash:
+      - 3c66f8419dd7af9cda056c3aed9c23db
+      X-Response-Time:
+      - '16'
+    body:
+      encoding: ASCII-8BIT
+      string: '{"errors":[{"code":32,"message":"Could not authenticate you."}]}'
+    http_version: 
+  recorded_at: Mon, 11 Jul 2016 15:40:19 GMT
+- request:
+    method: get
+    uri: https://api.twitter.com/1.1/statuses/user_timeline.json?count=100&screen_name=WSJ
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      User-Agent:
+      - TwitterRubyGem/5.16.0
+      Authorization:
+      - OAuth oauth_consumer_key="92ZwZKHSMlKh9GRkdonSVIc7L", oauth_nonce="2f80f872a83879256e6397360c3283ea",
+        oauth_signature="66imaKVYkPJ8aVlmsBeCMyEDWCE%3D", oauth_signature_method="HMAC-SHA1",
+        oauth_timestamp="1468251619", oauth_token="711995065347006465-JLJWrBLyfySojWUz1C7mwaqx37Qv7vQ",
+        oauth_version="1.0"
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 401
+      message: Authorization Required
+    headers:
+      Content-Length:
+      - '89'
+      Content-Type:
+      - application/json; charset=utf-8
+      Date:
+      - Mon, 11 Jul 2016 15:40:19 GMT
+      Server:
+      - tsa_b
+      Set-Cookie:
+      - guest_id=v1%3A146825161941598722; Domain=.twitter.com; Path=/; Expires=Wed,
+        11-Jul-2018 15:40:19 UTC
+      Strict-Transport-Security:
+      - max-age=631138519
+      X-Connection-Hash:
+      - d214a926ba8de55d9e4640959f71aa17
+      X-Response-Time:
+      - '7'
+    body:
+      encoding: ASCII-8BIT
+      string: '{"errors":[{"code":32,"message":"Could not authenticate you."}]}'
+    http_version: 
+  recorded_at: Mon, 11 Jul 2016 15:40:19 GMT
+- request:
+    method: get
+    uri: https://api.twitter.com/1.1/statuses/user_timeline.json?count=100&screen_name=coalboat
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      User-Agent:
+      - TwitterRubyGem/5.16.0
+      Authorization:
+      - OAuth oauth_consumer_key="92ZwZKHSMlKh9GRkdonSVIc7L", oauth_nonce="3d04074343e15034e33ebc399da354ec",
+        oauth_signature="7%2FTKd3c5AcLvQbJmrjhIiFVTRt0%3D", oauth_signature_method="HMAC-SHA1",
+        oauth_timestamp="1468251619", oauth_token="711995065347006465-JLJWrBLyfySojWUz1C7mwaqx37Qv7vQ",
+        oauth_version="1.0"
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 401
+      message: Authorization Required
+    headers:
+      Content-Length:
+      - '89'
+      Content-Type:
+      - application/json; charset=utf-8
+      Date:
+      - Mon, 11 Jul 2016 15:40:19 GMT
+      Server:
+      - tsa_b
+      Set-Cookie:
+      - guest_id=v1%3A146825161965834858; Domain=.twitter.com; Path=/; Expires=Wed,
+        11-Jul-2018 15:40:19 UTC
+      Strict-Transport-Security:
+      - max-age=631138519
+      X-Connection-Hash:
+      - db36db65a9ebdee47b89f6b2b24baf0c
+      X-Response-Time:
+      - '11'
+    body:
+      encoding: ASCII-8BIT
+      string: '{"errors":[{"code":32,"message":"Could not authenticate you."}]}'
+    http_version: 
+  recorded_at: Mon, 11 Jul 2016 15:40:19 GMT
+- request:
+    method: get
+    uri: https://api.twitter.com/1.1/statuses/user_timeline.json?count=100&screen_name=washingtonpost
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      User-Agent:
+      - TwitterRubyGem/5.16.0
+      Authorization:
+      - OAuth oauth_consumer_key="92ZwZKHSMlKh9GRkdonSVIc7L", oauth_nonce="ba066fd7ef192e1a24be7eb20295fecf",
+        oauth_signature="TA63JLjrU5hqqhAzhkuW%2BqJmFPE%3D", oauth_signature_method="HMAC-SHA1",
+        oauth_timestamp="1468254283", oauth_token="711995065347006465-JLJWrBLyfySojWUz1C7mwaqx37Qv7vQ",
+        oauth_version="1.0"
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 401
+      message: Authorization Required
+    headers:
+      Content-Length:
+      - '89'
+      Content-Type:
+      - application/json; charset=utf-8
+      Date:
+      - Mon, 11 Jul 2016 16:24:43 GMT
+      Server:
+      - tsa_b
+      Set-Cookie:
+      - guest_id=v1%3A146825428337023743; Domain=.twitter.com; Path=/; Expires=Wed,
+        11-Jul-2018 16:24:43 UTC
+      Strict-Transport-Security:
+      - max-age=631138519
+      X-Connection-Hash:
+      - 8fece5bee0a1b01e65799017e3e010d2
+      X-Response-Time:
+      - '8'
+    body:
+      encoding: ASCII-8BIT
+      string: '{"errors":[{"code":32,"message":"Could not authenticate you."}]}'
+    http_version: 
+  recorded_at: Mon, 11 Jul 2016 16:24:43 GMT
+- request:
+    method: get
+    uri: https://api.twitter.com/1.1/statuses/user_timeline.json?count=100&screen_name=nytimes
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      User-Agent:
+      - TwitterRubyGem/5.16.0
+      Authorization:
+      - OAuth oauth_consumer_key="92ZwZKHSMlKh9GRkdonSVIc7L", oauth_nonce="79bb37017dd5bbfb5324b17aa1138fc7",
+        oauth_signature="ffdq7ywwdlVIOuFtCX0HEBCBch4%3D", oauth_signature_method="HMAC-SHA1",
+        oauth_timestamp="1468254283", oauth_token="711995065347006465-JLJWrBLyfySojWUz1C7mwaqx37Qv7vQ",
+        oauth_version="1.0"
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 401
+      message: Authorization Required
+    headers:
+      Content-Length:
+      - '89'
+      Content-Type:
+      - application/json; charset=utf-8
+      Date:
+      - Mon, 11 Jul 2016 16:24:43 GMT
+      Server:
+      - tsa_b
+      Set-Cookie:
+      - guest_id=v1%3A146825428360660691; Domain=.twitter.com; Path=/; Expires=Wed,
+        11-Jul-2018 16:24:43 UTC
+      Strict-Transport-Security:
+      - max-age=631138519
+      X-Connection-Hash:
+      - c3ed897294598081b69bf44304478fe6
+      X-Response-Time:
+      - '7'
+    body:
+      encoding: ASCII-8BIT
+      string: '{"errors":[{"code":32,"message":"Could not authenticate you."}]}'
+    http_version: 
+  recorded_at: Mon, 11 Jul 2016 16:24:43 GMT
+- request:
+    method: get
+    uri: https://api.twitter.com/1.1/statuses/user_timeline.json?count=100&screen_name=tenderlove
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      User-Agent:
+      - TwitterRubyGem/5.16.0
+      Authorization:
+      - OAuth oauth_consumer_key="92ZwZKHSMlKh9GRkdonSVIc7L", oauth_nonce="7cf7fd50757969beb606c5f226f4211e",
+        oauth_signature="5hbNMG2FA3hb4THE%2Fc99qgta%2B0k%3D", oauth_signature_method="HMAC-SHA1",
+        oauth_timestamp="1468254283", oauth_token="711995065347006465-JLJWrBLyfySojWUz1C7mwaqx37Qv7vQ",
+        oauth_version="1.0"
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 401
+      message: Authorization Required
+    headers:
+      Content-Length:
+      - '89'
+      Content-Type:
+      - application/json; charset=utf-8
+      Date:
+      - Mon, 11 Jul 2016 16:24:43 GMT
+      Server:
+      - tsa_b
+      Set-Cookie:
+      - guest_id=v1%3A146825428385229244; Domain=.twitter.com; Path=/; Expires=Wed,
+        11-Jul-2018 16:24:43 UTC
+      Strict-Transport-Security:
+      - max-age=631138519
+      X-Connection-Hash:
+      - 17678115b78d71f4226d9b4ec8102431
+      X-Response-Time:
+      - '7'
+    body:
+      encoding: ASCII-8BIT
+      string: '{"errors":[{"code":32,"message":"Could not authenticate you."}]}'
+    http_version: 
+  recorded_at: Mon, 11 Jul 2016 16:24:43 GMT
+- request:
+    method: get
+    uri: https://api.twitter.com/1.1/statuses/user_timeline.json?count=100&screen_name=WIRED
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      User-Agent:
+      - TwitterRubyGem/5.16.0
+      Authorization:
+      - OAuth oauth_consumer_key="92ZwZKHSMlKh9GRkdonSVIc7L", oauth_nonce="74668047378f1ffa76061e89d87bb054",
+        oauth_signature="plnEgF23vwaIShh4%2Fn%2FoIFFCbZk%3D", oauth_signature_method="HMAC-SHA1",
+        oauth_timestamp="1468254283", oauth_token="711995065347006465-JLJWrBLyfySojWUz1C7mwaqx37Qv7vQ",
+        oauth_version="1.0"
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 401
+      message: Authorization Required
+    headers:
+      Content-Length:
+      - '89'
+      Content-Type:
+      - application/json; charset=utf-8
+      Date:
+      - Mon, 11 Jul 2016 16:24:44 GMT
+      Server:
+      - tsa_b
+      Set-Cookie:
+      - guest_id=v1%3A146825428409382463; Domain=.twitter.com; Path=/; Expires=Wed,
+        11-Jul-2018 16:24:44 UTC
+      Strict-Transport-Security:
+      - max-age=631138519
+      X-Connection-Hash:
+      - a76884da7c267e6ffc771f181667f45f
+      X-Response-Time:
+      - '13'
+    body:
+      encoding: ASCII-8BIT
+      string: '{"errors":[{"code":32,"message":"Could not authenticate you."}]}'
+    http_version: 
+  recorded_at: Mon, 11 Jul 2016 16:24:44 GMT
+- request:
+    method: get
+    uri: https://api.twitter.com/1.1/statuses/user_timeline.json?count=100&screen_name=carson_blah
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      User-Agent:
+      - TwitterRubyGem/5.16.0
+      Authorization:
+      - OAuth oauth_consumer_key="92ZwZKHSMlKh9GRkdonSVIc7L", oauth_nonce="36182b6ef99e328d9a71422ac3fca4e0",
+        oauth_signature="h0noGDE%2F67MPC%2B9TEAIlJEmr2fA%3D", oauth_signature_method="HMAC-SHA1",
+        oauth_timestamp="1468254284", oauth_token="711995065347006465-JLJWrBLyfySojWUz1C7mwaqx37Qv7vQ",
+        oauth_version="1.0"
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 401
+      message: Authorization Required
+    headers:
+      Content-Length:
+      - '89'
+      Content-Type:
+      - application/json; charset=utf-8
+      Date:
+      - Mon, 11 Jul 2016 16:24:44 GMT
+      Server:
+      - tsa_b
+      Set-Cookie:
+      - guest_id=v1%3A146825428448110802; Domain=.twitter.com; Path=/; Expires=Wed,
+        11-Jul-2018 16:24:44 UTC
+      Strict-Transport-Security:
+      - max-age=631138519
+      X-Connection-Hash:
+      - b5c2bb4242b0b565801d3121583091a1
+      X-Response-Time:
+      - '8'
+    body:
+      encoding: ASCII-8BIT
+      string: '{"errors":[{"code":32,"message":"Could not authenticate you."}]}'
+    http_version: 
+  recorded_at: Mon, 11 Jul 2016 16:24:44 GMT
+- request:
+    method: get
+    uri: https://api.twitter.com/1.1/statuses/user_timeline.json?count=100&screen_name=niedzielskiadam
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      User-Agent:
+      - TwitterRubyGem/5.16.0
+      Authorization:
+      - OAuth oauth_consumer_key="92ZwZKHSMlKh9GRkdonSVIc7L", oauth_nonce="457c65faa3c05ab5cdcf304fdaf7572c",
+        oauth_signature="eiMOZoKJMcnQMNcA06dEiuyZrbo%3D", oauth_signature_method="HMAC-SHA1",
+        oauth_timestamp="1468254284", oauth_token="711995065347006465-JLJWrBLyfySojWUz1C7mwaqx37Qv7vQ",
+        oauth_version="1.0"
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 401
+      message: Authorization Required
+    headers:
+      Content-Length:
+      - '89'
+      Content-Type:
+      - application/json; charset=utf-8
+      Date:
+      - Mon, 11 Jul 2016 16:24:44 GMT
+      Server:
+      - tsa_b
+      Set-Cookie:
+      - guest_id=v1%3A146825428481452248; Domain=.twitter.com; Path=/; Expires=Wed,
+        11-Jul-2018 16:24:44 UTC
+      Strict-Transport-Security:
+      - max-age=631138519
+      X-Connection-Hash:
+      - f2d25820dd6ace0bb7d168f5375a4fa5
+      X-Response-Time:
+      - '8'
+    body:
+      encoding: ASCII-8BIT
+      string: '{"errors":[{"code":32,"message":"Could not authenticate you."}]}'
+    http_version: 
+  recorded_at: Mon, 11 Jul 2016 16:24:44 GMT
+- request:
+    method: get
+    uri: https://api.twitter.com/1.1/statuses/user_timeline.json?count=100&screen_name=JakubJatczak
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      User-Agent:
+      - TwitterRubyGem/5.16.0
+      Authorization:
+      - OAuth oauth_consumer_key="92ZwZKHSMlKh9GRkdonSVIc7L", oauth_nonce="8f0f1f2475be11913773e1c9094bd530",
+        oauth_signature="XxsIRYgtBKf4xhVGCKI9EUOUILE%3D", oauth_signature_method="HMAC-SHA1",
+        oauth_timestamp="1468254284", oauth_token="711995065347006465-JLJWrBLyfySojWUz1C7mwaqx37Qv7vQ",
+        oauth_version="1.0"
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 401
+      message: Authorization Required
+    headers:
+      Content-Length:
+      - '89'
+      Content-Type:
+      - application/json; charset=utf-8
+      Date:
+      - Mon, 11 Jul 2016 16:24:45 GMT
+      Server:
+      - tsa_b
+      Set-Cookie:
+      - guest_id=v1%3A146825428505819428; Domain=.twitter.com; Path=/; Expires=Wed,
+        11-Jul-2018 16:24:45 UTC
+      Strict-Transport-Security:
+      - max-age=631138519
+      X-Connection-Hash:
+      - a5e19a84b45e1091f4a260ad6fdb98bb
+      X-Response-Time:
+      - '7'
+    body:
+      encoding: ASCII-8BIT
+      string: '{"errors":[{"code":32,"message":"Could not authenticate you."}]}'
+    http_version: 
+  recorded_at: Mon, 11 Jul 2016 16:24:45 GMT
+- request:
+    method: get
+    uri: https://api.twitter.com/1.1/statuses/user_timeline.json?count=100&screen_name=pokorson
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      User-Agent:
+      - TwitterRubyGem/5.16.0
+      Authorization:
+      - OAuth oauth_consumer_key="92ZwZKHSMlKh9GRkdonSVIc7L", oauth_nonce="01f58258c8a67e0b3c7242ea1c3fef7f",
+        oauth_signature="AIyfv7gUuvaFLb9zYtYD7hc3iqQ%3D", oauth_signature_method="HMAC-SHA1",
+        oauth_timestamp="1468254285", oauth_token="711995065347006465-JLJWrBLyfySojWUz1C7mwaqx37Qv7vQ",
+        oauth_version="1.0"
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 401
+      message: Authorization Required
+    headers:
+      Content-Length:
+      - '89'
+      Content-Type:
+      - application/json; charset=utf-8
+      Date:
+      - Mon, 11 Jul 2016 16:24:45 GMT
+      Server:
+      - tsa_b
+      Set-Cookie:
+      - guest_id=v1%3A146825428530362055; Domain=.twitter.com; Path=/; Expires=Wed,
+        11-Jul-2018 16:24:45 UTC
+      Strict-Transport-Security:
+      - max-age=631138519
+      X-Connection-Hash:
+      - b8b7d15d1b45616c3c8b2aab297fc51e
+      X-Response-Time:
+      - '11'
+    body:
+      encoding: ASCII-8BIT
+      string: '{"errors":[{"code":32,"message":"Could not authenticate you."}]}'
+    http_version: 
+  recorded_at: Mon, 11 Jul 2016 16:24:45 GMT
 recorded_with: VCR 3.0.3

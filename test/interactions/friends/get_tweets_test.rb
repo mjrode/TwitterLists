@@ -6,7 +6,8 @@ class Friends::GetTweetsTest < ActiveSupport::TestCase
     @user = User.new(
       username: "mjr_tts",
       token: '711995065347006465-JLJWrBLyfySojWUz1C7mwaqx37Qv7vQ',
-      secret: 'Efmd45AlTJml6nIcsaBVjLuyZwPpx9Bn9ktICwiPxNIRF'
+      secret: 'Efmd45AlTJml6nIcsaBVjLuyZwPpx9Bn9ktICwiPxNIRF', 
+      imported: false
     )
     @friend = friends(:michael)
   end
