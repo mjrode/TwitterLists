@@ -7,7 +7,16 @@ class ApplicationController < ActionController::Base
   def current_user
     @current_user ||= User.find_by(id: session[:user_id])
   end
-  helper_method :current_user
+
+  def loaded?
+    if @current_user.tweets.count > 0 || @current_user.friends.count > 0 || @current_user.lists.count > 0
+      true
+    else
+      false
+    end
+  end
+
+  helper_method :current_user, :loaded?
 
   private
 

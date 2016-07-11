@@ -1,4 +1,7 @@
 -if current_user && current_user.tweets.present?
   =render 'display_tweets'
 -if current_user && !current_user.tweets.present?
-  %h1.center Please wait while we load your tweets ... 
+  .columns.large-4.large-offset-4.top5
+    %h1.center.load Please wait while we load your tweets ... 
+    .loading
+      =render 'partials/loading'
