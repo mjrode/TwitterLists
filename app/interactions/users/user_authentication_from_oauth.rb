@@ -7,7 +7,7 @@ class Users::UserAuthenticationFromOauth < Less::Interaction
     initialize_user
     self.message = set_message
     self.user = user
-    Users::ImportTwitterAccountInformation.delay.run(user: self.user) if friends_count < 5_000
+    Users::ImportTwitterAccountInformation.run(user: self.user) if friends_count < 5_000
     self
   end
 
