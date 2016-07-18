@@ -51,7 +51,7 @@ class Lists::ImportLists < Less::Interaction
     )
     # binding.pry if ActiveRecord::RecordNotSaved
   rescue NoMethodError
-    binding.pry if env.development?
+    # binding.pry if env.development?
     puts remote_list.name
     puts remote_member.screen_name
   end

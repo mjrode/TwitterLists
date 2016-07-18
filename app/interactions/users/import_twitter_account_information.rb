@@ -56,7 +56,7 @@ class Users::ImportTwitterAccountInformation < Less::Interaction
       following: following,
       avatar: friend.profile_image_uri.to_s.gsub("_normal", "")
     )
-  binding.pry if ActiveRecord::RecordNotSaved
+  # binding.pry if ActiveRecord::RecordNotSaved
   end
 
   def remote_friends_usernames
