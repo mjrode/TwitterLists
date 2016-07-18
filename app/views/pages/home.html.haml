@@ -16,9 +16,11 @@
           =submit_tag "Go", class: "yellow large button half-width float-center"
       .large-6.large-offset-3.small-12.columns.goaway
         = link_to "Make a New List", new_list_path, class: "yellow large button half-width float-center" 
+
       .large-6.small-12.columns
   -elsif current_user 
     .columns.large-4.large-offset-4.top5
+      =render 'partials/loading'
       %h1.center.load Please wait while we gather your information ... 
     :javascript
       window.setTimeout(function(){location.reload()},5000)
