@@ -61,5 +61,7 @@ class Friends::GetTweets < Less::Interaction
       friend_id: friend.user_id,
       user_id: user.id
     )
+  rescue ActiveRecord::RecordNotSaved => e
+    Honeybadger.notify e
   end
 end
