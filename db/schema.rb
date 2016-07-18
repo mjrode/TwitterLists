@@ -59,6 +59,7 @@ ActiveRecord::Schema.define(version: 201606211553501) do
     t.integer  "remote_id",  limit: 8
     t.string   "avatar"
     t.boolean  "following"
+    t.integer  "since_id",   limit: 8
   end
 
   create_table "lists", force: :cascade do |t|

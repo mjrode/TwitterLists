@@ -19,10 +19,9 @@
       .large-6.small-12.columns
   -elsif current_user 
     .columns.large-4.large-offset-4.top5
-      %h1.center.load Please wait while we load your tweets ... 
-      .loading
-        =render 'partials/loading'
-    =render 'partials/progress_bar.html.haml'
+      %h1.center.load Please wait while we gather your information ... 
+    :javascript
+      window.setTimeout(function(){location.reload()},5000)
   -if !current_user
     %h1.full-width.title.center.lower
       Less-Tweets

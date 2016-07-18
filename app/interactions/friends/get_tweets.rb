@@ -17,18 +17,22 @@ class Friends::GetTweets < Less::Interaction
       exclude_replies: true,
       trim_user: true,
       include_rts: false,
-      since_id: since_id,
-      count: 200
+      count: 20
     )
   rescue Twitter::Error => e
     Honeybadger.notify e
     []
   end
 
-  def since_id
-    return friend.tweets.last.remote_tweet_id if user.imported
-    @client.user_timeline(friend.username, count: 100).last.id
-  end
+  # def since_id
+  #   if friend.since_id.nil?
+  #     since_id = @client.user_timeline
+  #   end
+  # end
+  # def since_id
+  #   return friend.tweets.last.remote_tweet_id if user.imported
+  #   @client.user_timeline(friend.username, count: 100).last.id
+  # end
 
   def new_tweets
     @new_tweets ||= []
