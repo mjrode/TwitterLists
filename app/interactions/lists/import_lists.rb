@@ -49,9 +49,9 @@ class Lists::ImportLists < Less::Interaction
       friend_id: local_friend(remote_member.id).id,
       schedule: 1
     )
-    binding.pry if ActiveRecord::RecordNotSaved
+    # binding.pry if ActiveRecord::RecordNotSaved
   rescue NoMethodError
-    binding.pry
+    binding.pry if env.development?
     puts remote_list.name
     puts remote_member.screen_name
   end
