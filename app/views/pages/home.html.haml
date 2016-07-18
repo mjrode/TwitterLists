@@ -22,7 +22,11 @@
       %h1.center.load Please wait while we load your tweets ... 
       .loading
         =render 'partials/loading'
+    =render 'partials/progress_bar.html.haml'
   -if !current_user
     %h1.full-width.title.center.lower
       Less-Tweets
     =link_to "Log In", "/auth/twitter", class: "yellow large button half-width float-center"
+
+
+

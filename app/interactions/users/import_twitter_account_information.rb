@@ -8,14 +8,14 @@ class Users::ImportTwitterAccountInformation < Less::Interaction
 
   def run
     @client = Shared::SetTwitterClient.run(user: user)
-    delay.fetch_friends_and_tweets_and_lists
+    delay.fetch_twitter_info
     LoggedInMailer.user_logged_in_email(user).deliver_later if user.email.present?
     self
   end
 
   private
 
-  def fetch_friends_and_tweets_and_lists
+  def fetch_twitter_info
     fetch_all_friends_and_tweets # refactored this so I can have a more accurate progress bar
     fetch_all_list_members
     remove_local_friends
@@ -35,8 +35,9 @@ class Users::ImportTwitterAccountInformation < Less::Interaction
     lists.each do |list|
       members = @client.list_members(user.username, list.id)
       members.each do |member|
-        save_friend(member, true)
+        friend = save_friend(member, true)
         remote_friends_usernames << member.screen_name
+        fetch_tweets(friend)
       end
     end
   end
@@ -55,6 +56,7 @@ class Users::ImportTwitterAccountInformation < Less::Interaction
       following: following,
       avatar: friend.profile_image_uri.to_s.gsub("_normal", "")
     )
+  binding.pry if ActiveRecord::RecordNotSaved
   end
 
   def remote_friends_usernames

@@ -25,9 +25,10 @@ class Lists::ImportLists < Less::Interaction
       name: remote_list.name,
       remote_id:  remote_list.id,
       user_id:  user.id,
-      url: remote_list.url, 
+      url: remote_list.url,
       mode: remote_list.mode
     )
+    binding.pry if ActiveRecord::RecordNotSaved
   end
 
   def remote_members(remote_list)
@@ -48,6 +49,7 @@ class Lists::ImportLists < Less::Interaction
       friend_id: local_friend(remote_member.id).id,
       schedule: 1
     )
+    binding.pry if ActiveRecord::RecordNotSaved
   rescue NoMethodError
     puts remote_list.name
     puts remote_member.screen_name

@@ -3,7 +3,7 @@ class Users::CheckImportProgress < Less::Interaction
 
   def run
     @client = Shared::SetTwitterClient.run(user: user)
-    set_user
+    friend_import_percentage
   end
 
   private
@@ -13,11 +13,14 @@ class Users::CheckImportProgress < Less::Interaction
   end
 
   def total_friends
-    @user.friends_count
+    # @total_friends ||= @client.user(@user.username).friends_count
+    25
   end
 
-  def total_tweets
-    
+  def friend_import_percentage
+    result = (user.friends.count.to_d / total_friends.to_d)
+    result *= 100
+    return result.to_i if result.to_i < 100
+    100
   end
-
 end

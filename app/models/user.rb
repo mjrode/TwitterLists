@@ -26,4 +26,8 @@ class User < ActiveRecord::Base
   def sort(params)
     tweets.where(replied: false).order("remote_tweet_created_at DESC").page(params[:page])
   end
+
+  def self.importing
+    true
+  end
 end

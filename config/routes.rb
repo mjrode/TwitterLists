@@ -31,6 +31,7 @@ Rails.application.routes.draw do
   # pages
   get '/pages/home'
   get '/about', to: 'pages#about'
+  get '/update_progress', to: 'pages#update_progress'
   root 'pages#home'
 
   #replies

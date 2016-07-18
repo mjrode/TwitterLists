@@ -5,7 +5,10 @@ class SessionsController < ApplicationController
     @user = response.user
     session[:user_id] = @user.id
     flash[:success] = response.message
-    redirect
+    respond_to do |format|
+      format.html { redirect }
+      format.js
+    end
   end
 
   def set_email
