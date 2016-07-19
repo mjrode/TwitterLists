@@ -28,7 +28,6 @@ class Lists::ImportLists < Less::Interaction
       url: remote_list.url,
       mode: remote_list.mode
     )
-    binding.pry if ActiveRecord::RecordNotSaved
   end
 
   def remote_members(remote_list)
