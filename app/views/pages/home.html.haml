@@ -21,8 +21,8 @@
   -elsif current_user 
     .columns.large-4.large-offset-4.top5
       =render 'partials/loading'
-      %h1.center.load Please wait while we gather your information ... 
-      %p.center (This may take a few minutes the first time you log in)
+      %h1.center.tag.load Gathering Information... 
+      %p.center (This may take a few minutes)
       %h2.tag.center Twitter Facts
       %p.center
         = User.quotes.sample[3..-1]
