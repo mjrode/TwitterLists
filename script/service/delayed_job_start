@@ -1,0 +1,4 @@
+#!/bin/bash
+# See lessaccounting's scripts when you need to add additional queues
+cd /less/app/current
+RAILS_ENV=production bundle exec bin/delayed_job --pid-dir=/less/app/shared/tmp/pids/ start -n 2

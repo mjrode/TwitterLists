@@ -1,0 +1,68 @@
+#!/usr/bin/env ruby
+require 'fileutils'
+DIRNAME = "/less/app/shared/tmp/pids"
+dir = Dir.new(DIRNAME)
+
+
+def pid_from_file(file)
+  return nil unless file =~ /^delayed_job.*pid$/
+  pid = File.read("#{DIRNAME}/#{file}").chomp!
+  return nil unless pid =~ /[0-9]*/
+  return pid.to_i
+end
+
+def rm_file(file)
+  puts "Removing PID file #{file}"
+  FileUtils.rm("#{DIRNAME}/#{file}")
+end
+def process_exists?(pid)
+  begin
+    Process.getpgid(pid)
+    return true
+  rescue Errno::ESRCH
+    return false
+  end
+end
+
+dir.each do |file|
+  next unless pid = pid_from_file(file)
+
+  puts "Killing DJ PID #{pid}"
+  begin
+    Process.kill("TERM", pid)
+  rescue Errno::ESRCH
+    puts "DJ PID #{pid} is already dead. Removing file"
+    rm_file(file)
+  end
+end
+
+puts
+t1 = Time.now
+begin
+  pids = 0
+  t2 = Time.now
+  puts t2
+
+  if t2 - t1 > 120
+    puts "This is taking a long time."
+    puts "Consider running strace -p on the processes that have not been killed yet."
+    puts "If you don't want to wait you can kill the processes yourself by running kill -9. This script will not do it for you."
+  end
+
+  dir.each do |file|
+    next unless pid = pid_from_file(file)
+
+    if process_exists?(pid)
+      puts "DJ PID #{pid} has not finished yet."
+      pids += 1
+    else
+      puts "DJ PID #{pid} has been killed."
+      rm_file(file)
+    end
+  end
+
+  puts
+  sleep(5) if pids > 0
+end while pids > 0
+
+puts "DJ PIDs have been stopped."

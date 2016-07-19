@@ -1,0 +1,3 @@
+#!/bin/bash
+cd /less/app/current
+RAILS_ENV=production bundle exec script/dj_stop
