@@ -6,6 +6,12 @@ $('document').ready(function(){
     boxes.push({location: element_position, id: $(value).data().remoteTweetId});
   });
 
+  $.ajaxSetup({
+    headers: {
+      'X-CSRF-Token': $('meta[name="csrf-token"]').attr('content')
+    }
+  });
+
   function seen_tweet(box){
     seen.push(box);
     p('seenIt' + box.id);
@@ -23,4 +29,8 @@ $('document').ready(function(){
       }
     });
   });
+});
+
+$(window).on('beforeunload', function() {
+    $(window).scrollTop(0); 
 });

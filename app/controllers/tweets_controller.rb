@@ -1,6 +1,6 @@
 class TweetsController < ApplicationController
   before_action :set_tweet, only: [:edit, :destroy, :show]
-  skip_before_action :verify_authenticity_token
+  # skip_before_action :verify_authenticity_token
 
 
   def index
