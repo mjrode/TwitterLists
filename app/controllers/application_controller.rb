@@ -9,7 +9,7 @@ class ApplicationController < ActionController::Base
   end
 
   def loaded?
-    if @current_user.tweets.count > 10 && @current_user.friends.count > 5 && @current_user.lists.count > 0
+    if @current_user.tweets.count > 1 && @current_user.friends.count > 1 && @current_user.lists.count > 1
       true
     else
       false
