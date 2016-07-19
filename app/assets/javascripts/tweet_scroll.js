@@ -16,10 +16,9 @@ $('document').ready(function(){
   }
 
   $(window).on('scroll', function(){
-    var scrollTop = $(window).scrollTop() + 100;
-    var scrollBottom = $(window).scrollTop() + $(window).height() - 100;
+    var scrollTop = $(window).scrollTop();
     last = boxes.find(function(box){
-      if ((scrollBottom > box.location) && (scrollTop < box.location)&& !(seen.includes(box))){
+      if ((scrollTop > box.location) && !(seen.includes(box))){
         seen_tweet(box);
       }
     });
