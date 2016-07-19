@@ -1,0 +1,8 @@
+{
+  "environment": "production",
+  "port": 8080,
+  "daemonize": false,
+  "user": "general",
+  "max_pool_size": 2,
+  "min_instances": 2
+}
