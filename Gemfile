@@ -23,6 +23,7 @@ gem "capistrano", '3.4.0'
 gem "capistrano-rails"
 gem "capistrano-bundler"
 gem "capistrano-passenger"
+gem "daemons"
 
 group :development, :test do
   gem 'byebug'
