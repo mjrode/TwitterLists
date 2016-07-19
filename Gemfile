@@ -19,6 +19,10 @@ gem 'omniauth-twitter'
 gem 'figaro'
 gem 'foundation-rails'
 gem 'responders'
+gem "capistrano", '3.4.0'
+gem "capistrano-rails"
+gem "capistrano-bundler"
+gem "capistrano-passenger"
 
 group :development, :test do
   gem 'byebug'
