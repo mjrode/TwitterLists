@@ -1,5 +1,7 @@
 class TweetsController < ApplicationController
   before_action :set_tweet, only: [:edit, :destroy, :show]
+  skip_before_action :verify_authenticity_token
+
 
   def index
     @friends = Friend.all
@@ -34,6 +36,15 @@ class TweetsController < ApplicationController
   def destroy
     @tweet.destroy
     redirect_to tweets_path
+  end
+
+  def seen
+    tweet = Tweet.find_by_remote_tweet_id(params[:id])
+    tweet.viewed = true 
+    tweet.save
+    respond_to do |format|
+      format.json  { head :no_content }
+    end
   end
 
   private
