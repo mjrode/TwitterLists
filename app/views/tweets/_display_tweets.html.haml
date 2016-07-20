@@ -9,7 +9,7 @@
       =form_tag replies_create_path, id: "form-tweet-#{tweet.id}", class: 'tweet-form' do 
         .form-group
           Reply
-          =text_area_tag :body, "@#{tweet.try(:friend).username}", class: "full-width form-control resize-reply", id: "reply-box-#{index}"
+          =text_area_tag :body, "@#{tweet.try(:friend).try(:username)}", class: "full-width form-control resize-reply", id: "reply-box-#{index}"
         .form-group
           =hidden_field_tag :remote_tweet_id, tweet.remote_tweet_id
           =hidden_field_tag :user_id, tweet.user.id
