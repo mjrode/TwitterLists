@@ -2,8 +2,9 @@ $('document').ready(function(){
   var boxes = [];
   var seen = [];
   $(".tweets").each(function(index, value){
-    var element_position = $("#reply-box-"+index).offset().top;
-    boxes.push({location: element_position, id: $(value).data().remoteTweetId});
+    if ($("#reply-box-"+index).offset()){
+      boxes.push({element: $(this), id: $(value).data().remoteTweetId}); 
+    }
   });
 
   $.ajaxSetup({
@@ -15,7 +16,8 @@ $('document').ready(function(){
   function seen_tweet(box){
     seen.push(box);
     p('seenIt' + box.id);
-    $.post('/tweets/seen', box, function(response) {
+
+    $.post('/tweets/seen', {'id': box.id}, function(response) {
       return response;
     }, 'json');
 
@@ -24,8 +26,10 @@ $('document').ready(function(){
   $(window).on('scroll', function(){
     var scrollTop = $(window).scrollTop();
     last = boxes.find(function(box){
-      if ((scrollTop > box.location) && !(seen.includes(box))){
+      boxEnd = box.element.offset().top + box.element.height();
+      if ((scrollTop > boxEnd) && !(seen.includes(box))){
         seen_tweet(box);
+        console.log('seen tweet');
       }
     });
   });

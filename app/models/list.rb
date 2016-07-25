@@ -18,7 +18,7 @@ class List < ActiveRecord::Base
   has_many :friends, through: :friend_list_schedules
   belongs_to :user
   validates :name, presence: true
-  validates :name, uniqueness: true
+  validates :remote_id, uniqueness: { scope: :user_id }
   # rubocop:disable all
   scope :needs_rotation, -> { where("(updated_at + (days_until_rotation || ' DAY')::INTERVAL) <= CURRENT_TIMESTAMP") }
   # rubocop:enable all

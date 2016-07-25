@@ -1,12 +1,12 @@
 class TweetsController < ApplicationController
   before_action :set_tweet, only: [:edit, :destroy, :show]
-  # skip_before_action :verify_authenticity_token
 
 
   def index
     @friends = Friend.all
     @user = current_user
-    @tweets = @user.sort(params)
+    @tweets = @user.tweets.sorted(params)
+    refresh_tweets if Tweet.viewed_all?(current_user)
   end
 
   def new
@@ -40,8 +40,7 @@ class TweetsController < ApplicationController
 
   def seen
     tweet = Tweet.find_by_remote_tweet_id(params[:id])
-    tweet.viewed = true 
-    tweet.save
+    tweet.update(viewed: true)
     respond_to do |format|
       format.json  { head :no_content }
     end
@@ -55,5 +54,10 @@ class TweetsController < ApplicationController
 
   def authenticate
     redirect_to root_path unless current_user
+  end
+
+  def refresh_tweets
+    Users::ImportTwitterAccountInformation.delay.run(user: current_user)
+    flash[:notice] = "Hang tight! We are looking for new Tweets."
   end
 end

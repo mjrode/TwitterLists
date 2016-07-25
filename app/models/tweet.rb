@@ -23,7 +23,15 @@ class Tweet < ActiveRecord::Base
   belongs_to :user
   paginates_per 25
 
+  def self.sorted(params)
+    where(replied: false, viewed: false).order("remote_tweet_created_at DESC").page(params[:page])
+  end
+
   def self.loaded?(current_user)
     current_user.tweets.count > 0 ? true : false
+  end
+
+  def self.viewed_all?(user)
+    user.tweets.where(viewed: false).count < 2
   end
 end

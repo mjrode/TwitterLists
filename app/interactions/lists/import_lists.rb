@@ -21,13 +21,15 @@ class Lists::ImportLists < Less::Interaction
   end
 
   def save_local_list(remote_list)
-    List.create(
+    local_list = List.find_by(user_id: user.id, remote_id: remote_list.id)
+    local_list ||= List.create!(
       name: remote_list.name,
       remote_id:  remote_list.id,
       user_id:  user.id,
       url: remote_list.url,
       mode: remote_list.mode
     )
+    local_list
   end
 
   def remote_members(remote_list)
@@ -48,16 +50,17 @@ class Lists::ImportLists < Less::Interaction
       friend_id: local_friend(remote_member.id).id,
       schedule: 1
     )
-    # binding.pry if ActiveRecord::RecordNotSaved
-  rescue NoMethodError
-    # binding.pry if env.development?
+  rescue NoMethodError => e
+    # Honeybadger.notify(e)
+    #Help from Eugen 
+    binding.pry
     puts remote_list.name
     puts remote_member.screen_name
   end
 
   def create_friend_list_schedules(remote_list)
     remote_members(remote_list).each do |remote_member|
-      create_friend_list_schedule(remote_list, remote_member)
+        create_friend_list_schedule(remote_list, remote_member)
     end
   end
 end

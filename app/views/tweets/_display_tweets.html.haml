@@ -2,6 +2,7 @@
   .reply{
   display: none;
   }
+
 -@tweets.each_with_index do |tweet, index|
   .columns.small-5.small-offset-3.center.tweets{"data-remote-tweet-id"=>tweet.remote_tweet_id}
     -unless tweet.html_block.nil?
