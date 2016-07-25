@@ -166,6 +166,7 @@ GEM
     net-scp (1.2.1)
       net-ssh (>= 2.6.5)
     net-ssh (3.2.0)
+    newrelic_rpm (3.15.1.316)
     nokogiri (1.6.8)
       mini_portile2 (~> 2.1.0)
       pkg-config (~> 1.1.7)
@@ -321,6 +322,7 @@ DEPENDENCIES
   minitest
   minitest-around
   mocha
+  newrelic_rpm
   omniauth-twitter
   pg
   pry-rails

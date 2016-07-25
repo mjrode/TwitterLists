@@ -24,6 +24,8 @@ gem "capistrano-rails"
 gem "capistrano-bundler"
 gem "capistrano-passenger"
 gem "daemons"
+gem 'newrelic_rpm'
+
 
 group :development, :test do
   gem 'byebug'
