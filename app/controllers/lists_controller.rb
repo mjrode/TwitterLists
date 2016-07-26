@@ -79,8 +79,10 @@ class ListsController < ApplicationController
   def add_friends_params
     {
       friends_hash: params[:friends],
+      
       list: @list,
-      user: current_user
+      user: current_user, 
+      days_between_rotation: params[:days_between_rotation].to_i
     }
   end
 end

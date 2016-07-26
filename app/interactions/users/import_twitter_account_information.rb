@@ -5,6 +5,7 @@
 # Imports lists and creates local copies
 class Users::ImportTwitterAccountInformation < Less::Interaction
   expects :user
+  expects :first_time, allow_nil: true
 
   def run
     @client = Shared::SetTwitterClient.run(user: user)
@@ -13,7 +14,7 @@ class Users::ImportTwitterAccountInformation < Less::Interaction
     remove_local_friends
     Lists::ImportLists.run(user: user)
     fetch_tweets
-    LoggedInMailer.user_logged_in_email(user).deliver_later if user.email.present?
+    LoggedInMailer.user_logged_in_email(user).deliver_later if user.email? && first_time
     self
   end
 

@@ -1,7 +1,6 @@
 class Lists::CreateList < Less::Interaction
   expects_any :local_list, :name
   expects :user
-  expects :days_until_rotation
   returns :success
   returns :message
 
@@ -44,7 +43,6 @@ class Lists::CreateList < Less::Interaction
       name: remote_list.name,
       remote_id:  remote_list.id,
       user_id:  user.id,
-      days_until_rotation: days_until_rotation,
       url: remote_list.url,
       mode: 'private'
     )

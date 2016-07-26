@@ -5,15 +5,25 @@
   height: 2em;
   }
 
-%h1.center 
-  ="#{@list.name}"
-  .smaller
-    ="(#{@list.mode})"
-%hr.shrink-me
 
 
 
 = form_tag(add_friends_list_path(@list), class: "seperate-lists")  do 
+  %h1.center 
+    ="#{@list.name}"
+    .smaller
+      ="(#{@list.mode})"
+
+  .large-3.columns.large-offset-5
+    =label_tag "Days between list rotation"
+    =radio_button_tag "days_between_rotation", "1", true
+    =label_tag "1"
+    =radio_button_tag "days_between_rotation", "2", false
+    =label_tag "2"
+    =radio_button_tag "days_between_rotation", "3", false
+    =label_tag "3"
+  %hr.shrink-me
+
   %row#always-on
   %row#frequently-on
   %row#sometimes-on

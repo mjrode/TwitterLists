@@ -12,6 +12,7 @@
 #  remote_id  :integer
 #  avatar     :string
 #  following  :boolean
+#  since_id   :integer
 #
 
 class Friend < ActiveRecord::Base

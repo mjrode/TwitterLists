@@ -5,6 +5,4 @@
       =form_for @list do |f|
         =f.text_field :name, placeholder: "List Name", class: "full-width form-control em3"
         %p.center (This list will be private)
-        %br/
-        =f.text_field :days_until_rotation, placeholder: "Days Between Rotation", class: "form-control small-width push-down new-form-text days"
         =f.submit  class: "yellow large button full-width custom"

@@ -65,12 +65,13 @@ ActiveRecord::Schema.define(version: 201606211553501) do
   create_table "lists", force: :cascade do |t|
     t.string   "name"
     t.integer  "user_id"
-    t.datetime "created_at",                    null: false
-    t.datetime "updated_at",                    null: false
-    t.integer  "remote_id",           limit: 8
+    t.datetime "created_at",                      null: false
+    t.datetime "updated_at",                      null: false
+    t.integer  "remote_id",             limit: 8
     t.string   "url"
-    t.integer  "days_until_rotation"
     t.string   "mode"
+    t.datetime "next_rotation_at"
+    t.integer  "days_between_rotation"
   end
 
   create_table "models", force: :cascade do |t|
