@@ -1,0 +1,9 @@
+.columns.large-4.large-offset-4.top5
+  %h1.center.tag.load Gathering Information... 
+  %p.center (This may take a few minutes)
+  =render 'partials/loading'
+  %h2.tag.center Twitter Facts
+  %p.center
+    = User.quotes.sample[3..-1]
+:javascript
+  window.setTimeout(function(){location.reload()},5000)

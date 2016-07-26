@@ -1,64 +1,10 @@
 %body.home
   -if current_user && loaded? 
-    %h1.full-width.title.center
-      Less-Tweets
-    %h2.tag.center.full-width
-      Choose an Option
-    .row
-      .large-6.large-offset-3.small-12.columns.goaway
-        =link_to "View Tweets with Images", tweets_path, class: "yellow large button half-width float-center" 
-      .large-6.large-offset-3.small-12.columns
-        = link_to "Manage an Exisiting List", "#", class: "yellow large button half-width float-center", id: "show-find-list" 
-      .large-6.large-offset-3.small-12.columns#select-list
-        %h3.center.tag Pick a List
-        = form_tag(find_list_path, method: :get) do 
-          = select_tag "list", options_from_collection_for_select(@user.lists, "id", :name_for_select), class: " float-center half-width"
-          =submit_tag "Go", class: "yellow large button half-width float-center"
-      .large-6.large-offset-3.small-12.columns.goaway
-        = link_to "Make a New List", new_list_path, class: "yellow large button half-width float-center" 
-
-      .large-6.small-12.columns
+    = render 'partials/select_action'
   -elsif current_user 
-    .columns.large-4.large-offset-4.top5
-      %h1.center.tag.load Gathering Information... 
-      %p.center (This may take a few minutes)
-      =render 'partials/loading'
-      %h2.tag.center Twitter Facts
-      %p.center
-        = User.quotes.sample[3..-1]
-    :javascript
-      window.setTimeout(function(){location.reload()},5000)
+    =render 'partials/importing'
   -if !current_user
-    %h1.full-width.title.center.lower
-      Less-Tweets
-    %h3.center.tag.coulmns.large-8.large-offset-2
-      Reducing your timeline clutter by only showing you what you want to see.
-    =link_to "Log In", "/auth/twitter", class: "yellow large button half-width float-center"
-    %hr.white
-    %hr.bye
-    .columns.large-4
-      %h3.about See Whats Important 
-      %p.about-p LessTweets offers a better way to view all of the pictures your friends have tweeted. All of the images are now in one streamlined view with the ability to reply inline. The best part is after you view a tweet it will be removed from your timeline so it will no longer add to the clutter. 
-    .columns.large-4
-      = image_tag 'tweet3.png', class: "tweet-image image-center"
-    #moving-down
-    .columns.large-4
-    %hr.white.pull-right
-    %hr.bye
-    .columns.large-4
-    .columns.large-4.large-offset-4
-      = image_tag 'list.png', class: "tweet-image images-center"
-    .columns.large-4
-      %h3.about.right Easily Manage Lists
-      %p.about-p.right LessTweets offers a simpler approach to managing twitter lists. With LessTweets you can select which friends you would like to see more tweets from. Every night your list will be updated to show you tweets from friends that you marked as relevant. 
-    %hr.white
-    %hr.bye
-    .columns.large-4
-      %h3.about Create New Lists
-      %p.about-p Create new lists directly from the application. Pick the name of the list and how often you would like to have members rotate on and off. All lists are private by default but you are able to change them to public after they have been created. 
-    .columns.large-4
-      = image_tag 'home2.png', class: "tweet-image image-center"
-    %p
+    = render 'partials/about'
 
 
 

@@ -1,0 +1,18 @@
+%h1.full-width.title.center
+  Less-Tweets
+%h2.tag.center.full-width
+  Choose an Option
+.row
+  .large-6.large-offset-3.small-12.columns.goaway
+    =link_to "View Tweets with Images", tweets_path, class: "yellow large button half-width float-center" 
+  .large-6.large-offset-3.small-12.columns
+    = link_to "Manage an Exisiting List", "#", class: "yellow large button half-width float-center", id: "show-find-list" 
+  .large-6.large-offset-3.small-12.columns#select-list
+    %h3.center.tag Pick a List
+    = form_tag(find_list_path, method: :get) do 
+      = select_tag "list", options_from_collection_for_select(@user.lists, "id", :name_for_select), class: " float-center half-width"
+      =submit_tag "Go", class: "yellow large button half-width float-center"
+  .large-6.large-offset-3.small-12.columns.goaway
+    = link_to "Make a New List", new_list_path, class: "yellow large button half-width float-center" 
+
+  .large-6.small-12.columns
