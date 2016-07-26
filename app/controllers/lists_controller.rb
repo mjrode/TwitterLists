@@ -60,7 +60,6 @@ class ListsController < ApplicationController
   end
 
   def viewed
-    
   end
 
   private

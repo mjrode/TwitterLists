@@ -11,7 +11,7 @@
 %hr.shrink-me
 
 
-= form_tag(add_friends_list_path(@list), class: "seperate-lists")  do 
+= form_tag(add_friends_list_path(@list), class: "seperate-lists padding-bottom-6")  do 
   %row#always-on
   %row#frequently-on
   %row#sometimes-on
@@ -29,5 +29,6 @@
         =hidden_field_tag "friends[][friend_id]", friend.id
         =hidden_field_tag "list", @list.id 
     %hr.shrink-me-hr{id: "move-hr-#{index}"}
-    =submit_tag "Submit", class: "button success large float-center half-width", id: "stay-down"
+    .fixed#stay-down.padding-top-1
+      = submit_tag "Submit", class: "button success large float-center half-width down-button"
     

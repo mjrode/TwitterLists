@@ -1,0 +1,9 @@
+.inner-but-full
+  .email-form
+    %h2.about.center.padding-top-2 5 Common Software Project Mistakes
+    %p.about-p.center Receive 5 Software projects mistakes we have made over the years and how to avoid them.
+    
+    = form_tag "/drip", method: "post", class: "form-group small-form float-center" do 
+      = label_tag :email, "Email"
+      = text_field_tag :email
+      = submit_tag "Subscribe", class: "button float-center"

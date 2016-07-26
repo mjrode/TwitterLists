@@ -1,7 +1,6 @@
 class TweetsController < ApplicationController
   before_action :set_tweet, only: [:edit, :destroy, :show]
 
-
   def index
     @friends = Friend.all
     @user = current_user

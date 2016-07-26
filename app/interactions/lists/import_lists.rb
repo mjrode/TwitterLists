@@ -51,16 +51,12 @@ class Lists::ImportLists < Less::Interaction
       schedule: 1
     )
   rescue NoMethodError => e
-    # Honeybadger.notify(e)
-    #Help from Eugen 
-    binding.pry
-    puts remote_list.name
-    puts remote_member.screen_name
+    Honeybadger.notify(e)
   end
 
   def create_friend_list_schedules(remote_list)
     remote_members(remote_list).each do |remote_member|
-        create_friend_list_schedule(remote_list, remote_member)
+      create_friend_list_schedule(remote_list, remote_member)
     end
   end
 end

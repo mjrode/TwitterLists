@@ -45,7 +45,7 @@ class Lists::CreateList < Less::Interaction
       remote_id:  remote_list.id,
       user_id:  user.id,
       days_until_rotation: days_until_rotation,
-      url: remote_list.url, 
+      url: remote_list.url,
       mode: 'private'
     )
   end
