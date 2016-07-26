@@ -16,14 +16,14 @@ class Lists::RandomizeAndUpdate < Less::Interaction
   end
 
   def randomize_and_update_lists
-    lists_to_update.each do |list_id|
-      randomized_list = Lists::RandomizeList.run(list: List.find(list_id)
+    # lists_to_update.each do |list_id|
+    #   randomized_list = Lists::RandomizeList.run(list: List.find(list_id)
         
-      Lists::UpdateRemoteListMembers.run(
-            randomized_list_of_friends: randomized_list,
-            list: List.find(list_id),
-            user_id: user.id
-          )
+    #   Lists::UpdateRemoteListMembers.run(
+    #         randomized_list_of_friends: randomized_list,
+    #         list: List.find(list_id),
+    #         user_id: user.id
+    #       )
     end  
   end
 
