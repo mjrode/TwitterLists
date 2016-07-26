@@ -18,12 +18,12 @@
   %hr.shrink-me
   - @friends.each_with_index do |friend, index|
     .row.shrink-me.middle.bump-up{id: "move-me-#{index}"}
-      .large-3.columns.border-right.row-height
+      .large-3.columns.small-12.border-right.row-height
         =image_tag friend.avatar, class: "circle middle"
-      .large-3.columns.border-right.row-height{class: "color-me-#{index}"}
-        .h2.name.center= "#{friend.name}"
-      .large-3.columns.border-right.row-height{class: "color-me-#{index}"}
-        .h2.name.center= "@#{friend.username}"
+      .large-3.columns.border-right.white-bottom.row-height{class: "color-me-#{index}"}
+        .h2.name.center-name.center= "#{friend.name}"
+      .large-3.columns.border-right.white-bottom.row-height{class: "color-me-#{index}"}
+        .h2.name.center-name.center= "@#{friend.username}"
       .large-3.columns.row-height
         = select_tag "friends[][schedule]", options_for_select(FriendListSchedule.schedules, friend.current_schedule(@list)), class: "middle", id: "friend-list-options-#{index}"
         =hidden_field_tag "friends[][friend_id]", friend.id

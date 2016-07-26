@@ -35,6 +35,9 @@
   .bio{
     clear: both;
   }
+  .center-name{
+    margin-top: 0.5em;
+  }
   .collage{
     display:inline;
     width: 49%;
@@ -486,4 +489,7 @@ body.home{
 }
 .padding-bottom-1{
   padding-bottom: 1em;
+}
+.white-bottom{
+  border-bottom: solid white;
 }
