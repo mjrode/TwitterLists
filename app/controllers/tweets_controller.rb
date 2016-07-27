@@ -4,7 +4,8 @@ class TweetsController < ApplicationController
   def index
     @friends = Friend.all
     @user = current_user
-    @tweets = @user.tweets.sorted(params)
+    @new_tweets = @user.tweets.new_sorted(params)
+    @viewed_tweets = @user.tweets.viewed_sorted(params)
     refresh_tweets if Tweet.viewed_all?(current_user)
   end
 
