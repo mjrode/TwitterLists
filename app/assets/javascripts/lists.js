@@ -3,16 +3,6 @@ $("document").ready(function() {
   YELLOW = '#fee873';
   GREEN = 'rgba(53, 214, 37, 0.639216)';
  
-  $('#select-list').hide();
-  $('#show-find-list').click(function() {
-      $("#select-list").animate({
-         height: 'toggle'
-      });
-      $('.goaway').toggle();
-  });
-  $('.close').click(function(){
-    $('.alert-box').toggle();
-  });
   
   $('.shrink-me').each(function (index, value) { 
     $("#friend-list-options-"+index).change(function(){

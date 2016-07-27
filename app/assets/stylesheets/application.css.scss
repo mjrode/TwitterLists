@@ -97,6 +97,9 @@
   .half-width{
     width: 50%;
   }
+  .small{
+    display: none;
+  }
   .border-right{
     border-right: 1px solid #cacaca;
   }
@@ -508,4 +511,7 @@ body.home{
 }
 .white-bottom{
   border-bottom: solid white;
+}
+.nomas{
+  display: none;
 }
