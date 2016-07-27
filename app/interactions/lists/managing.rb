@@ -5,6 +5,7 @@ module Lists::Managing
   end
 
   def update_remote_list_members(list)
+    binding.pry
     result = Lists::UpdateRemoteListMembers.run(
       randomized_list_of_friends: randomized_list(list),
       list: list,

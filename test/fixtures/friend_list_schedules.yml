@@ -72,3 +72,23 @@ six:
   list_id: 1234
   friend_id: 1331
   schedule: "2"
+
+rotate1:
+  list: past_due
+  friend_id: 1331
+  schedule: '3'
+
+rotate2:
+  list: past_due
+  friend_id: 1619
+  schedule: '3'
+
+rotate3:
+  list: past_due
+  friend_id: 133815
+  schedule: '3'
+
+rotate4:
+  list: past_due
+  friend_id: 133495
+  schedule: '3'
