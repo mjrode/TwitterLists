@@ -35,6 +35,20 @@
   .bio{
     clear: both;
   }
+  #pink{
+    height: 25em;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 5em;
+    margin-bottom: 5em;
+    background: rgba(250, 135, 189, 0.64);
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+  .half-width{
+    width: 90%;
+  }
   .center-name{
     margin-top: 0.5em;
   }
@@ -64,12 +78,12 @@
   .new-title{
     padding-top: 1em;
     font-family: 'Bungee', cursive;
-    font-size: 4em;
+    font-size: 2em;
     margin-top: 1em;
   }
-  .yellow{
+/*  .yellow{
     width: 50%;
-  }
+  }*/
 }
 
 /*Big Screens*/
@@ -79,6 +93,9 @@
     background-repeat: no-repeat;
     background-position: center;
 
+  }
+  .half-width{
+    width: 50%;
   }
   .border-right{
     border-right: 1px solid #cacaca;
@@ -101,6 +118,17 @@
     font-family: 'Bungee', cursive;
     font-size: 6em;
     margin-top: 0.5em;
+  }
+  #pink{
+    height: 25em;
+    width: 60%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 5em;
+    margin-bottom: 5em;
+    background: rgba(250, 135, 189, 0.64);
+    background-repeat: no-repeat;
+    background-position: center;
   }
   .break{
     margin-top: 1em;
@@ -160,17 +188,7 @@
 .button.move-down-button{
   margin-top: 40%;
 }
-#pink{
-  height: 25em;
-  width: 60%;
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: 5em;
-  margin-bottom: 5em;
-  background: rgba(250, 135, 189, 0.64);
-  background-repeat: no-repeat;
-  background-position: center;
-}
+
 .pink{
   background: rgba(250, 135, 189, 0.64);
 }
@@ -290,9 +308,7 @@ body.home{
 .move-down-4{
   margin-top: 4em;
 }
-.half-width{
-  width: 50%;
-}
+
 .four-width{
   width: 48%;
 }
