@@ -19,7 +19,7 @@ first_list:
   name: "Jake"
   user_id: 25
   remote_id: 739942637654921216
-  days_until_rotation: 3
+  days_between_rotation: 3
   user: mike
 
 second_list: 
@@ -52,3 +52,9 @@ food:
   user_id: 350169060
   remote_id: 744272088551333888
   user: mike
+
+past_due:
+  name: "past due"
+  user: mike
+  days_between_rotation: 1
+  next_rotation_at: 2016-07-25 12:23:37 -0400
