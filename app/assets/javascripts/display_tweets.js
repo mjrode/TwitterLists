@@ -8,7 +8,6 @@ $('document').ready(function(){
   });
 
   $('#viewed').click(function(){
-    console.log('hello')
     $('.new-tweets').hide();
     $('.viewed-tweets').show();
 

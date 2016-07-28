@@ -9,9 +9,9 @@
 = form_tag(add_friends_list_path(@list), class: "seperate-lists padding-bottom-6")  do 
   %h1.center
     = "Edit #{@list.name}" 
-    .smaller= "(#{@list.mode})"  if @list.mode
-  .large-3.columns.large-offset-5
-    =label_tag "Days between list rotation"
+    .smaller.clear= "(#{@list.mode})"  if @list.mode
+  .large-3.columns.large-offset-5.small-12.center
+    .center=label_tag "Days between list rotation"
     =radio_button_tag "days_between_rotation", "1", true
     =label_tag "1"
     =radio_button_tag "days_between_rotation", "2", false

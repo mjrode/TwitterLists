@@ -74,6 +74,9 @@
     font-size: 4em;
     margin-top: 0.5em;
   }
+  .quarter{
+    width: 100%;
+  }
 
   .new-title{
     padding-top: 1em;
@@ -93,6 +96,9 @@
     background-repeat: no-repeat;
     background-position: center;
 
+  }
+  .quarter{
+    width: 41%;
   }
   .half-width{
     width: 50%;
@@ -517,11 +523,16 @@ body.home{
 }
 .viewed-tweets{
   display: none;
-  background: #dadada;
 }
-.quarter{
-  width: 28%;
-}
+
 .blue{
   background-color: #1583cc;
+}
+.gray{
+  border: 5px solid #bcbcbc;
+  margin-bottom: 2em;
+}
+.green-border{
+  border: 5px solid rgba(250, 135, 189, 0.64);
+  margin-bottom: 2em;
 }
